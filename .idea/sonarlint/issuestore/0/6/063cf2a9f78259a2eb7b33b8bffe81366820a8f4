@@ -1,0 +1,25 @@
+
+kpython:S2208"GImport only needed names or import the module and then use its members.(ÅÙï„úÿÿÿÿ8Ñâ®ƒª/
+=python:S125"Remove this commented out code.(®Çœá8Ñâ®ƒª/
+wpython:S117"YRename this local variable "aboutObj" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ëúðñ8Òâ®ƒª/
+spython:S1542,"ORename function "eCommerce" to match the regular expression ^[a-z_][a-z0-9_]*$.(÷´á­ÿÿÿÿÿ8Óâ®ƒª/
+npython:S15421"ORename function "eLearning" to match the regular expression ^[a-z_][a-z0-9_]*$.(èÝŸ­8Óâ®ƒª/
+tpython:S15427"URename function "eHealthSoftware" to match the regular expression ^[a-z_][a-z0-9_]*$.(Ïýëä8Ôâ®ƒª/
+opython:S1542<"PRename function "eHealthApp" to match the regular expression ^[a-z_][a-z0-9_]*$.(îžÅò8Ôâ®ƒª/
+opython:S1542A"PRename function "eLogistics" to match the regular expression ^[a-z_][a-z0-9_]*$.(ûëÈÍ8Ôâ®ƒª/
+qpython:S1542F"MRename function "eRetail" to match the regular expression ^[a-z_][a-z0-9_]*$.(áæäýúÿÿÿÿ8Ôâ®ƒª/
+ppython:S1542K"LRename function "sCloud" to match the regular expression ^[a-z_][a-z0-9_]*$.(òûïáýÿÿÿÿ8Ôâ®ƒª/
+mpython:S1542P"IRename function "sAI" to match the regular expression ^[a-z_][a-z0-9_]*$.(°íêéüÿÿÿÿ8Ôâ®ƒª/
+tpython:S1542U"PRename function "sAI_retail" to match the regular expression ^[a-z_][a-z0-9_]*$.(¶á¶Íùÿÿÿÿ8Ôâ®ƒª/
+wpython:S1542Z"SRename function "sAI_education" to match the regular expression ^[a-z_][a-z0-9_]*$.(³ÅÜ…üÿÿÿÿ8Ôâ®ƒª/
+tpython:S1542_"PRename function "sAI_health" to match the regular expression ^[a-z_][a-z0-9_]*$.(Íé¸­ûÿÿÿÿ8Õâ®ƒª/
+xpython:S1542d"TRename function "sAI_automation" to match the regular expression ^[a-z_][a-z0-9_]*$.(Æï˜Óþÿÿÿÿ8Õâ®ƒª/
+{python:S1542i"WRename function "sAugmentedReality" to match the regular expression ^[a-z_][a-z0-9_]*$.(§â¹úÿÿÿÿ8Õâ®ƒª/
+rpython:S1542n"TRename function "sDigiTransform" to match the regular expression ^[a-z_][a-z0-9_]*$.(Û¡ [8Õâ®ƒª/
+jpython:S1542s"KRename function "sTeam" to match the regular expression ^[a-z_][a-z0-9_]*$.(»½Åþ8Õâ®ƒª/
+mpython:S1542x"NRename function "sTeamCto" to match the regular expression ^[a-z_][a-z0-9_]*$.(Û¸…Ú8Õâ®ƒª/
+lpython:S1542~"MRename function "sDevops" to match the regular expression ^[a-z_][a-z0-9_]*$.(«ƒîà8Õâ®ƒª/
+€python:S1542ƒ"[Rename function "sTechnologyConsulting" to match the regular expression ^[a-z_][a-z0-9_]*$.(²É‡»ýÿÿÿÿ8Õâ®ƒª/
+upython:S1542ˆ"URename function "sAppDevelopment" to match the regular expression ^[a-z_][a-z0-9_]*$.(é¾ü8Õâ®ƒª/
+upython:S1542"URename function "sDataConsulting" to match the regular expression ^[a-z_][a-z0-9_]*$.(¾óÔ…8Öâ®ƒª/
+upython:S1542“"VRename function "sSoftwareTesting" to match the regular expression ^[a-z_][a-z0-9_]*$.(ø‘§18Öâ®ƒª/

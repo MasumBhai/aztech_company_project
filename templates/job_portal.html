@@ -1,0 +1,539 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_tag %}
+    <body class="page-template page-template-templates page-template-jobs-landing page-template-templatesjobs-landing-php page">
+{% endblock body_tag %}
+
+{% block main_content %}
+    <div class="wrapper">
+        <div class="block block_nav block_overflow" id="header">
+            <div class="block__background jobs-header__background">
+                <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/career-1.jpg" alt=""
+                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/career-1-1920x768.jpg 1920w, https://itrexgroup.com/wp-content/uploads/2021/01/career-1-1440x576.jpg 1440w, https://itrexgroup.com/wp-content/uploads/2021/01/career-1-1024x410.jpg 1024w, https://itrexgroup.com/wp-content/uploads/2021/01/career-1-720x288.jpg 720w, https://itrexgroup.com/wp-content/uploads/2021/01/career-1-512x205.jpg 512w"
+                     sizes="100vw"
+                     alt="itrex office"></div>
+            <div class="block__content post-block__content post-block__content_medium">
+                <div class="jobs-header">
+                    <h1 class="jobs-header__title title title_medium yellow">Build things you’re
+                        proud of</h1>
+                    <h2 class="jobs-header__description">Join a crew as motivated as you. Make cool stuff for global
+                        brands.
+                        Level up, learn and grow.</h2>
+                </div>
+            </div>
+        </div>
+        {#        <div class="jobs-filter-wrapper"></div>#}
+        {#        <div class="jobs-filter">#}
+        {#            <div class="jobs-filter__content post-block__content post-block__content_medium">#}
+        {#                <div class="jobs-filter__label">Search</div>#}
+        {#                <div class="jobs-filter__field">#}
+        {#                    <div class="select"><input type="hidden" name="locations" value="">#}
+        {#                        <div class="select__value">All locations</div>#}
+        {#                        <svg class="select__icon icon">#}
+        {#                            <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>#}
+        {#                        </svg>#}
+        {#                        <div class="select__list">#}
+        {#                            <div class="select__item select__item_active" data-select-value="">All locations</div>#}
+        {#                            <div class="select__item" data-select-value="181">Kyiv, Ukraine</div>#}
+        {#                            <div class="select__item" data-select-value="183">Minsk, Belarus</div>#}
+        {#                            <div class="select__item" data-select-value="184">SPb, Russia</div>#}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#                <div class="jobs-filter__label">for</div>#}
+        {#                <div class="jobs-filter__field">#}
+        {#                    <div class="select"><input type="hidden" name="types" value="">#}
+        {#                        <div class="select__value">All jobs</div>#}
+        {#                        <svg class="select__icon icon">#}
+        {#                            <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>#}
+        {#                        </svg>#}
+        {#                        <div class="select__list">#}
+        {#                            <div class="select__item select__item_active" data-select-value="">All jobs</div>#}
+        {#                            <div class="select__item" data-select-value="193">Administrative</div>#}
+        {#                            <div class="select__item" data-select-value="189">Engineering</div>#}
+        {#                            <div class="select__item" data-select-value="188">Sales &amp; Marketing</div>#}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#                <button class="jobs-filter__submit button arrow-link arrow-link arrow-link_fixed-opacity"#}
+        {#                        id="jobs-filter"><span class="arrow-link__text">Find a <span#}
+        {#                        style="white-space: nowrap">job<span#}
+        {#                        class="arrow-link__arrow"><span#}
+        {#                        class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span#}
+        {#                        class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span></button>#}
+        {#            </div>#}
+        {#            <div class="jobs-filter__mobile-backdrop"></div>#}
+        {#            <div class="jobs-filter__mobile">#}
+        {#                <div class="jobs-filter__label">Filter</div>#}
+        {#                <svg class="jobs-filter__icon">#}
+        {#                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#filter"></use>#}
+        {#                </svg>#}
+        {#            </div>#}
+        {#        </div>#}
+        {#        <div class="jobs-filter-wrapper"></div>#}
+        {#        <script>#}
+        {#            document.addEventListener('DOMContentLoaded', function () {#}
+        {#                jQuery(function ($) {#}
+        {#                    const $filter = $('.jobs-filter');#}
+        {#                    const $fields = $filter.find('.jobs-filter__field');#}
+        {#                    const $submit = $filter.find('.jobs-filter__submit');#}
+        {#                    $submit.on('click', function (e) {#}
+        {#                        const params = getParams();#}
+        {#                        updateUrl(params);#}
+        {#                    });#}
+        {##}
+        {#                    function getParams() {#}
+        {#                        let params = [];#}
+        {#                        $fields.each(function () {#}
+        {#                            const $field = $(this);#}
+        {#                            const $input = $field.find('input');#}
+        {#                            params.push({#}
+        {#                                name: $input.attr('name'),#}
+        {#                                value: $input.val()#}
+        {#                            })#}
+        {#                        });#}
+        {#                        return params;#}
+        {#                    }#}
+        {##}
+        {#                    function updateUrl(params) {#}
+        {#                        const searchParams = new URLSearchParams(window.location.search);#}
+        {#                        for (let i = 0; i < params.length; ++i) {#}
+        {#                            const param = params[i];#}
+        {#                            const name = param.name;#}
+        {#                            const value = param.value;#}
+        {#                            if (value && value !== '') {#}
+        {#                                searchParams.set(name, value);#}
+        {#                            } else {#}
+        {#                                searchParams.delete(name);#}
+        {#                            }#}
+        {#                        }#}
+        {#// let newurl = window.location.protocol + '//' + window.location.host + window.location.pathname;#}
+        {#                        let newurl = '';#}
+        {#                        newurl = 'https://itrexgroup.com/jobs/vacancies/';#}
+        {#// window.history.replaceState(null, null, newurl);#}
+        {#                        console.log(newurl);#}
+        {#                        if (newurl !== '') {#}
+        {#                            let paramsString = searchParams.toString();#}
+        {#                            if (paramsString != '') {#}
+        {#                                newurl += '?' + paramsString;#}
+        {#                            }#}
+        {#                            window.location.href = newurl;#}
+        {#                        }#}
+        {#                    }#}
+        {#                });#}
+        {#            });#}
+        {#        </script>#}
+        <div class="block" id="who-we-are">
+            <div class="block__content">
+                <div class="jobs-about">
+                    <div class="jobs-about__image">
+                        <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/who-we-are.jpg" alt=""
+                             srcset="https://itrexgroup.com/wp-content/uploads/2021/01/who-we-are.jpg 2880w, https://itrexgroup.com/wp-content/uploads/2021/01/who-we-are-1024x978.jpg 2048w, https://itrexgroup.com/wp-content/uploads/2021/01/who-we-are-720x688.jpg 720w, https://itrexgroup.com/wp-content/uploads/2021/01/who-we-are-512x489.jpg 512w"
+                             sizes="(min-width: 961px) 50vw, 100vw"
+                             alt="Aztech office"></div>
+                    <div class="jobs-about__content">
+                        <div class="jobs-about__title">Who we are</div>
+                        <div class="jobs-about__text space space_hmt">ITRex is more than 250 technology professionals
+                            based in Minsk, Kyiv, Saint Petersburg and Los Angeles. We write software, craft strategies
+                            and give expert advice.
+                            </br>
+                            </br>
+                            We solve problems and drive growth for our clients. They’ve included big names like Walmart,
+                            Take a Swing at Cancer, Procter & Gamble, Dun & Bradstreet, Warner Bros., 21st Century Fox
+                            and the Dollar Shave Club.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="our-capabilities-include">
+            <div class="block__content">
+                <div class="jobs-capabilities">
+                    <div class="jobs-capabilities__title">Our capabilities include:</div>
+                    <div class="jobs-capabilities__list">
+                        <div class="jobs-capabilities__item">
+                            <svg class="jobs-capabilities__item-icon">
+                                <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#AI"></use>
+                            </svg>
+                            <div class="jobs-capabilities__item-text">Artificial intelligence, machine learning and big
+                                data
+                            </div>
+                        </div>
+                        <div class="jobs-capabilities__item">
+                            <svg class="jobs-capabilities__item-icon">
+                                <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#iot"></use>
+                            </svg>
+                            <div class="jobs-capabilities__item-text">Embedded systems and the Internet of Things</div>
+                        </div>
+                        <div class="jobs-capabilities__item">
+                            <svg class="jobs-capabilities__item-icon">
+                                <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#VR"></use>
+                            </svg>
+                            <div class="jobs-capabilities__item-text">Virtual reality, augmented reality and mixed
+                                reality
+                            </div>
+                        </div>
+                        <div class="jobs-capabilities__item">
+                            <svg class="jobs-capabilities__item-icon">
+                                <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#iba"></use>
+                            </svg>
+                            <div class="jobs-capabilities__item-text">Intelligent business automation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="who-should-apply">
+            <div class="block__content">
+                <div class="jobs-apply">
+                    <div class="jobs-apply__content">
+                        <div class="jobs-apply__title">Who should apply</div>
+                        <div class="jobs-apply__block space space_hmt">
+                            <div class="jobs-apply__label">Look, this is not for everyone.
+                            </div>
+                            <div class="jobs-apply__text">If you only want a salary and don’t much care about how good
+                                your projects are, you’ll probably hate it here. If you hide behind policies and
+                                processes because, secretly, you’re terrified of owning ideas or decisions, you too will
+                                think it sucks.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jobs-apply__image">
+                        <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/who-should-apply.jpg" alt=""
+                             srcset="https://itrexgroup.com/wp-content/uploads/2021/01/who-should-apply.jpg 2880w, https://itrexgroup.com/wp-content/uploads/2021/01/who-should-apply-1024x968.jpg 2048w, https://itrexgroup.com/wp-content/uploads/2021/01/who-should-apply-720x681.jpg 720w, https://itrexgroup.com/wp-content/uploads/2021/01/who-should-apply-512x484.jpg 512w"
+                             sizes="(min-width: 961px) 50vw, 100vw"
+                             alt="itrex office"></div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="now-ask-yourself">
+            <div class="block__content">
+                <div class="jobs-ask block__content">
+                    <div class="jobs-ask__title">Now ask yourself (and be honest)</div>
+                    <div class="jobs-ask__blocks space space_hmt">
+                        <div class="jobs-ask__block">Does being part of a shoddy project bother you so much that you
+                            have to speak up?
+                        </div>
+                        <div class="jobs-ask__block">Do you care about your client, your project, your decisions and
+                            your team?
+                        </div>
+                        <div class="jobs-ask__block">Do you get a buzz out of solving hard problems?</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="honesty-transparency-and-family-spirit">
+            <div class="block__content">
+                <div class="jobs-about">
+                    <div class="jobs-about__image">
+                        <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/honesty-1.jpg" alt=""
+                             srcset="https://itrexgroup.com/wp-content/uploads/2021/01/honesty-1.jpg 2880w, https://itrexgroup.com/wp-content/uploads/2021/01/honesty-1-1024x1311.jpg 2048w, https://itrexgroup.com/wp-content/uploads/2021/01/honesty-1-720x922.jpg 720w, https://itrexgroup.com/wp-content/uploads/2021/01/honesty-1-512x655.jpg 512w"
+                             sizes="(min-width: 961px) 50vw, 100vw"
+                             alt="itrex office"></div>
+                    <div class="jobs-about__content">
+                        <div class="jobs-about__title">
+                            Honesty, transparency and family spirit
+                        </div>
+                        <div class="jobs-about__text space space_hmt">
+                            We strive always to be honest with each other and the client. That’s more than being
+                            truthful, it’s about not dodging responsibility or concealing important things.
+                            </br>
+                            </br>
+                            We aren’t afraid to argue. Because we care about our work, it happens. We disagree like
+                            family; we help and support each other no matter what.
+                            </br>
+                            </br>
+                            Our managers live by this too. You’re never too junior to ask questions or to have an
+                            opinion.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="do-you-play-to-win">
+            <div class="block__content">
+                <div class="jobs-apply">
+                    <div class="jobs-apply__content">
+                        <div class="jobs-apply__title">Do you play to win? Or just to avoid blame?
+                        </div>
+                        <div class="jobs-apply__block space space_hmt">
+                            <div class="jobs-apply__label">
+                                Does this sound overly lofty? We’re definitely not perfect. We make mistakes.
+                            </div>
+                            <div class="jobs-apply__text">
+                                You’re allowed to get things wrong – even horribly wrong – sometimes too. If you’re
+                                honest enough to own your mistakes, you will be safe. Working at ITRex, you’ll watch us
+                                admit mistakes all the time. That’s what initiative and transparency looks like. We are
+                                all committed to each other’s success. All we ask in return is the same commitment back.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jobs-apply__image">
+                        <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/play-to-win-1.jpg" alt=""
+                             srcset="https://itrexgroup.com/wp-content/uploads/2021/01/play-to-win-1.jpg 2880w, https://itrexgroup.com/wp-content/uploads/2021/01/play-to-win-1-1024x1449.jpg 2048w, https://itrexgroup.com/wp-content/uploads/2021/01/play-to-win-1-720x1019.jpg 720w, https://itrexgroup.com/wp-content/uploads/2021/01/play-to-win-1-512x724.jpg 512w"
+                             sizes="(min-width: 961px) 50vw, 100vw"
+                             alt="itrex office"></div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="dlexibility-and-balance">
+            <div class="block__content">
+                <div class="jobs-balance">
+                    <div class="jobs-balance__left">
+                        <div class="jobs-balance__title">Flexibility and balance</div>
+                        <div class="jobs-balance__text jobs-balance__text_bold">
+                            We believe in hard work. That means you honestly give your best effort. It doesn’t mean you
+                            give every waking hour.
+                        </div>
+                    </div>
+                    <div class="jobs-balance__right">
+                        <div class="jobs-balance__col">
+                            <div class="jobs-balance__text">
+                                Our crew is motivated and accountable, so they earn a lot of trust. Flexible and remote
+                                working arrangements are no problem.
+                            </div>
+                        </div>
+                        <div class="jobs-balance__col">
+                            <div class="jobs-balance__text">
+                                If you’re so stuck on a hard problem that you need to switch gears, head to the gym to
+                                work out, or to the Playstation to shoot bad guys.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="jobs-image">
+            <div class="landing-image" animation="fade-up" animation-delay=".15">
+                <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/flexibility-1.jpg" alt=""
+                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/flexibility-1-1440x717.jpg 2880w, https://itrexgroup.com/wp-content/uploads/2021/01/flexibility-1-1024x510.jpg 2048w, https://itrexgroup.com/wp-content/uploads/2021/01/flexibility-1-720x359.jpg 720w, https://itrexgroup.com/wp-content/uploads/2021/01/flexibility-1-512x255.jpg 512w"
+                     sizes="100vw"
+                     alt="itrex office"></div>
+        </div>
+        <div class="block" id="opportunity-and-growth">
+            <div class="block__content">
+                <div class="jobs-text">
+                    <div class="jobs-text__left">
+                        <div class="jobs-text__title">Opportunity and growth</div>
+                    </div>
+                    <div class="jobs-text__right">
+                        <div class="jobs-text__text">
+                            We expect you to work hard on difficult challenges, among high-level professionals who
+                            support you. You will take hard decisions, with permission to make mistakes and learn from
+                            them. If you have the attitude to make this work, your skills will level up fast and you’ll
+                            feel proud of how you grow. We offer language classes and career progression tracks too.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="build-a-new-life-in-a-new-city">
+            <div class="block__content">
+                <div class="jobs-gallery">
+                    <div class="jobs-gallery__row">
+                        <div class="jobs-gallery__text">
+                            If you’d like, you can relocate to Minsk, Kyiv or Saint Petersburg. We’ll help you and your
+                            family with the legals, transport, health care and a home.
+                        </div>
+                        <div class="jobs-gallery__title">
+                            Build a new life in a new city
+                        </div>
+                    </div>
+                    <div class="jobs-gallery__gallery space space_hmt">
+                        <div class="jobs-gallery__left">
+                            <div class="jobs-gallery__item jobs-gallery__item_break">
+                                <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-minsk-1.jpg"
+                                     alt=""
+                                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-minsk-1.jpg 2880w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-minsk-1.jpg 2048w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-minsk-1.jpg 720w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-minsk-1-512x406.jpg 512w"
+                                     sizes="(min-width: 961px) 50vw, 100vw"
+                                     alt="jobs in minsk"></div>
+                            <div class="jobs-gallery__item">
+                                <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-kyiv-1.jpg"
+                                     alt=""
+                                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-kyiv-1.jpg 2880w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-kyiv-1.jpg 2048w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-kyiv-1.jpg 720w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-kyiv-1-512x406.jpg 512w"
+                                     sizes="(min-width: 961px) 50vw, 100vw"
+                                     alt="jobs in kyiv"></div>
+                        </div>
+                        <div class="jobs-gallery__right">
+                            <div class="jobs-gallery__item">
+                                <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-spb.jpg" alt=""
+                                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-spb.jpg 2880w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-spb-1024x554.jpg 2048w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-spb-720x389.jpg 720w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-spb-512x277.jpg 512w"
+                                     sizes="(min-width: 961px) 50vw, 100vw"
+                                     alt="jobs in spb"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="many-saythey-want-this">
+            <div class="block__content">
+                <div class="jobs-text jobs-text_center">
+                    <div class="jobs-text__title">Many say they want this</div>
+                    <div class="jobs-text__text">
+                        Some even mean it. If you feel like you’d thrive at ITRex, we’d love to hear from you. Please
+                        browse through our vacancies and see if anything suits you.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block block_smoke" id="jobs_form">
+            <div class="block__content">
+                <div class="jobs-form">
+                    <div class="jobs-form__title">Didn’t find a suitable job?</div>
+                    <div class="jobs-form__choise space space_hmt">
+                        <a class="jobs-form__item button arrow-link arrow-link arrow-link_fixed-opacity"
+                           data-popup="#send-cv" id="send-cv-target" href="#send-cv">
+<span class="arrow-link__text">Send a CV <span style="white-space: nowrap">anyway<span class="arrow-link__arrow">
+<span class="arrow-link__arrow_back arrow-link__arrow_black">→</span>
+<span class="arrow-link__arrow_front arrow-link__arrow_black">→</span>
+</span></span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main_content %}
+
+{% block inner_body_content %}
+    <div class="popup" id="send-cv">
+        <div class="popup__header">
+            <div class="popup__logo"><img
+                    src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-white.svg"
+                    alt="ITRex"></div>
+            <div class="popup__close"></div>
+        </div>
+        <div class="popup__content">
+            <div class="popup__info">
+                <h2 class="popup__title">Join Aztech</h2>
+                <div class="popup__contacts">
+                    <a style="popup__link" href="mailto:hello@itrexgroup.com" target="" id="contacts-popup-1">hello@Aztech.com</a>
+                    <br>
+                    <a style="popup__link" href="tel:+1 213 436 7785" target="" id="contacts-popup-2">+880
+                        1712-500637</a>
+                </div>
+            </div>
+            <div class="form" hf-data="hf-data" data-thank-you="thankYouJobsUrl">
+                <div role="form" class="wpcf7" id="wpcf7-f5212-o2" lang="en-US" dir="ltr">
+                    <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
+                        <ul></ul>
+                    </div>
+                    <form action="/jobs/#wpcf7-f5212-o2" method="post" class="wpcf7-form init"
+                          enctype="multipart/form-data"
+                          novalidate="novalidate" data-status="init">
+                        <div style="display: none;">
+                            <input type="hidden" name="_wpcf7" value="5212"/>
+                            <input type="hidden" name="_wpcf7_version" value="5.3.2"/>
+                            <input type="hidden" name="_wpcf7_locale" value="en_US"/>
+                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5212-o2"/>
+                            <input type="hidden" name="_wpcf7_container_post" value="0"/>
+                            <input type="hidden" name="_wpcf7_posted_data_hash" value=""/>
+                            <input type="hidden" name="_wpcf7_recaptcha_response" value=""/>
+                        </div>
+                        <input type="hidden" name="hf-source" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-medium" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-campaign" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-clientid" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-keyword" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-content" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-referrer" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-popup" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-ip" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-country" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-city" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-timezone" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-country_calling_code" value=""
+                               class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-original-source" value=""
+                               class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-source2" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-medium2" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-campaign2" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-clientid2" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-keyword2" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-content2" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-popup2" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-referrer2" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-cta2" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-ip2" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-country2" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-city2" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-timezone2" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-country_calling_code2" value=""
+                               class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-landing2" value="" class="wpcf7-form-control wpcf7-hidden"/>
+                        <input type="hidden" name="hf-conversion_page2" value=""
+                               class="wpcf7-form-control wpcf7-hidden"/>
+                        <label for="wpcf7-60e47aec41140-field" class="hp-message">Please leave this field
+                            empty.</label><input id="wpcf7-60e47aec41140-field"
+                                                 class="wpcf7-form-control wpcf7-text hp-input" type="text"
+                                                 name="honeypot-720" value="" size="40" tabindex="-1"
+                                                 autocomplete="new-password"/>
+                        <div class="field" validation="required">
+                            <input type="text" name="your-name" value="" size="40"
+                                   class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required field__input"
+                                   aria-required="true" aria-invalid="false" placeholder="Name*"/>
+                            <div class="field__status"></div>
+                            <div class="field__line"></div>
+                            <div class="field__error"></div>
+                        </div>
+                        <div class="field" validation="required,email">
+                            <input type="email" name="email" value="" size="40"
+                                   class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email field__input"
+                                   aria-required="true" aria-invalid="false" placeholder="Email*"/>
+                            <div class="field__status"></div>
+                            <div class="field__line"></div>
+                            <div class="field__error"></div>
+                        </div>
+                        <div class="field" validation="phone">
+                            <input type="tel" name="phone" value="" size="40"
+                                   class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel field__input"
+                                   aria-invalid="false" placeholder="Phone"/>
+                            <div class="field__status"></div>
+                            <div class="field__line"></div>
+                            <div class="field__error"></div>
+                        </div>
+                        <div class="field" validation="linkedin">
+                            <input type="text" name="linkedin" value="" size="40"
+                                   class="wpcf7-form-control wpcf7-text field__input" aria-invalid="false"
+                                   placeholder="Linkedin"/>
+                            <div class="field__status"></div>
+                            <div class="field__line"></div>
+                            <div class="field__error"></div>
+                        </div>
+                        <div class="field" validation="required">
+                            <input type="text" name="message" value="" size="40"
+                                   class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required field__input"
+                                   aria-required="true" aria-invalid="false" placeholder="Message*"/>
+                            <div class="field__status"></div>
+                            <div class="field__line"></div>
+                            <div class="field__error"></div>
+                        </div>
+                        <div class="field field_file field_yellow" validation="emailfile">
+                            <input type="file" name="file" size="40" class="wpcf7-form-control wpcf7-file field__input"
+                                   id="file"
+                                   accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv"
+                                   aria-invalid="false"/>
+                            <label class="field__label" for="file">
+                                <svg class="field__icon">
+                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.6#attach"></use>
+                                </svg>
+                                <span data-file-label>Attach your CV</span>
+                            </label>
+                            <div class="field__error"></div>
+                        </div>
+                        <div class="form__label">We will process your personal information in accordance with our <a
+                                href="https://itrexgroup.com/privacy-policy/" target="_blank">Privacy Policy.</a></div>
+                        <div class="form__submit" id="form-submit" disabled>Send message<span>→</span></div>
+                        <div class="wpcf7-response-output" aria-hidden="true"></div>
+                    </form>
+                </div>
+            </div>
+            <div class="popup__contacts popup__contacts_tablet">
+                <a style="popup__link" href="mailto:hello@itrexgroup.com" target="" id="contacts-popup-1-tablet">hello@Aztech.com</a>
+                <a style="popup__link" href="tel:+1 213 436 7785" target="" id="contacts-popup-2-tablet">+880
+                    1712-500637</a>
+            </div>
+        </div>
+    </div>
+{% endblock inner_body_content %}

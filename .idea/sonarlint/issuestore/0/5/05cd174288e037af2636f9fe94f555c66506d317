@@ -1,0 +1,4 @@
+
+kpython:S2208"GImport only needed names or import the module and then use its members.(ÅÙï„úÿÿÿÿ8…¹«ƒª/
+;python:S2772"Remove this unneeded "pass".(ã‘Û¾8‡¹«ƒª/
+Bpython:S125"Remove this commented out code.(÷ÈŽ©ÿÿÿÿÿ8ˆ¹«ƒª/
