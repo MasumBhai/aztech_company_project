@@ -4,6 +4,24 @@
     <body class="page-template page-template-templates page-template-about page-template-templatesabout-php page">
 {% endblock body_tag %}
 
+{% block navbar_style %}
+    <style>
+.navigation > .navigation__logo,
+.navigation__item,
+.navigation__burger {
+color: #000000;
+}
+.navigation__item_active {
+color: #445aec;
+}
+@media only screen and (min-width: 961px) {
+.navigation__item:hover {
+color: #445aec;
+}
+}
+</style>
+{% endblock navbar_style %}
+
 {% block main_content %}
     <div class="wrapper">
         <div class="block block_slide-min block_yellow block_nav block_overflow" id="header" cta-text="Get in touch">
@@ -60,26 +78,25 @@
                         <div class="stats-list__text">cross-functional experts</div>
                     </div>
                 </div>
-                <div class="regional-offices" animation="fade-up" animation-delay=".15">
-                    <div class="regional-offices__title">6 regional offices:</div>
-                    <div class="regional-offices__list">
-                        <div class="regional-offices__list-content">
-                            <a class="regional-offices__item" href="#" target="">Los Angeles</a>
-                            <a class="regional-offices__item" href="#" target="">Chicago</a>
-                            <a class="regional-offices__item" href="#" target="">New York</a>
-                            <a class="regional-offices__item" href="#" target="">Minsk</a>
-                            <a class="regional-offices__item" href="#" target="">Kyiv</a>
-                            <a class="regional-offices__item" href="#" target="">Saint Petersburg </a>
-                            <div class="regional-offices__list-append"></div>
-                        </div>
-                    </div>
-                </div>
+{#                <div class="regional-offices" animation="fade-up" animation-delay=".15">#}
+{#                    <div class="regional-offices__title">6 regional offices:</div>#}
+{#                    <div class="regional-offices__list">#}
+{#                        <div class="regional-offices__list-content">#}
+{#                            <a class="regional-offices__item" href="#" target="">Dhaka</a>#}
+{#                            <a class="regional-offices__item" href="#" target="">Chitagong</a>#}
+{#                            <a class="regional-offices__item" href="#" target="">Rangpur</a>#}
+{#                            <a class="regional-offices__item" href="#" target="">Barishal</a>#}
+{#                            <a class="regional-offices__item" href="#" target="">Gazipur</a>#}
+{#                            <a class="regional-offices__item" href="#" target="">Rajshahi</a>#}
+{#                            <div class="regional-offices__list-append"></div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
             </div>
         </div>
         <div class="block block_yellow" id="help" cta-text="Get in touch">
             <div class="block__content">
-                <h2 class="block__title title title_medium" animation="fade-up" animation-delay=".15">How we can
-                    help</h2>
+                <h2 class="block__title title title_medium" animation="fade-up" animation-delay=".15">How we can help</h2>
                 <div class="accordion">
                     <div class="accordion__item">
                         <div class="accordion__header">
@@ -89,10 +106,7 @@
                         </div>
                         <div class="accordion__content" style="height: 0">
                             <div class="accordion__content-inner">
-                                <div class="accordion__text">We combine strategic insights with digital know-hows to
-                                    help
-                                    you formulate new business models, modernize your legacy systems, and create
-                                    market-ready digital products and platforms.
+                                <div class="accordion__text"><span class="mark mark_green">We combine</span>  strategic insights with digital know-hows to help you formulate new business models, modernize your legacy systems, and create market-ready digital products and platforms.
                                 </div>
                                 <div class="accordion__list">
                                     <div class="accordion__list-item">
@@ -124,11 +138,8 @@
                         </div>
                         <div class="accordion__content" style="height: 0">
                             <div class="accordion__content-inner">
-                                <div class="accordion__text">Consumers hunger for more. And it’s never-ending. We
-                                    research
-                                    and create new technology solutions based on your business challenges and turn them
-                                    into
-                                    brand-new marketable products, processes, or services.
+                                <div class="accordion__text">Consumers hunger for more. And it’s never-ending. <span class="mark mark_green">We Research</span> 
+                                    and create new technology solutions based on your business challenges and turn them into brand-new marketable products, processes, or services.
                                 </div>
                                 <div class="accordion__list">
                                     <div class="accordion__list-item">
@@ -164,8 +175,7 @@
                         <div class="accordion__content" style="height: 0">
                             <div class="accordion__content-inner">
                                 <div class="accordion__text">We help businesses embrace disruptive technologies to drive
-                                    innovation growth and longer-term transition into digitally mature organizations. We
-                                    will help you start small, start simple, and scale fast.
+                                    innovation growth and longer-term transition into digitally mature organizations.  <span class="mark mark_green">We will help</span> you start small, start simple, and scale fast.
                                 </div>
                                 <div class="accordion__list">
                                     <div class="accordion__list-item">
@@ -176,14 +186,14 @@
                                         <div class="accordion__icon">/</div>
                                         <div class="accordion__name">AR, VR, MR</div>
                                     </div>
+{#                                    <div class="accordion__list-item">#}
+{#                                        <div class="accordion__icon">/</div>#}
+{#                                        <div class="accordion__name">IoT#}
+{#                                        </div>#}
+{#                                    </div>#}
                                     <div class="accordion__list-item">
                                         <div class="accordion__icon">/</div>
-                                        <div class="accordion__name">IoT
-                                        </div>
-                                    </div>
-                                    <div class="accordion__list-item">
-                                        <div class="accordion__icon">/</div>
-                                        <div class="accordion__name">Intelligent business automation</div>
+                                        <div class="accordion__name">Intelligent Business Automation</div>
                                     </div>
                                 </div>
                             </div>
@@ -568,150 +578,6 @@
                                 <img loading="lazy"
                                      data-src="https://itrexgroup.com/wp-content/uploads/2020/07/TheHonestCompany.jpg"
                                      alt="Ecommerce Data Management and Data Analytics The Honest Company">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="posts-list__controlls">
-                        <div class="posts-list__ui">
-                            <div class="posts-list__button posts-list__button_left" id="post-prev-item">
-                                <svg class="icon">
-                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
-                                </svg>
-                            </div>
-                            <div class="posts-list__button posts-list__button_right" id="post-next-item">
-                                <svg class="icon">
-                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="block block_z-index-up block_relative" id="thinking" cta-text="Get in touch ">
-            <div class="block__content">
-                <div class="post-title">
-                    <h2 class="block__title post-title__title" animation="fade-up" animation-delay=".15">Latest
-                        thinking</h2>
-                </div>
-            </div>
-            <div class="block__scroll block__scroll_tablet" scroll-destination="posts" animation="fade-up"
-                 animation-delay=".15">
-                <div class="posts-list posts-list_slider">
-                    <svg style="position: absolute;pointer-events: none" width="0" height="0">
-                        <defs>
-                            <clipPath id="thinking-mask" clipPathUnits="objectBoundingBox">
-                                <rect x="0" y="0" width="1" height="1"></rect>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <div class="post post_slider" style="position: relative;visibility: visible">
-                        <div class="post__info">
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/blog/ai-powered-augmented-analytics/"><span
-                                    class="arrow-link__text">AI-powered augmented analytics: capabilities and benefits for </span><span
-                                    style="white-space: nowrap">business<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/blog/ai-powered-augmented-analytics/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/AI-powered-augmented-analytics-1440x1171.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/AI-powered-augmented-analytics-1024x832.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/AI-powered-augmented-analytics-720x585.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/AI-powered-augmented-analytics-512x416.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/AI-powered-augmented-analytics-scaled.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/08/AI-powered-augmented-analytics-scaled.jpg"
-                                     alt="AI-powered-augmented-analytics">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/blog/waterfall-vs-agile-how-to-choose-the-right-approach/"><span
-                                    class="arrow-link__text">Waterfall vs. Agile: how to choose the right </span><span
-                                    style="white-space: nowrap">approach<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/blog/waterfall-vs-agile-how-to-choose-the-right-approach/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/pierre-chatel-innocenti-uZa4XqZM5G0-unsplash-1440x960.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/pierre-chatel-innocenti-uZa4XqZM5G0-unsplash-1024x683.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/pierre-chatel-innocenti-uZa4XqZM5G0-unsplash-720x480.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/pierre-chatel-innocenti-uZa4XqZM5G0-unsplash-512x341.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/pierre-chatel-innocenti-uZa4XqZM5G0-unsplash-scaled.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/09/pierre-chatel-innocenti-uZa4XqZM5G0-unsplash-scaled.jpg"
-                                     alt="itrex background image">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/blog/self-service-bi/"><span class="arrow-link__text">What is Self-service BI and how it can benefit your </span><span
-                                    style="white-space: nowrap">business?<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy" href="https://itrexgroup.com/blog/self-service-bi/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/lukas-blazek-mcSDtbWXUZU-unsplash-1440x954.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/lukas-blazek-mcSDtbWXUZU-unsplash-1024x678.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/lukas-blazek-mcSDtbWXUZU-unsplash-720x477.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/lukas-blazek-mcSDtbWXUZU-unsplash-512x339.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/lukas-blazek-mcSDtbWXUZU-unsplash.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/08/lukas-blazek-mcSDtbWXUZU-unsplash.jpg"
-                                     alt="What is Self-service BI and how it can benefit your business?">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/blog/five-major-challenges-of-implementing-big-data-analytics/"><span
-                                    class="arrow-link__text">Five major challenges of implementing big data </span><span
-                                    style="white-space: nowrap">analytics<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/blog/five-major-challenges-of-implementing-big-data-analytics/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/big-data-preview-1440x960.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/big-data-preview-1024x683.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/big-data-preview-720x480.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/big-data-preview-512x341.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/big-data-preview-scaled.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/08/big-data-preview-scaled.jpg"
-                                     alt="challenges of implementing Big Data analytics">
                             </picture>
                         </a>
                     </div>

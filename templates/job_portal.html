@@ -18,111 +18,10 @@
                         proud of</h1>
                     <h2 class="jobs-header__description">Join a crew as motivated as you. Make cool stuff for global
                         brands.
-                        Level up, learn and grow.</h2>
+                         <span class="mark mark_violet">Level up, learn and grow</span> </h2>
                 </div>
             </div>
         </div>
-        {#        <div class="jobs-filter-wrapper"></div>#}
-        {#        <div class="jobs-filter">#}
-        {#            <div class="jobs-filter__content post-block__content post-block__content_medium">#}
-        {#                <div class="jobs-filter__label">Search</div>#}
-        {#                <div class="jobs-filter__field">#}
-        {#                    <div class="select"><input type="hidden" name="locations" value="">#}
-        {#                        <div class="select__value">All locations</div>#}
-        {#                        <svg class="select__icon icon">#}
-        {#                            <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>#}
-        {#                        </svg>#}
-        {#                        <div class="select__list">#}
-        {#                            <div class="select__item select__item_active" data-select-value="">All locations</div>#}
-        {#                            <div class="select__item" data-select-value="181">Kyiv, Ukraine</div>#}
-        {#                            <div class="select__item" data-select-value="183">Minsk, Belarus</div>#}
-        {#                            <div class="select__item" data-select-value="184">SPb, Russia</div>#}
-        {#                        </div>#}
-        {#                    </div>#}
-        {#                </div>#}
-        {#                <div class="jobs-filter__label">for</div>#}
-        {#                <div class="jobs-filter__field">#}
-        {#                    <div class="select"><input type="hidden" name="types" value="">#}
-        {#                        <div class="select__value">All jobs</div>#}
-        {#                        <svg class="select__icon icon">#}
-        {#                            <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>#}
-        {#                        </svg>#}
-        {#                        <div class="select__list">#}
-        {#                            <div class="select__item select__item_active" data-select-value="">All jobs</div>#}
-        {#                            <div class="select__item" data-select-value="193">Administrative</div>#}
-        {#                            <div class="select__item" data-select-value="189">Engineering</div>#}
-        {#                            <div class="select__item" data-select-value="188">Sales &amp; Marketing</div>#}
-        {#                        </div>#}
-        {#                    </div>#}
-        {#                </div>#}
-        {#                <button class="jobs-filter__submit button arrow-link arrow-link arrow-link_fixed-opacity"#}
-        {#                        id="jobs-filter"><span class="arrow-link__text">Find a <span#}
-        {#                        style="white-space: nowrap">job<span#}
-        {#                        class="arrow-link__arrow"><span#}
-        {#                        class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span#}
-        {#                        class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span></button>#}
-        {#            </div>#}
-        {#            <div class="jobs-filter__mobile-backdrop"></div>#}
-        {#            <div class="jobs-filter__mobile">#}
-        {#                <div class="jobs-filter__label">Filter</div>#}
-        {#                <svg class="jobs-filter__icon">#}
-        {#                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#filter"></use>#}
-        {#                </svg>#}
-        {#            </div>#}
-        {#        </div>#}
-        {#        <div class="jobs-filter-wrapper"></div>#}
-        {#        <script>#}
-        {#            document.addEventListener('DOMContentLoaded', function () {#}
-        {#                jQuery(function ($) {#}
-        {#                    const $filter = $('.jobs-filter');#}
-        {#                    const $fields = $filter.find('.jobs-filter__field');#}
-        {#                    const $submit = $filter.find('.jobs-filter__submit');#}
-        {#                    $submit.on('click', function (e) {#}
-        {#                        const params = getParams();#}
-        {#                        updateUrl(params);#}
-        {#                    });#}
-        {##}
-        {#                    function getParams() {#}
-        {#                        let params = [];#}
-        {#                        $fields.each(function () {#}
-        {#                            const $field = $(this);#}
-        {#                            const $input = $field.find('input');#}
-        {#                            params.push({#}
-        {#                                name: $input.attr('name'),#}
-        {#                                value: $input.val()#}
-        {#                            })#}
-        {#                        });#}
-        {#                        return params;#}
-        {#                    }#}
-        {##}
-        {#                    function updateUrl(params) {#}
-        {#                        const searchParams = new URLSearchParams(window.location.search);#}
-        {#                        for (let i = 0; i < params.length; ++i) {#}
-        {#                            const param = params[i];#}
-        {#                            const name = param.name;#}
-        {#                            const value = param.value;#}
-        {#                            if (value && value !== '') {#}
-        {#                                searchParams.set(name, value);#}
-        {#                            } else {#}
-        {#                                searchParams.delete(name);#}
-        {#                            }#}
-        {#                        }#}
-        {#// let newurl = window.location.protocol + '//' + window.location.host + window.location.pathname;#}
-        {#                        let newurl = '';#}
-        {#                        newurl = 'https://itrexgroup.com/jobs/vacancies/';#}
-        {#// window.history.replaceState(null, null, newurl);#}
-        {#                        console.log(newurl);#}
-        {#                        if (newurl !== '') {#}
-        {#                            let paramsString = searchParams.toString();#}
-        {#                            if (paramsString != '') {#}
-        {#                                newurl += '?' + paramsString;#}
-        {#                            }#}
-        {#                            window.location.href = newurl;#}
-        {#                        }#}
-        {#                    }#}
-        {#                });#}
-        {#            });#}
-        {#        </script>#}
         <div class="block" id="who-we-are">
             <div class="block__content">
                 <div class="jobs-about">
@@ -327,52 +226,21 @@
                 </div>
             </div>
         </div>
-        <div class="block" id="build-a-new-life-in-a-new-city">
-            <div class="block__content">
-                <div class="jobs-gallery">
-                    <div class="jobs-gallery__row">
-                        <div class="jobs-gallery__text">
-                            If you’d like, you can relocate to Minsk, Kyiv or Saint Petersburg. We’ll help you and your
-                            family with the legals, transport, health care and a home.
-                        </div>
-                        <div class="jobs-gallery__title">
-                            Build a new life in a new city
-                        </div>
-                    </div>
-                    <div class="jobs-gallery__gallery space space_hmt">
-                        <div class="jobs-gallery__left">
-                            <div class="jobs-gallery__item jobs-gallery__item_break">
-                                <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-minsk-1.jpg"
-                                     alt=""
-                                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-minsk-1.jpg 2880w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-minsk-1.jpg 2048w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-minsk-1.jpg 720w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-minsk-1-512x406.jpg 512w"
-                                     sizes="(min-width: 961px) 50vw, 100vw"
-                                     alt="jobs in minsk"></div>
-                            <div class="jobs-gallery__item">
-                                <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-kyiv-1.jpg"
-                                     alt=""
-                                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-kyiv-1.jpg 2880w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-kyiv-1.jpg 2048w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-kyiv-1.jpg 720w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-kyiv-1-512x406.jpg 512w"
-                                     sizes="(min-width: 961px) 50vw, 100vw"
-                                     alt="jobs in kyiv"></div>
-                        </div>
-                        <div class="jobs-gallery__right">
-                            <div class="jobs-gallery__item">
-                                <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-spb.jpg" alt=""
-                                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-spb.jpg 2880w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-spb-1024x554.jpg 2048w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-spb-720x389.jpg 720w, https://itrexgroup.com/wp-content/uploads/2021/01/jobs-in-spb-512x277.jpg 512w"
-                                     sizes="(min-width: 961px) 50vw, 100vw"
-                                     alt="jobs in spb"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="block" id="many-saythey-want-this">
             <div class="block__content">
                 <div class="jobs-text jobs-text_center">
                     <div class="jobs-text__title">Many say they want this</div>
-                    <div class="jobs-text__text">
-                        Some even mean it. If you feel like you’d thrive at ITRex, we’d love to hear from you. Please
-                        browse through our vacancies and see if anything suits you.
-                    </div>
+                    <div class="block block_yellow" id="" cta-text="">
+<div class="block__content block__content_half post-block__content post-block__content_medium">
+<div class="landing-subheader" animation="fade-up" animation-delay=".15">
+<div class="landing-subheader__content">
+<p class="landing-subheader__text landing-subheader__text_small" style="text-align: center">
+    Some even mean it. If you feel like you’d thrive at Aztech, we’d love to hear from you. Please browse through our vacancies and see if anything suits you.
+</p>
+</div>
+</div>
+</div>
+</div>
                 </div>
             </div>
         </div>

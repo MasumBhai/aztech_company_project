@@ -4,6 +4,24 @@
     <body class="page-template page-template-templates page-template-landing page-template-templateslanding-php page page-id-3523 page-child parent-pageid-1184">
 {% endblock body_tag %}
 
+{% block navbar_style %}
+    <style>
+.navigation > .navigation__logo,
+.navigation__item,
+.navigation__burger {
+color: #000000;
+}
+.navigation__item_active {
+color: #445aec;
+}
+@media only screen and (min-width: 961px) {
+.navigation__item:hover {
+color: #445aec;
+}
+}
+</style>
+{% endblock navbar_style %}
+
 {% block main_content %}
     <div class="wrapper">
         <div class="block block_slide-min block_nav block_yellow block_overflow" id="header"
@@ -465,7 +483,7 @@ support of customers</span>
         </div>
         <div class="block" id="timeline" cta-text="Contact us">
             <div class="block__content post-block__content post-block__content_medium">
-                <div class="landing-timeline" animation="fade-up" animation-delay=".15">
+                <div class="landing-timeline" animation="fade-up" animation-delay=".15" cta-text="Contact us">
                     <div class="landing-timeline__headers">
                         <button class="landing-timeline__header-item landing-timeline__header-item_active">Consulting
                         </button>
@@ -507,7 +525,7 @@ support of customers</span>
                             and securely with no interruptions.
                         </div>
                     </div>
-                </div>
+                </div >
                 <button class="block__button button arrow-link arrow-link arrow-link_fixed-opacity space space_hmt"
                         id="cta-timeline" data-popup="#form" href="#form" animation="fade-up"
                         animation-delay=".15"><span

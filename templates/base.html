@@ -24,8 +24,8 @@
     <meta name="twitter:card" content="summary_large_image"/>
 
     <meta name="description" content="Service--Likhte hobe">
-    <meta name="keywords" content="software,farm,software farm">
-    <meta name="author" content="Abdullah Al Masum">
+    <meta name="keywords" content="software,farm,software farm,aztech,valley,tech,it,app,job,techie">
+    <meta name="author" content="abdullahmasum6035@gmail.com">
     <!--for icon-->
     {% block head_favicon %}
         <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}">
@@ -96,7 +96,7 @@
         {% endblock head_css_page %}
     {% endblock head_css %}
     <!--for title-->
-    <title>{% block title %}Aztech{% endblock title %}</title>
+    <title>{% block title %}AzTech Valley{% endblock title %}</title>
 </head>
 
 {% block page_loader %}
@@ -111,13 +111,13 @@
 
 {% block header_nav_bar %}
     <nav class="navigation" style="display: none;text-decoration-color: white;">
-        <a class="navigation__logo" href="https://itrexgroup.com">
+        <a class="navigation__logo" href="{% url 'contact' %}">
             Aztech
         </a>
         <button class="navigation__burger"><span></span><span></span></button>
         <div class="navigation__items">
             <div class="navigation__header">
-                <a class="navigation__logo" href="https://itrexgroup.com">
+                <a class="navigation__logo" href="{% url 'contact' %}">
                     Aztech
                 </a>
                 <button class="navigation__back" style="display: none">
@@ -125,6 +125,7 @@
                 </button>
             </div>
             <div class="navigation__breadcrumbs"></div>
+            <a class="navigation__item" href="{% url 'home' %}" target="">Home</a>
             <a class="navigation__item" href="{% url 'about' %}" target="">About</a>
             <div class="navigation__item navigation__item_submenu">
                 <a href="" target="">Services</a>
@@ -144,100 +145,30 @@
                                     Automation</a>
                             </div>
                         </div>
-                        <a class="navigation__link" href="{% url 'sAugReality' %}" target="">Augmented Reality</a>
-                        <a class="navigation__link" href="{% url 'sCloud' %}" target="">Cloud</a>
-                        <a class="navigation__link" href="{% url 'sDataConsulting' %}" target="">Data Consultation</a>
-{#                        <div class="navigation__link navigation__link_list">#}
-                            {#                            <div class="navigation__open-sublist"></div>#}
-                            {#                            <div class="navigation__list"><a class="navigation__link"#}
-                            {#                                                             href="https://itrexgroup.com/services/cloud-migration/"#}
-                            {#                                                             target="">Cloud Migration</a></div>#}
-{#                        </div>#}
-{#                        <div class="navigation__link navigation__link_list">#}
-{#                            <a href="https://itrexgroup.com/services/big-data/" target="">Data Services &#}
-{#                                Solutions</a>#}
-{#                            <div class="navigation__open-sublist"></div>#}
-{#                            <div class="navigation__list"><a class="navigation__link"#}
-{#                                                             href="https://itrexgroup.com/services/data-management/"#}
-{#                                                             target="">Data management</a><a#}
-{#                                    class="navigation__link"#}
-{#                                    href="https://itrexgroup.com/services/business-intelligence/"#}
-{#                                    target="">Business#}
-{#                                Intelligence</a><a class="navigation__link"#}
-{#                                                   href="https://itrexgroup.com/services/enterprise-data-platforms/"#}
-{#                                                   target="">Enterprise Data Platform</a><a class="navigation__link"#}
-{#                                                                                            href="https://itrexgroup.com/services/data-science-consulting/"#}
-{#                                                                                            target="">Data#}
-{#                                Science</a><a#}
-{#                                    class="navigation__link" href="https://itrexgroup.com/services/data-analytics/"#}
-{#                                    target="">Data Analytics</a></div>#}
-{#                        </div>#}
-                        <div class="navigation__link navigation__link_list">
-                            <a href="{% url 'sTeam' %}" target="">Dedicated Team</a>
-                            <div class="navigation__open-sublist"></div>
-                            <div class="navigation__list">
-                                <a class="navigation__link" href="{% url 'sTeamCto' %}" target="">Cost Optimization</a>
-                            </div>
-                        </div>
-                        <a class="navigation__link" href="{% url 'sDevops' %}" target="">DevOps</a>
+{#                        <a class="navigation__link" href="{% url 'sAugReality' %}" target="">Augmented Reality</a>#}
+{#                        <a class="navigation__link" href="{% url 'sCloud' %}" target="">Cloud</a>#}
+{#                        <a class="navigation__link" href="{% url 'sDataConsulting' %}" target="">Data Consultation</a>#}
+{#                        <a class="navigation__link" href="{% url 'sDevops' %}" target="">DevOps</a>#}
+                        <a class="navigation__link" href="{% url 'sTeam' %}" target="">Dedicated Team</a>
                         <a class="navigation__link" href="{% url 'sAppDevelopment' %}" target="">Apps Development</a>
                         <a class="navigation__link" href="{% url 'sDigiTransform' %}" target="">Digital Transformation</a>
-{#                        <div class="navigation__link navigation__link_list">#}
-{#                            <a href="{% url 'sDigiTransform' %}" target="">Digital Transformation</a>#}
-{#                            <div class="navigation__open-sublist"></div>#}
-{#                            <div class="navigation__list">#}
-{#                                <a class="navigation__link" href="{% url 'sTechnologyConsulting' %}" target="">Legacy software modernization</a>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                        <div class="navigation__link navigation__link_list">#}
-{#                            <a href="https://itrexgroup.com/services/mobile-app-development/" target="">Mobile#}
-{#                                Development</a>#}
-{#                            <div class="navigation__open-sublist"></div>#}
-{#                            <div class="navigation__list"><a class="navigation__link"#}
-{#                                                             href="https://itrexgroup.com/services/ios-app-development/"#}
-{#                                                             target="">iOS</a><a class="navigation__link"#}
-{#                                                                                 href="https://itrexgroup.com/services/android-app-development/"#}
-{#                                                                                 target="">Android</a><a#}
-{#                                    class="navigation__link"#}
-{#                                    href="https://itrexgroup.com/services/cross-platfrom-app-development/"#}
-{#                                    target="">Cross-platform</a>#}
-{#                            </div>#}
-{#                        </div>#}
                         <a class="navigation__link" href="{% url 'sTechnologyConsulting' %}" target="">Technology Consulting</a>
                         <a class="navigation__link" href="{% url 'sSoftwareTesting' %}" target="">Software Testing</a>
-                        <div class="navigation__link navigation__link_list">
-                            <div class="navigation__open-sublist"></div>
-                            <div class="navigation__list"><a class="navigation__link"
-                                                             href="https://itrexgroup.com/services/mobile-testing/"
-                                                             target="">Mobile Testing</a><a class="navigation__link"
-                                                                                            href="https://itrexgroup.com/services/web-testing/"
-                                                                                            target="">Web
-                                Testing</a><a
-                                    class="navigation__link"
-                                    href="https://itrexgroup.com/services/automated-testing/"
-                                    target="">Automation Testing</a><a class="navigation__link"
-                                                                       href="https://itrexgroup.com/services/manual-testing/"
-                                                                       target="">Manual Testing</a></div>
-                        </div>
+                        <a class="navigation__link" href="{% url 'sTeamCto' %}" target="">Cost Optimization</a>
                     </div>
                 </div>
             </div>
             <div class="navigation__item navigation__item_submenu">
-                <a href="" target="">Industries</a>
+                <a href="" target="">Programme</a>
                 <div class="navigation__open-submenu"></div>
                 <div class="navigation__submenu">
                     <div class="navigation__list">
+                        <a class="navigation__link" href="{% url 'eCommerce' %}" target="">e-Commerce</a>
                         <a class="navigation__link" href="{% url 'eLearning' %}" target="">e-Learning</a>
-                            <a class="navigation__link" href="{% url 'eHealthSoft' %}" target="">Biotech Software</a>
-                            <a class="navigation__link" href="{% url 'eHealthApp' %}" target="">e-HealthCare</a>
-{#                        <div class="navigation__link navigation__link_list">#}
-{#                            <div class="navigation__open-sublist"></div>#}
-{#                            <div class="navigation__list">#}
-{#                                <a class="navigation__link" href="{% url 'eHealthApp' %}" target="">HealthCare</a></div>#}
-{#                        </div>#}
-                        <a class="navigation__link" href="{% url 'eLogistics' %}" target="">Logistics & Transportation</a>
-                        <a class="navigation__link" href="{% url 'eCommerce' %}" target="">Ecommerce</a>
+{#                            <a class="navigation__link" href="{% url 'eHealthSoft' %}" target="">Biotech Software</a>#}
+                        <a class="navigation__link" href="{% url 'eHealthApp' %}" target="">e-HealthCare</a>
                         <a class="navigation__link" href="{% url 'eRetail' %}" target="">e-Retail</a>
+                        <a class="navigation__link" href="{% url 'eLogistics' %}" target="">Logistics & Transportation</a>
                     </div>
                 </div>
             </div>

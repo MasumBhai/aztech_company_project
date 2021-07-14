@@ -3,9 +3,125 @@
 {% block body_tag %}
     <body class="home page-template-default page">
 {% endblock body_tag %}
-{#{% block header_nav_bar %}#}
-{#{{ block.super }}#}
-{#{% endblock header_nav_bar %}#}
+
+{% block header_nav_bar %}
+    <nav class="navigation" style="display: none;text-decoration-color: white;">
+        <a class="navigation__logo" href="{% url 'contact' %}">
+            Aztech
+        </a>
+        <button class="navigation__burger"><span></span><span></span></button>
+        <div class="navigation__items">
+            <div class="navigation__header">
+                <a class="navigation__logo" href="{% url 'contact' %}">
+                    Aztech
+                </a>
+                <button class="navigation__back" style="display: none">
+                    <a class="icon icon_white">Aztech</a>
+                </button>
+            </div>
+            <div class="navigation__breadcrumbs"></div>
+            <a class="navigation__item" href="{% url 'about' %}" target="">About</a>
+            <div class="navigation__item navigation__item_submenu">
+                <a href="" target="">Services</a>
+                <div class="navigation__open-submenu"></div>
+                <div class="navigation__submenu">
+                    <div class="navigation__list">
+                        <div class="navigation__link navigation__link_list">
+                            <a href="{% url 'sAI' %}" target="">Artificial Intelligence</a>
+                            <div class="navigation__open-sublist"></div>
+                            <div class="navigation__list">
+                                <a class="navigation__link" href="{% url 'sAI_retail' %}" target="">AI for Retail</a>
+                                <a class="navigation__link" href="{% url 'sAI_health' %}" target="">AI for
+                                    Healthcare</a>
+                                <a class="navigation__link" href="{% url 'sAI_education' %}" target="">AI for
+                                    Education</a>
+                                <a class="navigation__link" href="{% url 'sAI_automation' %}" target="">AI for
+                                    Automation</a>
+                            </div>
+                        </div>
+{#                        <a class="navigation__link" href="{% url 'sAugReality' %}" target="">Augmented Reality</a>#}
+{#                        <a class="navigation__link" href="{% url 'sCloud' %}" target="">Cloud</a>#}
+{#                        <a class="navigation__link" href="{% url 'sDataConsulting' %}" target="">Data Consultation</a>#}
+{#                        <a class="navigation__link" href="{% url 'sDevops' %}" target="">DevOps</a>#}
+                        <a class="navigation__link" href="{% url 'sTeam' %}" target="">Dedicated Team</a>
+                        <a class="navigation__link" href="{% url 'sAppDevelopment' %}" target="">Apps Development</a>
+                        <a class="navigation__link" href="{% url 'sDigiTransform' %}" target="">Digital Transformation</a>
+                        <a class="navigation__link" href="{% url 'sTechnologyConsulting' %}" target="">Technology Consulting</a>
+                        <a class="navigation__link" href="{% url 'sSoftwareTesting' %}" target="">Software Testing</a>
+                        <a class="navigation__link" href="{% url 'sTeamCto' %}" target="">Cost Optimization</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation__item navigation__item_submenu">
+                <a href="" target="">Programme</a>
+                <div class="navigation__open-submenu"></div>
+                <div class="navigation__submenu">
+                    <div class="navigation__list">
+                        <a class="navigation__link" href="{% url 'eCommerce' %}" target="">e-Commerce</a>
+                        <a class="navigation__link" href="{% url 'eLearning' %}" target="">e-Learning</a>
+{#                            <a class="navigation__link" href="{% url 'eHealthSoft' %}" target="">Biotech Software</a>#}
+                        <a class="navigation__link" href="{% url 'eHealthApp' %}" target="">e-HealthCare</a>
+                        <a class="navigation__link" href="{% url 'eRetail' %}" target="">e-Retail</a>
+                        <a class="navigation__link" href="{% url 'eLogistics' %}" target="">Logistics & Transportation</a>
+                    </div>
+                </div>
+            </div>
+            <a class="navigation__item" href="{% url 'challenges' %}" target="">Challenges</a>
+{#            <a class="navigation__item" href="" target="">Thinking</a>#}
+            <a class="navigation__item" href="{% url 'job_portal' %}" target="">Careers</a>
+            <a class="navigation__item" href="{% url 'contact' %}" target="">Contact Us</a>
+            <div class="navigation__footer">
+                <div class="navigation__socials">
+                    <a class="social" href="" target="_blank" id="menu-social-1">
+                        <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/linkedin.svg"/>
+                    </a>
+                    <a class="social" href="" target="_blank" id="menu-social-2">
+                        <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/facebook.svg"/>
+                    </a>
+                    <a class="social" href="" target="_blank" id="menu-social-3">
+                        <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/instagram.svg"/>
+                    </a>
+                    <a class="social" href=""
+                       target="_blank"
+                       id="menu-social-4">
+                        <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/youtube.svg"/>
+                    </a>
+                </div>
+                <div class="navigation__contacts">
+                    <a href="mailto:hello@itrexgroup.com" target="" id="menu-contacts-1">hello@Aztech.com</a>
+                    <a href="tel:+1 213 436 7785" target="" id="menu-contacts-2">+880 1712-500637</a>
+                </div>
+                <div class="navigation__pages">
+                    <a class="arrow-link" href="https://itrexgroup.com/contact-us/" target="" id="menu-page-1">
+                        <span class="arrow-link__text">Contact us</span>
+                        <span class="arrow-link__arrow"><span
+                                class="arrow-link__arrow_static arrow-link__arrow_blue">→</span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+{% endblock header_nav_bar %}
+
+
+{% block navbar_style %}
+    <style>
+.navigation > .navigation__logo,
+.navigation__item,
+.navigation__burger {
+color: #000000;
+}
+.navigation__item_active {
+color: #445aec;
+}
+@media only screen and (min-width: 961px) {
+.navigation__item:hover {
+color: #445aec;
+}
+}
+</style>
+{% endblock navbar_style %}
+
 {% block sidebar_nav_bar %}
     <div class="scroll-bar"></div>
 {% endblock sidebar_nav_bar %}
@@ -20,9 +136,9 @@
                             <div class="slider__info" block-max-height="block-max-height">
                                 <h1 class="slider__title">Hungry
                                     for challenges</h1>
-                                <p class="slider__text">We are a software development and consulting company that
-                                    creates
-                                    and transforms products and enterprises to drive growth.</p>
+                                <p class="slider__text">
+                                    We are a software development and consulting company that creates and transforms products and enterprises  <span class="mark mark_green">to drive growth</span>.
+                                </p>
                             </div>
                             <div class="slider__picture">
                                 <picture>
@@ -41,9 +157,8 @@
                             <div class="slider__info" block-max-height="block-max-height">
                                 <h2 class="slider__title">Hungry
                                     for impact</h2>
-                                <p class="slider__text">We think in terms of value, not technology. We deep dive into
-                                    your
-                                    business to deliver innovations tailored to your business needs.</p>
+                                <p class="slider__text">
+                                    We think in terms of value, not technology.  <span class="mark mark_green">We deep dive</span>  into your business to deliver innovations tailored to your business needs.</p>
                             </div>
                             <div class="slider__picture">
                                 <picture>
@@ -62,8 +177,8 @@
                             <div class="slider__info" block-max-height="block-max-height">
                                 <h2 class="slider__title">Hungry
                                     for more</h2>
-                                <p class="slider__text">Using a tech-agnostic approach, we provide the right blend of
-                                    software and hardware solutions that let you capture the full value of tech.</p>
+                                <p class="slider__text">
+                                    Using a tech-agnostic approach,  <span class="mark mark_green">We provide</span> the right blend of software and hardware solutions that let you capture the full value of tech.</p>
                             </div>
                             <div class="slider__picture">
                                 <picture>
@@ -85,7 +200,7 @@
                 </div>
             </div>
         </div>
-        <div class="block" id="clients" cta-text="Get a free quote">
+        <div class="block" id="clients" cta-text="Get your optimum solution">
             <div class="block__content">
                 <h2 class="block__title" animation="fade-up" animation-delay=".15">Hungry for every
                     client’s success</h2>
@@ -235,7 +350,7 @@
                 </div>
             </div>
         </div>
-        <div class="block block_slide-min block_relative" id="we-do" cta-text="Get a free quote" tabs-block>
+        <div class="block block_slide-min block_relative" id="we-do" cta-text="Get your optimum solution" tabs-block>
             <div class="block__content" auto-size-padding="we-do">
                 <h2 class="block__title" animation="fade-up" animation-delay=".15" auto-size="we-do">Challenges we
                     are hungry for</h2>
@@ -287,9 +402,9 @@
                                     <div class="tabs__tag">Mobile Apps</div>
                                     <div class="tabs__tag">Web Apps</div>
                                     <div class="tabs__tag">Cloud Apps</div>
-                                    <div class="tabs__tag">Enterprise Software Development</div>
-                                    <div class="tabs__tag">Data Platforms</div>
                                     <div class="tabs__tag">Embedded Software</div>
+                                    <div class="tabs__tag">Data Platforms</div>
+                                    <div class="tabs__tag">Enterprise Software Development</div>
                                 </div>
                             </div>
                         </div>
@@ -298,42 +413,42 @@
                         </h3>
                         <div class="tabs__item" style="visibility: hidden; position: absolute">
                             <div class="tabs__content">
-                                <div class="tabs__text">We make sure you are not adopting a technology just because it’s
-                                    fancy. Our goal is to turn innovations into a market-ready product to help you
-                                    achieve
-                                    operational excellence, disrupt the competition and maximize profits<img
-                                            class="tabs__text-logo"
-                                            src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-logo.svg"
-                                            alt="ITRex" role="presentation"/></div>
+                                <div class="tabs__text">
+                                    We make sure you are not adopting a technology just because it’s fancy. Our goal is
+                                    to turn innovations into a market-ready product to help you achieve operational
+                                    excellence, disrupt the competition and maximize profits
+                                    <img class="tabs__text-logo"
+                                         src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-logo.svg"
+                                         alt="ITRex" role="presentation"/></div>
                                 <div class="tabs__tags">
                                     <div class="tabs__tag">Artificial Intelligence</div>
-                                    <div class="tabs__tag">Extended Reality: AR, VR, MR</div>
+                                    <div class="tabs__tag">Extended Reality: AR, VR</div>
                                     <div class="tabs__tag">IoT</div>
-                                    <div class="tabs__tag">Robotic Process Automation</div>
+                                    <div class="tabs__tag">Automation</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tabs__item" style="visibility: hidden; position: absolute">
                         <div class="tabs__content">
-                            <div class="tabs__text">Digital transformation may feel like an incredible challenge that
-                                brings
-                                risks and uncertainties. And it actually is. We believe in starting smart and simple to
-                                translate complexity into an easily digestible roadmap for change. We help you pivot to
-                                new
-                                technology step-by-step while getting most out of your legacy systems<img
-                                        class="tabs__text-logo"
-                                        src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-logo.svg"
-                                        alt="ITRex" role="presentation"/></div>
+                            <div class="tabs__text">
+                                Digital transformation may feel like an incredible challenge that brings risks and
+                                uncertainties. And it actually is. We believe in starting smart and simple to translate
+                                complexity into an easily digestible roadmap for change. We help you pivot to new
+                                technology step-by-step while getting most out of your legacy systems
+                                <img class="tabs__text-logo"
+                                     src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-logo.svg"
+                                     alt="ITRex" role="presentation"/>
+                            </div>
                             <div class="tabs__tags">
                                 <div class="tabs__tag">Digital Transformation Strategy</div>
-                                <div class="tabs__tag">Digital Transformation Implementation</div>
+                                {#                                <div class="tabs__tag">Digital Transformation Implementation</div>#}
+                                <div class="tabs__tag">Digital Workforce</div>
                                 <div class="tabs__tag">Application Modernization</div>
                                 <div class="tabs__tag">Software Modernization</div>
-                                <div class="tabs__tag">Digital Product Deleopment</div>
-                                <div class="tabs__tag">Cloud Migration</div>
                                 <div class="tabs__tag">Big Data &amp; Analytics</div>
-                                <div class="tabs__tag">Digital Workforce</div>
+                                <div class="tabs__tag">Digital Product Deleopment</div>
+                                {#                                <div class="tabs__tag">Cloud Migration</div>#}
                             </div>
                         </div>
                     </div>
@@ -343,41 +458,43 @@
                                 we do
                                 it all, from product ideation and concept development to system rollout and scale-up. We
                                 envision, prototype, create and test products and solutions to find new competitive
-                                advantage for your business<img class="tabs__text-logo"
-                                                                src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-logo.svg"
-                                                                alt="ITRex" role="presentation"/></div>
+                                advantage for your business
+                                <img class="tabs__text-logo"
+                                     src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-logo.svg"
+                                     alt="ITRex" role="presentation"/>
+                            </div>
                             <div class="tabs__tags">
                                 <div class="tabs__tag">Mobile Apps</div>
                                 <div class="tabs__tag">Web Apps</div>
                                 <div class="tabs__tag">Cloud Apps</div>
-                                <div class="tabs__tag">Enterprise Software Development</div>
-                                <div class="tabs__tag">Data Platforms</div>
                                 <div class="tabs__tag">Embedded Software</div>
+                                <div class="tabs__tag">Data Platforms</div>
+                                <div class="tabs__tag">Enterprise Software Development</div>
                             </div>
                         </div>
                     </div>
                     <div class="tabs__item" style="visibility: hidden; position: absolute">
                         <div class="tabs__content">
-                            <div class="tabs__text">We make sure you are not adopting a technology just because it’s
-                                fancy.
-                                Our goal is to turn innovations into a market-ready product to help you achieve
-                                operational
-                                excellence, disrupt the competition and maximize profits<img class="tabs__text-logo"
-                                                                                             src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-logo.svg"
-                                                                                             alt="ITRex"
-                                                                                             role="presentation"/></div>
+                            <div class="tabs__text">
+                                We make sure you are not adopting a technology just because it’s fancy. Our goal is to
+                                turn innovations into a market-ready product to help you achieve operational excellence,
+                                disrupt the competition and maximize profits
+                                <img class="tabs__text-logo"
+                                     src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-logo.svg"
+                                     alt="ITRex"
+                                     role="presentation"/></div>
                             <div class="tabs__tags">
                                 <div class="tabs__tag">Artificial Intelligence</div>
-                                <div class="tabs__tag">Extended Reality: AR, VR, MR</div>
+                                <div class="tabs__tag">Extended Reality: AR, VR</div>
                                 <div class="tabs__tag">IoT</div>
-                                <div class="tabs__tag">Robotic Process Automation</div>
+                                <div class="tabs__tag">Automation</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="block block_z-index-up block_relative" id="work" cta-text="Get a free quote">
+        <div class="block block_z-index-up block_relative" id="work" cta-text="Get your optimum solution">
             <div class="block__content">
                 <div class="post-title">
                     <h2 class="block__title post-title__title" animation="fade-up" animation-delay=".15">Latest
@@ -530,234 +647,6 @@
                                      alt="logistics software development">
                             </picture>
                         </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="block block_z-index-up block_relative" id="thinking" cta-text="Get a free quote">
-            <div class="block__content">
-                <div class="post-title">
-                    <h2 class="block__title post-title__title" animation="fade-up" animation-delay=".15">Latest
-                        thinking</h2>
-                </div>
-            </div>
-            <div class="block__scroll block__scroll_tablet" scroll-destination="posts" animation="fade-up"
-                 animation-delay=".15">
-                <div class="posts-list posts-list_slider">
-                    <svg style="position: absolute;pointer-events: none" width="0" height="0">
-                        <defs>
-                            <clipPath id="thinking-mask" clipPathUnits="objectBoundingBox">
-                                <rect x="0" y="0" width="1" height="1"></rect>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <div class="post post_slider" style="position: relative;visibility: visible">
-                        <div class="post__info">
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/blog/ai-types-subsets-use-cases/"><span
-                                    class="arrow-link__text">Understanding AI types and subsets — and their applications in </span><span
-                                    style="white-space: nowrap">business<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/blog/ai-types-subsets-use-cases/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/augmented-analytics-1440x500.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/augmented-analytics-1024x356.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/augmented-analytics-720x250.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/augmented-analytics-512x178.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/augmented-analytics-scaled.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/06/augmented-analytics-scaled.jpg"
-                                     alt="augmented analytics provider">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/blog/waterfall-vs-agile-how-to-choose-the-right-approach/"><span
-                                    class="arrow-link__text">Waterfall vs. Agile: how to choose the right </span><span
-                                    style="white-space: nowrap">approach<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/blog/waterfall-vs-agile-how-to-choose-the-right-approach/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/pierre-chatel-innocenti-uZa4XqZM5G0-unsplash-1440x960.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/pierre-chatel-innocenti-uZa4XqZM5G0-unsplash-1024x683.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/pierre-chatel-innocenti-uZa4XqZM5G0-unsplash-720x480.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/pierre-chatel-innocenti-uZa4XqZM5G0-unsplash-512x341.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/pierre-chatel-innocenti-uZa4XqZM5G0-unsplash-scaled.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/09/pierre-chatel-innocenti-uZa4XqZM5G0-unsplash-scaled.jpg"
-                                     alt="itrex background image">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/blog/artificial-intelligence-challenges/"><span
-                                    class="arrow-link__text">Top 5 Artificial Intelligence implementation challenges and how to overcome </span><span
-                                    style="white-space: nowrap">them<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/blog/artificial-intelligence-challenges/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/Migration-1440x500.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/Migration-1024x356.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/Migration-720x250.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/Migration-512x178.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/Migration.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/09/Migration.jpg"
-                                     alt="abstract technology background">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/blog/ai-powered-augmented-analytics/"><span
-                                    class="arrow-link__text">AI-powered augmented analytics: capabilities and benefits for </span><span
-                                    style="white-space: nowrap">business<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/blog/ai-powered-augmented-analytics/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/AI-powered-augmented-analytics-1440x1171.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/AI-powered-augmented-analytics-1024x832.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/AI-powered-augmented-analytics-720x585.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/AI-powered-augmented-analytics-512x416.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/AI-powered-augmented-analytics-scaled.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/08/AI-powered-augmented-analytics-scaled.jpg"
-                                     alt="AI-powered-augmented-analytics">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/blog/your-unstructured-data/"><span
-                                    class="arrow-link__text">What is unstructured data and how your business can benefit from </span><span
-                                    style="white-space: nowrap">it<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/blog/your-unstructured-data/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/daria-nepriakhina-i5iIhHSAtp4-unsplash-1440x960.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/daria-nepriakhina-i5iIhHSAtp4-unsplash-1024x683.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/daria-nepriakhina-i5iIhHSAtp4-unsplash-720x480.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/daria-nepriakhina-i5iIhHSAtp4-unsplash-512x341.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/daria-nepriakhina-i5iIhHSAtp4-unsplash-scaled.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/08/daria-nepriakhina-i5iIhHSAtp4-unsplash-scaled.jpg"
-                                     alt="unstructured data background">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/blog/self-service-bi/"><span class="arrow-link__text">What is Self-service BI and how it can benefit your </span><span
-                                    style="white-space: nowrap">business?<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy" href="https://itrexgroup.com/blog/self-service-bi/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/lukas-blazek-mcSDtbWXUZU-unsplash-1440x954.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/lukas-blazek-mcSDtbWXUZU-unsplash-1024x678.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/lukas-blazek-mcSDtbWXUZU-unsplash-720x477.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/lukas-blazek-mcSDtbWXUZU-unsplash-512x339.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/08/lukas-blazek-mcSDtbWXUZU-unsplash.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/08/lukas-blazek-mcSDtbWXUZU-unsplash.jpg"
-                                     alt="What is Self-service BI and how it can benefit your business?">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/blog/automation-testing-benefits-best-practices/"><span
-                                    class="arrow-link__text">Automation testing benefits and best </span><span
-                                    style="white-space: nowrap">practices<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/blog/automation-testing-benefits-best-practices/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2021/01/hybrid-cloud-preview-1-1440x1029.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2021/01/hybrid-cloud-preview-1-1024x731.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2021/01/hybrid-cloud-preview-1-720x514.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2021/01/hybrid-cloud-preview-1-512x366.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2021/01/hybrid-cloud-preview-1.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2021/01/hybrid-cloud-preview-1.jpg"
-                                     alt="cloud solutions">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="posts-list__controlls">
-                        <div class="posts-list__ui">
-                            <div class="posts-list__button posts-list__button_left" id="post-prev-item">
-                                <svg class="icon">
-                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
-                                </svg>
-                            </div>
-                            <div class="posts-list__button posts-list__button_right" id="post-next-item">
-                                <svg class="icon">
-                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
-                                </svg>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

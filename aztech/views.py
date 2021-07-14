@@ -44,33 +44,33 @@ def contact(request):
 def eCommerce(request):
     context = {
     }
-    return render(request, 'industries/eCommerce.html', context=context)
+    return render(request, 'programme/eCommerce.html', context=context)
 
 def eLearning(request):
     context = {
     }
-    return render(request, 'industries/eLearning.html', context=context)
+    return render(request, 'programme/eLearning.html', context=context)
 
 
 def eHealthSoftware(request):
     context = {
     }
-    return render(request, 'industries/eHealthSoft.html', context=context)
+    return render(request, 'programme/eHealthSoft.html', context=context)
 
 def eHealthApp(request):
     context = {
     }
-    return render(request, 'industries/eHealthApp.html', context=context)
+    return render(request, 'programme/eHealthApp.html', context=context)
 
 def eLogistics(request):
     context = {
     }
-    return render(request, 'industries/eLogistics.html', context=context)
+    return render(request, 'programme/eLogistics.html', context=context)
 
 def eRetail(request):
     context = {
     }
-    return render(request, 'industries/eRetailSoft.html', context=context)
+    return render(request, 'programme/eRetailSoft.html', context=context)
 
 def sCloud(request):
     context = {
