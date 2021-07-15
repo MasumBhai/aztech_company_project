@@ -22,7 +22,8 @@ urlpatterns = [
     path('home/', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
-    path('challenges/', views.challenges, name='challenges'),
+    path('blog/', views.blog, name='challenges'),
+    path('<slug:slug>/', views.BlogDetails.as_view(), name='blog-details'),
     path('career/', views.job_portal, name='job_portal'),
 
     path('programme/e-commerce/', views.eCommerce, name='eCommerce'),

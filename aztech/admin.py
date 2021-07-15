@@ -62,3 +62,16 @@ class ClientDetails(admin.ModelAdmin):
     list_per_page = 20
     paginator = Paginator
     pass
+
+
+@admin.register(BlogPost)
+class PostAdmin(admin.ModelAdmin):
+    list_display = ('title', 'slug','author', 'status', 'created_on','updated_on','image_tag')
+    list_filter = ("status",)
+    search_fields = ['title', 'content']
+    prepopulated_fields = {'slug': ('title',)}
+    fields = ['postImage',('author', 'status'),('created_on','updated_on'),'slug','title','content',]
+    list_per_page = 10
+    paginator = Paginator
+    pass
+

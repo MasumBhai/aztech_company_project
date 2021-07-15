@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib import messages
+from django.views import generic
 from django.views.generic import ListView
 from django.conf import settings
 from django.core.mail import send_mail
@@ -20,15 +21,18 @@ def home(request):
     return render(request, 'index.html', context=context)
 
 
-def challenges(request):
+def blog(request):
+    post_List = BlogPost.objects.filter(status=1).order_by('-created_on')
     context = {
+        'post_list': post_List,
     }
-    return render(request, 'challenges.html', context=context)
+    return render(request, 'Our_Blog.html', context=context)
 
 
-# class About(ListView):
-#     model = about
-#     template_name = 'index.html'
+class BlogDetails(generic.DetailView):
+    model = BlogPost
+    template_name = 'Blog_Details.html'
+
 
 def about(request):
     aboutObj = AboutPage.objects.get(about_id=1)
@@ -79,6 +83,7 @@ def job_portal(request):
     context = {
     }
     return render(request, 'job_portal.html', context=context)
+
 
 def contact(request):
     baseEverywhere(request=request)
@@ -210,7 +215,7 @@ def sDataConsulting(request):
 def sSoftwareTesting(request):
     client_details = OurClients.objects.all()
     context = {
-        'clientInfo':client_details,
+        'clientInfo': client_details,
     }
     return render(request, 'sarvices/softwareTesting.html', context=context)
 

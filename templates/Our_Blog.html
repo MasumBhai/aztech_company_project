@@ -12,6 +12,25 @@
                 <div class="works-header"><h1 class="works-header__title">Our latest challenges</h1></div>
             </div>
         </div>
+
+        {% for post in post_list %}
+            <div class="post-preview">
+                <a href="{% url 'blog-details' post.slug %}">
+                    <h2 class="post-title">
+                        {{ post.title }}
+                    </h2>
+                    <h3 class="post-subtitle">
+                        {{ post.content|slice:":160" }}
+                    </h3>
+                </a>
+                <p class="post-meta">Posted by {{ post.author }} | {{ post.created_on }} </p>
+                <img class="img-fluid" src="{{ post.postImage.url }}" alt="{{ post.title }}"  style="width: 640px;height: 320px"/>
+            </div>
+            <hr>
+        {% endfor %}
+{#        <div class="clearfix">#}
+{#            <a class="btn btn-primary float-right" href="#">Older Posts →</a>#}
+{#        </div>#}
     </div>
 {% endblock main_content %}
 {% block footer_javascript_page %}

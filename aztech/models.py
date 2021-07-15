@@ -1,6 +1,8 @@
 from django.db import models
+from django.utils import timezone
 from phone_field import PhoneField
 from django.utils.safestring import mark_safe
+from django.utils.text import slugify
 
 
 # Create your models here.
@@ -99,3 +101,34 @@ class OurClients(models.Model):
 
     def __str__(self):
         return "%s" % (self.client_id)
+
+STATUS = (
+    (0,"Draft"),
+    (1,"Publish")
+)
+class BlogPost(models.Model):
+    title = models.CharField(max_length=256,help_text="Blog Title Info", blank=True, null=True)
+    slug = models.SlugField(max_length=256, blank=True, null=True)
+    author = models.EmailField(max_length=120,help_text="Author is email address holder", blank=True, null=True)
+    updated_on = models.DateTimeField(help_text="Blog post modified Time", blank=True, null=True)
+    content = models.TextField(help_text="Blog Content", blank=True, null=True)
+    created_on = models.DateTimeField(default=timezone.now, blank=True, null=True,help_text="Blog post created time")
+    status = models.IntegerField(choices=STATUS, default=0)
+    postImage = models.ImageField(verbose_name='Post-related-image',upload_to='blog-image/%Y/%m/%d/', blank=True, null=True)
+
+    def image_tag(self):
+        return mark_safe("<img src='/../../media/%s' width='150' height='150' />" % (self.postImage))
+
+    image_tag.allow_tags = True
+
+    class Meta:
+        verbose_name = 'BlogPost'
+        verbose_name_plural = 'BlogPost'
+        ordering = ['-created_on']
+        db_table = "blogpost"
+
+    def __str__(self):
+        return self.title
+
+
+
