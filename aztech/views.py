@@ -80,7 +80,6 @@ def job_portal(request):
     }
     return render(request, 'job_portal.html', context=context)
 
-
 def contact(request):
     baseEverywhere(request=request)
     context = {
@@ -209,7 +208,9 @@ def sDataConsulting(request):
 
 
 def sSoftwareTesting(request):
+    client_details = OurClients.objects.all()
     context = {
+        'clientInfo':client_details,
     }
     return render(request, 'sarvices/softwareTesting.html', context=context)
 

@@ -26,7 +26,7 @@ class UserContact(admin.ModelAdmin):
     list_display = ['contact_mail', 'contact_time', 'contact_name', 'contact_phone', 'contact_msg']
     list_filter = ['contact_name']
     list_display_links = ['contact_mail']
-    readonly_fields = ('contact_name', 'contact_mail', 'contact_phone', 'contact_time','contact_msg')
+    readonly_fields = ('contact_name', 'contact_mail', 'contact_phone', 'contact_time', 'contact_msg')
     list_per_page = 20
     paginator = Paginator
     pass
@@ -42,9 +42,23 @@ class UserContact(admin.ModelAdmin):
     fields = ['participant_id', 'participant_name', ('participant_mail', 'participant_phone'),
               ('participant_linkedIn', 'participant_github'), ('participant_resume', 'participant_cover_letter'),
               'participant_msg']
-    readonly_fields = ['participant_id','participant_mail', 'participant_time', 'participant_name', 'participant_phone',
+    readonly_fields = ['participant_id', 'participant_mail', 'participant_time', 'participant_name',
+                       'participant_phone',
                        'participant_linkedIn', 'participant_github', 'participant_msg', 'participant_resume',
                        'participant_cover_letter']
+    list_per_page = 20
+    paginator = Paginator
+    pass
+
+
+@admin.register(OurClients)
+class ClientDetails(admin.ModelAdmin):
+    list_display = ['client_id', 'client_mail', 'client_name', 'client_project_title', 'client_project_link',
+                    'client_phone', 'client_address', 'client_agreement_date', 'client_payment','image_tag',]
+    list_filter = ['client_payment']
+    list_display_links = ['client_mail']
+    fields = ['client_logo',('client_name', 'client_address'), ('client_mail', 'client_phone'),
+              ('client_agreement_date', 'client_payment'), ('client_project_title', 'client_project_link'), ]
     list_per_page = 20
     paginator = Paginator
     pass

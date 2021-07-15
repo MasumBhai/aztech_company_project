@@ -3,8 +3,6 @@ N
 aztech_company_project/urls.py,a\9\a941877cbc3613d7e78755ff53dee58452dff112
 >
 aztech/apps.py,7\a\7a50718fe548e4cea7d7bc61be43e37662488460
-L
-aztech/context_processors.py,a\6\a6cbff20567695a6f114d32acfdb0b8f123729a9
 b
 2templates/sarvices/AI/artificial_intelligence.html,f\f\ff3597edcb7b8c9d8edddb77a46ac4b357bf6f53
 X
@@ -15,8 +13,6 @@ X
 (templates/sarvices/augmentedReality.html,3\5\354e9b7843ec4832a301c314d18d9b8a9baea134
 N
 templates/sarvices/devops.html,9\4\94a1423e32df3092c72becf812fa2bae36e03cc4
-I
-templates/challenges.html,3\5\35aa94083cb888f13b7b5b29f8f7b107b3eda9df
 X
 (templates/sarvices/team/cto_service.html,e\7\e7590cee48d4d930a140747ad37236a5982b83e9
 [
@@ -43,21 +39,21 @@ S
 #templates/programme/eLogistics.html,9\b\9b7efbfb439564e478107a23def9de455efe67a7
 T
 $templates/programme/eRetailSoft.html,4\d\4d615bffef7bc74bc889642adc9fcd41d7c09266
-W
-'templates/sarvices/softwareTesting.html,f\8\f86dfcf9e0c6e5e3d286a0b4a61f255648d5eabd
 \
 ,templates/sarvices/technologyConsulting.html,7\1\71488bc79ee86c7067d78ff49415ae07da4db310
->
-aztech/urls.py,e\5\e59a84d2bec9c374b6bfa155068ef3805d4c98c3
 D
 templates/about.html,5\8\58893e517e4076b20838ca69fba7259ba475306a
 S
 #aztech/migrations/0002_contactus.py,f\c\fcc2aee001629817c1ce23bbf96e3999c67b81b6
 G
 templates/messages.html,9\2\924627e410e78e0b95a7bea0cab78584c7948f33
-R
-"aztech_company_project/settings.py,4\f\4f451acfbc05daac37d05421ff2a6bbc80e41a3a
 F
 templates/contact.html,7\f\7f50bc186c5d8c3260f8530e58ffb1e0559fb0ca
-D
-templates/index.html,f\6\f69b8ce2e31684ae06f1b3e84821e07e3dfddb2f
+\
+,aztech/migrations/0003_auto_20210715_1705.py,5\2\521d42f23514a015e068dc610c68d5fb006ca8f2
+T
+$templates/promotional_Advertise.html,0\3\03a0036e236c13ad85e099db619446cd0f7bea9f
+Z
+*templates/promotional_congratulations.html,3\2\321f9bfb53f86cfc04fabe0e347de54affc86a76
+I
+templates/job_portal.html,3\8\383c8f3c8c23bc84297e29f0df7e770ebe417a5f
