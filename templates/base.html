@@ -128,7 +128,7 @@
             <a class="navigation__item" href="{% url 'home' %}" target="">Home</a>
             <a class="navigation__item" href="{% url 'about' %}" target="">About</a>
             <div class="navigation__item navigation__item_submenu">
-                <a href="" target="">Services</a>
+                <a href="" target="" disabled>Services</a>
                 <div class="navigation__open-submenu"></div>
                 <div class="navigation__submenu">
                     <div class="navigation__list">
@@ -194,8 +194,8 @@
                     </a>
                 </div>
                 <div class="navigation__contacts">
-                    <a href="mailto:hello@itrexgroup.com" target="" id="menu-contacts-1">hello@Aztech.com</a>
-                    <a href="tel:+1 213 436 7785" target="" id="menu-contacts-2">+880 1712-500637</a>
+                    <a href="mailto:aztechvalleyltd@gmail.com" target="" id="menu-contacts-1">aztechvalleyltd@gmail.com</a>
+                    <a href="tel:+8801712500637" target="" id="menu-contacts-2">+880 171 250 0637</a>
                 </div>
                 <div class="navigation__pages">
                     <a class="arrow-link" href="https://itrexgroup.com/contact-us/" target="" id="menu-page-1">
@@ -330,23 +330,23 @@
                                     <div class="field" validation="required">
                                         <input type="text" name="your-name" value="" size="40"
                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required field__input"
-                                               aria-required="true" aria-invalid="false" placeholder="Name*"/>
+                                               aria-required="true" aria-invalid="false" placeholder="Name*" required/>
                                         <div class="field__status"></div>
                                         <div class="field__line"></div>
                                     </div>
                                     <div class="field" validation="required,email">
                                         <input type="email" name="email" value="" size="40"
                                                class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email field__input"
-                                               aria-required="true" aria-invalid="false" placeholder="Email*"/>
+                                               aria-required="true" aria-invalid="false" placeholder="Email*" required/>
                                         <div class="field__status"></div>
                                         <div class="field__line"></div>
                                     </div>
                                 </div>
                                 <div class="form__col">
-                                    <div class="field" validation="phone">
+                                    <div class="field" validation="required,phone">
                                         <input type="tel" name="phone" value="" size="40"
                                                class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel field__input"
-                                               aria-invalid="false" placeholder="Phone"/>
+                                               aria-required="true" aria-invalid="false" placeholder="Phone*" required/>
                                         <div class="field__status"></div>
                                         <div class="field__line"></div>
                                     </div>
@@ -354,14 +354,14 @@
                                     <textarea name="message" cols="40" rows="10"
                                               class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required field__textarea"
                                               aria-required="true" aria-invalid="false"
-                                              placeholder="Message*"></textarea>
+                                              placeholder="Message*" required></textarea>
                                         <div class="field__status"></div>
                                         <div class="field__line"></div>
                                     </div>
                                 </div>
                                 <div class="form__label">We will process your personal information in accordance
                                     with our <a
-                                            href="https://itrexgroup.com/privacy-policy/" target="_blank">Privacy
+                                            href="https://www.termsfeed.com/live/0c9149b6-1986-4616-9cd3-f9cb9717c573" target="_blank">Privacy
                                         Policy.</a>
                                 </div>
                                 <div class="radio">
@@ -438,10 +438,10 @@
                                     </a>
                                 </div>
                                 <div class="contact-us__contact-links">
-                                    <a class="contact-us__mail" href="mailto:hello@itrexgroup.com" target=""
-                                       id="contacts-1">hello@itrexgroup.com</a>
-                                    <br/> <a class="contact-us__mail" href="tel:+1 213 436 7785" target=""
-                                             id="contacts-2">+880 1712-500637</a>
+                                    <a class="contact-us__mail" href="mailto:aztechvalleyltd@gmail.com" target=""
+                                       id="contacts-1">aztechvalleyltd@gmail.com</a>
+                                    <br/> <a class="contact-us__mail" href="tel:+8801712500637" target=""
+                                             id="contacts-2">+880 171 250 0637</a>
                                 </div>
                             </div>
                             <div class="contact-us__advancements">
@@ -479,8 +479,8 @@
                     </div>
                 </div>
                 <div class="contact-us__links" animation="fade-up" animation-delay=".15">
-                    <a class="contact-us__link contact-us__link_disable">©{% now 'Y' %} Aztech Group</a>
-                    <a class="contact-us__link" href="https://itrexgroup.com/privacy-policy/" target="">Privacy
+                    <a class="contact-us__link contact-us__link_disable">©{% now 'Y' %} Aztech Valley Ltd</a>
+                    <a class="contact-us__link" href="https://www.termsfeed.com/live/0c9149b6-1986-4616-9cd3-f9cb9717c573" target="">Privacy
                         Policy</a>
                     <!-- <a class="contact-us__link contact-us__link_last" href="https://hainteractive.com/" target="_blank">Made by HA</a> -->
                 </div>
@@ -502,9 +502,8 @@
                     in touch
                 </div>
                 <div class="popup__contacts">
-                    <a class="popup__link" href="mailto:hello@itrexgroup.com" target="" id="contacts-popup-1">hello@Aztech.com</a>
-                    <br/> <a class="popup__link" href="tel:+1 213 436 7785" target="" id="contacts-popup-2">+880
-                    1712-500637</a>
+                    <a class="popup__link" href="mailto:aztechvalleyltd@gmail.com" target="" id="contacts-popup-1">aztechvalleyltd@gmail.com</a>
+                    <br/> <a class="popup__link" href="tel:+8801712500637" target="" id="contacts-popup-2">+880 171 250 0637</a>
                 </div>
             </div>
             <div class="form" hf-data="hf-data">
@@ -512,87 +511,39 @@
                     <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
                         <ul></ul>
                     </div>
-                    <form action="/#wpcf7-f28-o2" method="post"
+                    <form action="#" method="post"
                           class="wpcf7-form init wpcf7-acceptance-as-validation"
                           novalidate="novalidate" data-status="init">
-                        <div style="display: none;">
-                            <input type="hidden" name="_wpcf7" value="28"/>
-                            <input type="hidden" name="_wpcf7_version" value="5.3.2"/>
-                            <input type="hidden" name="_wpcf7_locale" value="en_US"/>
-                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f28-o2"/>
-                            <input type="hidden" name="_wpcf7_container_post" value="0"/>
-                            <input type="hidden" name="_wpcf7_posted_data_hash" value=""/>
-                            <input type="hidden" name="_wpcf7_recaptcha_response" value=""/>
-                        </div>
-                        <input type="hidden" name="hf-source" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-medium" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-campaign" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-clientid" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-keyword" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-content" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-referrer" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-popup" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-ip" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-country" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-city" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-timezone" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-country_calling_code" value=""
-                               class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-original-source" value=""
-                               class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-source2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-medium2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-campaign2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-clientid2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-keyword2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-content2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-popup2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-referrer2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-cta2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-ip2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-country2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-city2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-timezone2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-country_calling_code2" value=""
-                               class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-landing2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-conversion_page2" value=""
-                               class="wpcf7-form-control wpcf7-hidden"/>
-                        <label for="wpcf7-60e479c6d62f6-field" class="hp-message">Please leave this field
-                            empty.</label><input id="wpcf7-60e479c6d62f6-field"
-                                                 class="wpcf7-form-control wpcf7-text hp-input" type="text"
-                                                 name="honeypot-4" value="" size="40" tabindex="-1"
-                                                 autocomplete="new-password"/>
                         <div class="field" validation="required">
                             <input type="text" name="your-name" value="" size="40"
                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required field__input"
-                                   aria-required="true" aria-invalid="false" placeholder="Name*"/>
+                                   aria-required="true" aria-invalid="false" placeholder="Name*" required/>
                             <div class="field__status"></div>
                             <div class="field__line"></div>
                         </div>
                         <div class="field" validation="required,email">
                             <input type="email" name="email" value="" size="40"
                                    class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email field__input"
-                                   aria-required="true" aria-invalid="false" placeholder="Email*"/>
+                                   aria-required="true" aria-invalid="false" placeholder="Email*" required/>
                             <div class="field__status"></div>
                             <div class="field__line"></div>
                         </div>
-                        <div class="field" validation="phone">
+                        <div class="field" validation="required,phone">
                             <input type="tel" name="phone" value="" size="40"
                                    class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel field__input"
-                                   aria-invalid="false" placeholder="Phone"/>
+                                   aria-invalid="false" placeholder="Phone*" required/>
                             <div class="field__status"></div>
                             <div class="field__line"></div>
                         </div>
                         <div class="field" validation="required">
                         <textarea name="message" cols="40" rows="10"
                                   class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required field__textarea"
-                                  aria-required="true" aria-invalid="false" placeholder="Message*"></textarea>
+                                  aria-required="true" aria-invalid="false" placeholder="Message*" required></textarea>
                             <div class="field__status"></div>
                             <div class="field__line"></div>
                         </div>
                         <div class="form__label">We will process your personal information in accordance with our <a
-                                href="https://itrexgroup.com/privacy-policy/" target="_blank">Privacy Policy.</a>
+                                href="https://www.termsfeed.com/live/0c9149b6-1986-4616-9cd3-f9cb9717c573" target="_blank">Privacy Policy.</a>
                         </div>
                         <div class="radio">
                             <input type="checkbox" name="subscribe" value="1" aria-invalid="false"
@@ -609,8 +560,8 @@
                 </div>
             </div>
             <div class="popup__contacts popup__contacts_tablet">
-                <a class="popup__link" href="mailto:hello@itrexgroup.com" target="" id="contacts-popup-1-tablet">hello@Aztech.com</a>
-                <br/> <a class="popup__link" href="tel:+1 213 436 7785" target="" id="contacts-popup-2-tablet">+8801712500637</a>
+                <a class="popup__link" href="mailto:aztechvalleyltd@gmail.com" target="" id="contacts-popup-1-tablet">aztechvalleyltd@gmail.com</a>
+                <br/> <a class="popup__link" href="tel:+8801712500637" target="" id="contacts-popup-2-tablet">+880 171 250 0637</a>
             </div>
         </div>
     </div>
@@ -660,7 +611,13 @@
     {% endblock footer_javascript_site %}
     {% block footer_javascript_section %}
         {# custom written js for specific page #}
-
+        <script>
+            setTimeout(function () {
+                if ($('#msg').length > 0) {
+                    $('#msg').remove();
+                }
+            }, 6000)
+        </script>
         <script>
             (function () {
                 var skipLinkTarget = document.querySelector('main'),

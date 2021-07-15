@@ -1,5 +1,11 @@
 from django.shortcuts import render
+from django.contrib import messages
 from django.views.generic import ListView
+from django.conf import settings
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.utils.timezone import get_current_timezone
+import datetime
 
 from .models import *
 
@@ -23,7 +29,7 @@ def challenges(request):
 #     template_name = 'index.html'
 
 def about(request):
-    aboutObj = aboutpage.objects.get(about_id=1)
+    aboutObj = AboutPage.objects.get(about_id=1)
     context = {
         'aboutImage': aboutObj.about_pic.url,
         'aboutImageAlt': aboutObj.about_title,
@@ -37,6 +43,7 @@ def job_portal(request):
 
 
 def contact(request):
+    baseEverywhere(request=request)
     context = {
     }
     return render(request, 'contact.html', context=context)
@@ -153,6 +160,33 @@ def error(request,anything):
     context = {
     }
     return render(request, 'error.html', context=context)
+
+def baseEverywhere(request):
+    if request.POST.get('send-message'):
+        nameOfContact = request.POST.get('contact-name')
+        emailAddress = request.POST.get('contact-email')
+        phoneNumber = request.POST.get('contact-phone')
+        msgOfContact = request.POST.get('contact-message')
+        msgTime = str(datetime.datetime.now(tz=get_current_timezone()))
+        try:
+            newContact = ContactUs.objects.create(
+                contact_name=nameOfContact,
+                contact_phone=phoneNumber,
+                contact_mail=emailAddress,
+                contact_msg=msgOfContact,
+                contact_time=msgTime,
+            )
+            messages.success(request=request,message="An email is sent to your mailing address")
+
+            subject = f'Thanks {newContact.contact_name} for contacting Aztech Valley'
+            message = render_to_string(template_name='promotional_Advertise.html',context={'personName':newContact.contact_name,'personPhone':newContact.contact_phone,})
+            email_from = settings.EMAIL_HOST_USER
+            recipient_list = [newContact.contact_mail, ]
+            send_mail(subject, message, email_from, recipient_list,fail_silently=False)
+        except:
+            messages.error(request=request,message="Something Went Wrong, Kindly Try Again")
+
+
 
 
 

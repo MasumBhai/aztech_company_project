@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -160,37 +161,17 @@ INTERNAL_IPS = [
     '127.0.0.1'
 ]
 
-# JET_THEMES = [
-#     {
-#         'theme': 'default', # theme folder name
-#         'color': '#47bac1', # color of the theme's button in user menu
-#         'title': 'Default' # theme title
-#     },
-#     {
-#         'theme': 'green',
-#         'color': '#44b78b',
-#         'title': 'Green'
-#     },
-#     {
-#         'theme': 'light-green',
-#         'color': '#2faa60',
-#         'title': 'Light Green'
-#     },
-#     {
-#         'theme': 'light-violet',
-#         'color': '#a464c4',
-#         'title': 'Light Violet'
-#     },
-#     {
-#         'theme': 'light-blue',
-#         'color': '#5EADDE',
-#         'title': 'Light Blue'
-#     },
-#     {
-#         'theme': 'light-gray',
-#         'color': '#222',
-#         'title': 'Light Gray'
-#     }
-# ]
-# JET_SIDE_MENU_COMPACT = True
-# JET_DEFAULT_THEME = 'Light-gray'
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'masumbhaiexperiment@gmail.com' #sender's email-id
+EMAIL_HOST_PASSWORD = 'Masum11806035' #password associated with above email-id

@@ -3,18 +3,10 @@ N
 aztech_company_project/urls.py,a\9\a941877cbc3613d7e78755ff53dee58452dff112
 C
 static/css/main.css,1\d\1d911fa3e8e9e880e642b3cfb08a49276784f29a
-?
-aztech/admin.py,0\5\05cd174288e037af2636f9fe94f555c66506d317
 >
 aztech/apps.py,7\a\7a50718fe548e4cea7d7bc61be43e37662488460
-@
-aztech/models.py,7\2\72dcafe8fb252c7ce4b472c033e82062dceeec7d
 L
 aztech/context_processors.py,a\6\a6cbff20567695a6f114d32acfdb0b8f123729a9
-?
-aztech/tests.py,8\2\8212dfc090dcf0083c5a9111f7f183a931b65d4a
-R
-"aztech_company_project/settings.py,4\f\4f451acfbc05daac37d05421ff2a6bbc80e41a3a
 b
 2templates/sarvices/AI/artificial_intelligence.html,f\f\ff3597edcb7b8c9d8edddb77a46ac4b357bf6f53
 X
@@ -25,8 +17,6 @@ X
 (templates/sarvices/augmentedReality.html,3\5\354e9b7843ec4832a301c314d18d9b8a9baea134
 N
 templates/sarvices/devops.html,9\4\94a1423e32df3092c72becf812fa2bae36e03cc4
-F
-templates/contact.html,7\f\7f50bc186c5d8c3260f8530e58ffb1e0559fb0ca
 I
 templates/challenges.html,3\5\35aa94083cb888f13b7b5b29f8f7b107b3eda9df
 X
@@ -37,3 +27,31 @@ X
 +templates/sarvices/AI/ai_for_education.html,0\e\0e71f9a2ee035091015a0041a51b9c8afcce14a6
 V
 &templates/sarvices/dataConsulting.html,8\2\8255cb2d63690b3cefbe50079b36f3788960c7ec
+\
+,templates/sarvices/AI/ai_for_healthcare.html,8\9\893cb170c973be29b2ccc245a4241d1d5d0811b4
+V
+&templates/sarvices/appDevelopment.html,3\1\31003af49203045383cd5a50ef80a4c5872b1a06
+]
+-templates/sarvices/digitalTransformation.html,b\6\b6dc3fa601226ff1aae7967ffdbdddf2bce5fd3c
+R
+"templates/programme/eCommerce.html,b\b\bb350c43185044f9d05dc35878fbc4cb98f77403
+S
+#templates/programme/eHealthApp.html,b\5\b5d83c4e1fb3d0c91b09d40699aa9d67afa8cd79
+T
+$templates/programme/eHealthSoft.html,a\2\a2163fb74b65a69d056e755b90633089b95925a0
+R
+"templates/programme/eLearning.html,d\a\da537555a13df83dd4ca7481cbd1835bdc7d6eaa
+S
+#templates/programme/eLogistics.html,9\b\9b7efbfb439564e478107a23def9de455efe67a7
+T
+$templates/programme/eRetailSoft.html,4\d\4d615bffef7bc74bc889642adc9fcd41d7c09266
+I
+templates/job_portal.html,3\8\383c8f3c8c23bc84297e29f0df7e770ebe417a5f
+W
+'templates/sarvices/softwareTesting.html,f\8\f86dfcf9e0c6e5e3d286a0b4a61f255648d5eabd
+\
+,templates/sarvices/technologyConsulting.html,7\1\71488bc79ee86c7067d78ff49415ae07da4db310
+>
+aztech/urls.py,e\5\e59a84d2bec9c374b6bfa155068ef3805d4c98c3
+D
+templates/about.html,5\8\58893e517e4076b20838ca69fba7259ba475306a
