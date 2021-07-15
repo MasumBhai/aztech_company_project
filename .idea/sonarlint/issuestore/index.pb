@@ -1,8 +1,6 @@
 
 N
 aztech_company_project/urls.py,a\9\a941877cbc3613d7e78755ff53dee58452dff112
-C
-static/css/main.css,1\d\1d911fa3e8e9e880e642b3cfb08a49276784f29a
 >
 aztech/apps.py,7\a\7a50718fe548e4cea7d7bc61be43e37662488460
 L
@@ -45,8 +43,6 @@ S
 #templates/programme/eLogistics.html,9\b\9b7efbfb439564e478107a23def9de455efe67a7
 T
 $templates/programme/eRetailSoft.html,4\d\4d615bffef7bc74bc889642adc9fcd41d7c09266
-I
-templates/job_portal.html,3\8\383c8f3c8c23bc84297e29f0df7e770ebe417a5f
 W
 'templates/sarvices/softwareTesting.html,f\8\f86dfcf9e0c6e5e3d286a0b4a61f255648d5eabd
 \
@@ -55,3 +51,13 @@ W
 aztech/urls.py,e\5\e59a84d2bec9c374b6bfa155068ef3805d4c98c3
 D
 templates/about.html,5\8\58893e517e4076b20838ca69fba7259ba475306a
+S
+#aztech/migrations/0002_contactus.py,f\c\fcc2aee001629817c1ce23bbf96e3999c67b81b6
+G
+templates/messages.html,9\2\924627e410e78e0b95a7bea0cab78584c7948f33
+R
+"aztech_company_project/settings.py,4\f\4f451acfbc05daac37d05421ff2a6bbc80e41a3a
+F
+templates/contact.html,7\f\7f50bc186c5d8c3260f8530e58ffb1e0559fb0ca
+D
+templates/index.html,f\6\f69b8ce2e31684ae06f1b3e84821e07e3dfddb2f

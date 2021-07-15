@@ -10,7 +10,7 @@ class AboutPage(models.Model):
     # about_something = models.TextField(blank=True,null=True,max_length=256,help_text='intro of about page')
 
     def image_tag(self):
-        return mark_safe("<img src='media/images/%s' width='150' height='150' />" % (self.about_pic))
+        return mark_safe("<img src='/../../media/%s' width='150' height='150' />" % (self.about_pic))
 
     image_tag.allow_tags = True
 
@@ -39,6 +39,27 @@ class ContactUs(models.Model):
 
     def __str__(self):
         return "%s" % (self.contact_mail)
+
+class JobRequest(models.Model):
+    participant_id = models.AutoField(primary_key=True)
+    participant_name = models.CharField(max_length=64,help_text="participant's name")
+    participant_time = models.DateTimeField(help_text="Local BanglDesh Time")
+    participant_mail = models.EmailField(max_length=120,help_text="participant's email address")
+    participant_phone = PhoneField(help_text="participant's phone number")
+    participant_linkedIn = models.URLField(verbose_name="LinkidIn-Id",max_length=200,help_text="participant's Linkedin Profile Link",blank=True,null=True)
+    participant_github = models.URLField(verbose_name="Github-Id",max_length=200,help_text="participant's Github Profile Link",blank=True,null=True)
+    participant_msg = models.TextField(help_text="participant's msg to get job")
+    participant_resume = models.FileField(verbose_name='Resume',upload_to='resume/%Y/%m/%d/',blank=True,null=True)
+    participant_cover_letter = models.FileField(verbose_name='Cover-Letter',upload_to='cover-letter/%Y/%m/%d/',blank=True,null=True)
+
+    class Meta:
+        verbose_name = 'JobRequest'
+        verbose_name_plural = 'JobRequest'
+        ordering = ['-participant_time']  # from top to bottom
+        db_table = 'jobrequest'
+
+    def __str__(self):
+        return "%s" % (self.participant_id)
 
 
 

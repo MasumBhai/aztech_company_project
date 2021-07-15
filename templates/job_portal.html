@@ -273,12 +273,11 @@
         </div>
         <div class="popup__content">
             <div class="popup__info">
-                <h2 class="popup__title">Join Aztech</h2>
+                <h2 class="popup__title">Join Aztech Valley</h2>
                 <div class="popup__contacts">
-                    <a style="popup__link" href="mailto:hello@itrexgroup.com" target="" id="contacts-popup-1">hello@Aztech.com</a>
+                    <a style="popup__link" href="mailto:aztechvalleyltd@gmail.com" target="" id="contacts-popup-1">aztechvalleyltd@gmail.com</a>
                     <br>
-                    <a style="popup__link" href="tel:+1 213 436 7785" target="" id="contacts-popup-2">+880
-                        1712-500637</a>
+                    <a style="popup__link" href="tel:+8801712500637" target="" id="contacts-popup-2">+880 171 250 0637</a>
                 </div>
             </div>
             <div class="form" hf-data="hf-data" data-thank-you="thankYouJobsUrl">
@@ -286,91 +285,58 @@
                     <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
                         <ul></ul>
                     </div>
-                    <form action="/jobs/#wpcf7-f5212-o2" method="post" class="wpcf7-form init"
+                    <form action="" method="post" class="wpcf7-form init"
                           enctype="multipart/form-data"
                           novalidate="novalidate" data-status="init">
-                        <div style="display: none;">
-                            <input type="hidden" name="_wpcf7" value="5212"/>
-                            <input type="hidden" name="_wpcf7_version" value="5.3.2"/>
-                            <input type="hidden" name="_wpcf7_locale" value="en_US"/>
-                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5212-o2"/>
-                            <input type="hidden" name="_wpcf7_container_post" value="0"/>
-                            <input type="hidden" name="_wpcf7_posted_data_hash" value=""/>
-                            <input type="hidden" name="_wpcf7_recaptcha_response" value=""/>
-                        </div>
-                        <input type="hidden" name="hf-source" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-medium" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-campaign" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-clientid" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-keyword" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-content" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-referrer" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-popup" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-ip" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-country" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-city" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-timezone" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-country_calling_code" value=""
-                               class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-original-source" value=""
-                               class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-source2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-medium2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-campaign2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-clientid2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-keyword2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-content2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-popup2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-referrer2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-cta2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-ip2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-country2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-city2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-timezone2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-country_calling_code2" value=""
-                               class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-landing2" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                        <input type="hidden" name="hf-conversion_page2" value=""
-                               class="wpcf7-form-control wpcf7-hidden"/>
-                        <label for="wpcf7-60e47aec41140-field" class="hp-message">Please leave this field
-                            empty.</label><input id="wpcf7-60e47aec41140-field"
-                                                 class="wpcf7-form-control wpcf7-text hp-input" type="text"
-                                                 name="honeypot-720" value="" size="40" tabindex="-1"
-                                                 autocomplete="new-password"/>
+                        {% csrf_token %}
                         <div class="field" validation="required">
-                            <input type="text" name="your-name" value="" size="40"
+                            {% csrf_token %}
+                            <input type="text" name="participant-name" size="40"
                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required field__input"
-                                   aria-required="true" aria-invalid="false" placeholder="Name*"/>
+                                   aria-required="true" aria-invalid="false" placeholder="Name*" required/>
                             <div class="field__status"></div>
                             <div class="field__line"></div>
                             <div class="field__error"></div>
                         </div>
                         <div class="field" validation="required,email">
-                            <input type="email" name="email" value="" size="40"
+                            {% csrf_token %}
+                            <input type="email" name="participant-email" size="40"
                                    class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email field__input"
-                                   aria-required="true" aria-invalid="false" placeholder="Email*"/>
+                                   aria-required="true" aria-invalid="false" placeholder="Email*" required/>
                             <div class="field__status"></div>
                             <div class="field__line"></div>
                             <div class="field__error"></div>
                         </div>
-                        <div class="field" validation="phone">
-                            <input type="tel" name="phone" value="" size="40"
+                        <div class="field" validation="required,phone">
+                            {% csrf_token %}
+                            <input type="tel" name="participant-phone" size="40"
                                    class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel field__input"
-                                   aria-invalid="false" placeholder="Phone"/>
+                                   aria-required="true" aria-invalid="false" placeholder="Phone*" required/>
                             <div class="field__status"></div>
                             <div class="field__line"></div>
                             <div class="field__error"></div>
                         </div>
                         <div class="field" validation="linkedin">
-                            <input type="text" name="linkedin" value="" size="40"
+                            {% csrf_token %}
+                            <input type="text" name="participant-linkedin" size="40"
                                    class="wpcf7-form-control wpcf7-text field__input" aria-invalid="false"
-                                   placeholder="Linkedin"/>
+                                   placeholder="Linkedin-id (optional)"/>
+                            <div class="field__status"></div>
+                            <div class="field__line"></div>
+                            <div class="field__error"></div>
+                        </div>
+                        <div class="field" validation="github">
+                            {% csrf_token %}
+                            <input type="text" name="participant-github" size="40"
+                                   class="wpcf7-form-control wpcf7-text field__input" aria-invalid="false"
+                                   placeholder="Github-profile-id (optional)"/>
                             <div class="field__status"></div>
                             <div class="field__line"></div>
                             <div class="field__error"></div>
                         </div>
                         <div class="field" validation="required">
-                            <input type="text" name="message" value="" size="40"
+                            {% csrf_token %}
+                            <input type="text" name="participant-message" size="40"
                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required field__input"
                                    aria-required="true" aria-invalid="false" placeholder="Message*"/>
                             <div class="field__status"></div>
@@ -378,22 +344,38 @@
                             <div class="field__error"></div>
                         </div>
                         <div class="field field_file field_yellow" validation="emailfile">
-                            <input type="file" name="file" size="40" class="wpcf7-form-control wpcf7-file field__input"
-                                   id="file"
-                                   accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv"
+                            {% csrf_token %}
+                            <input type="file" name="participant-resume" size="40" class="wpcf7-form-control wpcf7-file field__input"
+                                   id="resume"
+                                   accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv,.txt"
                                    aria-invalid="false"/>
-                            <label class="field__label" for="file">
+                            <label class="field__label" for="resume">
                                 <svg class="field__icon">
                                     <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.6#attach"></use>
                                 </svg>
-                                <span data-file-label>Attach your CV</span>
+                                <span data-file-label>Attach your CV / RESUME</span>
+                            </label>
+                            <div class="field__error"></div>
+                        </div>
+                        <div class="field field_file field_yellow" validation="emailfile">
+                            {% csrf_token %}
+                            <input type="file" name="participant-covLetter" size="40" class="wpcf7-form-control wpcf7-file field__input"
+                                   id="coverLetter"
+                                   accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv,.txt"
+                                   aria-invalid="false"/>
+                            <label class="field__label" for="coverLetter">
+                                <svg class="field__icon">
+                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.6#attach"></use>
+                                </svg>
+                                <span data-file-label>Attach your Cover Letter</span>
                             </label>
                             <div class="field__error"></div>
                         </div>
                         <div class="form__label">We will process your personal information in accordance with our <a
-                                href="https://itrexgroup.com/privacy-policy/" target="_blank">Privacy Policy.</a></div>
-                        <div class="form__submit" id="form-submit" disabled>Send message<span>→</span></div>
-                        <div class="wpcf7-response-output" aria-hidden="true"></div>
+                                href="https://www.termsfeed.com/live/0c9149b6-1986-4616-9cd3-f9cb9717c573" target="_blank">Privacy Policy.</a></div>
+                        {% csrf_token %}
+                            <input class="form__submit" id="form-submit" type="submit" name="job-applied" value="Apply Now → ">
+
                     </form>
                 </div>
             </div>

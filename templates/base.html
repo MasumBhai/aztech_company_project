@@ -250,92 +250,22 @@
                                                                aria-atomic="true"></p>
                             <ul></ul>
                         </div>
-                        <form action="/#wpcf7-f254-o1" method="post" class="wpcf7-form init" novalidate="novalidate"
+                        <form action="" method="post" class="wpcf7-form init" novalidate="novalidate"
                               data-status="init">
-                            <div style="display: none;">
-                                <input type="hidden" name="_wpcf7" value="254"/>
-                                <input type="hidden" name="_wpcf7_version" value="5.3.2"/>
-                                <input type="hidden" name="_wpcf7_locale" value="en_US"/>
-                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f254-o1"/>
-                                <input type="hidden" name="_wpcf7_container_post" value="0"/>
-                                <input type="hidden" name="_wpcf7_posted_data_hash" value=""/>
-                                <input type="hidden" name="_wpcf7_recaptcha_response" value=""/>
-                            </div>
+                            {% csrf_token %}
                             <div class="form__wrapper">
-                                <input type="hidden" name="hf-source" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-medium" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-campaign" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-clientid" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-keyword" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-content" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-referrer" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-popup" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-ip" value="" class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-country" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-city" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-timezone" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-country_calling_code" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-original-source" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-source2" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-medium2" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-campaign2" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-clientid2" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-keyword2" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-content2" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-popup2" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-referrer2" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-cta2" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-ip2" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-country2" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-city2" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-timezone2" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-country_calling_code2" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-landing2" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <input type="hidden" name="hf-conversion_page2" value=""
-                                       class="wpcf7-form-control wpcf7-hidden"/>
-                                <label for="wpcf7-60e479c6d4c6d-field" class="hp-message">Please leave this field
-                                    empty.</label><input id="wpcf7-60e479c6d4c6d-field"
-                                                         class="wpcf7-form-control wpcf7-text hp-input" type="text"
-                                                         name="honeypot-720" value="" size="40" tabindex="-1"
-                                                         autocomplete="new-password"/>
                                 <div class="form__col">
                                     <div class="field" validation="required">
-                                        <input type="text" name="your-name" value="" size="40"
+                                        {% csrf_token %}
+                                        <input type="text" name="contact-name" size="40"
                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required field__input"
                                                aria-required="true" aria-invalid="false" placeholder="Name*" required/>
                                         <div class="field__status"></div>
                                         <div class="field__line"></div>
                                     </div>
                                     <div class="field" validation="required,email">
-                                        <input type="email" name="email" value="" size="40"
+                                        {% csrf_token %}
+                                        <input type="email" name="contact-email" size="40"
                                                class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email field__input"
                                                aria-required="true" aria-invalid="false" placeholder="Email*" required/>
                                         <div class="field__status"></div>
@@ -344,14 +274,16 @@
                                 </div>
                                 <div class="form__col">
                                     <div class="field" validation="required,phone">
-                                        <input type="tel" name="phone" value="" size="40"
+                                        {% csrf_token %}
+                                        <input type="tel" name="contact-phone" size="40"
                                                class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel field__input"
                                                aria-required="true" aria-invalid="false" placeholder="Phone*" required/>
                                         <div class="field__status"></div>
                                         <div class="field__line"></div>
                                     </div>
                                     <div class="field" validation="required">
-                                    <textarea name="message" cols="40" rows="10"
+                                        {% csrf_token %}
+                                    <textarea name="contact-message" cols="40" rows="10"
                                               class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required field__textarea"
                                               aria-required="true" aria-invalid="false"
                                               placeholder="Message*" required></textarea>
@@ -364,18 +296,18 @@
                                             href="https://www.termsfeed.com/live/0c9149b6-1986-4616-9cd3-f9cb9717c573" target="_blank">Privacy
                                         Policy.</a>
                                 </div>
-                                <div class="radio">
-                                    <input type="checkbox" name="subscribe" value="1" aria-invalid="false"
-                                           class="radio__input" id="subscribe"/></span>
-                                    <label class="radio__label" for="subscribe"></label>
-                                    <label class="radio__text" for="subscribe">I would like to be contacted with
-                                        news and
-                                        updates about your events and services</label>
-                                </div>
+{#                                <div class="radio">#}
+{#                                    {% csrf_token %}#}
+{#                                    <input type="checkbox" name="subscribe" value="1" aria-invalid="false"#}
+{#                                           class="radio__input" id="subscribe"/></span>#}
+{#                                    <label class="radio__label" for="subscribe"></label>#}
+{#                                    <label class="radio__text" for="subscribe">I would like to be contacted with#}
+{#                                        news and#}
+{#                                        updates about your events and services</label>#}
+{#                                </div>#}
                             </div>
-                            <div class="form__submit form__submit_full" id="form-submit" disabled="disabled">Send
-                                message<span>→</span></div>
-                            <div class="wpcf7-response-output" aria-hidden="true"></div>
+                            {% csrf_token %}
+                            <input class="form__submit form__submit_full" id="form-submit" type="submit" name="send-message" value="Send message → ">
                         </form>
                     </div>
                 </div>
@@ -511,32 +443,37 @@
                     <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
                         <ul></ul>
                     </div>
-                    <form action="#" method="post"
+                    <form action="" method="post"
                           class="wpcf7-form init wpcf7-acceptance-as-validation"
                           novalidate="novalidate" data-status="init">
+                        {% csrf_token %}
                         <div class="field" validation="required">
-                            <input type="text" name="your-name" value="" size="40"
+                            {% csrf_token %}
+                            <input type="text" name="contact-name" size="40"
                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required field__input"
                                    aria-required="true" aria-invalid="false" placeholder="Name*" required/>
                             <div class="field__status"></div>
                             <div class="field__line"></div>
                         </div>
                         <div class="field" validation="required,email">
-                            <input type="email" name="email" value="" size="40"
+                            {% csrf_token %}
+                            <input type="email" name="contact-email" size="40"
                                    class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email field__input"
                                    aria-required="true" aria-invalid="false" placeholder="Email*" required/>
                             <div class="field__status"></div>
                             <div class="field__line"></div>
                         </div>
                         <div class="field" validation="required,phone">
-                            <input type="tel" name="phone" value="" size="40"
+                            {% csrf_token %}
+                            <input type="tel" name="contact-phone" size="40"
                                    class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel field__input"
                                    aria-invalid="false" placeholder="Phone*" required/>
                             <div class="field__status"></div>
                             <div class="field__line"></div>
                         </div>
                         <div class="field" validation="required">
-                        <textarea name="message" cols="40" rows="10"
+                            {% csrf_token %}
+                        <textarea name="contact-message" cols="40" rows="10"
                                   class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required field__textarea"
                                   aria-required="true" aria-invalid="false" placeholder="Message*" required></textarea>
                             <div class="field__status"></div>
@@ -545,17 +482,18 @@
                         <div class="form__label">We will process your personal information in accordance with our <a
                                 href="https://www.termsfeed.com/live/0c9149b6-1986-4616-9cd3-f9cb9717c573" target="_blank">Privacy Policy.</a>
                         </div>
-                        <div class="radio">
-                            <input type="checkbox" name="subscribe" value="1" aria-invalid="false"
-                                   class="radio__input"
-                                   id="subscribe-popup"/></span>
-                            <label class="radio__label" for="subscribe-popup"></label>
-                            <label class="radio__text" for="subscribe-popup">I would like to be contacted with news
-                                and
-                                updates about your events and services</label>
-                        </div>
-                        <div class="form__submit" id="form-submit" disabled>Send message<span>→</span></div>
-                        <div class="wpcf7-response-output" aria-hidden="true"></div>
+{#                        <div class="radio">#}
+{#                            {% csrf_token %}#}
+{#                            <input type="checkbox" name="subscribe" value="1" aria-invalid="false"#}
+{#                                   class="radio__input"#}
+{#                                   id="subscribe-popup"/></span>#}
+{#                            <label class="radio__label" for="subscribe-popup"></label>#}
+{#                            <label class="radio__text" for="subscribe-popup">I would like to be contacted with news#}
+{#                                and#}
+{#                                updates about your events and services</label>#}
+{#                        </div>#}
+                        {% csrf_token %}
+                            <input class="form__submit"  type="submit" name="send-message" value="Send message → ">
                     </form>
                 </div>
             </div>
