@@ -1,4 +1,6 @@
-from django.shortcuts import render
+import json
+import urllib
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.views import generic
 from django.views.generic import ListView
@@ -7,7 +9,8 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.utils.timezone import get_current_timezone
 import datetime
-
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from aztech.forms import CommentForm
 from .models import *
 
 '''navigation__item_active     inside class="navigation__item'''
@@ -22,23 +25,84 @@ def home(request):
 
 
 def blog(request):
-    post_List = BlogPost.objects.filter(status=1).order_by('-created_on')
+    object_list = BlogPost.objects.filter(status=1).order_by('-created_on')
+    paginator = Paginator(object_list, 5)  # 5 posts in each page
+    page = request.GET.get('page')
+    try:
+        post_list = paginator.page(page)
+    except PageNotAnInteger:
+        # jodi page number integer na hoy tobe first page-e retun koro
+        post_list = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range deliver last page of results
+        post_list = paginator.page(paginator.num_pages)
     context = {
-        'post_list': post_List,
+        'page': page,
+        'post_list': post_list,
     }
     return render(request, 'Our_Blog.html', context=context)
 
 
-class BlogDetails(generic.DetailView):
-    model = BlogPost
+# class BlogDetails(generic.DetailView):
+#     model = BlogPost
+#     template_name = 'Blog_Details.html'
+def post_detail(request, slug):
     template_name = 'Blog_Details.html'
+    post = get_object_or_404(BlogPost, slug=slug)
+    comments = post.comments.filter(comment_status=1)
+    new_comment = None
+    successful = False
+    recapchaError = False
+    # Comment posted
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            # Create Comment object but don't save to database yet
+            new_comment = comment_form.save(commit=False)
+            # Assign the current post to the comment
+            new_comment.commented_post = post
+            # Save the comment to the database but via recaptcha
+            recaptcha_response = request.POST.get('g-recaptcha-response')
+            url = 'https://www.google.com/recaptcha/api/siteverify'
+            values = {
+                'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+                'response': recaptcha_response
+            }
+            data = urllib.parse.urlencode(values).encode()
+            req = urllib.request.Request(url, data=data)
+            response = urllib.request.urlopen(req)
+            result = json.loads(response.read().decode())
+
+            if result['success']:
+                comment_form.save()
+                successful = True
+                messages.success(request, 'New comment added in queue!')
+            else:
+                messages.error(request, 'Invalid reCAPTCHA. Please try again.')
+                recapchaError = True
+    else:
+        comment_form = CommentForm()
+
+    return render(request, template_name, {'post': post,
+                                           'comments': comments,
+                                           'new_comment': new_comment,
+                                           'comment_form': comment_form,
+                                           'commentSuccess': successful,
+                                           'recapchaError': recapchaError})
+
+
+def project_detil(request, slug):
+    template_name = 'latest_projects.html'
+    proj = get_object_or_404(LatestProjects, project_slug=slug)
+    context = {
+        'project': proj,
+    }
+    return render(request, template_name=template_name, context=context)
 
 
 def about(request):
-    aboutObj = AboutPage.objects.get(about_id=1)
     context = {
-        'aboutImage': aboutObj.about_pic.url,
-        'aboutImageAlt': aboutObj.about_title,
+
     }
     return render(request, 'about.html', context=context)
 

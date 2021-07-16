@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Aztech Blog</title>
+    {% load static %}
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{% static 'css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+    <style>
+        .navigation > .navigation__logo,
+        .navigation__item,
+        .navigation__burger {
+            color: #000000;
+        }
+
+        .navigation__item_active {
+            color: #445aec;
+        }
+
+        @media only screen and (min-width: 961px) {
+            .navigation__item:hover {
+                color: #445aec;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav class="navigation navbar navbar-expand-lg navbar-light fixed-top" id="mainNav"
+     style="text-decoration-color: black;">
+    <a class="navigation__logo" href="{% url 'contact' %}">
+        Aztech
+    </a>
+    <button class="navigation__burger"><span></span><span></span></button>
+    <div class="navigation__items">
+        <div class="navigation__header">
+            <a class="navigation__logo" href="{% url 'contact' %}">
+                Aztech
+            </a>
+            <button class="navigation__back" style="display: none">
+                <a class="icon icon_white">Aztech</a>
+            </button>
+        </div>
+        <div class="navigation__breadcrumbs"></div>
+        <a class="navigation__item" href="{% url 'home' %}" target="">Home</a>
+        <a class="navigation__item" href="{% url 'about' %}" target="">About</a>
+        <div class="navigation__item navigation__item_submenu">
+            <a href="" target="" disabled>Services</a>
+            <div class="navigation__open-submenu"></div>
+            <div class="navigation__submenu">
+                <div class="navigation__list">
+                    <div class="navigation__link navigation__link_list">
+                        <a href="{% url 'sAI' %}" target="">Artificial Intelligence</a>
+                        <div class="navigation__open-sublist"></div>
+                        <div class="navigation__list">
+                            <a class="navigation__link" href="{% url 'sAI_retail' %}" target="">AI for Retail</a>
+                            <a class="navigation__link" href="{% url 'sAI_health' %}" target="">AI for
+                                Healthcare</a>
+                            <a class="navigation__link" href="{% url 'sAI_education' %}" target="">AI for
+                                Education</a>
+                            <a class="navigation__link" href="{% url 'sAI_automation' %}" target="">AI for
+                                Automation</a>
+                        </div>
+                    </div>
+                    {#                        <a class="navigation__link" href="{% url 'sAugReality' %}" target="">Augmented Reality</a>#}
+                    {#                        <a class="navigation__link" href="{% url 'sCloud' %}" target="">Cloud</a>#}
+                    {#                        <a class="navigation__link" href="{% url 'sDataConsulting' %}" target="">Data Consultation</a>#}
+                    {#                        <a class="navigation__link" href="{% url 'sDevops' %}" target="">DevOps</a>#}
+                    <a class="navigation__link" href="{% url 'sTeam' %}" target="">Dedicated Team</a>
+                    <a class="navigation__link" href="{% url 'sAppDevelopment' %}" target="">Apps Development</a>
+                    <a class="navigation__link" href="{% url 'sDigiTransform' %}" target="">Digital Transformation</a>
+                    <a class="navigation__link" href="{% url 'sTechnologyConsulting' %}" target="">Technology
+                        Consulting</a>
+                    <a class="navigation__link" href="{% url 'sSoftwareTesting' %}" target="">Software Testing</a>
+                    <a class="navigation__link" href="{% url 'sTeamCto' %}" target="">Cost Optimization</a>
+                </div>
+            </div>
+        </div>
+        <div class="navigation__item navigation__item_submenu">
+            <a href="" target="">Programme</a>
+            <div class="navigation__open-submenu"></div>
+            <div class="navigation__submenu">
+                <div class="navigation__list">
+                    <a class="navigation__link" href="{% url 'eCommerce' %}" target="">e-Commerce</a>
+                    <a class="navigation__link" href="{% url 'eLearning' %}" target="">e-Learning</a>
+                    {#                            <a class="navigation__link" href="{% url 'eHealthSoft' %}" target="">Biotech Software</a>#}
+                    <a class="navigation__link" href="{% url 'eHealthApp' %}" target="">e-HealthCare</a>
+                    <a class="navigation__link" href="{% url 'eRetail' %}" target="">e-Retail</a>
+                    <a class="navigation__link" href="{% url 'eLogistics' %}" target="">Logistics & Transportation</a>
+                </div>
+            </div>
+        </div>
+        <a class="navigation__item" href="{% url 'blog' %}" target="">Blog</a>
+        {#            <a class="navigation__item" href="" target="">Thinking</a>#}
+        <a class="navigation__item" href="{% url 'job_portal' %}" target="">Careers</a>
+        <a class="navigation__item" href="{% url 'contact' %}" target="">Contact Us</a>
+        <div class="navigation__footer">
+            <div class="navigation__socials">
+                <a class="social" href="" target="_blank" id="menu-social-1">
+                    <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/linkedin.svg"/>
+                </a>
+                <a class="social" href="" target="_blank" id="menu-social-2">
+                    <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/facebook.svg"/>
+                </a>
+                <a class="social" href="" target="_blank" id="menu-social-3">
+                    <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/instagram.svg"/>
+                </a>
+                <a class="social" href=""
+                   target="_blank"
+                   id="menu-social-4">
+                    <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/youtube.svg"/>
+                </a>
+            </div>
+            <div class="navigation__contacts">
+                <a href="mailto:aztechvalleyltd@gmail.com" target="" id="menu-contacts-1">aztechvalleyltd@gmail.com</a>
+                <a href="tel:+8801712500637" target="" id="menu-contacts-2">+880 171 250 0637</a>
+            </div>
+            <div class="navigation__pages">
+                <a class="arrow-link" href="https://itrexgroup.com/contact-us/" target="" id="menu-page-1">
+                    <span class="arrow-link__text">Contact us</span>
+                    <span class="arrow-link__arrow"><span
+                            class="arrow-link__arrow_static arrow-link__arrow_blue">→</span></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('{% static 'images/home-bg.jpg' %}')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>Aztech Valley Blog</h1>
+                    <span class="subheading">A Blog of Interest Things</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <ul class="list-inline text-center">
+                    <li class="list-inline-item">
+                        <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted">Copyright © Aztech Valley 2021</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Custom scripts for this template -->
+<script src="{% static 'js/clean-blog.min.js' %}"></script>
+{% block javascript %} {% endblock %}
+
+<style>
+ul {list-style:none;}
+.alert-success, .alert-warning, .alert-info, .alert-danger {
+ background-repeat: no-repeat;
+ background-position: 10px center;
+ height: 40px;
+ text-transform: uppercase;
+ font-size: 11px;
+ line-height: 22px;
+ margin-bottom: 20px;
+ padding-top: 10px;
+ padding-right: 10px;
+ padding-bottom: 10px;
+ padding-left: 50px;
+
+}
+.alert-success     {
+ background-color: #EBF8D6;
+ border: 1px solid #A6DD88;
+ color: #539B2D;
+ background-image: url({% static 'img/accept00.png' %});
+}
+.alert-warning      {
+ background-color: #FFECE6;
+ border: 1px solid #FF936F;
+ color: #842100;
+ background-image: url({% static 'img/delete00.png' %});
+}
+.alert-info    {
+ background-color: #D3EEF1;
+ border: 1px solid #81CDD8;
+ color: #369CAB;
+ background-image: url({% static 'img/info0000.png' %});
+}
+.alert-danger   {
+ background-color: #FFFBCC;
+ border: 1px solid #FFF35E;
+ color: #C69E00;
+ background-image: url({% static 'img/warning0.png' %});
+}
+.close-notification     {
+ width: 16px;
+ height: 16px;
+ position: absolute;
+ background: url({% static 'img/close000.png' %}) no-repeat;
+ top: 4px;
+ right: 4px;
+ cursor: pointer;
+}
+</style>
+</body>
+
+</html>

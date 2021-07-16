@@ -685,6 +685,7 @@ support of customers</span>
                 </div>
             </div>
         </div>
+        {% if projectDetails %}
         <div class="block block_z-index-up block_relative" id="projects" cta-text="">
             <div class="block__content">
                 <div class="post-title">
@@ -702,151 +703,23 @@ support of customers</span>
                             </clipPath>
                         </defs>
                     </svg>
+                    {% for project in projectDetails %}
                     <div class="post post_slider" style="position: relative;visibility: visible">
                         <div class="post__info">
-                            <div class="post__company">DealMe</div>
+                            <div class="post__company">{{ project.project_client }}</div>
                             <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/case-studies/dealme-location-based-discount-finding-app/"><span
-                                    class="arrow-link__text">Location-based discount-finding mobile app for </span><span
-                                    style="white-space: nowrap">shoppers<span class="arrow-link__arrow"><span
+                               href="{% url 'project-details' project.project_slug %}"><span
+                                    class="arrow-link__text">{{ project.project_title }}<span class="arrow-link__arrow"><span
                                     class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
                                     class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
                         </div>
                         <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/case-studies/dealme-location-based-discount-finding-app/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/10/Mobile-app-shoppers-1-1440x1029.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/10/Mobile-app-shoppers-1-1024x731.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/10/Mobile-app-shoppers-1-720x514.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/10/Mobile-app-shoppers-1-512x366.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/10/Mobile-app-shoppers-1.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/10/Mobile-app-shoppers-1.jpg"
-                                     alt="Location-based discount-finding mobile app">
-                            </picture>
+                           href="{% url 'project-details' project.project_slug %}">
+                            <img loading="lazy" src="{{ project.project_preview.url }}"
+                                     alt="{{ project.project_title }}">
                         </a>
                     </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <div class="post__company">Car.co.uk</div>
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/case-studies/website-interface-functionality-upgrade-for-car-co-uk/"><span
-                                    class="arrow-link__text">Website design and functionality upgrade for </span><span
-                                    style="white-space: nowrap">Car.co.uk<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/case-studies/website-interface-functionality-upgrade-for-car-co-uk/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/10/Car-co-uk-preview-1-1440x1029.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/10/Car-co-uk-preview-1-1024x731.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/10/Car-co-uk-preview-1-720x514.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/10/Car-co-uk-preview-1-512x366.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/10/Car-co-uk-preview-1.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/10/Car-co-uk-preview-1.jpg"
-                                     alt="Interface Upgrade for Car.co.uk">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <div class="post__company">DogVacay</div>
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/case-studies/dogvacay-android-mobile-app-for-pet-owner/"><span
-                                    class="arrow-link__text">Full-featured Android app DogVacay for dog </span><span
-                                    style="white-space: nowrap">boarding<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/case-studies/dogvacay-android-mobile-app-for-pet-owner/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/DogVacay.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/DogVacay-1024x737.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/DogVacay-720x518.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/DogVacay-512x369.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/DogVacay.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/07/DogVacay.jpg"
-                                     alt="DogVacay Mobile App for Pet Owners and Sitters">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <div class="post__company">Dollar Shave Club</div>
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/case-studies/dollar-shave-club-android-app/"><span
-                                    class="arrow-link__text">The Dollar Shave Club Android app for shaving products </span><span
-                                    style="white-space: nowrap">delivery<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/case-studies/dollar-shave-club-android-app/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/dollar-shave-club.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/dollar-shave-club.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/dollar-shave-club-720x368.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/dollar-shave-club-512x261.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/dollar-shave-club.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/07/dollar-shave-club.jpg"
-                                     alt="The Dollar Shave Club App">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <div class="post__company">Livby</div>
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/case-studies/livby-live-streaming-shopping-app-for-ecommerce/"><span
-                                    class="arrow-link__text">The Livby live streaming app reimagines the way people </span><span
-                                    style="white-space: nowrap">shop<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/case-studies/livby-live-streaming-shopping-app-for-ecommerce/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/Livby-1440x810.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/Livby-1024x576.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/Livby-720x405.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/Livby-512x288.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/Livby.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/07/Livby.jpg"
-                                     alt="Livby Live Streaming eСommerce App">
-                            </picture>
-                        </a>
-                    </div>
+                    {% endfor %}
                     <div class="posts-list__controlls">
                         <div class="posts-list__ui">
                             <div class="posts-list__button posts-list__button_left" id="post-prev-item">
@@ -864,6 +737,7 @@ support of customers</span>
                 </div>
             </div>
         </div>
+        {% endif %}
     </div>
 {% endblock main_content %}
 

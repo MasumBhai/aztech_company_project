@@ -1,195 +1,48 @@
-{% extends 'base.html' %}
+{% extends 'blog_base.html' %}
 {% load static %}
-{% block body_tag %}
-    <body class="page-template page-template-templates page-template-works page-template-templatesworks-php page">
-{% endblock body_tag %}
-
-
-{% block main_content %}
-    <div class="wrapper">
-        <div class="block block_yellow block_nav block_overflow" id="header">
-            <div class="block__content">
-                <div class="works-header"><h1 class="works-header__title">Our Finest Blog</h1></div>
-            </div>
-        </div>
+{% block javascript %}
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+{% endblock %}
+{% block content %}
+    <div class="card-body">
+        <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
+        <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
+        <p class="card-text ">{{ post.content | safe }}</p>
     </div>
-{% endblock main_content %}
 
-{% block inner_body_content %}
+    <h2>{{ comments.count }} comments</h2>
+    {% for comment in comments %}
+        <div class="comments" style="padding: 10px;">
+            <p class="font-weight-bold">
+                {{ comment.commentator_name }}
+                <span class=" text-muted font-weight-normal">
+              {{ comment.comment_posted_at }}
+            </span>
+            </p>
+            {{ comment.comment_body | linebreaks }}
+            <hr/>
+        </div>
+    {% endfor %}
 
-{% endblock inner_body_content %}
 
-{% block footer_javascript_page %}
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            let filterParams = {
-                ajaxurl: 'https://itrexgroup.com/wp-admin/admin-ajax.php',
-                posts: '{"post_type":"case","post_status":"publish","paged":1,"error":"","m":"","p":0,"post_parent":"","subpost":"","subpost_id":"","attachment":"","attachment_id":0,"name":"","pagename":"","page_id":0,"second":"","minute":"","hour":"","day":0,"monthnum":0,"year":0,"w":0,"category_name":"","tag":"","cat":"","tag_id":"","author":"","author_name":"","feed":"","tb":"","meta_key":"","meta_value":"","preview":"","s":"","sentence":"","title":"","fields":"","menu_order":"","embed":"","category__in":[],"category__not_in":[],"category__and":[],"post__in":[],"post__not_in":[],"post_name__in":[],"tag__in":[],"tag__not_in":[],"tag__and":[],"tag_slug__in":[],"tag_slug__and":[],"post_parent__in":[],"post_parent__not_in":[],"author__in":[],"author__not_in":[],"tax_query":[],"ignore_sticky_posts":false,"suppress_filters":false,"cache_results":false,"update_post_term_cache":true,"lazy_load_term_meta":true,"update_post_meta_cache":true,"posts_per_page":10,"nopaging":false,"comments_per_page":"50","no_found_rows":false,"order":"DESC"}'
-            }
-            filterParams.posts = JSON.parse(filterParams.posts);
-            filterParams.posts.tag = '';
-            filterParams.posts.tag_id = '';
-            filterParams.posts.terms = '';
-            filterParams.posts.tag__and = [];
-            filterParams.posts.tag__in = [];
-            filterParams.posts.tag__not_in = [];
-            filterParams.posts.tag_slug__and = [];
-            filterParams.posts.tag_slug__in = [];
-            filterParams.posts.tax_query = [];
-            filterParams.posts = JSON.stringify(filterParams.posts);
-            window.canBeLoaded = true;
-            jQuery(function ($) {
-                let $ajaxContainer = $('[ajax-load-more]');
-                let data = {
-                    action: 'filter_works',
-                    posts: filterParams.posts,
-                    page: 1,
-                    tags: ''
-                };
-                let activeTags = [];
-                let $filter = $('.filter');
-                let $tags = $filter.find('.filter__tag');
-                $tags.on('filter-state-change', function (e) {
-                    const $tag = $(this);
-                    updateTags($tag.attr('tag-id'), e.isActive);
-                    onChangeFilter();
-                });
+    <div class="card-body">
+        {% if commentSuccess %}
+            <div class="alert alert-success" role="alert">
+                Your comment is awaiting for moderation by site admin
+            </div>
+        {% elif recapchaError %}
+            <div class="alert alert-danger" role="alert">
+                Maybe.. You skipped Recaptcha, that's why your comment is not uploaded. Try again .
+            </div>
+        {% else %}
+            <h3>Leave a comment</h3>
+            <form method="post" style="margin-top: 1.3em;">
+                {{ comment_form.as_p }}
+                {% csrf_token %}
+                <div class="g-recaptcha" data-sitekey="6LeI5pwbAAAAACjb1VO2NICpuBD89U9gcv9mvqnO"></div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        {% endif %}
+    </div>
 
-                function updateTags(id, isActive) {
-                    if (isActive) {
-                        if (activeTags.indexOf(id) === -1) {
-                            activeTags.push(id);
-                        }
-                    } else {
-                        let index = activeTags.indexOf(id);
-                        if (index !== -1) {
-                            activeTags.splice(index, 1);
-                        }
-                    }
-                }
-
-                function updateUrl() {
-                    let searchParams = new URLSearchParams(window.location.search);
-                    if (activeTags.length > 0) {
-                        searchParams.set('tags', activeTags.join(','));
-                    } else {
-                        searchParams.delete('tags');
-                    }
-                    let newurl = window.location.protocol + '//' + window.location.host + window.location.pathname;
-                    let paramsString = searchParams.toString();
-                    if (paramsString != '') {
-                        newurl += '?' + paramsString;
-                    }
-                    window.history.replaceState(null, null, newurl);
-                }
-
-                function updatePosts() {
-                    if (window.canBeLoaded === true) {
-                        if (activeTags.length > 0) {
-                            data.tags = activeTags.join(',');
-                        } else {
-                            data.tags = '';
-                        }
-                        $.ajax({
-                            url: filterParams.ajaxurl,
-                            data: data,
-                            type: 'POST',
-                            beforeSend: function (xhr) {
-                                window.canBeLoaded = false;
-                            },
-                            success: function (responce) {
-                                responce = JSON.parse(responce);
-                                if (responce) {
-                                    $ajaxContainer.html(responce.html);
-                                } else {
-                                    $ajaxContainer.html('');
-                                }
-                                window.loadMoreParams = {
-                                    ajaxurl: 'https://itrexgroup.com/wp-admin/admin-ajax.php',
-                                    posts: responce.posts,
-                                    current_page: responce.current_page,
-                                    max_page: responce.max_page
-                                }
-                                window.canBeLoaded = true;
-                            },
-                            error: function (responce) {
-                                window.canBeLoaded = true;
-                            }
-                        });
-                    }
-                }
-
-                function update() {
-                    updateUrl();
-                    updatePosts();
-                }
-
-                let timerId = false;
-
-                function onChangeFilter() {
-                    if (timerId) {
-                        clearTimeout(timerId);
-                    }
-                    timerId = setTimeout(() => {
-                        update();
-                    }, 500);
-                }
-            });
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            window.loadMoreParams = {
-                ajaxurl: 'https://itrexgroup.com/wp-admin/admin-ajax.php',
-                posts: '{"post_type":"case","post_status":"publish","paged":1,"error":"","m":"","p":0,"post_parent":"","subpost":"","subpost_id":"","attachment":"","attachment_id":0,"name":"","pagename":"","page_id":0,"second":"","minute":"","hour":"","day":0,"monthnum":0,"year":0,"w":0,"category_name":"","tag":"","cat":"","tag_id":"","author":"","author_name":"","feed":"","tb":"","meta_key":"","meta_value":"","preview":"","s":"","sentence":"","title":"","fields":"","menu_order":"","embed":"","category__in":[],"category__not_in":[],"category__and":[],"post__in":[],"post__not_in":[],"post_name__in":[],"tag__in":[],"tag__not_in":[],"tag__and":[],"tag_slug__in":[],"tag_slug__and":[],"post_parent__in":[],"post_parent__not_in":[],"author__in":[],"author__not_in":[],"tax_query":[],"ignore_sticky_posts":false,"suppress_filters":false,"cache_results":false,"update_post_term_cache":true,"lazy_load_term_meta":true,"update_post_meta_cache":true,"posts_per_page":10,"nopaging":false,"comments_per_page":"50","no_found_rows":false,"order":"DESC"}',
-                current_page: '1',
-                max_page: '5',
-                layout_weight: '0'
-            }
-            if (typeof window.canBeLoaded === 'undefined') {
-                window.canBeLoaded = true;
-            }
-            let bottomOffset = window.innerHeight * 2;
-
-            function onScrollLoadMore() {
-                let $ajaxContainer = $('[ajax-load-more]');
-                if (window.scrollY > ($ajaxContainer.offset().top + $ajaxContainer.height() - bottomOffset)
-                    && window.canBeLoaded == true && loadMoreParams.current_page < loadMoreParams.max_page) {
-                    let data = {
-                        action: 'loadmore',
-                        posts: window.loadMoreParams.posts,
-                        page: window.loadMoreParams.current_page,
-                        layout_weight: window.loadMoreParams.layout_weight
-                    };
-                    $.ajax({
-                        url: loadMoreParams.ajaxurl,
-                        data: data,
-                        type: 'POST',
-                        beforeSend: function (xhr) {
-                            window.canBeLoaded = false;
-                        },
-                        success: function (responce) {
-                            responce = JSON.parse(responce);
-                            if (responce) {
-                                $ajaxContainer.append(responce.html);
-                                window.loadMoreParams = {
-                                    ajaxurl: 'https://itrexgroup.com/wp-admin/admin-ajax.php',
-                                    posts: responce.posts,
-                                    current_page: responce.current_page,
-                                    max_page: responce.max_page,
-                                    layout_weight: responce.layout_weight
-                                }
-                            }
-                            window.canBeLoaded = true;
-                        },
-                        error: function () {
-                            window.canBeLoaded = true;
-                        }
-                    });
-                }
-            }
-
-            window.addEventListener('scroll', onScrollLoadMore);
-        });
-    </script>
-{% endblock footer_javascript_page %}
+{% endblock %}
