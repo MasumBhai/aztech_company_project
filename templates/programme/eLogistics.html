@@ -228,129 +228,81 @@
                 </div>
             </div>
         </div>
-        <div class="block block_z-index-up block_relative" id="work" cta-text="Get a free quote">
-            <div class="block__content">
-                <div class="post-title">
-                    <h2 class="block__title post-title__title" animation="fade-up" animation-delay=".15">Latest
-                        projects</h2>
-                </div>
-            </div>
-            <div class="block__scroll block__scroll_tablet" scroll-destination="posts" animation="fade-up"
-                 animation-delay=".15">
-                <div class="posts-list posts-list_slider">
-                    <svg style="position: absolute;pointer-events: none" width="0" height="0">
-                        <defs>
-                            <clipPath id="thinking-mask" clipPathUnits="objectBoundingBox">
-                                <rect x="0" y="0" width="1" height="1"></rect>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <div class="post post_slider" style="position: relative;visibility: visible">
-                        <div class="post__info">
-                            <div class="post__company">Real-time collaborative logistics platform</div>
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/case-studies/ai-driven-iot-logistics-platform-predicts-and-manages-order/"><span
-                                    class="arrow-link__text">AI-driven end-to-end IoT logistics platform for managing shipments across the </span><span
-                                    style="white-space: nowrap">globe<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
+        <div class="block" id="clients" cta-text="Get your project estimate">
+<div class="block__content">
+<h2 class="block__title" animation="fade-up" animation-delay=".15">Hungry for every<br>client's success</h2>
+<p class="block__subtitle" animation="fade-up" animation-delay=".15"></p>
+<div class="clients" animation="fade-up" animation-delay=".15">
+<div class="clients__list">
+    {% if clientDetails %}
+        {% for x in clientDetails %}
+            <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
+                 style="width: 150px;height: 150px"/>
+        {% endfor %}
+    {% endif %}
+<div class="clients__append"></div>
+</div>
+</div>
+</div>
+</div>
+        {% block project_content %}
+            {% if projectDetails %}
+                <div class="block block_z-index-up block_relative" id="projects"
+                     cta-text="get your project optimum solutionn">
+                    <div class="block__content">
+                        <div class="post-title">
+                            <h2 class="block__title post-title__title" animation="fade-up" animation-delay=".15">
+                                Our Latest projects
+                            </h2>
                         </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/case-studies/ai-driven-iot-logistics-platform-predicts-and-manages-order/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-logistics.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-logistics-1024x731.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-logistics-720x514.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-logistics-512x366.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-logistics.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/06/case-logistics.jpg"
-                                     alt="logistics software development">
-                            </picture>
-                        </a>
                     </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <div class="post__company">Haulynx</div>
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/case-studies/fright-management-app-redesign-for-haulynx/"><span
-                                    class="arrow-link__text">Revamped freight management web and mobile apps for </span><span
-                                    style="white-space: nowrap">Haulynx<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/case-studies/fright-management-app-redesign-for-haulynx/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/freight-management-app.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/freight-management-app-1024x794.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/freight-management-app-720x558.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/freight-management-app-512x397.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/freight-management-app.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/07/freight-management-app.jpg"
-                                     alt="Redesigned solution">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <div class="post__company">A worldwide leader in independent containership management and
-                                ownership
-                            </div>
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/case-studies/erp-system-redesign-for-maritime-fleet-management/"><span
-                                    class="arrow-link__text">Logistics ERP system redesign to make maritime fleet management simple and </span><span
-                                    style="white-space: nowrap">easy<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/case-studies/erp-system-redesign-for-maritime-fleet-management/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/maritime-fleet-management-impact-1-1440x1000.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/maritime-fleet-management-impact-1-1024x711.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/maritime-fleet-management-impact-1-720x500.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/maritime-fleet-management-impact-1-512x356.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/maritime-fleet-management-impact-1.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/11/maritime-fleet-management-impact-1.jpg"
-                                     alt="Maritime Fleet Management solution">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="posts-list__controlls">
-                        <div class="posts-list__ui">
-                            <div class="posts-list__button posts-list__button_left" id="post-prev-item">
-                                <svg class="icon">
-                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
-                                </svg>
-                            </div>
-                            <div class="posts-list__button posts-list__button_right" id="post-next-item">
-                                <svg class="icon">
-                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
-                                </svg>
+                    <div class="block__scroll block__scroll_tablet" scroll-destination="posts" animation="fade-up"
+                         animation-delay=".15">
+                        <div class="posts-list posts-list_slider">
+                            <svg style="position: absolute;pointer-events: none" width="0" height="0">
+                                <defs>
+                                    <clipPath id="thinking-mask" clipPathUnits="objectBoundingBox">
+                                        <rect x="0" y="0" width="1" height="1"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            {% for project in projectDetails %}
+                                <div class="post post_slider" style="position: relative;visibility: visible">
+                                    <div class="post__info">
+                                        <div class="post__company">{{ project.project_client }}</div>
+                                        <a class="post__title arrow-link arrow-link_fixed-opacity"
+                                           href="{% url 'project-details' project.project_slug %}"><span
+                                                class="arrow-link__text">{{ project.project_title }}<span
+                                                class="arrow-link__arrow"><span
+                                                class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
+                                                class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
+                                    </div>
+                                    <a class="post__image" loading="lazy"
+                                       href="{% url 'project-details' project.project_slug %}">
+                                        <img loading="lazy" src="{{ project.project_preview.url }}"
+                                             alt="{{ project.project_title }}">
+                                    </a>
+                                </div>
+                            {% endfor %}
+                            <div class="posts-list__controlls">
+                                <div class="posts-list__ui">
+                                    <div class="posts-list__button posts-list__button_left" id="post-prev-item">
+                                        <svg class="icon">
+                                            <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="posts-list__button posts-list__button_right" id="post-next-item">
+                                        <svg class="icon">
+                                            <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            {% endif %}
+        {% endblock project_content %}
         <div class="sticky-overflow">
             <div class="footer" auto-size-height="we-do">
                 <div class="footer__content"><a class="footer__link" id="cta" href="#form"><span

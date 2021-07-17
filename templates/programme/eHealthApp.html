@@ -635,301 +635,81 @@ color: #445aec;
                 </div>
             </div>
         </div>
-        <div class="block block_z-index-up block_relative" id="projects" cta-text="">
-            <div class="block__content">
-                <div class="post-title">
-                    <h2 class="block__title post-title__title" animation="fade-up" animation-delay=".15">Latest
-                        projects</h2>
-                </div>
-            </div>
-            <div class="block__scroll block__scroll_tablet" scroll-destination="posts" animation="fade-up"
-                 animation-delay=".15">
-                <div class="posts-list posts-list_slider">
-                    <svg style="position: absolute;pointer-events: none" width="0" height="0">
-                        <defs>
-                            <clipPath id="thinking-mask" clipPathUnits="objectBoundingBox">
-                                <rect x="0" y="0" width="1" height="1"></rect>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <div class="post post_slider" style="position: relative;visibility: visible">
-                        <div class="post__info">
-                            <div class="post__company">A developer of imaging platforms for health services</div>
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/case-studies/medical-digital-imaging-system-improves-patient-care/"><span
-                                    class="arrow-link__text">Advanced medical digital imaging platform improves patient </span><span
-                                    style="white-space: nowrap">care<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
+        <div class="block" id="clients" cta-text="Get your project estimate">
+<div class="block__content">
+<h2 class="block__title" animation="fade-up" animation-delay=".15">Hungry for every<br>client's success</h2>
+<p class="block__subtitle" animation="fade-up" animation-delay=".15"></p>
+<div class="clients" animation="fade-up" animation-delay=".15">
+<div class="clients__list">
+    {% if clientDetails %}
+        {% for x in clientDetails %}
+            <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
+                 style="width: 150px;height: 150px"/>
+        {% endfor %}
+    {% endif %}
+<div class="clients__append"></div>
+</div>
+</div>
+</div>
+</div>
+        {% block project_content %}
+            {% if projectDetails %}
+                <div class="block block_z-index-up block_relative" id="projects"
+                     cta-text="get your project optimum solutionn">
+                    <div class="block__content">
+                        <div class="post-title">
+                            <h2 class="block__title post-title__title" animation="fade-up" animation-delay=".15">
+                                Our Latest projects
+                            </h2>
                         </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/case-studies/medical-digital-imaging-system-improves-patient-care/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/health-images-preview-2-1440x1029.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/health-images-preview-2-1024x731.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/health-images-preview-2-720x514.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/health-images-preview-2-512x366.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/health-images-preview-2.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/11/health-images-preview-2.jpg"
-                                     alt="Web-based Image Viewer for Medical Diagnostic">
-                            </picture>
-                        </a>
                     </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <div class="post__company">STAT Informatic Solutions</div>
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/case-studies/release-of-medical-information-solution-stat/"><span
-                                    class="arrow-link__text">Release of medical information (ROI) platform for STAT Informatic </span><span
-                                    style="white-space: nowrap">Solutions<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/case-studies/release-of-medical-information-solution-stat/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/nurse-1.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/nurse-1-1024x711.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/nurse-1-720x500.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/nurse-1-512x356.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/nurse-1.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/11/nurse-1.jpg"
-                                     alt="nurse">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <div class="post__company">Eye treatment clinic</div>
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/case-studies/ml-powered-web-app-for-eye-surgeons/"><span
-                                    class="arrow-link__text">ML-powered web platform for running eye lens power </span><span
-                                    style="white-space: nowrap">calculations<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/case-studies/ml-powered-web-app-for-eye-surgeons/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/10/eye-surgeons-1440x1029.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/10/eye-surgeons-1024x731.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/10/eye-surgeons-720x514.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/10/eye-surgeons-512x366.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/10/eye-surgeons.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/10/eye-surgeons.jpg"
-                                     alt="Web App for Eye Surgeons">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <div class="post__company">PotentiaMetrics</div>
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/case-studies/ai-platform-for-cancer-prognosis/"><span
-                                    class="arrow-link__text">AI platform for PotentialMetrics to improve cancer prognostic </span><span
-                                    style="white-space: nowrap">accuracy<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/case-studies/ai-platform-for-cancer-prognosis/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-health.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-health-1024x731.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-health-720x514.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-health-512x366.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-health.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/06/case-health.jpg"
-                                     alt="healthcare and medicine software development">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <div class="post__company">Hygenix</div>
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/case-studies/iot-platform-for-hand-hygiene-behavior-in-healthcare/"><span
-                                    class="arrow-link__text">Innovative IoT platform for improving hand hygiene behavior in healthcare </span><span
-                                    style="white-space: nowrap">facilities<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/case-studies/iot-platform-for-hand-hygiene-behavior-in-healthcare/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/Hygenix.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/Hygenix-1024x683.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/Hygenix-720x480.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/Hygenix-512x341.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/Hygenix.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/07/Hygenix.jpg"
-                                     alt="Healthcare IoT Platform to Improves Hand Hygiene Behavior">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <div class="post__company">Digital Networking and Booking Service</div>
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/case-studies/medical-appointment-scheduling-system/"><span
-                                    class="arrow-link__text">Automated  scheduling system for medical </span><span
-                                    style="white-space: nowrap">appointments<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/case-studies/medical-appointment-scheduling-system/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/QWELL.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/QWELL-1024x683.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/QWELL-720x480.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/QWELL-512x342.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/QWELL.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/07/QWELL.jpg"
-                                     alt="Medical Appointment Scheduling Systems Synchronization">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <div class="post__company">A global healthcare company</div>
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/case-studies/ml-driven-data-masking-solution-for-healthcare-industry/"><span
-                                    class="arrow-link__text">ML-driven data masking solution for healthcare industry to reduce cyber </span><span
-                                    style="white-space: nowrap">risks<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/case-studies/ml-driven-data-masking-solution-for-healthcare-industry/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/12/healthsecurity_previw-1-1440x1029.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/12/healthsecurity_previw-1-1024x731.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/12/healthsecurity_previw-1-720x514.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/12/healthsecurity_previw-1-512x366.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/12/healthsecurity_previw-1.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/12/healthsecurity_previw-1.jpg"
-                                     alt="ML-Driven Data Masking Solution for healthcare">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <div class="post__company">OLab4</div>
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/case-studies/olab-education-research-platform-modernization/"><span
-                                    class="arrow-link__text">Olab education research platform modernization for highly-engaging virtual </span><span
-                                    style="white-space: nowrap">scenarios<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/case-studies/olab-education-research-platform-modernization/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/OLab4.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/OLab4-1024x683.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/OLab4-720x480.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/OLab4-512x341.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/OLab4.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/07/OLab4.jpg"
-                                     alt="Black stethoscope on blue background">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="post post_slider">
-                        <div class="post__info">
-                            <div class="post__company">Biotech Company</div>
-                            <a class="post__title arrow-link arrow-link_fixed-opacity"
-                               href="https://itrexgroup.com/case-studies/web-mobile-apps-for-human-emulation-system/"><span
-                                    class="arrow-link__text">Web and mobile app for organ-on-chips system to empower biotech </span><span
-                                    style="white-space: nowrap">researchers<span class="arrow-link__arrow"><span
-                                    class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
-                                    class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-                        </div>
-                        <a class="post__image" loading="lazy"
-                           href="https://itrexgroup.com/case-studies/web-mobile-apps-for-human-emulation-system/">
-                            <picture>
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/chip-mobile3.jpg"
-                                        type="image/jpeg" media="(max-width: 2880px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/chip-mobile3.jpg"
-                                        type="image/jpeg" media="(max-width: 2048px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/chip-mobile3-720x720.jpg"
-                                        type="image/jpeg" media="(max-width: 720px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/chip-mobile3-512x512.jpg"
-                                        type="image/jpeg" media="(max-width: 512px)">
-                                <source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/chip-mobile3.jpg"
-                                        type="image/jpeg">
-                                <img loading="lazy"
-                                     data-src="https://itrexgroup.com/wp-content/uploads/2020/07/chip-mobile3.jpg"
-                                     alt="Web & Mobile App for Researches and Experiments">
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="posts-list__controlls">
-                        <div class="posts-list__ui">
-                            <div class="posts-list__button posts-list__button_left" id="post-prev-item">
-                                <svg class="icon">
-                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
-                                </svg>
-                            </div>
-                            <div class="posts-list__button posts-list__button_right" id="post-next-item">
-                                <svg class="icon">
-                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
-                                </svg>
+                    <div class="block__scroll block__scroll_tablet" scroll-destination="posts" animation="fade-up"
+                         animation-delay=".15">
+                        <div class="posts-list posts-list_slider">
+                            <svg style="position: absolute;pointer-events: none" width="0" height="0">
+                                <defs>
+                                    <clipPath id="thinking-mask" clipPathUnits="objectBoundingBox">
+                                        <rect x="0" y="0" width="1" height="1"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            {% for project in projectDetails %}
+                                <div class="post post_slider" style="position: relative;visibility: visible">
+                                    <div class="post__info">
+                                        <div class="post__company">{{ project.project_client }}</div>
+                                        <a class="post__title arrow-link arrow-link_fixed-opacity"
+                                           href="{% url 'project-details' project.project_slug %}"><span
+                                                class="arrow-link__text">{{ project.project_title }}<span
+                                                class="arrow-link__arrow"><span
+                                                class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
+                                                class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
+                                    </div>
+                                    <a class="post__image" loading="lazy"
+                                       href="{% url 'project-details' project.project_slug %}">
+                                        <img loading="lazy" src="{{ project.project_preview.url }}"
+                                             alt="{{ project.project_title }}">
+                                    </a>
+                                </div>
+                            {% endfor %}
+                            <div class="posts-list__controlls">
+                                <div class="posts-list__ui">
+                                    <div class="posts-list__button posts-list__button_left" id="post-prev-item">
+                                        <svg class="icon">
+                                            <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="posts-list__button posts-list__button_right" id="post-next-item">
+                                        <svg class="icon">
+                                            <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            {% endif %}
+        {% endblock project_content %}
     </div>
 {% endblock main_content %}
 

@@ -93,8 +93,7 @@ company </h1>
         <div class="block block_z-index-up block_relative" id="projects" cta-text="">
             <div class="block__content">
                 <div class="post-title">
-                    <h2 class="block__title post-title__title" animation="fade-up" animation-delay=".15">Latest
-                        projects</h2>
+                    <h2 class="block__title post-title__title" animation="fade-up" animation-delay=".15">Our Latest Projects</h2>
                 </div>
             </div>
             <div class="block__scroll block__scroll_tablet" scroll-destination="posts" animation="fade-up"
@@ -427,7 +426,23 @@ alt="mobile app solutions">          <h2 class="landing-image__content post-bloc
 </div>
 </div>
 </div>
-
+<div class="block" id="clients" cta-text="Contact us">
+<div class="block__content">
+<h2 class="block__title" animation="fade-up" animation-delay=".15">Hungry for every<br>client's success</h2>
+<p class="block__subtitle" animation="fade-up" animation-delay=".15"></p>
+<div class="clients" animation="fade-up" animation-delay=".15">
+<div class="clients__list">
+    {% if clientDetails %}
+        {% for x in clientDetails %}
+            <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
+                 style="width: 150px;height: 150px"/>
+        {% endfor %}
+    {% endif %}
+<div class="clients__append"></div>
+</div>
+</div>
+</div>
+</div>
 <div class="block" id="Next-Gen-Tech">
 <div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
 <img data-src="https://itrexgroup.com/wp-content/uploads/2020/12/vr.jpg" alt=""

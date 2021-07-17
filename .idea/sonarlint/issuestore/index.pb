@@ -1,28 +1,14 @@
 
 >
 aztech/apps.py,7\a\7a50718fe548e4cea7d7bc61be43e37662488460
-b
-2templates/sarvices/AI/artificial_intelligence.html,f\f\ff3597edcb7b8c9d8edddb77a46ac4b357bf6f53
-X
-(templates/sarvices/AI/ai_for_retail.html,e\1\e133b9720999bde1419469b2c2bebb28673d0569
-\
-,templates/sarvices/AI/ai_for_automation.html,b\1\b19cc3e64d9d2ea3215066b47f6a7da4e7d01865
 X
 (templates/sarvices/augmentedReality.html,3\5\354e9b7843ec4832a301c314d18d9b8a9baea134
 N
 templates/sarvices/devops.html,9\4\94a1423e32df3092c72becf812fa2bae36e03cc4
 V
 &templates/sarvices/dataConsulting.html,8\2\8255cb2d63690b3cefbe50079b36f3788960c7ec
-\
-,templates/sarvices/AI/ai_for_healthcare.html,8\9\893cb170c973be29b2ccc245a4241d1d5d0811b4
-]
--templates/sarvices/digitalTransformation.html,b\6\b6dc3fa601226ff1aae7967ffdbdddf2bce5fd3c
 T
 $templates/programme/eHealthSoft.html,a\2\a2163fb74b65a69d056e755b90633089b95925a0
-T
-$templates/programme/eRetailSoft.html,4\d\4d615bffef7bc74bc889642adc9fcd41d7c09266
-\
-,templates/sarvices/technologyConsulting.html,7\1\71488bc79ee86c7067d78ff49415ae07da4db310
 T
 $templates/promotional_Advertise.html,0\3\03a0036e236c13ad85e099db619446cd0f7bea9f
 Z
@@ -47,8 +33,6 @@ K
 static/js/clean-blog.min.js,d\1\d15edd9447a95ecaf71c8386f64af02816afbc1b
 f
 6static/startbootstrap-clean-blog-gh-pages/contact.html,a\8\a8abcabae476ef6ae2221c5a5c075bed003a1024
-R
-"templates/programme/eLearning.html,d\a\da537555a13df83dd4ca7481cbd1835bdc7d6eaa
 F
 static/css/forBlog.css,7\7\775c00640d833018c912ca8ae95ee084dc5dfdb8
 i
@@ -61,13 +45,5 @@ c
 3static/startbootstrap-clean-blog-gh-pages/post.html,d\2\d23f597795f02bd392dd19893240367bba72ece0
 g
 7static/startbootstrap-clean-blog-gh-pages/js/scripts.js,6\7\67c8884d17806207ac6056e990b33c8814ccac11
-N
-aztech_company_project/urls.py,a\9\a941877cbc3613d7e78755ff53dee58452dff112
-R
-"templates/programme/eCommerce.html,b\b\bb350c43185044f9d05dc35878fbc4cb98f77403
 ?
 aztech/tests.py,8\2\8212dfc090dcf0083c5a9111f7f183a931b65d4a
->
-aztech/urls.py,e\5\e59a84d2bec9c374b6bfa155068ef3805d4c98c3
-?
-aztech/views.py,0\6\063cf2a9f78259a2eb7b33b8bffe81366820a8f4

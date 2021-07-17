@@ -182,294 +182,82 @@ Our R&D and User Experience teams create, research and prototype ideas to valida
 </div>
 </div>
 </div>
-</div><div class="block" id="clients" cta-text="Get your project estimate">
-<div class="block__content" style="padding-top: 0">
-<h2 class="block__title" animation="fade-up" animation-delay=".15">Hungry for every
-client’s success</h2>
+</div>
+<div class="block" id="clients" cta-text="Get your project estimate">
+<div class="block__content">
+<h2 class="block__title" animation="fade-up" animation-delay=".15">Hungry for every<br>client's success</h2>
 <p class="block__subtitle" animation="fade-up" animation-delay=".15"></p>
 <div class="clients" animation="fade-up" animation-delay=".15">
 <div class="clients__list">
-<a class="clients__link" href="https://www.foxcorporation.com" target="_blank">
-<svg class="clients__logo" style="width: 123px;height: 44px">
-<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#21st-Century-Fox-logo"></use>
-</svg>
-</a>
-<a class="clients__link" href="https://www.dollarshaveclub.com" target="_blank">
-<svg class="clients__logo" style="width: 223px;height: 41px">
-<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#dollar-shave-club-logo"></use>
-</svg>
-</a>
-<a class="clients__link" href="https://www.dnb.com" target="_blank">
-<svg class="clients__logo" style="width: 200px;height: 31px">
-<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#dun-bradstreet-logo"></use>
-</svg>
-</a>
-<a class="clients__link" href="https://www.jibjab.com" target="_blank">
-<svg class="clients__logo" style="width: 63px;height: 54px">
-<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#JibJab-brand-logo"></use>
-</svg>
-</a>
-<a class="clients__link" href="https://www.potentiametrics.com" target="_blank">
-<svg class="clients__logo" style="width: 200px;height: 38px">
-<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#MyCancerJourny-logo"></use>
-</svg>
-</a>
-<a class="clients__link" href="https://www.potentiametrics.com" target="_blank">
-<svg class="clients__logo" style="width: 226px;height: 34px">
-<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#pm-logo"></use>
-</svg>
-</a>
-<a class="clients__link" href="https://us.pg.com" target="_blank">
-<svg class="clients__logo" style="width: 73px;height: 32px">
-<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#PG-logo"></use>
-</svg>
-</a>
-<a class="clients__link" href="https://www.poplidays.com/en/home" target="_blank">
-<svg class="clients__logo" style="width: 143px;height: 34px">
-<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#Poplidays-logo"></use>
-</svg>
-</a>
-<a class="clients__link" href="https://www.tasconline.com" target="_blank">
-<svg class="clients__logo" style="width: 121px;height: 47px">
-<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#tasc-logo"></use>
-</svg>
-</a>
-<a class="clients__link" href="https://www.telenav.com" target="_blank">
-<svg class="clients__logo" style="width: 166px;height: 27px">
-<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#telenav-logo"></use>
-</svg>
-</a>
-<a class="clients__link" href="https://www.honest.com" target="_blank">
-<svg class="clients__logo" style="width: 52px;height: 52px">
-<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#The-Honest-Co-logo"></use>
-</svg>
-</a>
-<a class="clients__link" href="https://turvo.com" target="_blank">
-<svg class="clients__logo" style="width: 129px;height: 34px">
-<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#Turvo-logo"></use>
-</svg>
-</a>
-<a class="clients__link" href="https://www.uei.com" target="_blank">
-<svg class="clients__logo" style="width: 148px;height: 54px">
-<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#UE-logo"></use>
-</svg>
-</a>
-<a class="clients__link" href="https://www.walmart.com" target="_blank">
-<svg class="clients__logo" style="width: 144px;height: 35px">
-<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#Walmart-logo"></use>
-</svg>
-</a>
-<a class="clients__link" href="https://www.warnerbros.com" target="_blank">
-<svg class="clients__logo" style="width: 52px;height: 54px">
-<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#Warner-Bros-logo"></use>
-</svg>
-</a>
+    {% if clientDetails %}
+        {% for x in clientDetails %}
+            <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
+                 style="width: 150px;height: 150px"/>
+        {% endfor %}
+    {% endif %}
 <div class="clients__append"></div>
 </div>
 </div>
 </div>
-<div class="block__content block__content_black block__content_auto block__content_scroll-tablet">
-<div class="reviews" animation="fade-up" animation-delay=".15">
-<div class="reviews__content">
-<div class="reviews__item" style="visibility: visible">
-<div class="reviews__title">Itrex’s team are experts in their trade. The software development they provided was critical to advancing the project to the next level.</div>
-<div class="reviews__author">
-<div class="reviews__author-image"><img src="https://itrexgroup.com/wp-content/uploads/2020/06/Jeff-Block-150x150.jpg" alt="Jeff Block"></div>
-<div class="reviews__author-info">
-<div class="reviews__author-name">Jeff Block</div>
-<div class="reviews__author-position">VP of Process and Technology</div>
-<div class="reviews__author-company">PotentiaMetrics, Inc.</div>
 </div>
-</div>
-</div>
-<div class="reviews__item">
-<div class="reviews__title">When you hire them, you're actually going to get something valuable.</div>
-<div class="reviews__author">
-<div class="reviews__author-image"><img src="https://itrexgroup.com/wp-content/uploads/2020/06/Daniel-Schuler-150x150.jpg" alt="Daniel Schuler"></div>
-<div class="reviews__author-info">
-<div class="reviews__author-name">Daniel Schuler</div>
-<div class="reviews__author-position">CTO</div>
-<div class="reviews__author-company">Hyginex</div>
-</div>
-</div>
-</div>
-<div class="reviews__item">
-<div class="reviews__title">Itrex is an outstanding partner. They don't even feel like a contractor, but more like a fully integrated team.</div>
-<div class="reviews__author">
-<div class="reviews__author-image"><img src="https://itrexgroup.com/wp-content/uploads/2020/06/author-1.jpg" alt="Ashley Lewis"></div>
-<div class="reviews__author-info">
-<div class="reviews__author-name">Ashley Lewis</div>
-<div class="reviews__author-position">Director of Product Management</div>
-<div class="reviews__author-company">Dollar Shave Club</div>
-</div>
-</div>
-</div>
-<div class="reviews__ui">
-<div class="reviews__button reviews__button_left" id="review-prev-item">
-<svg class="icon icon_white">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
-</svg>
-</div>
-<div class="reviews__button reviews__button_right" id="review-next-item">
-<svg class="icon icon_white">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
-</svg>
-</div>
-</div>
-</div>
-</div>    </div>
-</div><div class="block block_z-index-up block_relative" id="work" cta-text="Get your project estimate">
-<div class="block__content">
-<div class="post-title">
-<h2 class="block__title post-title__title" animation="fade-up" animation-delay=".15">Latest projects</h2>
-</div>
-</div>
-<div class="block__scroll block__scroll_tablet" scroll-destination="posts" animation="fade-up" animation-delay=".15">
-<div class="posts-list posts-list_slider">
-<svg style="position: absolute;pointer-events: none" width="0" height="0">
-<defs>
-<clipPath id="thinking-mask" clipPathUnits="objectBoundingBox">
-<rect x="0" y="0" width="1" height="1"></rect>
-</clipPath>
-</defs>
-</svg>
-<div class="post post_slider" style="position: relative;visibility: visible">
-<div class="post__info">
-<div class="post__company">The Honest Company</div>
-<a class="post__title arrow-link arrow-link_fixed-opacity" href="https://itrexgroup.com/case-studies/the-honest-company-data-managements-analytics-solution/"><span class="arrow-link__text">Ecommerce data management and data analytics solution for the Honest </span><span style="white-space: nowrap">Company<span class="arrow-link__arrow"><span class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-</div>
-<a class="post__image" loading="lazy" href="https://itrexgroup.com/case-studies/the-honest-company-data-managements-analytics-solution/">
-<picture>
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/TheHonestCompany.jpg" type="image/jpeg" media="(max-width: 2880px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/TheHonestCompany-1024x737.jpg" type="image/jpeg" media="(max-width: 2048px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/TheHonestCompany-720x518.jpg" type="image/jpeg" media="(max-width: 720px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/TheHonestCompany-512x368.jpg" type="image/jpeg" media="(max-width: 512px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/TheHonestCompany.jpg" type="image/jpeg">
-<img loading="lazy" data-src="https://itrexgroup.com/wp-content/uploads/2020/07/TheHonestCompany.jpg" alt="Ecommerce Data Management and Data Analytics The Honest Company">
-</picture>            </a>
-</div>
-<div class="post post_slider">
-<div class="post__info">
-<div class="post__company">Global Retailer</div>
-<a class="post__title arrow-link arrow-link_fixed-opacity" href="https://itrexgroup.com/case-studies/ai-powered-big-data-platform-for-retail/"><span class="arrow-link__text">AI-powered self-service BI and big data platform for the world's leading </span><span style="white-space: nowrap">retailer<span class="arrow-link__arrow"><span class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-</div>
-<a class="post__image" loading="lazy" href="https://itrexgroup.com/case-studies/ai-powered-big-data-platform-for-retail/">
-<picture>
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/wallmart_1.jpg" type="image/jpeg" media="(max-width: 2880px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/wallmart_1-1024x737.jpg" type="image/jpeg" media="(max-width: 2048px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/wallmart_1-720x518.jpg" type="image/jpeg" media="(max-width: 720px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/wallmart_1-512x369.jpg" type="image/jpeg" media="(max-width: 512px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/wallmart_1.jpg" type="image/jpeg">
-<img loading="lazy" data-src="https://itrexgroup.com/wp-content/uploads/2020/06/wallmart_1.jpg" alt="AI-powered Big Data Platform">
-</picture>            </a>
-</div>
-<div class="post post_slider">
-<div class="post__info">
-<div class="post__company">Real-time collaborative logistics platform</div>
-<a class="post__title arrow-link arrow-link_fixed-opacity" href="https://itrexgroup.com/case-studies/ai-driven-iot-logistics-platform-predicts-and-manages-order/"><span class="arrow-link__text">AI-driven end-to-end IoT logistics platform for managing shipments across the </span><span style="white-space: nowrap">globe<span class="arrow-link__arrow"><span class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-</div>
-<a class="post__image" loading="lazy" href="https://itrexgroup.com/case-studies/ai-driven-iot-logistics-platform-predicts-and-manages-order/">
-<picture>
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-logistics.jpg" type="image/jpeg" media="(max-width: 2880px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-logistics-1024x731.jpg" type="image/jpeg" media="(max-width: 2048px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-logistics-720x514.jpg" type="image/jpeg" media="(max-width: 720px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-logistics-512x366.jpg" type="image/jpeg" media="(max-width: 512px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-logistics.jpg" type="image/jpeg">
-<img loading="lazy" data-src="https://itrexgroup.com/wp-content/uploads/2020/06/case-logistics.jpg" alt="logistics software development">
-</picture>            </a>
-</div>
-<div class="post post_slider">
-<div class="post__info">
-<div class="post__company">Third-party benefits administrator</div>
-<a class="post__title arrow-link arrow-link_fixed-opacity" href="https://itrexgroup.com/case-studies/benefit-account-platform-redesign/"><span class="arrow-link__text">Legacy platform modernization for third-party benefits </span><span style="white-space: nowrap">administration<span class="arrow-link__arrow"><span class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-</div>
-<a class="post__image" loading="lazy" href="https://itrexgroup.com/case-studies/benefit-account-platform-redesign/">
-<picture>
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/BenefitsAdministrator.jpg" type="image/jpeg" media="(max-width: 2880px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/BenefitsAdministrator-1024x683.jpg" type="image/jpeg" media="(max-width: 2048px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/BenefitsAdministrator-720x480.jpg" type="image/jpeg" media="(max-width: 720px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/BenefitsAdministrator-512x342.jpg" type="image/jpeg" media="(max-width: 512px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/BenefitsAdministrator.jpg" type="image/jpeg">
-<img loading="lazy" data-src="https://itrexgroup.com/wp-content/uploads/2020/07/BenefitsAdministrator.jpg" alt="Legacy Monolithic System Modernization">
-</picture>            </a>
-</div>
-<div class="post post_slider">
-<div class="post__info">
-<div class="post__company">PotentiaMetrics</div>
-<a class="post__title arrow-link arrow-link_fixed-opacity" href="https://itrexgroup.com/case-studies/ai-platform-for-cancer-prognosis/"><span class="arrow-link__text">AI platform for PotentialMetrics to improve cancer prognostic </span><span style="white-space: nowrap">accuracy<span class="arrow-link__arrow"><span class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-</div>
-<a class="post__image" loading="lazy" href="https://itrexgroup.com/case-studies/ai-platform-for-cancer-prognosis/">
-<picture>
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-health.jpg" type="image/jpeg" media="(max-width: 2880px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-health-1024x731.jpg" type="image/jpeg" media="(max-width: 2048px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-health-720x514.jpg" type="image/jpeg" media="(max-width: 720px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-health-512x366.jpg" type="image/jpeg" media="(max-width: 512px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/06/case-health.jpg" type="image/jpeg">
-<img loading="lazy" data-src="https://itrexgroup.com/wp-content/uploads/2020/06/case-health.jpg" alt="healthcare and medicine software development">
-</picture>            </a>
-</div>
-<div class="post post_slider">
-<div class="post__info">
-<div class="post__company">Superscreen</div>
-<a class="post__title arrow-link arrow-link_fixed-opacity" href="https://itrexgroup.com/case-studies/superscreen-tablet-os-for-wireless-screen-mirroring/"><span class="arrow-link__text">Superscreen tablet for personal smartphone screen mirroring, screencasting, and media </span><span style="white-space: nowrap">streaming<span class="arrow-link__arrow"><span class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-</div>
-<a class="post__image" loading="lazy" href="https://itrexgroup.com/case-studies/superscreen-tablet-os-for-wireless-screen-mirroring/">
-<picture>
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/superscreen_1-1440x1020.jpg" type="image/jpeg" media="(max-width: 2880px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/superscreen_1-1024x725.jpg" type="image/jpeg" media="(max-width: 2048px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/superscreen_1-720x510.jpg" type="image/jpeg" media="(max-width: 720px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/superscreen_1-512x363.jpg" type="image/jpeg" media="(max-width: 512px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/superscreen_1.jpg" type="image/jpeg">
-<img loading="lazy" data-src="https://itrexgroup.com/wp-content/uploads/2020/07/superscreen_1.jpg" alt="The Superscreen Tablet that Mirrors Personal Smartphone">
-</picture>            </a>
-</div>
-<div class="post post_slider">
-<div class="post__info">
-<div class="post__company">Data Broker</div>
-<a class="post__title arrow-link arrow-link_fixed-opacity" href="https://itrexgroup.com/case-studies/mdr-connected-cloud-platform-for-sales-and-marketing/"><span class="arrow-link__text">AdTech cloud platform that accelerates education sales and </span><span style="white-space: nowrap">marketing<span class="arrow-link__arrow"><span class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-</div>
-<a class="post__image" loading="lazy" href="https://itrexgroup.com/case-studies/mdr-connected-cloud-platform-for-sales-and-marketing/">
-<picture>
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/adtech-cloudplatform.jpg" type="image/jpeg" media="(max-width: 2880px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/adtech-cloudplatform-1024x794.jpg" type="image/jpeg" media="(max-width: 2048px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/adtech-cloudplatform-720x558.jpg" type="image/jpeg" media="(max-width: 720px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/adtech-cloudplatform-512x397.jpg" type="image/jpeg" media="(max-width: 512px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/adtech-cloudplatform.jpg" type="image/jpeg">
-<img loading="lazy" data-src="https://itrexgroup.com/wp-content/uploads/2020/07/adtech-cloudplatform.jpg" alt="AdTech сloud platform">
-</picture>            </a>
-</div>
-<div class="post post_slider">
-<div class="post__info">
-<div class="post__company">Hygenix</div>
-<a class="post__title arrow-link arrow-link_fixed-opacity" href="https://itrexgroup.com/case-studies/iot-platform-for-hand-hygiene-behavior-in-healthcare/"><span class="arrow-link__text">Innovative IoT platform for improving hand hygiene behavior in healthcare </span><span style="white-space: nowrap">facilities<span class="arrow-link__arrow"><span class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
-</div>
-<a class="post__image" loading="lazy" href="https://itrexgroup.com/case-studies/iot-platform-for-hand-hygiene-behavior-in-healthcare/">
-<picture>
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/Hygenix.jpg" type="image/jpeg" media="(max-width: 2880px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/Hygenix-1024x683.jpg" type="image/jpeg" media="(max-width: 2048px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/Hygenix-720x480.jpg" type="image/jpeg" media="(max-width: 720px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/Hygenix-512x341.jpg" type="image/jpeg" media="(max-width: 512px)">
-<source srcset="https://itrexgroup.com/wp-content/uploads/2020/07/Hygenix.jpg" type="image/jpeg">
-<img loading="lazy" data-src="https://itrexgroup.com/wp-content/uploads/2020/07/Hygenix.jpg" alt="Healthcare IoT Platform to Improves Hand Hygiene Behavior">
-</picture>            </a>
-</div>
-<div class="posts-list__controlls">
-<div class="posts-list__ui">
-<div class="posts-list__button posts-list__button_left" id="post-prev-item">
-<svg class="icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
-</svg>
-</div>
-<div class="posts-list__button posts-list__button_right" id="post-next-item">
-<svg class="icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
-</svg>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+        {% block project_content %}
+            {% if projectDetails %}
+                <div class="block block_z-index-up block_relative" id="projects"
+                     cta-text="get your project optimum solutionn">
+                    <div class="block__content">
+                        <div class="post-title">
+                            <h2 class="block__title post-title__title" animation="fade-up" animation-delay=".15">
+                                Our Latest projects
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="block__scroll block__scroll_tablet" scroll-destination="posts" animation="fade-up"
+                         animation-delay=".15">
+                        <div class="posts-list posts-list_slider">
+                            <svg style="position: absolute;pointer-events: none" width="0" height="0">
+                                <defs>
+                                    <clipPath id="thinking-mask" clipPathUnits="objectBoundingBox">
+                                        <rect x="0" y="0" width="1" height="1"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            {% for project in projectDetails %}
+                                <div class="post post_slider" style="position: relative;visibility: visible">
+                                    <div class="post__info">
+                                        <div class="post__company">{{ project.project_client }}</div>
+                                        <a class="post__title arrow-link arrow-link_fixed-opacity"
+                                           href="{% url 'project-details' project.project_slug %}"><span
+                                                class="arrow-link__text">{{ project.project_title }}<span
+                                                class="arrow-link__arrow"><span
+                                                class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
+                                                class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
+                                    </div>
+                                    <a class="post__image" loading="lazy"
+                                       href="{% url 'project-details' project.project_slug %}">
+                                        <img loading="lazy" src="{{ project.project_preview.url }}"
+                                             alt="{{ project.project_title }}">
+                                    </a>
+                                </div>
+                            {% endfor %}
+                            <div class="posts-list__controlls">
+                                <div class="posts-list__ui">
+                                    <div class="posts-list__button posts-list__button_left" id="post-prev-item">
+                                        <svg class="icon">
+                                            <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="posts-list__button posts-list__button_right" id="post-next-item">
+                                        <svg class="icon">
+                                            <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endblock project_content %}
 <div class="sticky-overflow">
 <div class="footer" auto-size-height="we-do">
 <div class="footer__content"><a class="footer__link" id="cta" href="#form"><span class="footer__link-background footer__link-background_back"></span><span class="footer__link-background footer__link-background_front"></span><span class="footer__link-text"><span class="footer__link-text-value">Leverage our technology consulting services</span><span class="footer__link-icon"><span class="footer__link-icon-first">→</span><span class="footer__link-icon-second">→</span></span></span></a></div>
