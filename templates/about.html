@@ -60,21 +60,21 @@ color: #445aec;
                     that matter</h2>
                 <div class="stats-list" animation="fade-up" animation-delay=".15">
                     <div class="stats-list__item">
-                        <div class="stats-list__value">10+</div>
+                        <div class="stats-list__value">{% if companyInfo %}{{ companyInfo.years_of_experiences }}{% else %}05{% endif %}+</div>
                         <div class="stats-list__text">years of hands-on experience</div>
                     </div>
                     <div class="stats-list__item">
-                        <div class="stats-list__value">3+</div>
+                        <div class="stats-list__value">{% if companyInfo %}{{ companyInfo.years_of_collaborations }}{% else %}04{% endif %}+</div>
                         <div class="stats-list__text">years of ongoing collaboration with clients on average</div>
                     </div>
                     <div class="stats-list__item">
-                        <div class="stats-list__value">500+</div>
+                        <div class="stats-list__value">{% if companyInfo %}{{ companyInfo.product_delivers_total }}{% else %}500{% endif %}+</div>
                         <div class="stats-list__text">solutions delivered to Fortune 500 giants, enterprises, and
                             start-ups
                         </div>
                     </div>
                     <div class="stats-list__item">
-                        <div class="stats-list__value">250+</div>
+                        <div class="stats-list__value">{% if companyInfo %}{{ companyInfo.experts_hired_total }}{% else %}35{% endif %}+</div>
                         <div class="stats-list__text">cross-functional experts</div>
                     </div>
                 </div>

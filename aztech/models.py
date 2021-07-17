@@ -30,11 +30,11 @@ from django.utils.text import slugify
 
 class ContactUs(models.Model):
     contact_id = models.AutoField(primary_key=True)
-    contact_name = models.CharField(max_length=64, help_text='contact\'s name')
-    contact_time = models.DateTimeField(help_text='Local BanglDesh Time')
-    contact_mail = models.EmailField(max_length=120, help_text="contact's email address")
-    contact_phone = PhoneField(help_text='Contact phone number')
-    contact_msg = models.TextField(help_text="contact's message")
+    contact_name = models.CharField(max_length=64, verbose_name='contact person\'s name')
+    contact_time = models.DateTimeField(verbose_name='at Bangladesh Time')
+    contact_mail = models.EmailField(max_length=120, verbose_name="contact's email address")
+    contact_phone = PhoneField(verbose_name='Contact phone number')
+    contact_msg = models.TextField(verbose_name="contact's message")
 
     class Meta:
         verbose_name = 'ContactUs'
@@ -75,9 +75,9 @@ class OurClients(models.Model):
     client_id = models.AutoField(primary_key=True)
     client_name = models.CharField(max_length=256, help_text="Client's individual name or Company name", blank=True,
                                    null=True)
-    client_logo = models.ImageField(upload_to='client_Logo/%Y/%m/%d/', blank=True, null=True)
+    client_logo = models.ImageField(upload_to='client_Logo/%Y/%m/%d/', blank=True, null=True,verbose_name="client image/logo")
     client_mail = models.EmailField(max_length=120, help_text="Client's email address", blank=True, null=True)
-    client_phone = models.IntegerField(help_text="Client's phone number", blank=True, null=True)
+    client_phone = models.IntegerField(help_text="Client's phone number",blank=True,null=True)
     client_address = models.CharField(max_length=256, help_text="Client's Home/Office Address", blank=True, null=True)
     client_project_title = models.CharField(max_length=256, help_text="Client's Project Title We Have Done", blank=True,
                                             null=True)
@@ -111,12 +111,12 @@ STATUS = (
 
 
 class BlogPost(models.Model):
-    title = models.CharField(max_length=256, help_text="Blog Title Info", blank=True, null=True)
-    slug = models.SlugField(max_length=256, blank=True, null=True, unique=True)
-    author = models.EmailField(max_length=120, help_text="Author is email address holder", blank=True, null=True)
-    updated_on = models.DateTimeField(help_text="Blog post modified Time", blank=True, null=True)
-    content = models.TextField(help_text="Blog Content", blank=True, null=True)
-    created_on = models.DateTimeField(default=timezone.now, blank=True, null=True, help_text="Blog post created time")
+    title = models.CharField(max_length=256, verbose_name="Blog Title Info", blank=True, null=True)
+    slug = models.SlugField(max_length=256, blank=True, null=True, unique=True,verbose_name="Link name(slug field)")
+    author = models.EmailField(max_length=120, verbose_name="email address of Author", blank=True, null=True)
+    updated_on = models.DateTimeField(verbose_name="Blog post modified Time", blank=True, null=True)
+    content = models.TextField(verbose_name="Blog Content", blank=True, null=True)
+    created_on = models.DateTimeField(default=timezone.now, blank=True, null=True, verbose_name="Blog post created time")
     status = models.IntegerField(choices=STATUS, default=0)
     postImage = models.ImageField(verbose_name='Post-related-image', upload_to='blog-image/%Y/%m/%d/', blank=True,
                                   null=True)
@@ -143,11 +143,11 @@ class BlogPost(models.Model):
 
 class CommentBox(models.Model):
     commented_post = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name='comments')
-    commentator_name = models.CharField(max_length=120, help_text="Commentator's name")
-    commentator_email = models.EmailField(max_length=120, help_text="Commentator's email address")
-    comment_body = models.TextField(help_text="Comments Content")
+    commentator_name = models.CharField(max_length=120, verbose_name="Commentator's name")
+    commentator_email = models.EmailField(max_length=120, verbose_name="Commentator's email address")
+    comment_body = models.TextField(verbose_name="Comment Content")
     comment_posted_at = models.DateTimeField(default=timezone.now, blank=True, null=True,
-                                             help_text="Comment created time")
+                                             verbose_name="Comment posted time")
     comment_status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
@@ -175,11 +175,11 @@ class LatestProjects(models.Model):
         help_text="Challenges faced to complete this project & the scope of this project", blank=True, null=True)
     project_solution = models.TextField(help_text="Broad description of what solution brings this project", blank=True,
                                         null=True)
-    project_solution_pic = models.ImageField(verbose_name='Project-solution-related-image must be in jpeg format',
+    project_solution_pic = models.ImageField(help_text='Project-solution-related-image will be best for jpeg format',
                                              upload_to='project_solutions/%Y/%m/', blank=True, null=True)
     project_impact = models.TextField(help_text="Broad description of what impact brings this project", blank=True,
                                       null=True)
-    project_impact_pic = models.ImageField(verbose_name='Project-impact-related-image must be in jpeg format',
+    project_impact_pic = models.ImageField(help_text='Project-impact-related-image will be best for jpeg format',
                                            upload_to='project_impacts/%Y/%m/', blank=True, null=True)
     project_uploaded_time = models.DateTimeField(verbose_name="Project uploaded time", default=timezone.now, blank=True,
                                                  null=True, help_text="Project handover/uploaded time")
@@ -205,16 +205,33 @@ class LatestProjects(models.Model):
         super().save(*args, **kwargs)
 
 
-# class SoftwareFarm(models.Model):
-#     company_logo = models.ImageField(verbose_name='Company-logo-should-be-nice',
-#                                      upload_to='project_impacts/%Y/%m/', blank=True, null=True)
-#     years_of_experiences = models.PositiveSmallIntegerField(verbose_name="years-of-experience",blank=True,null=True)
-#     years_of_collaborations = models.PositiveSmallIntegerField(verbose_name="years-of-collaborations-with-client",blank=True,null=True)
-#     clients_total_number = models.PositiveSmallIntegerField(verbose_name="total-clients-number",blank=True,null=True)
-#     experts_hired_total = models.PositiveSmallIntegerField(verbose_name="total-experts-hired-uptill",blank=True,null=True)
-#     product_delivers_total = models.PositiveSmallIntegerField(verbose_name="total-product-delivered-uptill",blank=True,null=True)
-#
-#     def image_tag(self):
-#         return mark_safe("<img src='/../../media/%s' width='150' height='150' />" % (self.company_logo))
-#
-#     image_tag.allow_tags = True
+class SoftwareCompany(models.Model):
+    company_logo = models.ImageField(verbose_name='Company-logo-should-be-nice',
+                                     upload_to='project_impacts/%Y/%m/', blank=True, null=True)
+    company_name = models.CharField(verbose_name='company-name',max_length=120,blank=True,null=True)
+    company_mail = models.EmailField(verbose_name='company-official-mail-address',max_length=120,blank=True,null=True)
+    company_phone = PhoneField(help_text="company-official-phone-number")
+    company_address = models.CharField(verbose_name="company-office-address",max_length=256,blank=True,null=True)
+    company_facebook = models.URLField(verbose_name="company-facebook-link-(if any)",blank=True,null=True)
+    company_youtube = models.URLField(verbose_name="company-youtube-link-(if any)",blank=True,null=True)
+    company_linkedin = models.URLField(verbose_name="company-linkedin-link-(if any)",blank=True,null=True)
+    company_instagram = models.URLField(verbose_name="company-instagram-link-(if any)",blank=True,null=True)
+    company_description = models.TextField(verbose_name="Company-description-why-choose-us?",blank=True,null=True)
+    years_of_experiences = models.PositiveSmallIntegerField(verbose_name="years-of-experience",blank=True,null=True)
+    years_of_collaborations = models.PositiveSmallIntegerField(verbose_name="years-of-collaborations-with-client",blank=True,null=True)
+    clients_total_number = models.PositiveSmallIntegerField(verbose_name="total-clients-number",blank=True,null=True)
+    experts_hired_total = models.PositiveSmallIntegerField(verbose_name="total-experts-hired-uptill",blank=True,null=True)
+    product_delivers_total = models.PositiveSmallIntegerField(verbose_name="total-product-delivered-uptill",blank=True,null=True)
+
+    def image_tag(self):
+        return mark_safe("<img src='/../../media/%s' width='150' height='150' />" % (self.company_logo))
+
+    image_tag.allow_tags = True
+
+    class Meta:
+        verbose_name = 'SoftwareCompany'
+        verbose_name_plural = 'SoftwareCompany'
+        db_table = "softwarecompany"
+
+    def __str__(self):
+        return "%s" % (self.company_mail)

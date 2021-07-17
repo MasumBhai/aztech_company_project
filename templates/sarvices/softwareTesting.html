@@ -434,18 +434,18 @@ alt="auto qa services">          <h2 class="landing-image__content post-block__c
 <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#rex"></use>
 </svg>
 </div>
-<h2 class="landing-rex__title title title_small" animation="fade-up" animation-delay=".15">ITRex: a software testing company you can trust </h2>
+<h2 class="landing-rex__title title title_small" animation="fade-up" animation-delay=".15">{% if companyInfo %}{{ companyInfo.company_name }}:{% else %}We are{% endif %} a software testing company you can trust </h2>
 <div class="landing-rex__list">
 <div class="landing-rex__item" animation="fade-up" animation-delay=".15">
-<div class="landing-rex__item-title">10+years </div>
-<div class="landing-rex__item-value">of experience</div>
+<div class="landing-rex__item-title">{% if companyInfo %}{{ companyInfo.years_of_experiences }}{% else %}05{% endif %}+ </div>
+<div class="landing-rex__item-value">years of experience</div>
 </div>
 <div class="landing-rex__item" animation="fade-up" animation-delay=".15">
 <div class="landing-rex__item-title">Senior-level </div>
 <div class="landing-rex__item-value">test engineers</div>
 </div>
 <div class="landing-rex__item" animation="fade-up" animation-delay=".15">
-<div class="landing-rex__item-title">500+ </div>
+<div class="landing-rex__item-title">{% if companyInfo %}{{ companyInfo.product_delivers_total }}{% else %}60{% endif %}+ </div>
 <div class="landing-rex__item-value">successful projects</div>
 </div>
 <div class="landing-rex__item" animation="fade-up" animation-delay=".15">
@@ -482,81 +482,6 @@ alt="auto qa services">          <h2 class="landing-image__content post-block__c
     {% for x in clientInfo %}
         <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"  style="width: 150px;height: 150px"/>
     {% endfor %}
-{#<a class="clients__link" href="https://www.foxcorporation.com" target="_blank">#}
-{#<svg class="clients__logo" style="width: 123px;height: 44px">#}
-{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#21st-Century-Fox-logo"></use>#}
-{#</svg>#}
-{#</a>#}
-{#<a class="clients__link" href="https://www.dollarshaveclub.com" target="_blank">#}
-{#<svg class="clients__logo" style="width: 223px;height: 41px">#}
-{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#dollar-shave-club-logo"></use>#}
-{#</svg>#}
-{#</a>#}
-{#<a class="clients__link" href="https://www.dnb.com" target="_blank">#}
-{#<svg class="clients__logo" style="width: 200px;height: 31px">#}
-{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#dun-bradstreet-logo"></use>#}
-{#</svg>#}
-{#</a>#}
-{#<a class="clients__link" href="https://www.jibjab.com" target="_blank">#}
-{#<svg class="clients__logo" style="width: 63px;height: 54px">#}
-{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#JibJab-brand-logo"></use>#}
-{#</svg>#}
-{#</a>#}
-{#<a class="clients__link" href="https://www.potentiametrics.com" target="_blank">#}
-{#<svg class="clients__logo" style="width: 200px;height: 38px">#}
-{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#MyCancerJourny-logo"></use>#}
-{#</svg>#}
-{#</a>#}
-{#<a class="clients__link" href="https://www.potentiametrics.com" target="_blank">#}
-{#<svg class="clients__logo" style="width: 226px;height: 34px">#}
-{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#pm-logo"></use>#}
-{#</svg>#}
-{#</a>#}
-{#<a class="clients__link" href="https://us.pg.com" target="_blank">#}
-{#<svg class="clients__logo" style="width: 73px;height: 32px">#}
-{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#PG-logo"></use>#}
-{#</svg>#}
-{#</a>#}
-{#<a class="clients__link" href="https://www.poplidays.com/en/home" target="_blank">#}
-{#<svg class="clients__logo" style="width: 143px;height: 34px">#}
-{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#Poplidays-logo"></use>#}
-{#</svg>#}
-{#</a>#}
-{#<a class="clients__link" href="https://www.tasconline.com" target="_blank">#}
-{#<svg class="clients__logo" style="width: 121px;height: 47px">#}
-{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#tasc-logo"></use>#}
-{#</svg>#}
-{#</a>#}
-{#<a class="clients__link" href="https://www.telenav.com" target="_blank">#}
-{#<svg class="clients__logo" style="width: 166px;height: 27px">#}
-{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#telenav-logo"></use>#}
-{#</svg>#}
-{#</a>#}
-{#<a class="clients__link" href="https://www.honest.com" target="_blank">#}
-{#<svg class="clients__logo" style="width: 52px;height: 52px">#}
-{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#The-Honest-Co-logo"></use>#}
-{#</svg>#}
-{#</a>#}
-{#<a class="clients__link" href="https://turvo.com" target="_blank">#}
-{#<svg class="clients__logo" style="width: 129px;height: 34px">#}
-{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#Turvo-logo"></use>#}
-{#</svg>#}
-{#</a>#}
-{#<a class="clients__link" href="https://www.uei.com" target="_blank">#}
-{#<svg class="clients__logo" style="width: 148px;height: 34px">#}
-{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#UE-logo"></use>#}
-{#</svg>#}
-{#</a>#}
-{#<a class="clients__link" href="https://www.walmart.com" target="_blank">#}
-{#<svg class="clients__logo" style="width: 144px;height: 35px">#}
-{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#Walmart-logo"></use>#}
-{#</svg>#}
-{#</a>#}
-{#<a class="clients__link" href="https://www.warnerbros.com" target="_blank">#}
-{#<svg class="clients__logo" style="width: 52px;height: 54px">#}
-{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#Warner-Bros-logo"></use>#}
-{#</svg>#}
-{#</a>#}
 <div class="clients__append"></div>
 </div>
 </div>

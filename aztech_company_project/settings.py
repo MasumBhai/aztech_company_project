@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar',
+    'phone_field',
     'aztech.apps.AztechConfig',
 ]
 INSTALLED_APPS += ('django_summernote', )
@@ -81,9 +82,9 @@ WSGI_APPLICATION = 'aztech_company_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dbofaztech',
-        'USER': 'masumbhai',
-        'PASSWORD': 'masumbhai',
+        'NAME': 'aztechcompany',
+        'USER': 'Masum',
+        'PASSWORD': 'Masum6035',
     }
 }
 # DATABASES = {

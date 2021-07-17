@@ -28,12 +28,25 @@ color: #445aec;
     <div class="contact-us-page block block_full block_nav">
         <div class="contact-us-page__content">
             <div class="contact-us-page__info">
-                <h2 class="contact-us-page__title">Get
-                    in touch
+                <h2 class="contact-us-page__title">
+                    Get <br>in touch
                 </h2>
                 <div class="contact-us-page__contacts">
-                    <a class="contact-us-page__link" href="mailto:aztechvalleyltd@gmail.com" target="" id="contacts-1">aztechvalleyltd@gmail.com</a>
-                    <br/> <a class="contact-us-page__link" href="tel:+8801712500637" target="" id="contacts-2">+880 171 250 0637</a>
+                    {% if companyInfo %}
+                        <a class="contact-us__mail" href="mailto:{{ companyInfo.company_mail }}"
+                           target="_blank"
+                           id="contacts-1">{{ companyInfo.company_mail }}</a>
+                        <br/>
+                        <a class="contact-us__mail" href="tel:{{ companyInfo.company_phone }}"
+                                target="_blank"
+                                id="contacts-2">{{ companyInfo.company_phone }}</a>
+                    {% else %}
+                        <a class="popup__link" href="mailto:aztechvalleyltd@gmail.com" target=""
+                           id="contacts-popup-1">aztechvalleyltd@gmail.com</a>
+                        <br/>
+                        <a class="popup__link" href="tel:+8801712500637" target=""
+                                id="contacts-popup-2">+880 171 250 0637</a>
+                    {% endif %}
                 </div>
             </div>
             <div class="form form_dark" hf-data="hf-data">

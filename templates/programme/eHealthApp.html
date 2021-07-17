@@ -605,31 +605,31 @@ color: #445aec;
                     </div>
                     <h2 class="landing-rex__title title title_small" animation="fade-up" animation-delay=".15">What
                         makes
-                        ITRex stand out </h2>
+                        {% if companyInfo %}{{ companyInfo.company_name }}{% else %}us{% endif %} stand out </h2>
                     <div class="landing-rex__list">
                         <div class="landing-rex__item" animation="fade-up" animation-delay=".15">
-                            <div class="landing-rex__item-title">10+</div>
+                            <div class="landing-rex__item-title">{% if companyInfo %}{{ companyInfo.years_of_experiences }}{% else %}5{% endif %}+</div>
                             <div class="landing-rex__item-value">years of hands-on experience</div>
                         </div>
                         <div class="landing-rex__item" animation="fade-up" animation-delay=".15">
-                            <div class="landing-rex__item-title">250+</div>
+                            <div class="landing-rex__item-title">{% if companyInfo %}{{ companyInfo.experts_hired_total }}{% else %}35{% endif %}+</div>
                             <div class="landing-rex__item-value">top-tier development experts</div>
                         </div>
                         <div class="landing-rex__item" animation="fade-up" animation-delay=".15">
-                            <div class="landing-rex__item-title">500+</div>
+                            <div class="landing-rex__item-title">{% if companyInfo %}{{ companyInfo.product_delivers_total }}{% else %}200{% endif %}+</div>
                             <div class="landing-rex__item-value">software products delivered</div>
                         </div>
                         <div class="landing-rex__item" animation="fade-up" animation-delay=".15">
-                            <div class="landing-rex__item-title">99%</div>
+                            <div class="landing-rex__item-title">98%</div>
                             <div class="landing-rex__item-value">app reliability rate</div>
                         </div>
                         <div class="landing-rex__item" animation="fade-up" animation-delay=".15">
-                            <div class="landing-rex__item-title">150+</div>
+                            <div class="landing-rex__item-title">{% if companyInfo %}{{ companyInfo.clients_total_number }}{% else %}50{% endif %}+</div>
                             <div class="landing-rex__item-value">clients around the globe</div>
                         </div>
                         <div class="landing-rex__item" animation="fade-up" animation-delay=".15">
                             <div class="landing-rex__item-title">100+</div>
-                            <div class="landing-rex__item-value">million of user enjoy our apps</div>
+                            <div class="landing-rex__item-value">thousands of user enjoy our apps</div>
                         </div>
                     </div>
                 </div>

@@ -96,7 +96,7 @@
         {% endblock head_css_page %}
     {% endblock head_css %}
     <!--for title-->
-    <title>{% block title %}AzTech Valley{% endblock title %}</title>
+    <title>{% block title %}{% if companyInfo %} {{ companyInfo.company_name }} {% else %}Aztech Valley{% endif %}{% endblock title %}</title>
 </head>
 
 {% block page_loader %}
@@ -112,16 +112,30 @@
 {% block header_nav_bar %}
     <nav class="navigation" style="display: none;text-decoration-color: white;">
         <a class="navigation__logo" href="{% url 'contact' %}">
-            Aztech
+            {% if companyInfo %}
+                <img src="{{ companyInfo.company_logo.url }}" alt="{{ companyInfo.company_name }}"/>
+            {% else %}
+                Aztech
+            {% endif %}
         </a>
         <button class="navigation__burger"><span></span><span></span></button>
         <div class="navigation__items">
             <div class="navigation__header">
                 <a class="navigation__logo" href="{% url 'contact' %}">
-                    Aztech
+                    {% if companyInfo %}
+                        <img src="{{ companyInfo.company_logo.url }}" alt="{{ companyInfo.company_name }}"/>
+                    {% else %}
+                        Aztech
+                    {% endif %}
                 </a>
                 <button class="navigation__back" style="display: none">
-                    <a class="icon icon_white">Aztech</a>
+                    <a class="icon icon_white" href="{% url 'contact' %}">
+                        {% if companyInfo %}
+                            {{ companyInfo.company_name }}
+                        {% else %}
+                            Aztech
+                        {% endif %}
+                    </a>
                 </button>
             </div>
             <div class="navigation__breadcrumbs"></div>
@@ -173,32 +187,36 @@
                 </div>
             </div>
             <a class="navigation__item" href="{% url 'blog' %}" target="">Blog</a>
-{#            <a class="navigation__item" href="" target="">Thinking</a>#}
             <a class="navigation__item" href="{% url 'job_portal' %}" target="">Careers</a>
             <a class="navigation__item" href="{% url 'contact' %}" target="">Contact Us</a>
             <div class="navigation__footer">
                 <div class="navigation__socials">
-                    <a class="social" href="" target="_blank" id="menu-social-1">
+                    <a class="social" href="{% if companyInfo %}{{ companyInfo.company_linkedin }}{% endif %}"
+                       target="_blank" id="menu-social-1">
                         <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/linkedin.svg"/>
                     </a>
-                    <a class="social" href="" target="_blank" id="menu-social-2">
+                    <a class="social" href="{% if companyInfo %}{{ companyInfo.company_facebook }}{% endif %}"
+                       target="_blank" id="menu-social-2">
                         <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/facebook.svg"/>
                     </a>
-                    <a class="social" href="" target="_blank" id="menu-social-3">
+                    <a class="social" href="{% if companyInfo %}{{ companyInfo.company_instagram }}{% endif %}"
+                       target="_blank" id="menu-social-3">
                         <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/instagram.svg"/>
                     </a>
-                    <a class="social" href=""
+                    <a class="social" href="{% if companyInfo %}{{ companyInfo.company_youtube }}{% endif %}"
                        target="_blank"
                        id="menu-social-4">
                         <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/youtube.svg"/>
                     </a>
                 </div>
                 <div class="navigation__contacts">
-                    <a href="mailto:aztechvalleyltd@gmail.com" target="" id="menu-contacts-1">aztechvalleyltd@gmail.com</a>
-                    <a href="tel:+8801712500637" target="" id="menu-contacts-2">+880 171 250 0637</a>
+                    {% if companyInfo %}
+                    <a href="mailto:{{ companyInfo.company_mail }}" target="_blank" id="menu-contacts-1">{{ companyInfo.company_mail }}</a>
+                    <a href="tel:{{ companyInfo.company_phone }}" target="_blank" id="menu-contacts-2">{{ companyInfo.company_phone }}</a>
+                    {% endif %}
                 </div>
                 <div class="navigation__pages">
-                    <a class="arrow-link" href="https://itrexgroup.com/contact-us/" target="" id="menu-page-1">
+                    <a class="arrow-link" href="{% url 'contact' %}" target="" id="menu-page-1">
                         <span class="arrow-link__text">Contact us</span>
                         <span class="arrow-link__arrow"><span
                                 class="arrow-link__arrow_static arrow-link__arrow_blue">→</span></span>
@@ -313,28 +331,27 @@
                 </div>
                 <div class="contact-us__row contact-us__row_full contact-us__row_first">
                     <div class="contact-us__info">
-                        <div class="contact-us__title" animation="fade-up" animation-delay=".15">Custom software
-                            development
-                            company that creates and transforms business solutions, products, and enterprises to
-                            drive
-                            growth today and into the future<img class="contact-us__title-logo"
-                                                                 src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-logo-white.svg"
-                                                                 alt="ITRex" role="presentation"/>
+                        <div class="contact-us__title" animation="fade-up" animation-delay=".15">
+                            {% if companyInfo %}
+                            <p>{{ companyInfo.company_description }}</p>
+                            {% else %}
+                            <p>Custom software development company that creates and transforms business solutions, products, and enterprises to drive growth today and into the future</p>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="contact-us__navigation">
                         <div class="contact-us__menu">
                             <div class="contact-us__menu-block" animation="fade-up" animation-delay=".15">
-                                <div class="contact-us__menu-title">Our Offices
+                                <div class="contact-us__menu-title">
+                                    Our Office Location
                                 </div>
-                                <a class="contact-us__menu-item contact-us__menu-item_disable">Santa Monica,
-                                    CA</a><a
-                                    class="contact-us__menu-item contact-us__menu-item_disable">New York, NY</a><a
-                                    class="contact-us__menu-item contact-us__menu-item_disable">Chicago, IL</a><a
-                                    class="contact-us__menu-item contact-us__menu-item_disable">Minsk, Belarus</a><a
-                                    class="contact-us__menu-item contact-us__menu-item_disable">Kyiv, Ukraine</a><a
-                                    class="contact-us__menu-item contact-us__menu-item_disable">Saint Petersburg,
-                                Russia</a>
+                                <a class="contact-us__menu-item contact-us__menu-item_disable">
+                                    {% if companyInfo %}
+                                        <h3>{{ companyInfo.company_address }}</h3>
+                                    {% else %}
+                                    Dhaka,Bangladesh
+                                    {% endif %}
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -346,23 +363,23 @@
                             <div class="contact-us__block">
                                 <div class="contact-us__socials">
                                     <a class="contact-us__social"
-                                       href="https://www.linkedin.com/company/itrex-group/"
+                                       href="{% if companyInfo %}{{ companyInfo.company_linkedin }}{% endif %}"
                                        target="_blank" id="contacts-social-1">
                                         <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/linkedin.svg"
                                              alt="linkedin-logo"/>
                                     </a>
-                                    <a class="contact-us__social" href="https://www.facebook.com/itrexgroup/"
+                                    <a class="contact-us__social" href="{% if companyInfo %}{{ companyInfo.company_facebook }}{% endif %}"
                                        target="_blank" id="contacts-social-2">
                                         <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/facebook.svg"
                                              alt="facebook-logo"/>
                                     </a>
-                                    <a class="contact-us__social" href="https://www.instagram.com/itrexgroup/"
+                                    <a class="contact-us__social" href="{% if companyInfo %}{{ companyInfo.company_instagram }}{% endif %}"
                                        target="_blank" id="contacts-social-3">
                                         <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/instagram.svg"
                                              alt="instagram-logo"/>
                                     </a>
                                     <a class="contact-us__social"
-                                       href="https://www.youtube.com/channel/UCbrWfEktboUf0SeoqePATGA"
+                                       href="{% if companyInfo %}{{ companyInfo.company_youtube }}{% endif %}"
                                        target="_blank"
                                        id="contacts-social-4">
                                         <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/youtube.svg"
@@ -370,48 +387,47 @@
                                     </a>
                                 </div>
                                 <div class="contact-us__contact-links">
-                                    <a class="contact-us__mail" href="mailto:aztechvalleyltd@gmail.com" target=""
-                                       id="contacts-1">aztechvalleyltd@gmail.com</a>
-                                    <br/> <a class="contact-us__mail" href="tel:+8801712500637" target=""
-                                             id="contacts-2">+880 171 250 0637</a>
+                                    {% if companyInfo %}
+                                        <a class="contact-us__mail" href="mailto:{{ companyInfo.company_mail }}"
+                                           target="_blank"
+                                           id="contacts-1">{{ companyInfo.company_mail }}</a>
+                                        <br/><a class="contact-us__mail" href="tel:{{ companyInfo.company_phone }}"
+                                                target="_blank"
+                                                id="contacts-2">{{ companyInfo.company_phone }}</a>
+                                    {% else %}
+                                        <a class="popup__link" href="mailto:aztechvalleyltd@gmail.com" target=""
+                                           id="contacts-popup-1">aztechvalleyltd@gmail.com</a>
+                                        <br/><a class="popup__link" href="tel:+8801712500637" target=""
+                                                id="contacts-popup-2">+880 171 250 0637</a>
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class="contact-us__advancements">
-                                <img class="contact-us__advancement"
+                                <img class="contact-us__advancement" class="contact-us__advancement"
                                      src="https://itrexgroup.com/wp-content/uploads/2020/07/advancement-2.svg"
                                      alt=""
                                      role="presentation"/>
-                                <a class="contact-us__advancement" href="https://clutch.co/profile/itrex-group"
-                                   target="_blank" id="advancements-2">
-                                    <img src="https://itrexgroup.com/wp-content/uploads/2020/07/advancement-3.svg"
+                                <img class="contact-us__advancement" src="https://itrexgroup.com/wp-content/uploads/2020/07/advancement-3.svg"
                                          alt=""
                                          role="presentation"/>
-                                </a>
-                                <a class="contact-us__advancement" href="https://clutch.co/profile/itrex-group"
-                                   target="_blank" id="advancements-3">
-                                    <img src="https://itrexgroup.com/wp-content/uploads/2020/07/advancement-4.svg"
+                                <img class="contact-us__advancement" src="https://itrexgroup.com/wp-content/uploads/2020/07/advancement-4.svg"
                                          alt=""
                                          role="presentation"/>
-                                </a>
-                                <a class="contact-us__advancement"
-                                   href="https://www.upwork.com/o/companies/~010e61f430108e5be5/" target="_blank"
-                                   id="advancements-4">
-                                    <img src="https://itrexgroup.com/wp-content/uploads/2020/07/advancement-5.svg"
+                                <img class="contact-us__advancement" src="https://itrexgroup.com/wp-content/uploads/2020/07/advancement-5.svg"
                                          alt=""
                                          role="presentation"/>
-                                </a>
-                                <a class="contact-us__advancement"
-                                   href="https://www.microsoft.com/en-us/solution-providers/partnerdetails/db91c8ac-e7a4-4124-88e8-9f72165a7a7a/5199e6c5-b171-4cb6-bed2-0a2e57562ff5"
-                                   target="_blank" id="advancements-5">
-                                    <img src="https://itrexgroup.com/wp-content/uploads/2021/02/SMP.svg"
+                                <img class="contact-us__advancement" src="https://itrexgroup.com/wp-content/uploads/2021/02/SMP.svg"
                                          alt="Microsoft Silver Partner" role="presentation"/>
-                                </a>
+{#                                <a class="contact-us__advancement" href="https://clutch.co/profile/itrex-group"#}
+{#                                   target="_blank" id="advancements-2">#}
+                                        {# insert above image here #}
+{#                                </a>#}
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="contact-us__links" animation="fade-up" animation-delay=".15">
-                    <a class="contact-us__link contact-us__link_disable">©{% now 'Y' %} Aztech Valley Ltd</a>
+                    <a class="contact-us__link contact-us__link_disable">©{% now 'Y' %} {% if companyInfo %}{{ companyInfo.company_name }}{% else %}Brainy Fools{% endif %}</a>
                     <a class="contact-us__link" href="https://www.termsfeed.com/live/0c9149b6-1986-4616-9cd3-f9cb9717c573" target="">Privacy
                         Policy</a>
                     <!-- <a class="contact-us__link contact-us__link_last" href="https://hainteractive.com/" target="_blank">Made by HA</a> -->
@@ -423,9 +439,9 @@
 {% block footer_down %}
     <div class="popup" id="form">
         <div class="popup__header">
-            <div class="popup__logo"><img
-                    src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-white.svg"
-                    alt="ITRex"></div>
+            <div class="popup__logo">
+                <img src="{{ companyInfo.company_logo.url }}"
+                    alt="{{ companyInfo.company_name }}"></div>
             <div class="popup__close"></div>
         </div>
         <div class="popup__content">
@@ -434,8 +450,15 @@
                     in touch
                 </div>
                 <div class="popup__contacts">
-                    <a class="popup__link" href="mailto:aztechvalleyltd@gmail.com" target="" id="contacts-popup-1">aztechvalleyltd@gmail.com</a>
+                    {% if companyInfo %}
+                        <a class="contact-us__mail" href="mailto:{{ companyInfo.company_mail }}" target="_blank"
+                           id="contacts-1">{{ companyInfo.company_mail }}</a>
+                        <br/> <a class="contact-us__mail" href="tel:{{ companyInfo.company_phone }}" target="_blank"
+                                 id="contacts-2">{{ companyInfo.company_phone }}</a>
+                    {% else %}
+                        <a class="popup__link" href="mailto:aztechvalleyltd@gmail.com" target="" id="contacts-popup-1">aztechvalleyltd@gmail.com</a>
                     <br/> <a class="popup__link" href="tel:+8801712500637" target="" id="contacts-popup-2">+880 171 250 0637</a>
+                    {% endif %}
                 </div>
             </div>
             <div class="form" hf-data="hf-data">
@@ -482,24 +505,24 @@
                         <div class="form__label">We will process your personal information in accordance with our <a
                                 href="https://www.termsfeed.com/live/0c9149b6-1986-4616-9cd3-f9cb9717c573" target="_blank">Privacy Policy.</a>
                         </div>
-{#                        <div class="radio">#}
-{#                            {% csrf_token %}#}
-{#                            <input type="checkbox" name="subscribe" value="1" aria-invalid="false"#}
-{#                                   class="radio__input"#}
-{#                                   id="subscribe-popup"/></span>#}
-{#                            <label class="radio__label" for="subscribe-popup"></label>#}
-{#                            <label class="radio__text" for="subscribe-popup">I would like to be contacted with news#}
-{#                                and#}
-{#                                updates about your events and services</label>#}
-{#                        </div>#}
                         {% csrf_token %}
                             <input class="form__submit"  type="submit" name="send-message" value="Send message → ">
                     </form>
                 </div>
             </div>
             <div class="popup__contacts popup__contacts_tablet">
-                <a class="popup__link" href="mailto:aztechvalleyltd@gmail.com" target="" id="contacts-popup-1-tablet">aztechvalleyltd@gmail.com</a>
-                <br/> <a class="popup__link" href="tel:+8801712500637" target="" id="contacts-popup-2-tablet">+880 171 250 0637</a>
+                {% if companyInfo %}
+                    <a class="contact-us__mail" href="mailto:{{ companyInfo.company_mail }}" target="_blank"
+                       id="contacts-1">{{ companyInfo.company_mail }}</a>
+                    <br/>
+                    <a class="contact-us__mail" href="tel:{{ companyInfo.company_phone }}" target="_blank"
+                             id="contacts-2">{{ companyInfo.company_phone }}</a>
+                {% else %}
+                    <a class="popup__link" href="mailto:aztechvalleyltd@gmail.com" target="" id="contacts-popup-1">aztechvalleyltd@gmail.com</a>
+                    <br/>
+                    <a class="popup__link" href="tel:+8801712500637" target="" id="contacts-popup-2">+880 171 250
+                    0637</a>
+                {% endif %}
             </div>
         </div>
     </div>

@@ -9,18 +9,12 @@ admin.site.unregister(Group)
 
 # Register your models here.
 
-# @admin.register(AboutPage)
-# class UserAdmin(admin.ModelAdmin):
-#     list_display = ['about_title', 'image_tag']
-#     list_filter = ['about_title']
-#     list_display_links = ['about_title']
-#     # radio_fields = {"goods_order_status": admin.HORIZONTAL}
-#     # readonly_fields = ('goods_order_id', 'buyer_id', 'goods_id', 'pub_date')
-#     # search_fields = ['Field1', 'Field2']
-#     list_per_page = 15
-#     paginator = Paginator
-#     pass
-
+@admin.register(SoftwareCompany)
+class CompanyAdmin(admin.ModelAdmin):
+    list_display = ['image_tag','company_name','company_mail','company_phone','company_address','company_description']
+    list_display_links = ['image_tag','company_mail']
+    fields = [('company_logo','company_name'),('company_mail','company_phone'),('company_facebook','company_youtube'),('company_linkedin','company_instagram'),('company_address','clients_total_number'),('years_of_experiences','years_of_collaborations'),('experts_hired_total','product_delivers_total'),'company_description']
+    pass
 
 @admin.register(ContactUs)
 class UserContact(admin.ModelAdmin):
@@ -69,6 +63,7 @@ class PostAdmin(SummernoteModelAdmin):
     list_display = ('title', 'slug', 'author', 'status', 'created_on', 'updated_on', 'image_tag')
     list_filter = ("status",)
     search_fields = ['title', 'content']
+    list_display_links = ['title']
     prepopulated_fields = {'slug': ('title',)}
     fields = ['postImage', ('author', 'status'), ('created_on', 'updated_on'), 'slug', 'title', 'content', ]
     actions = ['approve_post']
@@ -88,6 +83,7 @@ class CommentAdmin(SummernoteModelAdmin):
         'commented_post', 'commentator_name', 'comment_posted_at', 'comment_body', 'comment_status',
         'commentator_email')
     list_filter = ('comment_status', 'comment_posted_at')
+    list_display_links = ['commented_post']
     search_fields = ('commentator_name', 'commentator_email', 'comment_body')
     actions = ['approve_comments']
     fields = ['commented_post', ('comment_posted_at', 'comment_status'), ('commentator_name', 'commentator_email'),
@@ -106,9 +102,10 @@ admin.site.register(CommentBox, CommentAdmin)
 @admin.register(LatestProjects)
 class ProjectDetails(admin.ModelAdmin):
     list_display = (
-        'image_tag', 'project_client', 'project_services', 'project_technologies',
+        'image_tag','project_title', 'project_client', 'project_services', 'project_technologies',
         'project_challenges', 'project_uploaded_time')
     list_filter = ('project_services', 'project_client')
+    list_display_links = ['image_tag','project_title']
     search_fields = ('project_title', 'project_services', 'project_technologies',)
     fields = ['project_preview', ('project_title', 'project_uploaded_time'), ('project_client', 'project_industries'),
               ('project_services', 'project_technologies'), 'project_challenges',

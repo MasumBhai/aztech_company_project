@@ -7,16 +7,30 @@
 {% block header_nav_bar %}
     <nav class="navigation" style="display: none;text-decoration-color: white;">
         <a class="navigation__logo" href="{% url 'contact' %}">
-            Aztech
+            {% if companyInfo %}
+                <img src="{{ companyInfo.company_logo.url }}" alt="{{ companyInfo.company_name }}"/>
+            {% else %}
+                Aztech
+            {% endif %}
         </a>
         <button class="navigation__burger"><span></span><span></span></button>
         <div class="navigation__items">
             <div class="navigation__header">
                 <a class="navigation__logo" href="{% url 'contact' %}">
-                    Aztech
+                    {% if companyInfo %}
+                        <img src="{{ companyInfo.company_logo.url }}" alt="{{ companyInfo.company_name }}"/>
+                    {% else %}
+                        Aztech
+                    {% endif %}
                 </a>
                 <button class="navigation__back" style="display: none">
-                    <a class="icon icon_white">Aztech</a>
+                    <a class="icon icon_white" href="{% url 'contact' %}">
+                        {% if companyInfo %}
+                            {{ companyInfo.company_name }}
+                        {% else %}
+                            Aztech
+                        {% endif %}
+                    </a>
                 </button>
             </div>
             <div class="navigation__breadcrumbs"></div>
@@ -67,32 +81,36 @@
                 </div>
             </div>
             <a class="navigation__item" href="{% url 'blog' %}" target="">Blog</a>
-{#            <a class="navigation__item" href="" target="">Thinking</a>#}
             <a class="navigation__item" href="{% url 'job_portal' %}" target="">Careers</a>
             <a class="navigation__item" href="{% url 'contact' %}" target="">Contact Us</a>
             <div class="navigation__footer">
                 <div class="navigation__socials">
-                    <a class="social" href="" target="_blank" id="menu-social-1">
+                    <a class="social" href="{% if companyInfo %}{{ companyInfo.company_linkedin }}{% endif %}"
+                       target="_blank" id="menu-social-1">
                         <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/linkedin.svg"/>
                     </a>
-                    <a class="social" href="" target="_blank" id="menu-social-2">
+                    <a class="social" href="{% if companyInfo %}{{ companyInfo.company_facebook }}{% endif %}"
+                       target="_blank" id="menu-social-2">
                         <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/facebook.svg"/>
                     </a>
-                    <a class="social" href="" target="_blank" id="menu-social-3">
+                    <a class="social" href="{% if companyInfo %}{{ companyInfo.company_instagram }}{% endif %}"
+                       target="_blank" id="menu-social-3">
                         <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/instagram.svg"/>
                     </a>
-                    <a class="social" href=""
+                    <a class="social" href="{% if companyInfo %}{{ companyInfo.company_youtube }}{% endif %}"
                        target="_blank"
                        id="menu-social-4">
                         <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/youtube.svg"/>
                     </a>
                 </div>
                 <div class="navigation__contacts">
-                    <a href="mailto:hello@itrexgroup.com" target="" id="menu-contacts-1">hello@Aztech.com</a>
-                    <a href="tel:+1 213 436 7785" target="" id="menu-contacts-2">+880 1712-500637</a>
+                    {% if companyInfo %}
+                    <a href="mailto:{{ companyInfo.company_mail }}" target="_blank" id="menu-contacts-1">{{ companyInfo.company_mail }}</a>
+                    <a href="tel:{{ companyInfo.company_phone }}" target="_blank" id="menu-contacts-2">{{ companyInfo.company_phone }}</a>
+                    {% endif %}
                 </div>
                 <div class="navigation__pages">
-                    <a class="arrow-link" href="https://itrexgroup.com/contact-us/" target="" id="menu-page-1">
+                    <a class="arrow-link" href="{% url 'contact' %}" target="" id="menu-page-1">
                         <span class="arrow-link__text">Contact us</span>
                         <span class="arrow-link__arrow"><span
                                 class="arrow-link__arrow_static arrow-link__arrow_blue">→</span></span>

@@ -156,20 +156,20 @@ alt="we create best custom solution">    </div>
 <div class="landing-info__col">
 <div class="landing-info__grid">
 <div class="landing-info__grid-content landing-info__grid-content_right">
-<span class="landing-info__name landing-info__name_bold landing-info__name_yellow landing-info__name_mr">10+ </span>
+<span class="landing-info__name landing-info__name_bold landing-info__name_yellow landing-info__name_mr">{% if companyInfo %}{{ companyInfo.years_of_experiences }}{% else %}05{% endif %}+ </span>
 </div>
 <span class="landing-info__value landing-info__value_bold">years of hands-on experience</span>
 <div class="landing-info__grid-content landing-info__grid-content_right">
-<span class="landing-info__name landing-info__name_bold landing-info__name_yellow landing-info__name_mr">3+</span>
+<span class="landing-info__name landing-info__name_bold landing-info__name_yellow landing-info__name_mr">{% if companyInfo %}{{ companyInfo.years_of_collaborations }}{% else %}04{% endif %}+</span>
 </div>
 <span class="landing-info__value landing-info__value_bold">years of ongoing collaboration with clients on average
 </span>
 <div class="landing-info__grid-content landing-info__grid-content_right">
-<span class="landing-info__name landing-info__name_bold landing-info__name_yellow landing-info__name_mr">250+</span>
+<span class="landing-info__name landing-info__name_bold landing-info__name_yellow landing-info__name_mr">{% if companyInfo %}{{ companyInfo.experts_hired_total }}{% else %}35{% endif %}+</span>
 </div>
 <span class="landing-info__value landing-info__value_bold">top-tier software development experts</span>
 <div class="landing-info__grid-content landing-info__grid-content_right">
-<span class="landing-info__name landing-info__name_bold landing-info__name_yellow landing-info__name_mr">500+</span>
+<span class="landing-info__name landing-info__name_bold landing-info__name_yellow landing-info__name_mr">{% if companyInfo %}{{ companyInfo.product_delivers_total }}{% else %}150{% endif %}+</span>
 </div>
 <span class="landing-info__value landing-info__value_bold">products delivered</span>
 </div>
