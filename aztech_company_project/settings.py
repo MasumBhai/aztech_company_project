@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-h*pe(69*&o1uundkpp0br5d!=20uadc=w5)ssm7&gc)9sa!pyw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'software-firm.herokuapp.com']
 
 # Application definition
 
@@ -41,10 +41,11 @@ INSTALLED_APPS = [
     'phone_field',
     'aztech.apps.AztechConfig',
 ]
-INSTALLED_APPS += ('django_summernote', )
+INSTALLED_APPS += ('django_summernote',)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -178,5 +179,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'masumbhaiexperiment@gmail.com' #sender's email-id
-EMAIL_HOST_PASSWORD = 'Masum11806035' #password associated with above email-id
+EMAIL_HOST_USER = 'masumbhaiexperiment@gmail.com'  # sender's email-id
+EMAIL_HOST_PASSWORD = 'Masum11806035'  # password associated with above email-id
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
