@@ -183,5 +183,9 @@ EMAIL_HOST_USER = 'masumbhaiexperiment@gmail.com'  # sender's email-id
 EMAIL_HOST_PASSWORD = 'Masum11806035'  # password associated with above email-id
 
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+DEBUG_PROPAGATE_EXCEPTIONS = True
+
+
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
 
