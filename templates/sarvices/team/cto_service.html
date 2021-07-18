@@ -114,7 +114,7 @@ alt="cto for hire">          <h2 class="landing-image__content post-block__conte
 </div><div class="block" id="why-itrex" cta-text="Go for CTO as a Service">
 <div class="block__content-x">
 <div class="landing-list post-block__content post-block__content_text landing-list_whiteyellow">
-<div class="landing-list__title" animation="fade-up" animation-delay=".15">What makes ITRex a reliable CTO as a Service vendor?
+<div class="landing-list__title" animation="fade-up" animation-delay=".15">What makes {% if companyInfo %}{{ companyInfo.company_name }}{% else %}us{% endif %} a reliable CTO as a Service vendor?
 </div>
 <div class="landing-list__list">
 <div class="landing-list__col">
@@ -155,23 +155,52 @@ data-popup="#form" href="#form" animation="fade-up" animation-delay=".15"><span 
 </div>
 </div>
 </div>
-<div class="block" id="clients" cta-text="Get your project estimate">
-<div class="block__content">
-<h2 class="block__title" animation="fade-up" animation-delay=".15">Hungry for every<br>client's success</h2>
-<p class="block__subtitle" animation="fade-up" animation-delay=".15"></p>
-<div class="clients" animation="fade-up" animation-delay=".15">
-<div class="clients__list">
-    {% if clientDetails %}
-        {% for x in clientDetails %}
-            <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
-                 style="width: 150px;height: 150px"/>
-        {% endfor %}
-    {% endif %}
-<div class="clients__append"></div>
-</div>
-</div>
-</div>
-</div>
+{% block precious_clients %}
+            <div class="block" id="clients" cta-text="Get your optimum solution">
+                <div class="block__content">
+                    <h2 class="block__title" animation="fade-up" animation-delay=".15">Hungry for every
+                        client’s success</h2>
+                    <div class="clients" animation="fade-up" animation-delay=".15">
+                        <div class="clients__list">
+                            {% if clientDetails %}
+                                {% for x in clientDetails %}
+                                    <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
+                                         style="width: 150px;height: 150px"/>
+                                {% endfor %}
+                            {% endif %}
+                            <div class="clients__append"></div>
+                        </div>
+                    </div>
+                </div>
+                {% if clientDetails %}
+                    <div class="block__content block__content_black block__content_scroll-tablet">
+                        <div class="reviews" animation="fade-up" animation-delay=".15">
+                            <div class="reviews__content">
+                                {% for client in clientDetails %}
+                                    {% if client.client_quote %}
+                                    <div class="reviews__item" style="visibility: visible;overflow: hidden">
+                                        <div class="reviews__title">
+                                            {{ client.client_quote }}
+                                        </div>
+                                        <div class="reviews__author">
+                                            <div class="reviews__author-image">
+                                                <img src="{{ client.client_logo.url }}" alt="{{ client.client_name }}">
+                                            </div>
+                                            <div class="reviews__author-info">
+                                                <div class="reviews__author-name">{{ client.client_name }}</div>
+                                                <div class="reviews__author-position">{{ client.client_mail }}</div>
+                                                <div class="reviews__author-company">{{ client.client_address }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        {% endblock precious_clients %}
         {% block project_content %}
             {% if projectDetails %}
                 <div class="block block_z-index-up block_relative" id="projects"

@@ -6,27 +6,6 @@ from django.utils.text import slugify
 
 
 # Create your models here.
-# class AboutPage(models.Model):
-#     about_id = models.AutoField(primary_key=True)
-#     about_title = models.CharField(max_length=256, help_text='About Page Title', default='We Care,We Excel')
-#     about_pic = models.ImageField(upload_to='images/', blank=True, null=True)
-#
-#     # about_something = models.TextField(blank=True,null=True,max_length=256,help_text='intro of about page')
-#
-#     def image_tag(self):
-#         return mark_safe("<img src='/../../media/%s' width='150' height='150' />" % (self.about_pic))
-#
-#     image_tag.allow_tags = True
-#
-#     class Meta:
-#         # verbose_name = 'aboutpage'
-#         # verbose_name_plural = 'abouts'
-#         # ordering = ['user_id']
-#         db_table = 'aboutpage'
-#
-#     def __str__(self):
-#         return "%s" % (self.about_title)
-
 
 class ContactUs(models.Model):
     contact_id = models.AutoField(primary_key=True)
@@ -86,6 +65,8 @@ class OurClients(models.Model):
                                           null=True)
     client_agreement_date = models.DateTimeField(help_text="Client came to us/client's project delivery date",
                                                  blank=True, null=True)
+    client_quote = models.TextField(verbose_name="Client's comment", help_text="Client's quote for us", blank=True,
+                                         null=True)
     client_payment = models.IntegerField(verbose_name="Client's Payment", help_text="Client's paid amount", blank=True,
                                          null=True)
 
@@ -143,9 +124,9 @@ class BlogPost(models.Model):
 
 class CommentBox(models.Model):
     commented_post = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name='comments')
-    commentator_name = models.CharField(max_length=120, verbose_name="Commentator's name")
-    commentator_email = models.EmailField(max_length=120, verbose_name="Commentator's email address")
-    comment_body = models.TextField(verbose_name="Comment Content")
+    commentator_name = models.CharField(max_length=120, verbose_name="name")
+    commentator_email = models.EmailField(max_length=120, verbose_name="email address")
+    comment_body = models.TextField(verbose_name="your thought")
     comment_posted_at = models.DateTimeField(default=timezone.now, blank=True, null=True,
                                              verbose_name="Comment posted time")
     comment_status = models.IntegerField(choices=STATUS, default=0)

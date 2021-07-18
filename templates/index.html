@@ -224,149 +224,42 @@ color: #445aec;
                     client’s success</h2>
                 <div class="clients" animation="fade-up" animation-delay=".15">
                     <div class="clients__list">
-                        <a class="clients__link" href="https://www.foxcorporation.com" target="_blank">
-                            <svg class="clients__logo" style="width: 123px;height: 44px">
-                                <use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#21st-Century-Fox-logo"></use>
-                            </svg>
-                        </a>
-                        <a class="clients__link" href="https://www.dollarshaveclub.com" target="_blank">
-                            <svg class="clients__logo" style="width: 223px;height: 41px">
-                                <use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#dollar-shave-club-logo"></use>
-                            </svg>
-                        </a>
-                        <a class="clients__link" href="https://www.dnb.com" target="_blank">
-                            <svg class="clients__logo" style="width: 200px;height: 31px">
-                                <use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#dun-bradstreet-logo"></use>
-                            </svg>
-                        </a>
-                        <a class="clients__link" href="https://www.jibjab.com" target="_blank">
-                            <svg class="clients__logo" style="width: 63px;height: 54px">
-                                <use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#JibJab-brand-logo"></use>
-                            </svg>
-                        </a>
-                        <a class="clients__link" href="https://www.potentiametrics.com" target="_blank">
-                            <svg class="clients__logo" style="width: 200px;height: 38px">
-                                <use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#MyCancerJourny-logo"></use>
-                            </svg>
-                        </a>
-                        <a class="clients__link" href="https://www.potentiametrics.com" target="_blank">
-                            <svg class="clients__logo" style="width: 226px;height: 34px">
-                                <use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#pm-logo"></use>
-                            </svg>
-                        </a>
-                        <a class="clients__link" href="https://us.pg.com" target="_blank">
-                            <svg class="clients__logo" style="width: 73px;height: 32px">
-                                <use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#PG-logo"></use>
-                            </svg>
-                        </a>
-                        <a class="clients__link" href="https://www.poplidays.com/en/home" target="_blank">
-                            <svg class="clients__logo" style="width: 143px;height: 34px">
-                                <use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#Poplidays-logo"></use>
-                            </svg>
-                        </a>
-                        <a class="clients__link" href="https://www.tasconline.com" target="_blank">
-                            <svg class="clients__logo" style="width: 121px;height: 47px">
-                                <use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#tasc-logo"></use>
-                            </svg>
-                        </a>
-                        <a class="clients__link" href="https://www.telenav.com" target="_blank">
-                            <svg class="clients__logo" style="width: 166px;height: 27px">
-                                <use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#telenav-logo"></use>
-                            </svg>
-                        </a>
-                        <a class="clients__link" href="https://www.honest.com" target="_blank">
-                            <svg class="clients__logo" style="width: 52px;height: 52px">
-                                <use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#The-Honest-Co-logo"></use>
-                            </svg>
-                        </a>
-                        <a class="clients__link" href="https://turvo.com" target="_blank">
-                            <svg class="clients__logo" style="width: 129px;height: 34px">
-                                <use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#Turvo-logo"></use>
-                            </svg>
-                        </a>
-                        <a class="clients__link" href="https://www.uei.com" target="_blank">
-                            <svg class="clients__logo" style="width: 148px;height: 54px">
-                                <use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#UE-logo"></use>
-                            </svg>
-                        </a>
-                        <a class="clients__link" href="https://www.walmart.com" target="_blank">
-                            <svg class="clients__logo" style="width: 144px;height: 35px">
-                                <use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#Walmart-logo"></use>
-                            </svg>
-                        </a>
-                        <a class="clients__link" href="https://www.warnerbros.com" target="_blank">
-                            <svg class="clients__logo" style="width: 52px;height: 54px">
-                                <use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#Warner-Bros-logo"></use>
-                            </svg>
-                        </a>
+                        {% if clientDetails %}
+        {% for x in clientDetails %}
+            <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
+                 style="width: 150px;height: 150px"/>
+        {% endfor %}
+    {% endif %}
                         <div class="clients__append"></div>
                     </div>
                 </div>
             </div>
+            {% if clientDetails %}
             <div class="block__content block__content_black block__content_auto block__content_scroll-tablet">
                 <div class="reviews" animation="fade-up" animation-delay=".15">
                     <div class="reviews__content">
-                        <div class="reviews__item" style="visibility: visible">
-                            <div class="reviews__title">Itrex’s team are experts in their trade. The software
-                                development
-                                they provided was critical to advancing the project to the next level.
+                        {% for client in clientDetails  %}
+                            {% if client.client_quote %}
+                        <div class="reviews__item" style="visibility: visible;overflow: hidden" >
+                            <div class="reviews__title">
+                                {{ client.client_quote }}
                             </div>
                             <div class="reviews__author">
-                                <div class="reviews__author-image"><img
-                                        src="https://itrexgroup.com/wp-content/uploads/2020/06/Jeff-Block-150x150.jpg"
-                                        alt="Jeff Block"></div>
+                                <div class="reviews__author-image">
+                                    <img src="{{ client.client_logo.url }}" alt="{{ client.client_name }}"></div>
                                 <div class="reviews__author-info">
-                                    <div class="reviews__author-name">Jeff Block</div>
-                                    <div class="reviews__author-position">VP of Process and Technology</div>
-                                    <div class="reviews__author-company">PotentiaMetrics, Inc.</div>
+                                    <div class="reviews__author-name">{{ client.client_name }}</div>
+                                    <div class="reviews__author-position">{{ client.client_mail }}</div>
+                                    <div class="reviews__author-company">{{ client.client_address }}</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="reviews__item">
-                            <div class="reviews__title">When you hire them, you're actually going to get something
-                                valuable.
-                            </div>
-                            <div class="reviews__author">
-                                <div class="reviews__author-image"><img
-                                        src="https://itrexgroup.com/wp-content/uploads/2020/06/Daniel-Schuler-150x150.jpg"
-                                        alt="Daniel Schuler"></div>
-                                <div class="reviews__author-info">
-                                    <div class="reviews__author-name">Daniel Schuler</div>
-                                    <div class="reviews__author-position">CTO</div>
-                                    <div class="reviews__author-company">Hyginex</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="reviews__item">
-                            <div class="reviews__title">Itrex is an outstanding partner. They don't even feel like a
-                                contractor, but more like a fully integrated team.
-                            </div>
-                            <div class="reviews__author">
-                                <div class="reviews__author-image"><img
-                                        src="https://itrexgroup.com/wp-content/uploads/2020/06/author-1.jpg"
-                                        alt="Ashley Lewis"></div>
-                                <div class="reviews__author-info">
-                                    <div class="reviews__author-name">Ashley Lewis</div>
-                                    <div class="reviews__author-position">Director of Product Management</div>
-                                    <div class="reviews__author-company">Dollar Shave Club</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="reviews__ui">
-                            <div class="reviews__button reviews__button_left" id="review-prev-item">
-                                <svg class="icon icon_white">
-                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
-                                </svg>
-                            </div>
-                            <div class="reviews__button reviews__button_right" id="review-next-item">
-                                <svg class="icon icon_white">
-                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
-                                </svg>
-                            </div>
-                        </div>
+                            {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
             </div>
+            {% endif %}
         </div>
         <div class="block block_slide-min block_relative" id="we-do" cta-text="Get your optimum solution" tabs-block>
             <div class="block__content" auto-size-padding="we-do">
@@ -555,12 +448,12 @@ color: #445aec;
                                 <div class="posts-list__ui">
                                     <div class="posts-list__button posts-list__button_left" id="post-prev-item">
                                         <svg class="icon">
-                                            <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
                                         </svg>
                                     </div>
                                     <div class="posts-list__button posts-list__button_right" id="post-next-item">
                                         <svg class="icon">
-                                            <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
                                         </svg>
                                     </div>
                                 </div>

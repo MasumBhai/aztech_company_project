@@ -16,8 +16,7 @@
                 <div class="jobs-header">
                     <h1 class="jobs-header__title title title_medium yellow">Build things you’re
                         proud of</h1>
-                    <h2 class="jobs-header__description">Join a crew as motivated as you. Make cool stuff for global
-                        brands.
+                    <h2 class="jobs-header__description">Join a crew as motivated as you. Make cool stuff for global brands.
                          <span class="mark mark_violet">Level up, learn and grow</span> </h2>
                 </div>
             </div>
@@ -32,14 +31,7 @@
                              alt="Aztech office"></div>
                     <div class="jobs-about__content">
                         <div class="jobs-about__title">Who we are</div>
-                        <div class="jobs-about__text space space_hmt">ITRex is more than 250 technology professionals
-                            based in Minsk, Kyiv, Saint Petersburg and Los Angeles. We write software, craft strategies
-                            and give expert advice.
-                            </br>
-                            </br>
-                            We solve problems and drive growth for our clients. They’ve included big names like Walmart,
-                            Take a Swing at Cancer, Procter & Gamble, Dun & Bradstreet, Warner Bros., 21st Century Fox
-                            and the Dollar Shave Club.
+                        <div class="jobs-about__text space space_hmt">{% if companyInfo %}<p class="landing-subheader__text">{{ companyInfo.company_description }}</p>{% endif %}
                         </div>
                     </div>
                 </div>
@@ -54,8 +46,7 @@
                             <svg class="jobs-capabilities__item-icon">
                                 <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#AI"></use>
                             </svg>
-                            <div class="jobs-capabilities__item-text">Artificial intelligence, machine learning and big
-                                data
+                            <div class="jobs-capabilities__item-text">Artificial intelligence, machine learning, big data
                             </div>
                         </div>
                         <div class="jobs-capabilities__item">
@@ -68,8 +59,7 @@
                             <svg class="jobs-capabilities__item-icon">
                                 <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#VR"></use>
                             </svg>
-                            <div class="jobs-capabilities__item-text">Virtual reality, augmented reality and mixed
-                                reality
+                            <div class="jobs-capabilities__item-text">Virtual reality, augmented reality and mixed reality
                             </div>
                         </div>
                         <div class="jobs-capabilities__item">
@@ -90,10 +80,7 @@
                         <div class="jobs-apply__block space space_hmt">
                             <div class="jobs-apply__label">Look, this is not for everyone.
                             </div>
-                            <div class="jobs-apply__text">If you only want a salary and don’t much care about how good
-                                your projects are, you’ll probably hate it here. If you hide behind policies and
-                                processes because, secretly, you’re terrified of owning ideas or decisions, you too will
-                                think it sucks.
+                            <div class="jobs-apply__text">If you only want a salary and don’t much care about how good your projects are, you’ll probably hate it here. If you hide behind policies and processes because, secretly, you’re terrified of owning ideas or decisions, you too will think it sucks.
                             </div>
                         </div>
                     </div>
@@ -134,16 +121,11 @@
                             Honesty, transparency and family spirit
                         </div>
                         <div class="jobs-about__text space space_hmt">
-                            We strive always to be honest with each other and the client. That’s more than being
-                            truthful, it’s about not dodging responsibility or concealing important things.
+                            We strive always to be honest with each other and the client. That’s more than being truthful, it’s about not dodging responsibility or concealing important things.
                             </br>
+                            </br>We aren’t afraid to argue. Because we care about our work, it happens. We disagree like family; we help and support each other no matter what.
                             </br>
-                            We aren’t afraid to argue. Because we care about our work, it happens. We disagree like
-                            family; we help and support each other no matter what.
-                            </br>
-                            </br>
-                            Our managers live by this too. You’re never too junior to ask questions or to have an
-                            opinion.
+                            </br>Our developers live by this too. You’re never too junior to ask questions or to have an opinion.
                         </div>
                     </div>
                 </div>
@@ -160,10 +142,7 @@
                                 Does this sound overly lofty? We’re definitely not perfect. We make mistakes.
                             </div>
                             <div class="jobs-apply__text">
-                                You’re allowed to get things wrong – even horribly wrong – sometimes too. If you’re
-                                honest enough to own your mistakes, you will be safe. Working at ITRex, you’ll watch us
-                                admit mistakes all the time. That’s what initiative and transparency looks like. We are
-                                all committed to each other’s success. All we ask in return is the same commitment back.
+                                You’re allowed to get things wrong – even horribly wrong – sometimes too. If you’re honest enough to own your mistakes, you will be safe. Working {% if companyInfo %}at {{ companyInfo.company_name }}{% else %}with us{% endif %}, you’ll watch us admit mistakes all the time. That’s what initiative and transparency looks like. We are all committed to each other’s success. All we ask in return: is the same commitment back.
                             </div>
                         </div>
                     </div>
@@ -181,21 +160,20 @@
                     <div class="jobs-balance__left">
                         <div class="jobs-balance__title">Flexibility and balance</div>
                         <div class="jobs-balance__text jobs-balance__text_bold">
-                            We believe in hard work. That means you honestly give your best effort. It doesn’t mean you
-                            give every waking hour.
+                            We believe in hard work.
+                            That means you honestly give your best effort.
+                            It doesn’t mean you give every working hour.
                         </div>
                     </div>
                     <div class="jobs-balance__right">
                         <div class="jobs-balance__col">
                             <div class="jobs-balance__text">
-                                Our crew is motivated and accountable, so they earn a lot of trust. Flexible and remote
-                                working arrangements are no problem.
+                                Our crew is motivated and accountable, so they earn a lot of trust. Flexible and remote working arrangements are no problem.
                             </div>
                         </div>
                         <div class="jobs-balance__col">
                             <div class="jobs-balance__text">
-                                If you’re so stuck on a hard problem that you need to switch gears, head to the gym to
-                                work out, or to the Playstation to shoot bad guys.
+                                If you’re so stuck on a hard problem that you need to switch gears, head to the gym to work out, or to the Playstation to shoot bad guys.
                             </div>
                         </div>
                     </div>
@@ -217,10 +195,7 @@
                     </div>
                     <div class="jobs-text__right">
                         <div class="jobs-text__text">
-                            We expect you to work hard on difficult challenges, among high-level professionals who
-                            support you. You will take hard decisions, with permission to make mistakes and learn from
-                            them. If you have the attitude to make this work, your skills will level up fast and you’ll
-                            feel proud of how you grow. We offer language classes and career progression tracks too.
+                            We expect you to work hard on difficult challenges, among high-level professionals who support you. You will take hard decisions, with permission to make mistakes and learn from them. If you have the attitude to make this work, your skills will level up fast and you’ll feel proud of how you grow.
                         </div>
                     </div>
                 </div>
@@ -235,7 +210,7 @@
 <div class="landing-subheader" animation="fade-up" animation-delay=".15">
 <div class="landing-subheader__content">
 <p class="landing-subheader__text landing-subheader__text_small" style="text-align: center">
-    Some even mean it. If you feel like you’d thrive at Aztech, we’d love to hear from you. Please browse through our vacancies and see if anything suits you.
+    Some even mean it. If you feel like you’d thrive {% if companyInfo %}at {{ companyInfo.company_name }}{% else %}with us{% endif %}, we’d love to hear from you. Please browse through our vacancies and see if anything suits you.
 </p>
 </div>
 </div>
@@ -247,11 +222,11 @@
         <div class="block block_smoke" id="jobs_form">
             <div class="block__content">
                 <div class="jobs-form">
-                    <div class="jobs-form__title">Didn’t find a suitable job?</div>
+                    <div class="jobs-form__title">Are you now intesrested?</div>
                     <div class="jobs-form__choise space space_hmt">
                         <a class="jobs-form__item button arrow-link arrow-link arrow-link_fixed-opacity"
                            data-popup="#send-cv" id="send-cv-target" href="#send-cv">
-<span class="arrow-link__text">Send a CV <span style="white-space: nowrap">anyway<span class="arrow-link__arrow">
+<span class="arrow-link__text">Send your CV <span style="white-space: nowrap">to apply<span class="arrow-link__arrow">
 <span class="arrow-link__arrow_back arrow-link__arrow_black">→</span>
 <span class="arrow-link__arrow_front arrow-link__arrow_black">→</span>
 </span></span></span>
@@ -266,18 +241,18 @@
 {% block inner_body_content %}
     <div class="popup" id="send-cv">
         <div class="popup__header">
-            <div class="popup__logo"><img
-                    src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-white.svg"
-                    alt="ITRex"></div>
+            <div class="popup__logo">
+                <img src="{% if companyInfo %}{{ companyInfo.company_logo.url }}{% endif %}" alt="{% if companyInfo %}{{ companyInfo.company_name }}{% endif %}">
+            </div>
             <div class="popup__close"></div>
         </div>
         <div class="popup__content">
             <div class="popup__info">
-                <h2 class="popup__title">Join Aztech Valley</h2>
+                <h2 class="popup__title">Join {% if companyInfo %}{{ companyInfo.company_name }}{% else %}Right Now{% endif %}</h2>
                 <div class="popup__contacts">
-                    <a style="popup__link" href="mailto:aztechvalleyltd@gmail.com" target="" id="contacts-popup-1">aztechvalleyltd@gmail.com</a>
+                    <a style="popup__link" href="mailto:{% if companyInfo %}{{ companyInfo.company_mail }}{% else %}aztechvalleyltd@gmail.com{% endif %}" target="" id="contacts-popup-1">{% if companyInfo %}{{ companyInfo.company_mail }}{% else %}aztechvalleyltd@gmail.com{% endif %}</a>
                     <br>
-                    <a style="popup__link" href="tel:+8801712500637" target="" id="contacts-popup-2">+880 171 250 0637</a>
+                    <a style="popup__link" href="tel:{% if companyInfo %}{{ companyInfo.company_phone }}{% else %}+8801712500637{% endif %}" target="" id="contacts-popup-2">{% if companyInfo %}{{ companyInfo.company_phone }}{% else %}aztechvalleyltd@gmail.com{% endif %}</a>
                 </div>
             </div>
             <div class="form" hf-data="hf-data" data-thank-you="thankYouJobsUrl">

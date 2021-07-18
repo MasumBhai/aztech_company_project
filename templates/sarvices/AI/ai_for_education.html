@@ -33,7 +33,7 @@ corporate training
 <div class="landing-info" animation="fade-up" animation-delay=".15">
 <h2 class="landing-info__title title title_micro title_mb" animation="fade-up" animation-delay=".15">Your trusted AI education partner
 </h2>
-<div class="landing-info__text landing-info__text_mini">AI is already in the classroom, but many are still perplexed at what benefits of artificial intelligence in education are. We are here to lend a hand. Our <a class="link" href="https://itrexgroup.com/services/artificial-intelligence/" target="_blank" rel="noopener noreferrer">AI development team</a> gets started by discussing your goals and opportunities that AI can create specifically for your learning environment, be it the classroom, the workplace, or remotely. Only then we nail down your AI solution for education or corporate training, leveraging our in-depth knowledge of machine learning, intelligent automation and computer vision technologies across educational areas.</div>
+<div class="landing-info__text landing-info__text_mini">AI is already in the classroom, but many are still perplexed at what benefits of artificial intelligence in education are. We are here to lend a hand. Our <a class="link" href="{% url 'sTeam' %}" target="_blank" rel="noopener noreferrer">AI development team</a> gets started by discussing your goals and opportunities that AI can create specifically for your learning environment, be it the classroom, the workplace, or remotely. Only then we nail down your AI solution for education or corporate training, leveraging our in-depth knowledge of machine learning, intelligent automation and computer vision technologies across educational areas.</div>
 </div>
 </div>
 </div>
@@ -137,7 +137,7 @@ alt="AI for colleges and universities">          <h2 class="landing-image__conte
 </div>
 <div class="landing-rows__row" animation="fade-up" animation-delay=".15">
 <div class="landing-rows__title">Colleges and universities</div>
-<div class="landing-rows__text">Through a partnership with ITRex, you can embrace the AI-powered future, reducing the cost of learning while boosting student success and instructor productivity at the same time in the age of remote education.
+<div class="landing-rows__text">{% if companyInfo %}Through a partnership with {{ companyInfo.company_name }}, {% else %}Yes.{% endif %}You can embrace the AI-powered future, reducing the cost of learning while boosting student success and instructor productivity at the same time in the age of remote education.
 </div>
 </div>
 <div class="landing-rows__row" animation="fade-up" animation-delay=".15">
@@ -316,23 +316,52 @@ alt="custom elearning development">          <h2 class="landing-image__content p
 </div>
 </div>
 </div>
-<div class="block" id="clients" cta-text="Contact us">
-<div class="block__content">
-<h2 class="block__title" animation="fade-up" animation-delay=".15">Our clients</h2>
-<p class="block__subtitle" animation="fade-up" animation-delay=".15"></p>
-<div class="clients" animation="fade-up" animation-delay=".15">
-<div class="clients__list">
-    {% if clientDetails %}
-        {% for x in clientDetails %}
-            <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
-                 style="width: 150px;height: 150px"/>
-        {% endfor %}
-    {% endif %}
-<div class="clients__append"></div>
-</div>
-</div>
-</div>
-</div>
+{% block precious_clients %}
+            <div class="block" id="clients" cta-text="Get your optimum solution">
+                <div class="block__content">
+                    <h2 class="block__title" animation="fade-up" animation-delay=".15">Hungry for every
+                        client’s success</h2>
+                    <div class="clients" animation="fade-up" animation-delay=".15">
+                        <div class="clients__list">
+                            {% if clientDetails %}
+                                {% for x in clientDetails %}
+                                    <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
+                                         style="width: 150px;height: 150px"/>
+                                {% endfor %}
+                            {% endif %}
+                            <div class="clients__append"></div>
+                        </div>
+                    </div>
+                </div>
+                {% if clientDetails %}
+                    <div class="block__content block__content_black block__content_scroll-tablet">
+                        <div class="reviews" animation="fade-up" animation-delay=".15">
+                            <div class="reviews__content">
+                                {% for client in clientDetails %}
+                                    {% if client.client_quote %}
+                                    <div class="reviews__item" style="visibility: visible;overflow: hidden">
+                                        <div class="reviews__title">
+                                            {{ client.client_quote }}
+                                        </div>
+                                        <div class="reviews__author">
+                                            <div class="reviews__author-image">
+                                                <img src="{{ client.client_logo.url }}" alt="{{ client.client_name }}">
+                                            </div>
+                                            <div class="reviews__author-info">
+                                                <div class="reviews__author-name">{{ client.client_name }}</div>
+                                                <div class="reviews__author-position">{{ client.client_mail }}</div>
+                                                <div class="reviews__author-company">{{ client.client_address }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        {% endblock precious_clients %}
     {% block project_content %}
         {% if projectDetails %}
             <div class="block block_z-index-up block_relative" id="projects"

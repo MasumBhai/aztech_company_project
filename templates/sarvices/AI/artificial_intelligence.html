@@ -53,7 +53,7 @@
                         animation-delay=".15">Our AI know-how </h2>
                     <div class="landing-info__text landing-info__text_mini">
                         <p class="landing-subheader__text landing-subheader__text_small">
-                            An AI company with a decade of experience, we will help you harness machine learning
+                            An AI company with {% if companyInfo %}{{ companyInfo.years_of_experiences }}{% else %}05{% endif %} years of experience, we will help you harness machine learning
                             algorithms and the latest artificial intelligence tools and technologies for exponential
                             growth.
                         </p>
@@ -448,8 +448,7 @@
         <div class="block" id="why-itrex" cta-text="Talk to our AI experts">
             <div class="block__content-x">
                 <div class="landing-list post-block__content post-block__content_text landing-list_whiteyellow">
-                    <div class="landing-list__title" animation="fade-up" animation-delay=".15">Why work with ITRex AI
-                        company?
+                    <div class="landing-list__title" animation="fade-up" animation-delay=".15">Why work with {% if companyInfo %}{{ companyInfo.company_name }}{% else %}us{% endif %}?
                     </div>
                     <div class="landing-list__list">
                         <div class="landing-list__col">
@@ -467,7 +466,7 @@
                                     <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
                                 </svg>
                                 <div class="landing-list__item-text"><b>Top AI developers with niche skills.</b>
-                                    With our 250-strong team, we can bring in senior analysts, elite developers, and our
+                                    With our {% if companyInfo %}{{ companyInfo.experts_hired_total }}{% else %}35{% endif %}-strong team, we can bring in senior analysts, elite developers, and our
                                     R&D department when needed.
                                 </div>
                             </div>
@@ -478,7 +477,7 @@
                                     <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
                                 </svg>
                                 <div class="landing-list__item-text"><b>Diverse expertise.</b>
-                                    AI development company with 10+ years’ experience, we worked on hundreds of projects
+                                    An AI company with {% if companyInfo %}{{ companyInfo.years_of_experiences }}{% else %}05{% endif %} years of experience, we worked on hundreds of projects
                                     across in idustries, from ecommerce and fintech to healthcare and real estate, and
                                     beyond.
                                 </div>
@@ -488,7 +487,7 @@
                                     <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
                                 </svg>
                                 <div class="landing-list__item-text"><b>Proven track record.</b>
-                                    We’ve successfully completed 500+ projects and served 150+ clients across the globe.
+                                    We’ve successfully completed {% if companyInfo %}{{ companyInfo.product_delivers_total }}{% else %}60{% endif %}+ projects and served {% if companyInfo %}{{ companyInfo.clients_total_number }}{% else %}80{% endif %}+ clients across the globe.
                                 </div>
                             </div>
                         </div>
@@ -619,23 +618,52 @@
                 </div>
             </div>
         </div>
-        <div class="block" id="clients" cta-text="Contact us">
-<div class="block__content">
-<h2 class="block__title" animation="fade-up" animation-delay=".15">Our clients</h2>
-<p class="block__subtitle" animation="fade-up" animation-delay=".15"></p>
-<div class="clients" animation="fade-up" animation-delay=".15">
-<div class="clients__list">
-    {% if clientDetails %}
-        {% for x in clientDetails %}
-            <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
-                 style="width: 150px;height: 150px"/>
-        {% endfor %}
-    {% endif %}
-<div class="clients__append"></div>
-</div>
-</div>
-</div>
-</div>
+        {% block precious_clients %}
+            <div class="block" id="clients" cta-text="Get your optimum solution">
+                <div class="block__content">
+                    <h2 class="block__title" animation="fade-up" animation-delay=".15">Hungry for every
+                        client’s success</h2>
+                    <div class="clients" animation="fade-up" animation-delay=".15">
+                        <div class="clients__list">
+                            {% if clientDetails %}
+                                {% for x in clientDetails %}
+                                    <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
+                                         style="width: 150px;height: 150px"/>
+                                {% endfor %}
+                            {% endif %}
+                            <div class="clients__append"></div>
+                        </div>
+                    </div>
+                </div>
+                {% if clientDetails %}
+                    <div class="block__content block__content_black block__content_scroll-tablet">
+                        <div class="reviews" animation="fade-up" animation-delay=".15">
+                            <div class="reviews__content">
+                                {% for client in clientDetails %}
+                                    {% if client.client_quote %}
+                                    <div class="reviews__item" style="visibility: visible;overflow: hidden">
+                                        <div class="reviews__title">
+                                            {{ client.client_quote }}
+                                        </div>
+                                        <div class="reviews__author">
+                                            <div class="reviews__author-image">
+                                                <img src="{{ client.client_logo.url }}" alt="{{ client.client_name }}">
+                                            </div>
+                                            <div class="reviews__author-info">
+                                                <div class="reviews__author-name">{{ client.client_name }}</div>
+                                                <div class="reviews__author-position">{{ client.client_mail }}</div>
+                                                <div class="reviews__author-company">{{ client.client_address }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        {% endblock precious_clients %}
         {% block project_content %}
             {% if projectDetails %}
                 <div class="block block_z-index-up block_relative" id="projects"

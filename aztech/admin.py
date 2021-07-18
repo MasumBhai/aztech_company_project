@@ -52,7 +52,7 @@ class ClientDetails(admin.ModelAdmin):
                     'client_phone', 'client_address', 'client_agreement_date', 'client_payment', 'image_tag', ]
     list_filter = ['client_payment']
     list_display_links = ['client_mail']
-    fields = ['client_logo', ('client_name', 'client_address'), ('client_mail', 'client_phone'),
+    fields = ['client_logo','client_quote', ('client_name', 'client_address'), ('client_mail', 'client_phone'),
               ('client_agreement_date', 'client_payment'), ('client_project_title', 'client_project_link'), ]
     list_per_page = 15
     paginator = Paginator

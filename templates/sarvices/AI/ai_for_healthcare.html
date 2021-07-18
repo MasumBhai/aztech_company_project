@@ -93,7 +93,7 @@ for healthcare
 </div>
 <div class="accordion__content" style="height: 0">
 <div class="accordion__content-inner">
-<div class="accordion__list-line">We set up automation algorithms to let medical staff devote more time to catering for patients rather than doing mundane administrative tasks. With <a class="link" href="https://itrexgroup.com/services/intelligent-process-automation/" target="_blank" rel="noopener noreferrer">robotic process automation (RPA)</a>, you can streamline online scheduling, easily manage insurance claims and patient requests, effectively track hospital and lab inventory, and more
+<div class="accordion__list-line">We set up automation algorithms to let medical staff devote more time to catering for patients rather than doing mundane administrative tasks. With <a class="link" href="{% url 'sSoftwareTesting' %}" target="_blank" rel="noopener noreferrer">robotic process automation (RPA)</a>, you can streamline online scheduling, easily manage insurance claims and patient requests, effectively track hospital and lab inventory, and more
 </div>
 </div>
 </div>
@@ -213,7 +213,7 @@ alt="medical AI solutions">          <h2 class="landing-image__content post-bloc
 <div class="block__content block__content_half post-block__content post-block__content_medium">
 <div class="landing-subheader" animation="fade-up" animation-delay=".15">
 <div class="landing-subheader__content">
-<p class="landing-subheader__text landing-subheader__text_small">At ITRex, we consider ethics as a cornerstone of healthcare AI development and put clear protocols in place on how to identify, evaluate, and mitigate AI-related risks. We always put humans in control, no matter how accurate our AI models are, to prevent any harm to patients’ health and lives.
+    <p class="landing-subheader__text landing-subheader__text_small">{% if companyInfo %}<strong>At {{ companyInfo.company_name }} </strong>{% else %}Actually {% endif %}We consider ethics as a cornerstone of healthcare AI development and put clear protocols in place on how to identify, evaluate, and mitigate AI-related risks. We always put humans in control, no matter how accurate our AI models are, to prevent any harm to patients’ health and lives.
 </p>
 </div>
 </div>
@@ -321,7 +321,7 @@ alt="medical AI solutions">          <h2 class="landing-image__content post-bloc
 <svg class="landing-list__item-icon">
 <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
 </svg>
-<div class="landing-list__item-text"><b>Top AI developers with niche skills.</b> With 250+ skilled professionals on board, we bring in business analysts, data scientists, software architects, developers, and an R&D team with proven expertise building healthcare solutions
+<div class="landing-list__item-text"><b>Top AI developers with niche skills.</b> With {% if companyInfo %}{{ companyInfo.experts_hired_total }}{% else %}35{% endif %}+ skilled professionals on board, we bring in business analysts, data scientists, software architects, developers, and an R&D team with proven expertise building healthcare solutions
 </div>
 </div>
 </div>
@@ -336,7 +336,7 @@ alt="medical AI solutions">          <h2 class="landing-image__content post-bloc
 <svg class="landing-list__item-icon">
 <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
 </svg>
-<div class="landing-list__item-text"><b>Diverse expertise.</b> An <a class="link" href="https://itrexgroup.com/services/artificial-intelligence/" target="_blank" rel="noopener noreferrer">AI development company</a> with 10+ years of experience, we have a track record of successfully completed healthcare projects utilizing varied AI subsets
+<div class="landing-list__item-text"><b>Diverse expertise.</b> An <a class="link" href="{% url 'sAI' %}" target="_blank" rel="noopener noreferrer">AI development company</a> with {% if companyInfo %}{{ companyInfo.years_of_experiences }}{% else %}05{% endif %}+ years of experience, we have a track record of successfully completed healthcare projects utilizing varied AI subsets
 </div>
 </div>
 </div>
@@ -523,23 +523,52 @@ alt="AI development for healthcare industry">          <h2 class="landing-image_
 </div>
 </div>
 </div>
-<div class="block" id="clients" cta-text="Contact us">
-<div class="block__content">
-<h2 class="block__title" animation="fade-up" animation-delay=".15">Our clients</h2>
-<p class="block__subtitle" animation="fade-up" animation-delay=".15"></p>
-<div class="clients" animation="fade-up" animation-delay=".15">
-<div class="clients__list">
-    {% if clientDetails %}
-        {% for x in clientDetails %}
-            <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
-                 style="width: 150px;height: 150px"/>
-        {% endfor %}
-    {% endif %}
-<div class="clients__append"></div>
-</div>
-</div>
-</div>
-</div>
+{% block precious_clients %}
+            <div class="block" id="clients" cta-text="Get your optimum solution">
+                <div class="block__content">
+                    <h2 class="block__title" animation="fade-up" animation-delay=".15">Hungry for every
+                        client’s success</h2>
+                    <div class="clients" animation="fade-up" animation-delay=".15">
+                        <div class="clients__list">
+                            {% if clientDetails %}
+                                {% for x in clientDetails %}
+                                    <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
+                                         style="width: 150px;height: 150px"/>
+                                {% endfor %}
+                            {% endif %}
+                            <div class="clients__append"></div>
+                        </div>
+                    </div>
+                </div>
+                {% if clientDetails %}
+                    <div class="block__content block__content_black block__content_scroll-tablet">
+                        <div class="reviews" animation="fade-up" animation-delay=".15">
+                            <div class="reviews__content">
+                                {% for client in clientDetails %}
+                                    {% if client.client_quote %}
+                                    <div class="reviews__item" style="visibility: visible;overflow: hidden">
+                                        <div class="reviews__title">
+                                            {{ client.client_quote }}
+                                        </div>
+                                        <div class="reviews__author">
+                                            <div class="reviews__author-image">
+                                                <img src="{{ client.client_logo.url }}" alt="{{ client.client_name }}">
+                                            </div>
+                                            <div class="reviews__author-info">
+                                                <div class="reviews__author-name">{{ client.client_name }}</div>
+                                                <div class="reviews__author-position">{{ client.client_mail }}</div>
+                                                <div class="reviews__author-company">{{ client.client_address }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        {% endblock precious_clients %}
         {% block project_content %}
             {% if projectDetails %}
                 <div class="block block_z-index-up block_relative" id="projects"
