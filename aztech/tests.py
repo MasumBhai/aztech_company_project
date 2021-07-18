@@ -7,6 +7,7 @@ py manage.py makemigrations
 python manage.py migrate --run-syncdb
 py manage.py runserver
 
+py manage.py collectstatic
 py manage.py migrate
 
 '''

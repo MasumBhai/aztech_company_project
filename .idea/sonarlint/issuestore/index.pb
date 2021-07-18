@@ -35,16 +35,10 @@ F
 templates/contact.html,7\f\7f50bc186c5d8c3260f8530e58ffb1e0559fb0ca
 N
 templates/latest_projects.html,6\f\6f32d68e90dcda2474dc62a6f995953c6af9c9ff
-G
-templates/Our_Blog.html,4\d\4d6eada42eb6c74025e28961939bfc9513b11791
 D
 static/js/scripts.js,4\d\4dc6053ee96817d0caa0ea943ea6d475fa3593b2
-N
-aztech_company_project/urls.py,a\9\a941877cbc3613d7e78755ff53dee58452dff112
 ?
 aztech/views.py,0\6\063cf2a9f78259a2eb7b33b8bffe81366820a8f4
->
-aztech/urls.py,e\5\e59a84d2bec9c374b6bfa155068ef3805d4c98c3
 L
 templates/base_for_blog.html,1\8\18ea4dd5e7e35ec00557477f7f0312cd7f8feb06
 F
@@ -71,8 +65,6 @@ V
 &templates/sarvices/appDevelopment.html,3\1\31003af49203045383cd5a50ef80a4c5872b1a06
 b
 2templates/sarvices/AI/artificial_intelligence.html,f\f\ff3597edcb7b8c9d8edddb77a46ac4b357bf6f53
-K
-templates/Blog_Details.html,e\1\e1d9131a2afd39b6a2f671fe4980348f77de6521
 X
 (templates/sarvices/team/cto_service.html,e\7\e7590cee48d4d930a140747ad37236a5982b83e9
 [
@@ -93,8 +85,6 @@ W
 'templates/sarvices/softwareTesting.html,f\8\f86dfcf9e0c6e5e3d286a0b4a61f255648d5eabd
 \
 ,templates/sarvices/technologyConsulting.html,7\1\71488bc79ee86c7067d78ff49415ae07da4db310
-H
-templates/blog_base.html,d\7\d76d62c4cdcd882652452eae62e9c578d0dc514f
 S
 #templates/programme/eLogistics.html,9\b\9b7efbfb439564e478107a23def9de455efe67a7
 T
