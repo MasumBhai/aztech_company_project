@@ -1,7 +1,11 @@
 from .models import *
 
 def add_variable_to_context(request):
-    companyInfo = SoftwareCompany.objects.get(id=1)
+    try:
+        companyInfo = SoftwareCompany.objects.get(id=1)
+    except:
+        companyInfo = SoftwareCompany.objects.all()
+
     client_details = OurClients.objects.all()
     project_detils = LatestProjects.objects.all()
     everyWhere = {

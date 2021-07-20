@@ -188,7 +188,7 @@ class LatestProjects(models.Model):
 
 class SoftwareCompany(models.Model):
     company_logo = models.ImageField(verbose_name='Company-logo-should-be-nice',
-                                     upload_to='project_impacts/%Y/%m/', blank=True, null=True)
+                                     upload_to='company-logo/%Y/%m/', blank=True, null=True)
     company_name = models.CharField(verbose_name='company-name',max_length=120,blank=True,null=True)
     company_mail = models.EmailField(verbose_name='company-official-mail-address',max_length=120,blank=True,null=True)
     company_phone = PhoneField(help_text="company-official-phone-number")
