@@ -1,1 +1,1 @@
-web: gunicorn aztech_company_project.wsgi
+web: gunicorn aztech_company_project.wsgi --log-file -

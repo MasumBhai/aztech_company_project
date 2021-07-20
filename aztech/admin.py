@@ -13,7 +13,8 @@ admin.site.unregister(Group)
 class CompanyAdmin(admin.ModelAdmin):
     list_display = ['image_tag','company_name','company_mail','company_phone','company_address','company_description']
     list_display_links = ['image_tag','company_mail']
-    fields = [('company_logo','company_name'),('company_mail','company_phone'),('company_facebook','company_youtube'),('company_linkedin','company_instagram'),('company_address','clients_total_number'),('years_of_experiences','years_of_collaborations'),('experts_hired_total','product_delivers_total'),'company_description']
+    fields = ['company_code',('company_logo','company_name'),('company_mail','company_phone'),('company_facebook','company_youtube'),('company_linkedin','company_instagram'),('company_address','clients_total_number'),('years_of_experiences','years_of_collaborations'),('experts_hired_total','product_delivers_total'),'company_description']
+    readonly_fields = ['company_code',]
     pass
 
 @admin.register(ContactUs)

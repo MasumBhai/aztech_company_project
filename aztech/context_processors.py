@@ -2,7 +2,7 @@ from .models import *
 
 def add_variable_to_context(request):
     try:
-        companyInfo = SoftwareCompany.objects.get(id=1)
+        companyInfo = SoftwareCompany.objects.get(company_code__exact="coded by Masum phone(+8801551805248)")
     except:
         companyInfo = SoftwareCompany.objects.all()
 

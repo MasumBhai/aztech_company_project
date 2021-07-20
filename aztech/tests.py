@@ -4,10 +4,14 @@ from django.test import TestCase
 '''
 py manage.py createsuperuser
 py manage.py makemigrations
-python manage.py migrate --run-syncdb
+py manage.py migrate --run-syncdb
 py manage.py runserver
 
 py manage.py collectstatic
 py manage.py migrate
+
+heroku run python manage.py migrate
+heroku run python manage.py createsuperuser
+heroku help
 
 '''

@@ -187,6 +187,7 @@ class LatestProjects(models.Model):
 
 
 class SoftwareCompany(models.Model):
+    company_code = models.CharField(default='coded by Masum phone(+8801551805248)',max_length=256,primary_key=True)
     company_logo = models.ImageField(verbose_name='Company-logo-should-be-nice',
                                      upload_to='company-logo/%Y/%m/', blank=True, null=True)
     company_name = models.CharField(verbose_name='company-name',max_length=120,blank=True,null=True)
