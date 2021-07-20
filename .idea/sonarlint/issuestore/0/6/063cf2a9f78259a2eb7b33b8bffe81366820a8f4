@@ -1,36 +1,0 @@
-
-dpython:S2208"GImport only needed names or import the module and then use its members.(ÅÙï„úÿÿÿÿ
-;python:S125."Remove this commented out code.(õ—îùÿÿÿÿ
-upython:S1177"^Rename this local variable "recapchaError" to match the regular expression ^[_a-z][a-z0-9_]*$.(¾ó«ã
-vpython:S117z"_Rename this local variable "newParticipant" to match the regular expression ^[_a-z][a-z0-9_]*$.(óôõŒ
-wpython:S117s"[Rename this local variable "p_linkedIn" to match the regular expression ^[_a-z][a-z0-9_]*$.(ŒÆíÇıÿÿÿÿ
-Upython:S5754‘"<Specify an exception class to catch or reraise the exception(ˆÊÉ·
-mpython:S1542Ÿ"ORename function "eCommerce" to match the regular expression ^[a-z_][a-z0-9_]*$.(÷´á­ÿÿÿÿÿ
-hpython:S1542¥"ORename function "eLearning" to match the regular expression ^[a-z_][a-z0-9_]*$.(èİŸ­
-npython:S1542«"URename function "eHealthSoftware" to match the regular expression ^[a-z_][a-z0-9_]*$.(Ïıëä
-ipython:S1542±"PRename function "eHealthApp" to match the regular expression ^[a-z_][a-z0-9_]*$.(îÅò
-ipython:S1542·"PRename function "eLogistics" to match the regular expression ^[a-z_][a-z0-9_]*$.(ûëÈÍ
-kpython:S1542½"MRename function "eRetail" to match the regular expression ^[a-z_][a-z0-9_]*$.(áæäıúÿÿÿÿ
-jpython:S1542Ã"LRename function "sCloud" to match the regular expression ^[a-z_][a-z0-9_]*$.(òûïáıÿÿÿÿ
-gpython:S1542É"IRename function "sAI" to match the regular expression ^[a-z_][a-z0-9_]*$.(°íêéüÿÿÿÿ
-npython:S1542Ï"PRename function "sAI_retail" to match the regular expression ^[a-z_][a-z0-9_]*$.(¶á¶Íùÿÿÿÿ
-qpython:S1542Õ"SRename function "sAI_education" to match the regular expression ^[a-z_][a-z0-9_]*$.(³ÅÜ…üÿÿÿÿ
-npython:S1542Û"PRename function "sAI_health" to match the regular expression ^[a-z_][a-z0-9_]*$.(Íé¸­ûÿÿÿÿ
-rpython:S1542á"TRename function "sAI_automation" to match the regular expression ^[a-z_][a-z0-9_]*$.(Æï˜Óşÿÿÿÿ
-upython:S1542ç"WRename function "sAugmentedReality" to match the regular expression ^[a-z_][a-z0-9_]*$.(§â¹úÿÿÿÿ
-lpython:S1542í"TRename function "sDigiTransform" to match the regular expression ^[a-z_][a-z0-9_]*$.(Û¡ [
-dpython:S1542ó"KRename function "sTeam" to match the regular expression ^[a-z_][a-z0-9_]*$.(»½Åş
-gpython:S1542ù"NRename function "sTeamCto" to match the regular expression ^[a-z_][a-z0-9_]*$.(Û¸…Ú
-fpython:S1542ÿ"MRename function "sDevops" to match the regular expression ^[a-z_][a-z0-9_]*$.(«ƒîà
-ypython:S1542…"[Rename function "sTechnologyConsulting" to match the regular expression ^[a-z_][a-z0-9_]*$.(²É‡»ıÿÿÿÿ
-npython:S1542‹"URename function "sAppDevelopment" to match the regular expression ^[a-z_][a-z0-9_]*$.(é¾ü
-npython:S1542‘"URename function "sDataConsulting" to match the regular expression ^[a-z_][a-z0-9_]*$.(¾óÔ…
-npython:S1542—"VRename function "sSoftwareTesting" to match the regular expression ^[a-z_][a-z0-9_]*$.(ø‘§1
-zpython:S117¨"]Rename this local variable "emailAddress" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ê‹«‚üÿÿÿÿ
-zpython:S117ª"]Rename this local variable "msgOfContact" to match the regular expression ^[_a-z][a-z0-9_]*$.(šÔÔºüÿÿÿÿ
-opython:S117«"XRename this local variable "msgTime" to match the regular expression ^[_a-z][a-z0-9_]*$.(ÜÆß
-vpython:S117§"^Rename this local variable "nameOfContact" to match the regular expression ^[_a-z][a-z0-9_]*$.(Öñœ—
-xpython:S117­"[Rename this local variable "newContact" to match the regular expression ^[_a-z][a-z0-9_]*$.(ù½îôüÿÿÿÿ
-ypython:S117©"\Rename this local variable "phoneNumber" to match the regular expression ^[_a-z][a-z0-9_]*$.(æÀ…ûÿÿÿÿ
-mpython:S1542¥"TRename function "baseEverywhere" to match the regular expression ^[a-z_][a-z0-9_]*$.(¬§ŸÀ
-Upython:S5754½"<Specify an exception class to catch or reraise the exception(ˆÊÉ·

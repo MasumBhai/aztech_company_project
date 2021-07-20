@@ -132,12 +132,18 @@ def job_portal(request):
             )
             messages.success(request=request, message="An email is sent to your mailing address")
 
+            companyInfo = SoftwareCompany.objects.get(company_code__exact="coded by Masum phone(+8801551805248)")
+
             subject = f'Thanks {newParticipant.participant_name} for applying into Aztech Valley'
             body = render_to_string(template_name='promotional_congratulations.html',
                                     context={'participantName': newParticipant.participant_name,
                                              'participantPhone': newParticipant.participant_phone,
                                              'participantGithub': newParticipant.participant_github,
-                                             'participantLinkedIn': newParticipant.participant_linkedIn, })
+                                             'participantLinkedIn': newParticipant.participant_linkedIn,
+                                             'companyName': companyInfo.company_name,
+                                             'companyPhone': companyInfo.company_phone,
+                                             'companyMail': companyInfo.company_mail,
+                                             })
             sender = settings.EMAIL_HOST_USER
             recipient_list = [newParticipant.participant_mail, ]
             send_mail(subject=subject, message=body, from_email=sender, recipient_list=recipient_list,
@@ -307,10 +313,16 @@ def baseEverywhere(request):
             )
             messages.success(request=request, message="An email is sent to your mailing address")
 
+            companyInfo = SoftwareCompany.objects.get(company_code__exact="coded by Masum phone(+8801551805248)")
+
             subject = f'Thanks {newContact.contact_name} for contacting Aztech Valley'
             message = render_to_string(template_name='promotional_Advertise.html',
                                        context={'personName': newContact.contact_name,
-                                                'personPhone': newContact.contact_phone, })
+                                                'personPhone': newContact.contact_phone,
+                                                'companyName': companyInfo.company_name,
+                                                'companyPhone': companyInfo.company_phone,
+                                                'companyMail': companyInfo.company_mail,
+                                                })
             email_from = settings.EMAIL_HOST_USER
             recipient_list = [newContact.contact_mail, ]
             send_mail(subject, message, email_from, recipient_list, fail_silently=False)

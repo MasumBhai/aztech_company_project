@@ -473,55 +473,74 @@ alt="auto qa services">          <h2 class="landing-image__content post-block__c
 </div>
 </div>
 {% block precious_clients %}
-            <div class="block" id="clients" cta-text="Get your optimum solution">
-                <div class="block__content">
-                    <h2 class="block__title" animation="fade-up" animation-delay=".15">Hungry for every
-                        client’s success</h2>
-                    <div class="clients" animation="fade-up" animation-delay=".15">
-                        <div class="clients__list">
-                            {% if clientDetails %}
-                                {% for x in clientDetails %}
-                                    <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
-                                         style="width: 150px;height: 150px"/>
-                                {% endfor %}
-                            {% endif %}
-                            <div class="clients__append"></div>
+<div class="block" id="clients" cta-text="Get your optimum solution">
+            <div class="block__content">
+                <h2 class="block__title" animation="fade-up" animation-delay=".15">Hungry for every
+                    client’s success</h2>
+                <div class="clients" animation="fade-up" animation-delay=".15">
+                    <div class="clients__list">
+                        {% if clientDetails %}
+                            {% for x in clientDetails %}
+                                <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
+                                     style="width: 150px;height: 150px"/>
+                            {% endfor %}
+                        {% endif %}
+                        <div class="clients__append"></div>
+                    </div>
+                </div>
+            </div>
+            {% if clientDetails %}
+                <div class="block__content block__content_black block__content_auto block__content_scroll-tablet">
+                    <div class="reviews" animation="fade-up" animation-delay=".15">
+                        <div class="reviews__content">
+                            {% for client in clientDetails %}
+                                {% if client.client_quote %}
+                                    {% if forloop.counter == 1 %}
+                                        <div class="reviews__item" style="visibility: visible;">
+                                            <div class="reviews__title">
+                                                {{ client.client_quote }}
+                                            </div>
+                                            <div class="reviews__author">
+                                                <div class="reviews__author-image">
+                                                    <img src="{{ client.client_logo.url }}"
+                                                         alt="{{ client.client_name }}"></div>
+                                                <div class="reviews__author-info">
+                                                    <div class="reviews__author-name">{{ client.client_name }}</div>
+                                                    <div class="reviews__author-position">{{ client.client_mail }}</div>
+                                                    <div class="reviews__author-company">{{ client.client_address }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        <div class="reviews__item">
+                                            <div class="reviews__title">
+                                                {{ client.client_quote }}
+                                            </div>
+                                            <div class="reviews__author">
+                                                <div class="reviews__author-image">
+                                                    <img src="{{ client.client_logo.url }}"
+                                                         alt="{{ client.client_name }}"></div>
+                                                <div class="reviews__author-info">
+                                                    <div class="reviews__author-name">{{ client.client_name }}</div>
+                                                    <div class="reviews__author-position">{{ client.client_mail }}</div>
+                                                    <div class="reviews__author-company">{{ client.client_address }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
-                {% if clientDetails %}
-                    <div class="block__content block__content_black block__content_scroll-tablet">
-                        <div class="reviews" animation="fade-up" animation-delay=".15">
-                            <div class="reviews__content">
-                                {% for client in clientDetails %}
-                                    {% if client.client_quote %}
-                                    <div class="reviews__item" style="visibility: visible;overflow: hidden">
-                                        <div class="reviews__title">
-                                            {{ client.client_quote }}
-                                        </div>
-                                        <div class="reviews__author">
-                                            <div class="reviews__author-image">
-                                                <img src="{{ client.client_logo.url }}" alt="{{ client.client_name }}">
-                                            </div>
-                                            <div class="reviews__author-info">
-                                                <div class="reviews__author-name">{{ client.client_name }}</div>
-                                                <div class="reviews__author-position">{{ client.client_mail }}</div>
-                                                <div class="reviews__author-company">{{ client.client_address }}</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {% endif %}
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </div>
-                {% endif %}
-            </div>
-        {% endblock precious_clients %}
-        {% block project_content %}
-            {% if projectDetails %}
+            {% endif %}
+        </div>
+{% endblock precious_clients %}
+
+{% block project_content %}
+{% if projectDetails %}
                 <div class="block block_z-index-up block_relative" id="projects"
-                     cta-text="get your project optimum solutionn">
+                     cta-text="get your project's optimum solution">
                     <div class="block__content">
                         <div class="post-title">
                             <h2 class="block__title post-title__title" animation="fade-up" animation-delay=".15">
@@ -540,6 +559,7 @@ alt="auto qa services">          <h2 class="landing-image__content post-block__c
                                 </defs>
                             </svg>
                             {% for project in projectDetails %}
+                                {% if forloop.counter == 1 %}
                                 <div class="post post_slider" style="position: relative;visibility: visible">
                                     <div class="post__info">
                                         <div class="post__company">{{ project.project_client }}</div>
@@ -556,17 +576,35 @@ alt="auto qa services">          <h2 class="landing-image__content post-block__c
                                              alt="{{ project.project_title }}">
                                     </a>
                                 </div>
+                                {% else %}
+                                    <div class="post post_slider">
+                                    <div class="post__info">
+                                        <div class="post__company">{{ project.project_client }}</div>
+                                        <a class="post__title arrow-link arrow-link_fixed-opacity"
+                                           href="{% url 'project-details' project.project_slug %}"><span
+                                                class="arrow-link__text">{{ project.project_title }}<span
+                                                class="arrow-link__arrow"><span
+                                                class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
+                                                class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
+                                    </div>
+                                    <a class="post__image" loading="lazy"
+                                       href="{% url 'project-details' project.project_slug %}">
+                                        <img loading="lazy" src="{{ project.project_preview.url }}"
+                                             alt="{{ project.project_title }}">
+                                    </a>
+                                </div>
+                                {% endif %}
                             {% endfor %}
                             <div class="posts-list__controlls">
                                 <div class="posts-list__ui">
                                     <div class="posts-list__button posts-list__button_left" id="post-prev-item">
                                         <svg class="icon">
-                                            <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
                                         </svg>
                                     </div>
                                     <div class="posts-list__button posts-list__button_right" id="post-next-item">
                                         <svg class="icon">
-                                            <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
                                         </svg>
                                     </div>
                                 </div>
@@ -575,6 +613,6 @@ alt="auto qa services">          <h2 class="landing-image__content post-block__c
                     </div>
                 </div>
             {% endif %}
-        {% endblock project_content %}
+{% endblock project_content %}
 </div>
 {% endblock main_content %}
