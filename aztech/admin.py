@@ -1,5 +1,10 @@
 from django.contrib import admin
+from django.core.mail import send_mail
 from django.core.paginator import Paginator
+from django.http import HttpResponseRedirect
+from django.template.loader import render_to_string
+
+from aztech_company_project import settings
 from .models import *
 from django.contrib.auth.models import Group
 from django_summernote.admin import SummernoteModelAdmin
@@ -25,6 +30,28 @@ class UserContact(admin.ModelAdmin):
     readonly_fields = ('contact_name', 'contact_mail', 'contact_phone', 'contact_time', 'contact_msg')
     list_per_page = 15
     paginator = Paginator
+    change_form_template = "admin/promotion_button.html"
+
+    def response_change(self, request, obj=None):
+        if "Promotional_Advertise" in request.POST:
+            try:
+                subject = "Just Trying My Luck"  # ekhane notun html template create korte hobe
+                message = render_to_string(template_name='promotional_Advertise.html',
+                                           context={'personName': "MasumBhai",
+                                                    'personPhone': "01551805848",
+                                                    'companyName': "Brainy-Fools",
+                                                    'companyPhone': "01615001206",
+                                                    'companyMail': "abdullahmasum6035@gmail.com",
+                                                    })
+                email_from = settings.EMAIL_HOST_USER
+                recipient_list = ['ultapaltapagla@gmail.com', ]
+                send_mail(subject, message, email_from, recipient_list, fail_silently=False)
+                self.message_user(request, "Promotional Mail Sent Successfully")
+            except:
+                self.message_user(request, "Out of Luck")
+            self.message_user(request, "Button Clicked. No Problem")
+            return HttpResponseRedirect(".")
+        return super().response_change(request, obj=obj)
     pass
 
 
@@ -57,6 +84,28 @@ class ClientDetails(admin.ModelAdmin):
               ('client_agreement_date', 'client_payment'), ('client_project_title', 'client_project_link'), ]
     list_per_page = 15
     paginator = Paginator
+    change_form_template = "admin/promotion_button.html"
+
+    def response_change(self, request,obj=None):
+        if "Promotional_Advertise" in request.POST:
+            try:
+                subject = "Just Trying My Luck"  # ekhane notun html template create korte hobe
+                message = render_to_string(template_name='promotional_Advertise.html',
+                                           context={'personName': "MasumBhai",
+                                                    'personPhone': "01551805848",
+                                                    'companyName': "Brainy-Fools",
+                                                    'companyPhone': "01615001206",
+                                                    'companyMail': "abdullahmasum6035@gmail.com",
+                                                    })
+                email_from = settings.EMAIL_HOST_USER
+                recipient_list = ['ultapaltapagla@gmail.com', ]
+                send_mail(subject, message, email_from, recipient_list, fail_silently=False)
+                self.message_user(request, "Promotional Mail Sent Successfully")
+            except:
+                self.message_user(request, "Out of Luck")
+            self.message_user(request, "Button Clicked. No Problem")
+            return HttpResponseRedirect(".")
+        return super().response_change(request,obj=obj)
     pass
 
 

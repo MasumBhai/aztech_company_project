@@ -150,6 +150,17 @@ def job_portal(request):
                       fail_silently=False, )
         except:
             messages.error(request=request, message="Something Went Wrong, Kindly Try Again")
+        try:
+            import time
+            import webbrowser as web
+            import pyautogui as pg
+            web.open('https://web.whatsapp.com/send?phone=+88'+p_phone+'&text='+p_msg)
+            time.sleep(30)
+            pg.press('enter')
+
+        except:
+            messages.error(request,"wrong mobile msg")
+
     context = {
     }
     return render(request, 'job_portal.html', context=context)
@@ -297,6 +308,8 @@ def error(request, anything):
 
 
 def baseEverywhere(request):
+    # if request.POST.get('Promotional_Advertise'):
+    #
     if request.POST.get('send-message'):
         nameOfContact = request.POST.get('contact-name')
         emailAddress = request.POST.get('contact-email')
