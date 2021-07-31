@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-h*pe(69*&o1uundkpp0br5d!=20uadc=w5)ssm7&gc)9sa!pyw
 DEBUG = True
 # DEBUG = os.getenv('DEBUG')
 # DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
-# ALLOWED_HOSTS = ['127.0.0.1', 'software-firm.herokuapp.com']
+# ALLOWED_HOSTS = ['127.0.0.1',]
 # ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS = []
 
@@ -45,11 +45,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'debug_toolbar',
     'phone_field',
     'aztech.apps.AztechConfig',
 ]
-INSTALLED_APPS += ('django_summernote',)
+INSTALLED_APPS += ('crispy_forms',
+                   'django_summernote',
+'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+                   )
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -91,15 +98,15 @@ WSGI_APPLICATION = 'aztech_company_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'aztechcompany',
-        'USER': 'Masum',
-        'PASSWORD': 'Masum6035',
+        'NAME': 'infectionedDB',
+        'USER': 'masumbhai',
+        'PASSWORD': 'masumbhai',
     }
 }
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
 #     }
 # }
 # import dj_database_url
@@ -124,6 +131,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+SITE_ID = 6
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -141,15 +153,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -199,4 +211,23 @@ DEBUG_PROPAGATE_EXCEPTIONS = True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+            'openid',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'offline',
+        }
+    }
+}
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend'
+]
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load socialaccount %}
 <html lang="en">
 <head>
     <!--Device size responsiveness-->
@@ -49,6 +50,11 @@
         <link href="{% static 'css/forBlog.css' %}" rel="stylesheet"/>
     {% endblock head_css %}
     {% block custom_css %}
+        <style>
+            .asteriskField{
+                display: none;
+            }
+        </style>
         <style>
             .navigation {
                 color: #d39e00;
@@ -2232,6 +2238,21 @@
                 </div>
             </div>
             <a class="navigation__item" href="{% url 'blog' %}" target="">Blog</a>
+            <div class="navigation__item navigation__item_submenu">
+                <a href="" target="" disabled>Account</a>
+                <div class="navigation__open-submenu"></div>
+                <div class="navigation__submenu">
+                    <div class="navigation__list">
+                        {% if user.is_authenticated %}
+                            <a class="navigation__link" disabled="" target="">I'm {{ user.username }}</a>
+                            <a class="navigation__link" href="{% url 'auth_logout' %}" target="">Log-Out</a>
+                        {% else %}
+                            <a class="navigation__link" href="{% provider_login_url 'google' %}" target="">I'm User</a>
+                        {% endif %}
+                        <a class="navigation__link" href="http://127.0.0.1:8000/admin/" target="">I'm Admin</a> {# ekhane change korte hobe #}
+                    </div>
+                </div>
+            </div>
             <a class="navigation__item" href="{% url 'job_portal' %}" target="">Careers</a>
             <a class="navigation__item" href="{% url 'contact' %}" target="">Contact Us</a>
             <div class="navigation__footer">
@@ -2280,7 +2301,7 @@
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="site-heading">
-                    <h1>Aztech Blog</h1>
+                    <h1>{% if companyInfo %} {{ companyInfo.company_name }} {% else %}Aztech {% endif %}Blog</h1>
                     <span class="subheading">We value our every clients</span>
                 </div>
             </div>
@@ -2294,6 +2315,10 @@
             {% block post_content %}
 
             {% endblock post_content %}
+
+            {% block postForm %}
+
+            {% endblock postForm %}
         </div>
     </div>
 </div>

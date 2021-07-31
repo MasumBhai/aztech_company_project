@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
+from django.contrib.auth.views import LogoutView
 from . import views
 
 urlpatterns = [
@@ -54,5 +55,7 @@ urlpatterns = [
     path('sevices/software-testing/', views.sSoftwareTesting, name='sSoftwareTesting'),
 
     path('<slug:anything>', views.error, name='error'),
+    path('accounts/social/signup/',views.error, name='login-Error'),
+    path('accounts/logout/', LogoutView.as_view(), name='auth_logout'),
 
 ]

@@ -19,6 +19,7 @@ from django.urls import path
 from django.conf import settings
 from django.views.generic import RedirectView
 from django.conf.urls import include, url
+from django.contrib.auth.views import LogoutView
 import debug_toolbar
 
 admin.site.site_header = "Aztech Valley"
@@ -32,6 +33,7 @@ urlpatterns = [
                   path('admin/', admin.site.urls),
                   path('__debug__/', include(debug_toolbar.urls)),
                   path('summernote/', include('django_summernote.urls')),
+                  path('accounts/', include('allauth.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
@@ -40,4 +42,4 @@ if settings.DEBUG:
 
     urlpatterns += [
                        path('__debug__/', include(debug_toolbar.urls)),
-                   ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                   ]

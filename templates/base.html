@@ -1,4 +1,5 @@
 {% load static %}
+{% load socialaccount %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,7 +93,15 @@
         {% endblock head_css_section %}
         {% block head_css_page %}
             <!--for custom-css-page-->
-            <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css"/>
+            <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css"/>
+            <!-- Alertify CSS -->
+            <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+            <!-- Default theme -->
+            <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+            <!-- Semantic UI theme -->
+            <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+            <!-- Bootstrap theme -->
+            <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
         {% endblock head_css_page %}
     {% endblock head_css %}
     <!--for title-->
@@ -187,6 +196,21 @@
                 </div>
             </div>
             <a class="navigation__item" href="{% url 'blog' %}" target="">Blog</a>
+            <div class="navigation__item navigation__item_submenu">
+                <a href="" target="" disabled>Account</a>
+                <div class="navigation__open-submenu"></div>
+                <div class="navigation__submenu">
+                    <div class="navigation__list">
+                        {% if user.is_authenticated %}
+                            <a class="navigation__link" disabled="" target="">I'm {{ user.username }}</a>
+                            <a class="navigation__link" href="{% url 'auth_logout' %}" target="">Log-Out</a>
+                        {% else %}
+                            <a class="navigation__link" href="{% provider_login_url 'google' %}" target="">I'm User</a>
+                        {% endif %}
+                        <a class="navigation__link" href="http://127.0.0.1:8000/admin/" target="">I'm Admin</a> {# ekhane change korte hobe #}
+                    </div>
+                </div>
+            </div>
             <a class="navigation__item" href="{% url 'job_portal' %}" target="">Careers</a>
             <a class="navigation__item" href="{% url 'contact' %}" target="">Contact Us</a>
             <div class="navigation__footer">
@@ -681,8 +705,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
         <!--for ajax-jquery-->
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-        <!-- for sweet-alert-->
+        <!-- for sweet-alert2-->
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- for Alertify JS -->
+        <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
         <!--for Google Recptcha-->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <!-- Google Tag Manager -->
@@ -762,7 +788,13 @@
         {% include 'bundle.html' %}
     {% endblock footer_javascript_section %}
     {% block footer_javascript_page %}
-        <!--for custom js file-->
+        <!--for Alertify js msg-->
+        <script>
+            {% for msg in messages %}
+                alertify.set('notifier', 'position', 'top-center');
+                alertify.success(msg + alertify.get('notifier', 'position'));
+            {% endfor %}
+        </script>
     {% endblock footer_javascript_page %}
 {% endblock footer_javascript %}
 </html>
