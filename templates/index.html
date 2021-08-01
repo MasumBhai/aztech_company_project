@@ -63,7 +63,7 @@
                         <a class="navigation__link" href="{% url 'sDigiTransform' %}" target="">Digital Transformation</a>
                         <a class="navigation__link" href="{% url 'sTechnologyConsulting' %}" target="">Technology Consulting</a>
                         <a class="navigation__link" href="{% url 'sSoftwareTesting' %}" target="">Software Testing</a>
-                        <a class="navigation__link" href="{% url 'sTeamCto' %}" target="">Cost Optimization</a>
+                        <a class="navigation__link" href="{% url 'sTeamCto' %}" target="">CTO Service</a>
                     </div>
                 </div>
             </div>
@@ -92,8 +92,8 @@
                             <a class="navigation__link" href="{% url 'auth_logout' %}" target="">Log-Out</a>
                         {% else %}
                             <a class="navigation__link" href="{% provider_login_url 'google' %}" target="">I'm User</a>
+                            <a class="navigation__link" href="http://127.0.0.1:8000/admin/" target="">I'm Admin</a> {# ekhane change korte hobe #}
                         {% endif %}
-                        <a class="navigation__link" href="http://127.0.0.1:8000/admin/" target="">I'm Admin</a> {# ekhane change korte hobe #}
                     </div>
                 </div>
             </div>
@@ -176,13 +176,13 @@ color: #445aec;
                             </div>
                             <div class="slider__picture">
                                 <picture>
-                                    <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/111-720x720.jpg"
+                                    <source srcset="{% static 'images/home/Landing1-720x720.jpg' %}"
                                             type="image/jpeg" media="(max-width: 1440px)">
-                                    <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/111-512x512.jpg"
+                                    <source srcset="{% static 'images/home/Landing1-512x512.jpg' %}"
                                             type="image/jpeg" media="(max-width: 512px)">
-                                    <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/111-1024x1024.jpg"
+                                    <source srcset="{% static 'images/home/Landing1-1024x1024.jpg' %}"
                                             type="image/jpeg">
-                                    <img src="https://itrexgroup.com/wp-content/uploads/2020/11/111-1024x1024.jpg"
+                                    <img src="{% static 'images/home/Landing1-1024x1024.jpg' %}"
                                          alt="">
                                 </picture>
                             </div>
@@ -196,13 +196,13 @@ color: #445aec;
                             </div>
                             <div class="slider__picture">
                                 <picture>
-                                    <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/3-11-720x720.jpg"
+                                    <source srcset="{% static 'images/home/Landing2-720x720.jpg' %}"
                                             type="image/jpeg" media="(max-width: 1440px)">
-                                    <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/3-11-512x512.jpg"
+                                    <source srcset="{% static 'images/home/Landing2-512x512.jpg' %}"
                                             type="image/jpeg" media="(max-width: 512px)">
-                                    <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/3-11-1024x1024.jpg"
+                                    <source srcset="{% static 'images/home/Landing2-1024x1024.jpg' %}"
                                             type="image/jpeg">
-                                    <img src="https://itrexgroup.com/wp-content/uploads/2020/11/3-11-1024x1024.jpg"
+                                    <img src="{% static 'images/home/Landing2-1024x1024.jpg' %}"
                                          alt="">
                                 </picture>
                             </div>
@@ -216,13 +216,13 @@ color: #445aec;
                             </div>
                             <div class="slider__picture">
                                 <picture>
-                                    <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/2-11-720x720.jpg"
+                                    <source srcset="{% static 'images/home/Landing3-720x720.jpg' %}"
                                             type="image/jpeg" media="(max-width: 1440px)">
-                                    <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/2-11-512x512.jpg"
+                                    <source srcset="{% static 'images/home/Landing3-512x512.jpg' %}"
                                             type="image/jpeg" media="(max-width: 512px)">
-                                    <source srcset="https://itrexgroup.com/wp-content/uploads/2020/11/2-11-1024x1024.jpg"
+                                    <source srcset="{% static 'images/home/Landing3-1024x1024.jpg' %}"
                                             type="image/jpeg">
-                                    <img src="https://itrexgroup.com/wp-content/uploads/2020/11/2-11-1024x1024.jpg"
+                                    <img src="{% static 'images/home/Landing3-1024x1024.jpg' %}"
                                          alt="">
                                 </picture>
                             </div>
@@ -316,10 +316,7 @@ color: #445aec;
                                     simple to translate complexity into an easily digestible roadmap for change. We help
                                     you
                                     pivot to new technology step-by-step while getting most out of your legacy
-                                    systems<img
-                                            class="tabs__text-logo"
-                                            src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-logo.svg"
-                                            alt="ITRex" role="presentation"/></div>
+                                    systems</div>
                                 <div class="tabs__tags">
                                     <div class="tabs__tag">Digital Transformation Strategy</div>
                                     <div class="tabs__tag">Digital Transformation Implementation</div>
@@ -341,9 +338,7 @@ color: #445aec;
                                     –
                                     we do it all, from product ideation and concept development to system rollout and
                                     scale-up. We envision, prototype, create and test products and solutions to find new
-                                    competitive advantage for your business<img class="tabs__text-logo"
-                                                                                src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-logo.svg"
-                                                                                alt="ITRex" role="presentation"/></div>
+                                    competitive advantage for your business</div>
                                 <div class="tabs__tags">
                                     <div class="tabs__tag">Mobile Apps</div>
                                     <div class="tabs__tag">Web Apps</div>
@@ -363,9 +358,7 @@ color: #445aec;
                                     We make sure you are not adopting a technology just because it’s fancy. Our goal is
                                     to turn innovations into a market-ready product to help you achieve operational
                                     excellence, disrupt the competition and maximize profits
-                                    <img class="tabs__text-logo"
-                                         src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-logo.svg"
-                                         alt="ITRex" role="presentation"/></div>
+                                </div>
                                 <div class="tabs__tags">
                                     <div class="tabs__tag">Artificial Intelligence</div>
                                     <div class="tabs__tag">Extended Reality: AR, VR</div>
@@ -382,9 +375,6 @@ color: #445aec;
                                 uncertainties. And it actually is. We believe in starting smart and simple to translate
                                 complexity into an easily digestible roadmap for change. We help you pivot to new
                                 technology step-by-step while getting most out of your legacy systems
-                                <img class="tabs__text-logo"
-                                     src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-logo.svg"
-                                     alt="ITRex" role="presentation"/>
                             </div>
                             <div class="tabs__tags">
                                 <div class="tabs__tag">Digital Transformation Strategy</div>
@@ -405,9 +395,6 @@ color: #445aec;
                                 it all, from product ideation and concept development to system rollout and scale-up. We
                                 envision, prototype, create and test products and solutions to find new competitive
                                 advantage for your business
-                                <img class="tabs__text-logo"
-                                     src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-logo.svg"
-                                     alt="ITRex" role="presentation"/>
                             </div>
                             <div class="tabs__tags">
                                 <div class="tabs__tag">Mobile Apps</div>
@@ -425,10 +412,7 @@ color: #445aec;
                                 We make sure you are not adopting a technology just because it’s fancy. Our goal is to
                                 turn innovations into a market-ready product to help you achieve operational excellence,
                                 disrupt the competition and maximize profits
-                                <img class="tabs__text-logo"
-                                     src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/itrex-logo.svg"
-                                     alt="ITRex"
-                                     role="presentation"/></div>
+                            </div>
                             <div class="tabs__tags">
                                 <div class="tabs__tag">Artificial Intelligence</div>
                                 <div class="tabs__tag">Extended Reality: AR, VR</div>

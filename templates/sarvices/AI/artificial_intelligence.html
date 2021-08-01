@@ -12,10 +12,10 @@
                 <div class="landing-header landing-header_new">
                     <div class="landing-header__background-picture landing-header__background-picture_desktop">
                         <img class="landing-header__background-picture-desktop"
-                             src="https://itrexgroup.com/wp-content/uploads/2021/01/AI-preview-1.jpg"
+                             src="{% static 'images/AI/AI-preview-1.jpg' %}"
                              alt="Artificial intelligence services and solutions">
                         <img class="landing-header__background-picture-mobile"
-                             src="https://itrexgroup.com/wp-content/uploads/2021/01/AI-preview-1.jpg"
+                             src="{% static 'images/AI/AI-preview-1.jpg' %}"
                              alt="Artificial intelligence services and solutions">
                     </div>
                     <div class="landing-header__content">
@@ -40,7 +40,7 @@
                             </button>
                         </div>
                         <div class="landing-header__picture landing-header__picture_mobile"><img
-                                src="https://itrexgroup.com/wp-content/uploads/2021/01/AI-preview-1.jpg"
+                                src="{% static 'images/AI/AI-preview-1.jpg' %}"
                                 alt="Artificial intelligence services and solutions"></div>
                     </div>
                 </div>
@@ -53,9 +53,7 @@
                         animation-delay=".15">Our AI know-how </h2>
                     <div class="landing-info__text landing-info__text_mini">
                         <p class="landing-subheader__text landing-subheader__text_small">
-                            An AI company with {% if companyInfo %}{{ companyInfo.years_of_experiences }}{% else %}05{% endif %} years of experience, we will help you harness machine learning
-                            algorithms and the latest artificial intelligence tools and technologies for exponential
-                            growth.
+                            An AI company with {% if companyInfo %}{{ companyInfo.years_of_experiences }}{% else %}05{% endif %} years of experience, we will help you harness machine learning algorithms and the latest artificial intelligence tools and technologies for exponential growth.
                         </p>
                     </div>
                 </div>
@@ -110,7 +108,11 @@
         <div class="block" id="ai-solutions">
             <div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
                 <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/AI-solutions-1.jpg" alt=""
-                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/AI-solutions-1-1920x667.jpg 1920w, https://itrexgroup.com/wp-content/uploads/2021/01/AI-solutions-1-1440x500.jpg 1440w, https://itrexgroup.com/wp-content/uploads/2021/01/AI-solutions-1-1024x356.jpg 1024w, https://itrexgroup.com/wp-content/uploads/2021/01/AI-solutions-1-720x250.jpg 720w, https://itrexgroup.com/wp-content/uploads/2021/01/AI-solutions-1-512x178.jpg 512w"
+                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/AI-solutions-1-1920x667.jpg 1920w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-solutions-1-1440x500.jpg 1440w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-solutions-1-1024x356.jpg 1024w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-solutions-1-720x250.jpg 720w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-solutions-1-512x178.jpg 512w"
                      sizes="100vw"
                      alt="ai development services">
                 <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up"
@@ -123,9 +125,7 @@
                 <div class="landing-subheader" animation="fade-up" animation-delay=".15">
                     <div class="landing-subheader__content">
                         <p class="landing-subheader__text landing-subheader__text_small">
-                            We know for sure that artificial intelligence has many possibilities to transform your
-                            business. The use cases below are just a few examples of how our AI consulting and
-                            development services forward business efficiency and improve the bottom line.
+                            We know for sure that artificial intelligence has many possibilities to transform your business. The use cases below are just a few examples of how our AI consulting and development services forward business efficiency and improve the bottom line.
                         </p>
                     </div>
                 </div>
@@ -182,7 +182,11 @@
         <div class="block" id="ai-industries">
             <div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
                 <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/AI-industry-3.jpg" alt=""
-                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/AI-industry-3-1920x667.jpg 1920w, https://itrexgroup.com/wp-content/uploads/2021/01/AI-industry-3-1440x500.jpg 1440w, https://itrexgroup.com/wp-content/uploads/2021/01/AI-industry-3-1024x356.jpg 1024w, https://itrexgroup.com/wp-content/uploads/2021/01/AI-industry-3-720x250.jpg 720w, https://itrexgroup.com/wp-content/uploads/2021/01/AI-industry-3-512x178.jpg 512w"
+                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/AI-industry-3-1920x667.jpg 1920w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-industry-3-1440x500.jpg 1440w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-industry-3-1024x356.jpg 1024w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-industry-3-720x250.jpg 720w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-industry-3-512x178.jpg 512w"
                      sizes="100vw"
                      alt="Artificial Intelligence Solutions & AI Consulting Services">
                 <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up"
@@ -195,10 +199,7 @@
                 <div class="landing-subheader" animation="fade-up" animation-delay=".15">
                     <div class="landing-subheader__content">
                         <p class="landing-subheader__text landing-subheader__text_small">
-                            Using our knowledge of industry-specific business processes and challenges, we tailor our
-                            artificial intelligence solutions to your particular needs. Whether you want to automate
-                            back-office operations, boost customer experience, improve security, or launch a truly
-                            innovative software product, our AI developers are up for the challenge.
+                            Using our knowledge of industry-specific business processes and challenges, we tailor our artificial intelligence solutions to your particular needs. Whether you want to automate back-office operations, boost customer experience, improve security, or launch a truly innovative software product, our AI developers are up for the challenge.
                         </p>
                     </div>
                 </div>
@@ -225,8 +226,7 @@
                                         <div class="accordion__list-line">Improve diagnostics and care delivery, enhance
                                             patient-doctor communication, and optimize hospital operations and
                                             population
-                                            health management with <a class="link"
-                                                                      href="https://itrexgroup.com/services/ai-for-healthcare/"
+                                            health management with <a class="link" href="{% url 'sAI_health' %}"
                                                                       target="_blank" rel="noopener noreferrer">AI-powered
                                                 healthcare solutions</a>.
                                         </div>
@@ -272,7 +272,7 @@
                                             forecasting, streamline inventory management, optimize the flow of goods,
                                             and
                                             better understand your customers with <a class="link"
-                                                                                     href="https://itrexgroup.com/services/ai-for-retail/"
+                                                                                     href="{% url 'sAI_retail' %}"
                                                                                      target="_blank"
                                                                                      rel="noopener noreferrer">AI for
                                                 retail</a>.
@@ -320,10 +320,9 @@
                                         <div class="accordion__list-line">Personalize learning programs, produce smart
                                             content, automate administrative tasks, and provide access to education for
                                             students with special needs with <a class="link"
-                                                                                href="https://itrexgroup.com/services/ai-for-education/"
+                                                                                href="{% url 'sAI_education' %}"
                                                                                 target="_blank"
-                                                                                rel="noopener noreferrer">AI
-                                                in education</a>.
+                                                                                rel="noopener noreferrer">AI in education</a>.
                                         </div>
                                     </div>
                                 </div>
@@ -343,7 +342,11 @@
         <div class="block" id="ai-software-development" cta-text="Contact us">
             <div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
                 <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/AI-development-1.jpg" alt=""
-                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/AI-development-1-1920x667.jpg 1920w, https://itrexgroup.com/wp-content/uploads/2021/01/AI-development-1-1440x500.jpg 1440w, https://itrexgroup.com/wp-content/uploads/2021/01/AI-development-1-1024x356.jpg 1024w, https://itrexgroup.com/wp-content/uploads/2021/01/AI-development-1-720x250.jpg 720w, https://itrexgroup.com/wp-content/uploads/2021/01/AI-development-1-512x178.jpg 512w"
+                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/AI-development-1-1920x667.jpg 1920w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-development-1-1440x500.jpg 1440w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-development-1-1024x356.jpg 1024w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-development-1-720x250.jpg 720w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-development-1-512x178.jpg 512w"
                      sizes="100vw"
                      alt="AI consulting and development">
                 <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up"
@@ -356,9 +359,7 @@
                 <div class="landing-subheader" animation="fade-up" animation-delay=".15">
                     <div class="landing-subheader__content">
                         <p class="landing-subheader__text landing-subheader__text_small">
-                            We provide end-to-end AI consulting and development services, from preparing data for
-                            artificial intelligence algorithms to rolling out your system to thousands of users. We can
-                            also help you customize third-party AI as a Service solutions.
+                            We provide end-to-end AI consulting and development services, from preparing data for artificial intelligence algorithms to rolling out your system to thousands of users. We can also help you customize third-party AI as a Service solutions.
                         </p>
                     </div>
                 </div>
@@ -508,7 +509,11 @@
         <div class="block" id="ai-technologies">
             <div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
                 <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/AI-tech-1.jpg" alt=""
-                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/AI-tech-1-1920x667.jpg 1920w, https://itrexgroup.com/wp-content/uploads/2021/01/AI-tech-1-1440x500.jpg 1440w, https://itrexgroup.com/wp-content/uploads/2021/01/AI-tech-1-1024x356.jpg 1024w, https://itrexgroup.com/wp-content/uploads/2021/01/AI-tech-1-720x250.jpg 720w, https://itrexgroup.com/wp-content/uploads/2021/01/AI-tech-1-512x178.jpg 512w"
+                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/AI-tech-1-1920x667.jpg 1920w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-tech-1-1440x500.jpg 1440w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-tech-1-1024x356.jpg 1024w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-tech-1-720x250.jpg 720w,
+                     ttps://itrexgroup.com/wp-content/uploads/2021/01/AI-tech-1-512x178.jpg 512w"
                      sizes="100vw"
                      alt="ai software development">
                 <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up"

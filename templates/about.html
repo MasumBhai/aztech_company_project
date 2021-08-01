@@ -35,13 +35,13 @@ color: #445aec;
                             </div>
                             <div class="slider__picture">
                                 <picture>
-{#                                    <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/heart-720x720.png"#}
-{#                                            type="image/png" media="(max-width: 1440px)">#}
-{#                                    <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/heart-512x512.png"#}
-{#                                            type="image/png" media="(max-width: 512px)">#}
-{#                                    <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/heart-1024x1024.png"#}
-{#                                            type="image/png">#}
-                                    <img src="https://itrexgroup.com/wp-content/uploads/2020/09/heart-1024x1024.png"
+                                    <source srcset="{% static 'images/about/heart-720x720.png' %}"
+                                            type="image/png" media="(max-width: 1440px)">
+                                    <source srcset="{% static 'images/about/heart-512x512.png' %}"
+                                            type="image/png" media="(max-width: 512px)">
+                                    <source srcset="{% static 'images/about/heart-1024x1024.png' %}"
+                                            type="image/png">
+                                    <img src="{% static 'images/about/heart-1024x1024.png' %}"
                                          alt="about-page">
                                 </picture>
                             </div>
@@ -234,13 +234,15 @@ color: #445aec;
         </div>
         <div class="block block_yellow block_overflow" id="numbers" cta-text="Get in touch">
             <div class="block__content">
-                <h2 class="block__title title title_medium">We live by powerful values that have guided us for over a
-                    decade:</h2>
+                <h2 class="block__title title title_medium">
+                    We live by powerful values that have guided us:
+                </h2>
                 <div class="numbers-list">
                     <div class="numbers-list__row">
                         <div class="numbers-list__number numbers-list__number_right">
                             <div class="numbers-list__number-content"><span>1</span>
-                                <picture><img src="https://itrexgroup.com/wp-content/uploads/2020/09/book-1.png">
+                                <picture>
+                                    <img src="{% static 'images/about/book-1.png' %}">
                                 </picture>
                             </div>
                         </div>
@@ -251,7 +253,7 @@ color: #445aec;
                     <div class="numbers-list__row">
                         <div class="numbers-list__number numbers-list__number_left">
                             <div class="numbers-list__number-content"><span>2</span>
-                                <picture><img src="https://itrexgroup.com/wp-content/uploads/2020/09/document-1.png">
+                                <picture><img src="{% static 'images/about/document-1.png' %}">
                                 </picture>
                             </div>
                         </div>
@@ -264,7 +266,8 @@ color: #445aec;
                     <div class="numbers-list__row">
                         <div class="numbers-list__number numbers-list__number_right">
                             <div class="numbers-list__number-content"><span>3</span>
-                                <picture><img src="https://itrexgroup.com/wp-content/uploads/2020/09/pin-1.png">
+                                <picture>
+                                    <img src="{% static 'images/about/pin-1.png' %}">
                                 </picture>
                             </div>
                         </div>
@@ -275,7 +278,8 @@ color: #445aec;
                     <div class="numbers-list__row">
                         <div class="numbers-list__number numbers-list__number_left">
                             <div class="numbers-list__number-content"><span>4</span>
-                                <picture><img src="https://itrexgroup.com/wp-content/uploads/2020/09/infinity-1.png">
+                                <picture>
+                                    <img src="{% static 'images/about/infinity-1.png' %}">
                                 </picture>
                             </div>
                         </div>
@@ -289,7 +293,8 @@ color: #445aec;
                     <div class="numbers-list__row">
                         <div class="numbers-list__number numbers-list__number_right">
                             <div class="numbers-list__number-content"><span>5</span>
-                                <picture><img src="https://itrexgroup.com/wp-content/uploads/2020/09/future-1.png">
+                                <picture>
+                                    <img src="{% static 'images/about/future-1.png' %}">
                                 </picture>
                             </div>
                         </div>
@@ -303,12 +308,13 @@ color: #445aec;
                     <div class="numbers-list__row">
                         <div class="numbers-list__number numbers-list__number_left">
                             <div class="numbers-list__number-content"><span>6</span>
-                                <picture><img src="https://itrexgroup.com/wp-content/uploads/2020/09/hause.png">
+                                <picture>
+                                    <img src="{% static 'images/about/hause.png' %}">
                                 </picture>
                             </div>
                         </div>
                         <div class="numbers-list__text">
-                            <div class="numbers-list__text-content"><b>We say “we”</b> since we are a big ITRex family
+                            <div class="numbers-list__text-content"><b>We say “we”</b> since we are a big {{ companyInfo.company_name }} family
                                 united together around one goal - to help you innovate for growth.
                             </div>
                         </div>
@@ -319,17 +325,17 @@ color: #445aec;
         <div class="block block_black block_slide-min" id="" cta-text="">
             <div class="block__background">
                 <picture>
-                    <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/about-office-1-1440x961.jpg"
+                    <source srcset="{% static 'images/about/office-1-1440x961.jpg' %}"
                             type="image/jpeg" media="(max-width: 2880px)">
-                    <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/about-office-1-1024x684.jpg"
+                    <source srcset="{% static 'images/about/office-1-1024x684.jpg' %}"
                             type="image/jpeg" media="(max-width: 2048px)">
-                    <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/about-office-1-720x481.jpg"
+                    <source srcset="{% static 'images/about/office-1-720x481.jpg' %}"
                             type="image/jpeg" media="(max-width: 720px)">
-                    <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/about-office-1-512x342.jpg"
+                    <source srcset="{% static 'images/about/office-1-512x342.jpg' %}"
                             type="image/jpeg" media="(max-width: 512px)">
-                    <source srcset="https://itrexgroup.com/wp-content/uploads/2020/09/about-office-1.jpg"
+                    <source srcset="{% static 'images/about/office-1.jpg' %}"
                             type="image/jpeg">
-                    <img loading="lazy" data-src="https://itrexgroup.com/wp-content/uploads/2020/09/about-office-1.jpg"
+                    <img loading="lazy" data-src="{% static 'images/about/office-1.jpg' %}"
                          alt="">
                 </picture>
             </div>

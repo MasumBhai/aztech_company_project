@@ -43,6 +43,32 @@
         {% endblock head_css_site %}
         {% block head_css_section %}
             {# custom written for specific page #}
+            <style>
+                @font-face {
+                    font-family: swiper-icons;
+                    src: url("{% static 'font/Swiper-Icon/swiper-icons.ttf' %}") format("truetype");
+                    font-weight: 400;
+                    font-style: normal
+                }
+                @font-face {
+                    font-family: SuisseIntl;
+                    src: url("{% static 'font/SuisseIntl-Regular/SuisseIntl-Regular.woff2' %}");
+                    src: local("SuisseIntl-Regular"),
+                         url("{% static 'font/SuisseIntl-Regular/SuisseIntl-Regular.woff2' %}") format("woff2");
+                    font-weight: 400;
+                    font-style: normal;
+                    font-display: swap
+                }
+                @font-face {
+                    font-family: SuisseIntl;
+                    src: url('{% static 'font/SuisseIntl-SemiBold/SuisseIntl-SemiBold.woff2' %}');
+                    src: local("SuisseIntl-SemiBold"),
+                         url("{% static 'font/SuisseIntl-SemiBold/SuisseIntl-SemiBold.woff2' %}") format("woff2");
+                    font-weight: 600;
+                    font-style: normal;
+                    font-display: swap
+                }
+            </style>
             <style type="text/css" id="wp-custom-css">
                 .field p {
                     font-size: 0px;
@@ -177,7 +203,7 @@
                         <a class="navigation__link" href="{% url 'sDigiTransform' %}" target="">Digital Transformation</a>
                         <a class="navigation__link" href="{% url 'sTechnologyConsulting' %}" target="">Technology Consulting</a>
                         <a class="navigation__link" href="{% url 'sSoftwareTesting' %}" target="">Software Testing</a>
-                        <a class="navigation__link" href="{% url 'sTeamCto' %}" target="">Cost Optimization</a>
+                        <a class="navigation__link" href="{% url 'sTeamCto' %}" target="">CTO Service</a>
                     </div>
                 </div>
             </div>
@@ -206,8 +232,8 @@
                             <a class="navigation__link" href="{% url 'auth_logout' %}" target="">Log-Out</a>
                         {% else %}
                             <a class="navigation__link" href="{% provider_login_url 'google' %}" target="">I'm User</a>
+                            <a class="navigation__link" href="http://127.0.0.1:8000/admin/" target="">I'm Admin</a> {# ekhane change korte hobe #}
                         {% endif %}
-                        <a class="navigation__link" href="http://127.0.0.1:8000/admin/" target="">I'm Admin</a> {# ekhane change korte hobe #}
                     </div>
                 </div>
             </div>
@@ -570,24 +596,20 @@
                             </div>
                             <div class="contact-us__advancements">
                                 <img class="contact-us__advancement" class="contact-us__advancement"
-                                     src="https://itrexgroup.com/wp-content/uploads/2020/07/advancement-2.svg"
+                                     src="{% static 'images/base/advancement-2.svg' %}"
                                      alt=""
                                      role="presentation"/>
-                                <img class="contact-us__advancement" src="https://itrexgroup.com/wp-content/uploads/2020/07/advancement-3.svg"
+                                <img class="contact-us__advancement" src="{% static 'images/base/advancement-3.svg' %}"
                                          alt=""
                                          role="presentation"/>
-                                <img class="contact-us__advancement" src="https://itrexgroup.com/wp-content/uploads/2020/07/advancement-4.svg"
+                                <img class="contact-us__advancement" src="{% static 'images/base/advancement-4.svg' %}"
                                          alt=""
                                          role="presentation"/>
-                                <img class="contact-us__advancement" src="https://itrexgroup.com/wp-content/uploads/2020/07/advancement-5.svg"
+                                <img class="contact-us__advancement" src="{% static 'images/base/advancement-5.svg' %}"
                                          alt=""
                                          role="presentation"/>
-                                <img class="contact-us__advancement" src="https://itrexgroup.com/wp-content/uploads/2021/02/SMP.svg"
+                                <img class="contact-us__advancement" src="{% static 'images/base/advancement-6.svg' %}"
                                          alt="Microsoft Silver Partner" role="presentation"/>
-{#                                <a class="contact-us__advancement" href="https://clutch.co/profile/itrex-group"#}
-{#                                   target="_blank" id="advancements-2">#}
-                                        {# insert above image here #}
-{#                                </a>#}
                             </div>
                         </div>
                     </div>

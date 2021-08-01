@@ -2218,7 +2218,7 @@
                         <a class="navigation__link" href="{% url 'sTechnologyConsulting' %}" target="">Technology
                             Consulting</a>
                         <a class="navigation__link" href="{% url 'sSoftwareTesting' %}" target="">Software Testing</a>
-                        <a class="navigation__link" href="{% url 'sTeamCto' %}" target="">Cost Optimization</a>
+                        <a class="navigation__link" href="{% url 'sTeamCto' %}" target="">CTO Service</a>
                     </div>
                 </div>
             </div>
@@ -2248,8 +2248,8 @@
                             <a class="navigation__link" href="{% url 'auth_logout' %}" target="">Log-Out</a>
                         {% else %}
                             <a class="navigation__link" href="{% provider_login_url 'google' %}" target="">I'm User</a>
+                            <a class="navigation__link" href="http://127.0.0.1:8000/admin/" target="">I'm Admin</a> {# ekhane change korte hobe #}
                         {% endif %}
-                        <a class="navigation__link" href="http://127.0.0.1:8000/admin/" target="">I'm Admin</a> {# ekhane change korte hobe #}
                     </div>
                 </div>
             </div>

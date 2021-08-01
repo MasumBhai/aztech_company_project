@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block body_tag %}
-    <body class="page-template page-template-templates page-template-landing page-template-templateslanding-php page page-id-3394 page-child parent-pageid-1184">
+    <body class="page-template page-template-templates page-template-landing page-template-templateslanding-php page page-id-3394 page-child parent-pageid-1184"
+          xmlns="http://www.w3.org/1999/html">
 {% endblock body_tag %}
 
 {% block navbar_style %}
@@ -28,8 +29,8 @@ color: #445aec;
 <div class="block__content post-block__content post-block__content_medium flex">
 <div class="landing-header landing-header_new">
 <div class="landing-header__background-picture landing-header__background-picture_desktop">
-<img class="landing-header__background-picture-desktop" src="https://itrexgroup.com/wp-content/uploads/2020/12/mobileapp-header-1.jpg" alt="">
-<img class="landing-header__background-picture-mobile" src="https://itrexgroup.com/wp-content/uploads/2020/12/mobile-app-header-mob2-1.jpg" alt="">
+<img class="landing-header__background-picture-desktop" src="{% static 'images/app_development/mobileapp-header-1.jpg' %}" alt="">
+<img class="landing-header__background-picture-mobile" src="{% static 'images/app_development/mobile-app-header-mob2-1.jpg' %}" alt="">
 </div>
 <div class="landing-header__content">
 <div class="landing-header__info">
@@ -40,7 +41,7 @@ company </h1>
 </div>
 <button class="landing-header__button button arrow-link arrow-link arrow-link_fixed-opacity" id="cta-header" data-popup="#form" href="#form" animation="fade-up" animation-delay=".35"><span class="arrow-link__text">Hire app <span style="white-space: nowrap">developers<span class="arrow-link__arrow"><span class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span></button>
 </div>
-<div class="landing-header__picture landing-header__picture_mobile"><img src="https://itrexgroup.com/wp-content/uploads/2020/12/mobileapp-header-1.jpg" alt=""></div>
+<div class="landing-header__picture landing-header__picture_mobile"><img src="{% static 'images/app_development/mobileapp-header-1.jpg' %}" alt=""></div>
 </div>
 </div>
 </div>
@@ -57,7 +58,7 @@ company </h1>
 <div class="block__content post-block__content post-block__content_medium" style="padding-top: 0">
 <div class="landing-platforms">
 <div class="landing-platforms__item" animation="fade-up" animation-delay="0.15">
-<img class="landing-platforms__item-image" src="https://itrexgroup.com/wp-content/uploads/2020/12/aindroid.svg" alt="" role="presentation" />
+<img class="landing-platforms__item-image" src="{% static 'images/app_development/aindroid.svg' %}" alt="" role="presentation" />
 <div class="landing-platforms__item-title">Android</div>
 <div class="landing-platforms__item-text">Using innovative concepts and data-driven insights, we craft high-performance apps that rank high on Google Play and transform business.                               <div class="landing-platforms__item-tech">
 <div class="landing-platforms__item-tech-item">Java</div>
@@ -66,7 +67,7 @@ company </h1>
 </div>
 </div>
 <div class="landing-platforms__item" animation="fade-up" animation-delay="0.25">
-<img class="landing-platforms__item-image" src="https://itrexgroup.com/wp-content/uploads/2020/12/ios-1.svg" alt="" role="presentation" />
+<img class="landing-platforms__item-image" src="{% static 'images/app_development/ios-1.svg' %}" alt="" role="presentation" />
 <div class="landing-platforms__item-title">iOS</div>
 <div class="landing-platforms__item-text">We boast a legacy of great iOS apps for a range of business niches, which never leave the iPhones and iPads home screens of the delighted users.                              <div class="landing-platforms__item-tech">
 <div class="landing-platforms__item-tech-item">Swift</div>
@@ -75,7 +76,7 @@ company </h1>
 </div>
 </div>
 <div class="landing-platforms__item" animation="fade-up" animation-delay="0.35">
-<img class="landing-platforms__item-image" src="https://itrexgroup.com/wp-content/uploads/2020/12/cross_platforms.svg" alt="" role="presentation" />
+<img class="landing-platforms__item-image" src="{% static 'images/app_development/cross_platforms.svg' %}" alt="" role="presentation" />
 <div class="landing-platforms__item-title">Cross-platform</div>
 <div class="landing-platforms__item-text">Whatever the complexity, we bring the full benefit of cross-platform tech to the table, including lower costs, faster time to market and maximum reach.                              <div class="landing-platforms__item-tech">
 <div class="landing-platforms__item-tech-item">React Native</div>
@@ -171,10 +172,15 @@ company </h1>
 <div class="block" id="end-to-end development">
 <div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
 <img data-src="https://itrexgroup.com/wp-content/uploads/2020/12/end-to-end-development.jpg" alt=""
-srcset="https://itrexgroup.com/wp-content/uploads/2020/12/end-to-end-development-1440x500.jpg 2880w, https://itrexgroup.com/wp-content/uploads/2020/12/end-to-end-development-1024x356.jpg 2048w, https://itrexgroup.com/wp-content/uploads/2020/12/end-to-end-development-720x250.jpg 720w, https://itrexgroup.com/wp-content/uploads/2020/12/end-to-end-development-512x178.jpg 512w"
+srcset="https://itrexgroup.com/wp-content/uploads/2020/12/end-to-end-development-1440x500.jpg 2880w,
+https://itrexgroup.com/wp-content/uploads/2020/12/end-to-end-development-1024x356.jpg 2048w,
+https://itrexgroup.com/wp-content/uploads/2020/12/end-to-end-development-720x250.jpg 720w,
+https://itrexgroup.com/wp-content/uploads/2020/12/end-to-end-development-512x178.jpg 512w"
 sizes="100vw"
-alt="">          <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up" animation-delay=".15">End-to-end mobile
-<span class="yellow"></b>development services </span></h2>
+alt="">
+    <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up" animation-delay=".15">
+        End-to-end mobile<span class="yellow"></br>development services </span>
+    </h2>
 </div>
 </div>
 <div class="block" id="timeline" cta-text="Hire mobile app developers">
@@ -208,11 +214,15 @@ alt="">          <h2 class="landing-image__content post-block__content post-bloc
 <div class="block" id="industry-specific-solutions">
 <div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
 <img data-src="https://itrexgroup.com/wp-content/uploads/2020/12/industry.jpg" alt=""
-srcset="https://itrexgroup.com/wp-content/uploads/2020/12/industry-1440x500.jpg 2880w, https://itrexgroup.com/wp-content/uploads/2020/12/industry-1024x356.jpg 2048w, https://itrexgroup.com/wp-content/uploads/2020/12/industry-720x250.jpg 720w, https://itrexgroup.com/wp-content/uploads/2020/12/industry-512x178.jpg 512w"
+srcset="https://itrexgroup.com/wp-content/uploads/2020/12/industry-1440x500.jpg 2880w,
+https://itrexgroup.com/wp-content/uploads/2020/12/industry-1024x356.jpg 2048w,
+https://itrexgroup.com/wp-content/uploads/2020/12/industry-720x250.jpg 720w,
+https://itrexgroup.com/wp-content/uploads/2020/12/industry-512x178.jpg 512w"
 sizes="100vw"
-alt="mobile app solutions">          <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up" animation-delay=".15">Delivering industry-specific
-<span class="yellow">mobile app solutions
-</span></h2>
+alt="mobile app solutions">
+    <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up" animation-delay=".15">
+        Delivering industry-specific<br><span class="yellow">mobile app solutions</span>
+    </h2>
 </div>
 </div>
 <div class="block block_yellow" id="" cta-text="">
@@ -412,7 +422,7 @@ alt="mobile app solutions">          <h2 class="landing-image__content post-bloc
 </div>
 </div>
 
-<div class="block" id="about-us" cta-text="">
+<div class="block" id="about-us" cta-text="get in touch">
 <div class="block__content-x">
 <div class="landing-rex post-block__content post-block__content post-block__content_text block landing-rex_black block_black">
 <div class="landing-rex__rex">
@@ -516,13 +526,18 @@ alt="mobile app solutions">          <h2 class="landing-image__content post-bloc
         </div>
 {% endblock precious_clients %}
 
-<div class="block" id="Next-Gen-Tech">
+<div class="block" id="Next-Gen-Tech" data-popup="#form" cta-text="Contact us">
 <div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
 <img data-src="https://itrexgroup.com/wp-content/uploads/2020/12/vr.jpg" alt=""
-srcset="https://itrexgroup.com/wp-content/uploads/2020/12/vr-1440x500.jpg 2880w, https://itrexgroup.com/wp-content/uploads/2020/12/vr-1024x356.jpg 2048w, https://itrexgroup.com/wp-content/uploads/2020/12/vr-720x250.jpg 720w, https://itrexgroup.com/wp-content/uploads/2020/12/vr-512x178.jpg 512w"
+srcset="https://itrexgroup.com/wp-content/uploads/2020/12/vr-1440x500.jpg 2880w,
+https://itrexgroup.com/wp-content/uploads/2020/12/vr-1024x356.jpg 2048w,
+https://itrexgroup.com/wp-content/uploads/2020/12/vr-720x250.jpg 720w,
+https://itrexgroup.com/wp-content/uploads/2020/12/vr-512x178.jpg 512w"
 sizes="100vw"
-alt="">          <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up" animation-delay=".15">Next-gen tech
-<span class="yellow">for mobile app development</span></h2>
+alt="">
+    <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up" animation-delay=".15">
+        Next-gen tech<br><span class="yellow">for mobile app development</span>
+    </h2>
 </div>
 </div>
 <div class="block block_yellow" id="" cta-text="">
