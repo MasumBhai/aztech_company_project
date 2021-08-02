@@ -1,0 +1,5 @@
+
+dpython:S2208"GImport only needed names or import the module and then use its members.(ÅÙï„úÿÿÿÿ
+rpython:S117"\Rename this local variable "companyInfo" to match the regular expression ^[_a-z][a-z0-9_]*$.(Âé›9
+wpython:S117"[Rename this local variable "everyWhere" to match the regular expression ^[_a-z][a-z0-9_]*$.(’éÅ³ûÿÿÿÿ
+Tpython:S5754"<Specify an exception class to catch or reraise the exception(ˆÊÉ·

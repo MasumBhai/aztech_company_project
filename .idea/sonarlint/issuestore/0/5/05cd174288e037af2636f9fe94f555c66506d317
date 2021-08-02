@@ -1,0 +1,10 @@
+
+dpython:S2208"GImport only needed names or import the module and then use its members.(ÅÙï„úÿÿÿÿ
+4python:S2772"Remove this unneeded "pass".(ã‘Û¾
+4python:S27727"Remove this unneeded "pass".(ã‘Û¾
+[python:S57542"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8¦ùæ¬/
+4python:S2772J"Remove this unneeded "pass".(ã‘Û¾
+;python:S125?"Remove this commented out code.(ã’Ÿºøÿÿÿÿ
+4python:S2772m"Remove this unneeded "pass".(ã‘Û¾
+[python:S5754h"<Specify an exception class to catch or reraise the exception(ˆÊÉ·8¬ÃÃæ¬/
+5python:S2772¥"Remove this unneeded "pass".(ã‘Û¾
