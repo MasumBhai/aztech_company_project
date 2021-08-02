@@ -456,11 +456,11 @@
                 <h2 class="block__title" animation="fade-up" animation-delay=".15">Contact us</h2>
                 <div class="form" animation="fade-up" animation-delay=".15" hf-data="hf-data">
                     <div role="form" class="wpcf7" id="wpcf7-f254-o1" lang="en-US" dir="ltr">
-                        <div class="screen-reader-response"><p role="status" aria-live="polite"
-                                                               aria-atomic="true"></p>
+                        <div class="screen-reader-response">
+                            <p role="status" aria-live="polite" aria-atomic="true"></p>
                             <ul></ul>
                         </div>
-                        <form action="" method="post" class="wpcf7-form init" novalidate="novalidate"
+                        <form action="" method="post" class="wpcf7-form init form form-control" novalidate="novalidate"
                               data-status="init">
                             {% csrf_token %}
                             <div class="form__wrapper">
@@ -483,11 +483,11 @@
                                     </div>
                                 </div>
                                 <div class="form__col">
-                                    <div class="field" validation="required,phone">
+                                    <div class="field" validation="phone">
                                         {% csrf_token %}
                                         <input type="tel" name="contact-phone" size="40"
                                                class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel field__input"
-                                               aria-required="true" aria-invalid="false" placeholder="Phone*" required/>
+                                               aria-invalid="false" placeholder="Phone*" required/>
                                         <div class="field__status"></div>
                                         <div class="field__line"></div>
                                     </div>
@@ -518,6 +518,7 @@
                             </div>
                             {% csrf_token %}
                             <input class="form__submit form__submit_full" id="form-submit" type="submit" name="send-message" value="Send message → ">
+                            <div class="wpcf7-response-output" aria-hidden="true"></div>
                         </form>
                     </div>
                 </div>

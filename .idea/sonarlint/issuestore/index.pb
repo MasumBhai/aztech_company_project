@@ -13,8 +13,6 @@ N
 templates/latest_projects.html,6\f\6f32d68e90dcda2474dc62a6f995953c6af9c9ff
 N
 static/images/fast-forward.svg,4\8\48b7907c83e3a45e573f8eb40134cf78c8fdd7a1
-8
-Procfile,b\c\bc3c68e880d1a01632bce79f69dd1387c7ba9c54
 ;
 runtime.txt,2\e\2ed4029984f4a6c70a541992efb31f76528bd80d
 X
@@ -25,8 +23,6 @@ V
 &templates/sarvices/dataConsulting.html,8\2\8255cb2d63690b3cefbe50079b36f3788960c7ec
 N
 templates/sarvices/devops.html,9\4\94a1423e32df3092c72becf812fa2bae36e03cc4
-@
-requirements.txt,1\9\19359a61ae2446b51b549167b014da2fcf265768
 4
 .env,3\c\3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
 C
@@ -44,12 +40,6 @@ Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 aztech/admin.py,0\5\05cd174288e037af2636f9fe94f555c66506d317
 M
 static/css/clean-blog.min.css,4\c\4ccd2e7cb996cdd32f0f4d6bd01a47e59a19d76c
-D
-static/js/scripts.js,4\d\4dc6053ee96817d0caa0ea943ea6d475fa3593b2
-J
-templates/ajax_karbar.html,f\1\f16ec4edcb5ebed830d5e17264970d05a7f9535b
-E
-templates/bundle.html,e\b\ebbd56eb4c5ae3a244cdf76056cf3037632de919
 D
 static/AVScanner.ini,2\b\2b015816ce270cc9016e1113a233c3d1169396df
 J
@@ -454,8 +444,6 @@ k
 ;staticfiles/admin/js/vendor/select2/i18n/nl.997868a37ed8.js,8\7\8794ec2ac27e20c432507bcc5cffa15578484719
 ^
 .staticfiles/admin/js/vendor/select2/i18n/nl.js,5\3\53afcc4c71a3013cf2c4f745c2e47bd48d9a4d51
-G
-templates/Our_Blog.html,4\d\4d6eada42eb6c74025e28961939bfc9513b11791
 k
 ;staticfiles/admin/js/vendor/select2/i18n/pl.6031b4f16452.js,4\0\4063cf0a950ddd2dc64aba7b81322bd8f35ff8c6
 ^
@@ -1064,3 +1052,45 @@ T
 $templates/programme/eHealthSoft.html,a\2\a2163fb74b65a69d056e755b90633089b95925a0
 F
 static/css/forBlog.css,7\7\775c00640d833018c912ca8ae95ee084dc5dfdb8
+D
+templates/error.html,1\2\127d2364058a31ca77aa8c81782c0052845ea0c0
+D
+templates/about.html,5\8\58893e517e4076b20838ca69fba7259ba475306a
+\
+,templates/sarvices/AI/ai_for_automation.html,b\1\b19cc3e64d9d2ea3215066b47f6a7da4e7d01865
+[
++templates/sarvices/AI/ai_for_education.html,0\e\0e71f9a2ee035091015a0041a51b9c8afcce14a6
+\
+,templates/sarvices/AI/ai_for_healthcare.html,8\9\893cb170c973be29b2ccc245a4241d1d5d0811b4
+X
+(templates/sarvices/AI/ai_for_retail.html,e\1\e133b9720999bde1419469b2c2bebb28673d0569
+V
+&templates/sarvices/appDevelopment.html,3\1\31003af49203045383cd5a50ef80a4c5872b1a06
+b
+2templates/sarvices/AI/artificial_intelligence.html,f\f\ff3597edcb7b8c9d8edddb77a46ac4b357bf6f53
+L
+templates/base_for_blog.html,1\8\18ea4dd5e7e35ec00557477f7f0312cd7f8feb06
+X
+(templates/sarvices/team/cto_service.html,e\7\e7590cee48d4d930a140747ad37236a5982b83e9
+[
++templates/sarvices/team/dedicatedTeams.html,b\6\b64465e272afac91e2ca22cc798d07e21a938275
+]
+-templates/sarvices/digitalTransformation.html,b\6\b6dc3fa601226ff1aae7967ffdbdddf2bce5fd3c
+R
+"templates/programme/eCommerce.html,b\b\bb350c43185044f9d05dc35878fbc4cb98f77403
+S
+#templates/programme/eHealthApp.html,b\5\b5d83c4e1fb3d0c91b09d40699aa9d67afa8cd79
+R
+"templates/programme/eLearning.html,d\a\da537555a13df83dd4ca7481cbd1835bdc7d6eaa
+S
+#templates/programme/eLogistics.html,9\b\9b7efbfb439564e478107a23def9de455efe67a7
+T
+$templates/programme/eRetailSoft.html,4\d\4d615bffef7bc74bc889642adc9fcd41d7c09266
+I
+templates/job_portal.html,3\8\383c8f3c8c23bc84297e29f0df7e770ebe417a5f
+W
+'templates/sarvices/softwareTesting.html,f\8\f86dfcf9e0c6e5e3d286a0b4a61f255648d5eabd
+\
+,templates/sarvices/technologyConsulting.html,7\1\71488bc79ee86c7067d78ff49415ae07da4db310
+D
+static/js/scripts.js,4\d\4dc6053ee96817d0caa0ea943ea6d475fa3593b2
