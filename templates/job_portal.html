@@ -1,0 +1,383 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_tag %}
+    <body class="page-template page-template-templates page-template-jobs-landing page-template-templatesjobs-landing-php page">
+{% endblock body_tag %}
+
+{% block main_content %}
+    <div class="wrapper">
+        <div class="block block_nav block_overflow" id="header">
+            <div class="block__background jobs-header__background">
+                <img data-src="{% static 'images/Career/career-1.jpg' %}" alt=""
+                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/career-1-1920x768.jpg 1920w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/career-1-1440x576.jpg 1440w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/career-1-1024x410.jpg 1024w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/career-1-720x288.jpg 720w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/career-1-512x205.jpg 512w"
+                     sizes="100vw"
+                     alt="itrex office"></div>
+            <div class="block__content post-block__content post-block__content_medium">
+                <div class="jobs-header">
+                    <h1 class="jobs-header__title title title_medium yellow">Build things you’re
+                        proud of</h1>
+                    <h2 class="jobs-header__description">Join a crew as motivated as you. Make cool stuff for global brands.
+                         <span class="mark mark_violet">Level up, learn and grow</span> </h2>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="who-we-are">
+            <div class="block__content">
+                <div class="jobs-about">
+                    <div class="jobs-about__image">
+                        <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/who-we-are.jpg" alt=""
+                             srcset="https://itrexgroup.com/wp-content/uploads/2021/01/who-we-are.jpg 2880w,
+                             https://itrexgroup.com/wp-content/uploads/2021/01/who-we-are-1024x978.jpg 2048w,
+                             https://itrexgroup.com/wp-content/uploads/2021/01/who-we-are-720x688.jpg 720w,
+                             https://itrexgroup.com/wp-content/uploads/2021/01/who-we-are-512x489.jpg 512w"
+                             sizes="(min-width: 961px) 50vw, 100vw"
+                             alt="Aztech office"></div>
+                    <div class="jobs-about__content">
+                        <div class="jobs-about__title">Who we are</div>
+                        <div class="jobs-about__text space space_hmt">{% if companyInfo %}<p class="landing-subheader__text">{{ companyInfo.company_description }}</p>{% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="our-capabilities-include">
+            <div class="block__content">
+                <div class="jobs-capabilities">
+                    <div class="jobs-capabilities__title">Our capabilities include:</div>
+                    <div class="jobs-capabilities__list">
+                        <div class="jobs-capabilities__item">
+                            <svg class="jobs-capabilities__item-icon">
+                                <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#AI"></use>
+                            </svg>
+                            <div class="jobs-capabilities__item-text">Artificial intelligence, machine learning, big data
+                            </div>
+                        </div>
+                        <div class="jobs-capabilities__item">
+                            <svg class="jobs-capabilities__item-icon">
+                                <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#iot"></use>
+                            </svg>
+                            <div class="jobs-capabilities__item-text">Embedded systems and the Internet of Things</div>
+                        </div>
+                        <div class="jobs-capabilities__item">
+                            <svg class="jobs-capabilities__item-icon">
+                                <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#VR"></use>
+                            </svg>
+                            <div class="jobs-capabilities__item-text">Virtual reality, augmented reality and mixed reality
+                            </div>
+                        </div>
+                        <div class="jobs-capabilities__item">
+                            <svg class="jobs-capabilities__item-icon">
+                                <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#iba"></use>
+                            </svg>
+                            <div class="jobs-capabilities__item-text">Intelligent business automation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="who-should-apply">
+            <div class="block__content">
+                <div class="jobs-apply">
+                    <div class="jobs-apply__content">
+                        <div class="jobs-apply__title">Who should apply</div>
+                        <div class="jobs-apply__block space space_hmt">
+                            <div class="jobs-apply__label">Look, this is not for everyone.
+                            </div>
+                            <div class="jobs-apply__text">If you only want a salary and don’t much care about how good your projects are, you’ll probably hate it here. If you hide behind policies and processes because, secretly, you’re terrified of owning ideas or decisions, you too will think it sucks.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jobs-apply__image">
+                        <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/who-should-apply.jpg" alt=""
+                             srcset="https://itrexgroup.com/wp-content/uploads/2021/01/who-should-apply.jpg 2880w,
+                             https://itrexgroup.com/wp-content/uploads/2021/01/who-should-apply-1024x968.jpg 2048w,
+                             https://itrexgroup.com/wp-content/uploads/2021/01/who-should-apply-720x681.jpg 720w,
+                             https://itrexgroup.com/wp-content/uploads/2021/01/who-should-apply-512x484.jpg 512w"
+                             sizes="(min-width: 961px) 50vw, 100vw"
+                             alt="itrex office"></div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="now-ask-yourself">
+            <div class="block__content">
+                <div class="jobs-ask block__content">
+                    <div class="jobs-ask__title">Now ask yourself (and be honest)</div>
+                    <div class="jobs-ask__blocks space space_hmt">
+                        <div class="jobs-ask__block">Does being part of a shoddy project bother you so much that you
+                            have to speak up?
+                        </div>
+                        <div class="jobs-ask__block">Do you care about your client, your project, your decisions and
+                            your team?
+                        </div>
+                        <div class="jobs-ask__block">Do you get a buzz out of solving hard problems?</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="honesty-transparency-and-family-spirit">
+            <div class="block__content">
+                <div class="jobs-about">
+                    <div class="jobs-about__image">
+                        <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/honesty-1.jpg" alt=""
+                             srcset="https://itrexgroup.com/wp-content/uploads/2021/01/honesty-1.jpg 2880w,
+                             https://itrexgroup.com/wp-content/uploads/2021/01/honesty-1-1024x1311.jpg 2048w,
+                             https://itrexgroup.com/wp-content/uploads/2021/01/honesty-1-720x922.jpg 720w,
+                             https://itrexgroup.com/wp-content/uploads/2021/01/honesty-1-512x655.jpg 512w"
+                             sizes="(min-width: 961px) 50vw, 100vw"
+                             alt="itrex office"></div>
+                    <div class="jobs-about__content">
+                        <div class="jobs-about__title">
+                            Honesty, transparency and family spirit
+                        </div>
+                        <div class="jobs-about__text space space_hmt">
+                            We strive always to be honest with each other and the client. That’s more than being truthful, it’s about not dodging responsibility or concealing important things.
+                            </br>
+                            </br>We aren’t afraid to argue. Because we care about our work, it happens. We disagree like family; we help and support each other no matter what.
+                            </br>
+                            </br>Our developers live by this too. You’re never too junior to ask questions or to have an opinion.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="do-you-play-to-win">
+            <div class="block__content">
+                <div class="jobs-apply">
+                    <div class="jobs-apply__content">
+                        <div class="jobs-apply__title">Do you play to win? Or just to avoid blame?
+                        </div>
+                        <div class="jobs-apply__block space space_hmt">
+                            <div class="jobs-apply__label">
+                                Does this sound overly lofty? We’re definitely not perfect. We make mistakes.
+                            </div>
+                            <div class="jobs-apply__text">
+                                You’re allowed to get things wrong – even horribly wrong – sometimes too. If you’re honest enough to own your mistakes, you will be safe. Working {% if companyInfo %}at {{ companyInfo.company_name }}{% else %}with us{% endif %}, you’ll watch us admit mistakes all the time. That’s what initiative and transparency looks like. We are all committed to each other’s success. All we ask in return: is the same commitment back.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jobs-apply__image">
+                        <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/play-to-win-1.jpg" alt=""
+                             srcset="https://itrexgroup.com/wp-content/uploads/2021/01/play-to-win-1.jpg 2880w,
+                             https://itrexgroup.com/wp-content/uploads/2021/01/play-to-win-1-1024x1449.jpg 2048w,
+                             https://itrexgroup.com/wp-content/uploads/2021/01/play-to-win-1-720x1019.jpg 720w,
+                             https://itrexgroup.com/wp-content/uploads/2021/01/play-to-win-1-512x724.jpg 512w"
+                             sizes="(min-width: 961px) 50vw, 100vw"
+                             alt="itrex office"></div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="dlexibility-and-balance">
+            <div class="block__content">
+                <div class="jobs-balance">
+                    <div class="jobs-balance__left">
+                        <div class="jobs-balance__title">Flexibility and balance</div>
+                        <div class="jobs-balance__text jobs-balance__text_bold">
+                            We at {{ companyInfo.company_name }}, believe in hard work.
+                            That means you honestly give your best effort.
+                            It doesn’t mean you give every working hour.
+                        </div>
+                    </div>
+                    <div class="jobs-balance__right">
+                        <div class="jobs-balance__col">
+                            <div class="jobs-balance__text">
+                                Our crew is motivated and accountable, so they earn a lot of trust. Flexible and remote working arrangements are no problem.
+                            </div>
+                        </div>
+                        <div class="jobs-balance__col">
+                            <div class="jobs-balance__text">
+                                If you’re so stuck on a hard problem that you need to switch gears, head to the gym to work out, or to the Playstation to shoot bad guys.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="jobs-image">
+            <div class="landing-image" animation="fade-up" animation-delay=".15">
+                <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/flexibility-1.jpg" alt=""
+                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/flexibility-1-1440x717.jpg 2880w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/flexibility-1-1024x510.jpg 2048w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/flexibility-1-720x359.jpg 720w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/flexibility-1-512x255.jpg 512w"
+                     sizes="100vw"
+                     alt="itrex office"></div>
+        </div>
+        <div class="block" id="opportunity-and-growth">
+            <div class="block__content">
+                <div class="jobs-text">
+                    <div class="jobs-text__left">
+                        <div class="jobs-text__title">Opportunity and growth</div>
+                    </div>
+                    <div class="jobs-text__right">
+                        <div class="jobs-text__text">
+                            We expect you to work hard on difficult challenges, among high-level professionals who support you. You will take hard decisions, with permission to make mistakes and learn from them. If you have the attitude to make this work, your skills will level up fast and you’ll feel proud of how you grow.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="many-saythey-want-this">
+            <div class="block__content">
+                <div class="jobs-text jobs-text_center">
+                    <div class="jobs-text__title">Many say they want this</div>
+                    <div class="block block_yellow" id="" cta-text="">
+<div class="block__content block__content_half post-block__content post-block__content_medium">
+<div class="landing-subheader" animation="fade-up" animation-delay=".15">
+<div class="landing-subheader__content">
+<p class="landing-subheader__text landing-subheader__text_small" style="text-align: center">
+    Some even mean it. If you feel like you’d thrive {% if companyInfo %}at <span class="mark mark_green">{{ companyInfo.company_name }}</span>{% else %}with us{% endif %}, we’d love to hear from you. Please browse through our vacancies and see if anything suits you.
+</p>
+</div>
+</div>
+</div>
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="block block_smoke" id="jobs_form">
+            <div class="block__content">
+                <div class="jobs-form">
+                    <div class="jobs-form__title">Are you now interested?</div>
+                    <div class="jobs-form__choise space space_hmt">
+                        <a class="jobs-form__item button arrow-link arrow-link arrow-link_fixed-opacity"
+                           data-popup="#send-cv" id="send-cv-target" href="#send-cv">
+<span class="arrow-link__text">Send your CV <span style="white-space: nowrap">to apply<span class="arrow-link__arrow">
+<span class="arrow-link__arrow_back arrow-link__arrow_black">→</span>
+<span class="arrow-link__arrow_front arrow-link__arrow_black">→</span>
+</span></span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main_content %}
+
+{% block inner_body_content %}
+    <div class="popup" id="send-cv">
+        <div class="popup__header">
+            <div class="popup__logo">
+                <img src="{% if companyInfo %}{{ companyInfo.company_logo.url }}{% endif %}" alt="{% if companyInfo %}{{ companyInfo.company_name }}{% endif %}">
+            </div>
+            <div class="popup__close"></div>
+        </div>
+        <div class="popup__content">
+            <div class="popup__info">
+                <h2 class="popup__title">Join {% if companyInfo %}{{ companyInfo.company_name }}{% else %}Right Now{% endif %}</h2>
+                <div class="popup__contacts">
+                    <a style="popup__link" href="mailto:{% if companyInfo %}{{ companyInfo.company_mail }}{% else %}aztechvalleyltd@gmail.com{% endif %}" target="" id="contacts-popup-1">{% if companyInfo %}{{ companyInfo.company_mail }}{% else %}aztechvalleyltd@gmail.com{% endif %}</a>
+                    <br>
+                    <a style="popup__link" href="tel:{% if companyInfo %}{{ companyInfo.company_phone }}{% else %}+8801712500637{% endif %}" target="" id="contacts-popup-2">{% if companyInfo %}{{ companyInfo.company_phone }}{% else %}aztechvalleyltd@gmail.com{% endif %}</a>
+                </div>
+            </div>
+            <div class="form" hf-data="hf-data" data-thank-you="thankYouJobsUrl">
+                <div role="form" class="wpcf7" id="wpcf7-f5212-o2" lang="en-US" dir="ltr">
+                    <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
+                        <ul></ul>
+                    </div>
+                    <form action="" method="post" class="wpcf7-form init"
+                          enctype="multipart/form-data"
+                          novalidate="novalidate" data-status="init">
+                        {% csrf_token %}
+                        <div class="field" validation="required">
+                            {% csrf_token %}
+                            <input type="text" name="participant-name" size="40"
+                                   class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required field__input"
+                                   aria-required="true" aria-invalid="false" placeholder="Name*" required/>
+                            <div class="field__status"></div>
+                            <div class="field__line"></div>
+                            <div class="field__error"></div>
+                        </div>
+                        <div class="field" validation="required,email">
+                            {% csrf_token %}
+                            <input type="email" name="participant-email" size="40"
+                                   class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email field__input"
+                                   aria-required="true" aria-invalid="false" placeholder="Email*" required/>
+                            <div class="field__status"></div>
+                            <div class="field__line"></div>
+                            <div class="field__error"></div>
+                        </div>
+                        <div class="field" validation="required,phone">
+                            {% csrf_token %}
+                            <input type="tel" name="participant-phone" size="40"
+                                   class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel field__input"
+                                   aria-required="true" aria-invalid="false" placeholder="Phone*" required/>
+                            <div class="field__status"></div>
+                            <div class="field__line"></div>
+                            <div class="field__error"></div>
+                        </div>
+                        <div class="field" validation="linkedin">
+                            {% csrf_token %}
+                            <input type="text" name="participant-linkedin" size="40"
+                                   class="wpcf7-form-control wpcf7-text field__input" aria-invalid="false"
+                                   placeholder="Linkedin-id (optional)"/>
+                            <div class="field__status"></div>
+                            <div class="field__line"></div>
+                            <div class="field__error"></div>
+                        </div>
+                        <div class="field" validation="github">
+                            {% csrf_token %}
+                            <input type="text" name="participant-github" size="40"
+                                   class="wpcf7-form-control wpcf7-text field__input" aria-invalid="false"
+                                   placeholder="Github-profile-id (optional)"/>
+                            <div class="field__status"></div>
+                            <div class="field__line"></div>
+                            <div class="field__error"></div>
+                        </div>
+                        <div class="field" validation="required">
+                            {% csrf_token %}
+                            <input type="text" name="participant-message" size="40"
+                                   class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required field__input"
+                                   aria-required="true" aria-invalid="false" placeholder="Message*"/>
+                            <div class="field__status"></div>
+                            <div class="field__line"></div>
+                            <div class="field__error"></div>
+                        </div>
+                        <div class="field field_file field_yellow" validation="emailfile">
+                            {% csrf_token %}
+                            <input type="file" name="participant-resume" size="40" class="wpcf7-form-control wpcf7-file field__input"
+                                   id="resume"
+                                   accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv,.txt"
+                                   aria-invalid="false"/>
+                            <label class="field__label" for="resume">
+                                <svg class="field__icon">
+                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.6#attach"></use>
+                                </svg>
+                                <span data-file-label>Attach your CV / RESUME</span>
+                            </label>
+                            <div class="field__error"></div>
+                        </div>
+                        <div class="field field_file field_yellow" validation="emailfile">
+                            {% csrf_token %}
+                            <input type="file" name="participant-covLetter" size="40" class="wpcf7-form-control wpcf7-file field__input"
+                                   id="coverLetter"
+                                   accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.ppt,.pptx,.odt,.avi,.ogg,.m4a,.mov,.mp3,.mp4,.mpg,.wav,.wmv,.txt"
+                                   aria-invalid="false"/>
+                            <label class="field__label" for="coverLetter">
+                                <svg class="field__icon">
+                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.6#attach"></use>
+                                </svg>
+                                <span data-file-label>Attach your Cover Letter</span>
+                            </label>
+                            <div class="field__error"></div>
+                        </div>
+                        <div class="form__label">We will process your personal information in accordance with our <a
+                                href="https://www.termsfeed.com/live/0c9149b6-1986-4616-9cd3-f9cb9717c573" target="_blank">Privacy Policy.</a></div>
+                        {% csrf_token %}
+                            <input class="form__submit" id="form-submit" type="submit" name="job-applied" value="Apply Now → ">
+
+                    </form>
+                </div>
+            </div>
+            <div class="popup__contacts popup__contacts_tablet">
+                <a style="popup__link" href="mailto:hello@itrexgroup.com" target="" id="contacts-popup-1-tablet">hello@Aztech.com</a>
+                <a style="popup__link" href="tel:+1 213 436 7785" target="" id="contacts-popup-2-tablet">+880
+                    1712-500637</a>
+            </div>
+        </div>
+    </div>
+{% endblock inner_body_content %}

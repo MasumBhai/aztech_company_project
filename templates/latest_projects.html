@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_tag %}
+    <body class="case-template-default single single-case">
+{% endblock body_tag %}
+
+{% block navbar_style %}
+    <style>
+        .navigation > .navigation__logo,
+        .navigation__item,
+        .navigation__burger {
+            color: #000000;
+        }
+
+        .navigation__item_active {
+            color: #445aec;
+        }
+
+        @media only screen and (min-width: 961px) {
+            .navigation__item:hover {
+                color: #445aec;
+            }
+        }
+    </style>
+{% endblock navbar_style %}
+
+{% block main_content %}
+    <div class="wrapper">
+        <div class="block block_yellow block_nav block_overflow" id="header" cta-text="Bring us your challenges">
+            <div class="block__content">
+                <div class="case-header">
+                    {#                    <a class="case-header__link arrow-link arrow-link_inverse"#}
+                    {#                       href="https://itrexgroup.com/case-studies/"#}
+                    {#                       id="all-cases"><span class="arrow-link__arrow"><span#}
+                    {#                            class="arrow-link__arrow_back arrow-link__arrow_blue">←</span><span#}
+                    {#                            class="arrow-link__arrow_front arrow-link__arrow_blue">←</span></span><span#}
+                    {#                            class="arrow-link__text">All cases</span></a>#}
+                    <h1 class="case-header__title" animation="fade-up">{{ project.project_title }}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="block block_black" id="info" cta-text="Bring us your challenge">
+            <div class="block__content">
+                <div class="parameters" animation="fade-up" animation-delay=".15">
+                    <div class="parameters__block">
+                        <div class="parameters__title">Client</div>
+                        <div class="parameters__text">
+                            {{ project.project_client }}
+                        </div>
+                    </div>
+                    <div class="parameters__block">
+                        <div class="parameters__title">Industry</div>
+                        <div class="parameters__text">{{ project.project_industries }}</div>
+                    </div>
+                    <div class="parameters__block">
+                        <div class="parameters__title">Services</div>
+                        <div class="parameters__text">{{ project.project_services }}</div>
+                    </div>
+                    <div class="parameters__block">
+                        <div class="parameters__title">Technologies</div>
+                        <div class="parameters__text">
+                            {{ project.project_technologies }}
+                        </div>
+                    </div>
+                </div>
+            </div
+            >
+        </div>
+        <div class="block" id="challenge" cta-text="Bring us your challenge">
+            <div class="block__content">
+                <div class="case-challenge">
+                    <h2 class="case-challenge__title" animation="fade-up" animation-delay=".15">Challenge</h2>
+                    <p class="case-challenge__text" animation="fade-up" animation-delay=".15">
+                        {{ project.project_challenges }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="block block_yellow" id="solution" cta-text="Bring us your challenge">
+            <div class="case-solution">
+                <div class="case-solution__sticky">
+                    <div class="case-solution__sticky-block" animation="fade-up" animation-delay=".15">
+                        <div class="block__content">
+                            <h2 class="case-solution__title">Solution</h2>
+                            <div class="case-solution__sticky-text">
+                                {{ project.project_solution }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-solution__sticky-image" animation="fade-up" animation-delay=".15">
+                        <picture>
+                            <source srcset="{{ project.project_solution_pic.url }}"
+                                    type="image/jpeg" media="(max-width: 2880px)">
+                            <source srcset="{{ project.project_solution_pic.url }}"
+                                    type="image/jpeg" media="(max-width: 2048px)">
+                            <source srcset="{{ project.project_solution_pic.url }}"
+                                    type="image/jpeg" media="(max-width: 720px)">
+                            <source srcset="{{ project.project_solution_pic.url }}"
+                                    type="image/jpeg" media="(max-width: 512px)">
+                            <source srcset="{{ project.project_solution_pic.url }}"
+                                    type="image/jpeg">
+                            <img loading="lazy"
+                                 data-src="{{ project.project_solution_pic.url }}"
+                                 alt="{{ project.project_title }}">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block block_orange" id="impact" cta-text="Bring us your challenge">
+            <div class="case-solution">
+                <div class="case-solution__sticky">
+                    <div class="case-solution__sticky-image" animation="fade-up" animation-delay=".15">
+                        <picture>
+                            <source srcset="{{ project.project_impact_pic.url }}"
+                                    type="image/jpeg" media="(max-width: 2880px)">
+                            <source srcset="{{ project.project_impact_pic.url }}"
+                                    type="image/jpeg" media="(max-width: 2048px)">
+                            <source srcset="{{ project.project_impact_pic.url }}"
+                                    type="image/jpeg" media="(max-width: 720px)">
+                            <source srcset="{{ project.project_impact_pic.url }}"
+                                    type="image/jpeg" media="(max-width: 512px)">
+                            <source srcset="{{ project.project_impact_pic.url }}"
+                                    type="images/jpeg">
+                            <img loading="lazy"
+                                 data-src="{{ project.project_impact_pic.url }}"
+                                 alt="{{ project.project_title }}">
+                        </picture>
+                    </div>
+                    <div class="case-solution__sticky-block" animation="fade-up" animation-delay=".15">
+                        <div class="block__content">
+                            <h2 class="case-solution__title">Impact</h2>
+                            <div class="case-solution__sticky-text">
+                                {{ project.project_impact }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block block_z-index-up block_relative" id="work" cta-text="Bring us your challenge">
+            <div class="block__content">
+                <div class="post-title">
+                    <h2 class="block__title post-title__title" animation="fade-up" animation-delay=".15">Latest
+                        projects</h2>
+                </div>
+            </div>
+            <div class="block__scroll block__scroll_tablet" scroll-destination="posts" animation="fade-up"
+                 animation-delay=".15">
+                <div class="posts-list posts-list_slider">
+                    <svg style="position: absolute;pointer-events: none" width="0" height="0">
+                        <defs>
+                            <clipPath id="thinking-mask" clipPathUnits="objectBoundingBox">
+                                <rect x="0" y="0" width="1" height="1"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    {% for project in projectDetails %}
+                        {% if forloop.counter == 1 %}
+                            <div class="post post_slider" style="position: relative;visibility: visible">
+                                <div class="post__info">
+                                    <div class="post__company">{{ project.project_client }}</div>
+                                    <a class="post__title arrow-link arrow-link_fixed-opacity"
+                                       href="{% url 'project-details' project.project_slug %}"><span
+                                            class="arrow-link__text">{{ project.project_title }}<span
+                                            class="arrow-link__arrow"><span
+                                            class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
+                                            class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
+                                </div>
+                                <a class="post__image" loading="lazy"
+                                   href="{% url 'project-details' project.project_slug %}">
+                                    <img loading="lazy" src="{{ project.project_preview.url }}"
+                                         alt="{{ project.project_title }}">
+                                </a>
+                            </div>
+                        {% else %}
+                            <div class="post post_slider">
+                                <div class="post__info">
+                                    <div class="post__company">{{ project.project_client }}</div>
+                                    <a class="post__title arrow-link arrow-link_fixed-opacity"
+                                       href="{% url 'project-details' project.project_slug %}">
+                                        <span class="arrow-link__text">{{ project.project_title }}<span
+                                            class="arrow-link__arrow"><span
+                                            class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
+                                </div>
+                                <a class="post__image" loading="lazy"
+                                   href="{% url 'project-details' project.project_slug %}">
+                                    <img loading="lazy" src="{{ project.project_preview.url }}"
+                                         alt="{{ project.project_title }}">
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    <div class="posts-list__controlls">
+                        <div class="posts-list__ui">
+                            <div class="posts-list__button posts-list__button_left" id="post-prev-item">
+                                <svg class="icon">
+                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                </svg>
+                            </div>
+                            <div class="posts-list__button posts-list__button_right" id="post-next-item">
+                                <svg class="icon">
+                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sticky-overflow">
+            <div class="footer" auto-size-height="we-do">
+                <div class="footer__content"><a class="footer__link" id="cta" href="#form"><span
+                        class="footer__link-background footer__link-background_back"></span><span
+                        class="footer__link-background footer__link-background_front"></span><span
+                        class="footer__link-text"><span
+                        class="footer__link-text-value">Bring us your challenges</span><span
+                        class="footer__link-icon"><span class="footer__link-icon-first">→</span><span
+                        class="footer__link-icon-second">→</span></span></span></a></div>
+            </div>
+        </div>
+    </div>
+{% endblock main_content %}

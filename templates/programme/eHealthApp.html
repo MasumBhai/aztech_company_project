@@ -1,0 +1,760 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_tag %}
+    <body class="page-template page-template-templates page-template-landing page-template-templateslanding-php page page-id-4295 page-child parent-pageid-1184">
+{% endblock body_tag %}
+
+{% block navbar_style %}
+    <style>
+.navigation > .navigation__logo,
+.navigation__item,
+.navigation__burger {
+color: #000000;
+}
+.navigation__item_active {
+color: #445aec;
+}
+@media only screen and (min-width: 961px) {
+.navigation__item:hover {
+color: #445aec;
+}
+}
+</style>
+{% endblock navbar_style %}
+
+{% block main_content %}
+    <div class="wrapper">
+        <div class="block block_slide-min block_nav block_yellow block_overflow" id="header" cta-text="Let’s talk"
+             style="background-color: #e0eeef">
+            <div class="block__content post-block__content post-block__content_medium flex">
+                <div class="landing-header landing-header_new">
+                    <div class="landing-header__background-picture landing-header__background-picture_desktop">
+                        <img class="landing-header__background-picture-desktop"
+                             src="{% static 'images/Ehealth-app/health-app-dev-1.jpg' %}"
+                             alt="Healthcare mobile app development">
+                        <img class="landing-header__background-picture-mobile"
+                             src="{% static 'images/Ehealth-app/health-app-dev-1.jpg' %}"
+                             alt="Healthcare mobile app development">
+                    </div>
+                    <div class="landing-header__content">
+                        <div class="landing-header__info">
+                            <h1 class="landing-header__title title title_small" style="color: #000000;"
+                                animation="fade-up"
+                                animation-delay=".15">Healthcare
+                                mobile app
+                                development
+                            </h1>
+                            <div class="landing-header__text" animation="fade-up" animation-delay=".25"
+                                 style="color: #000000">
+                                We build secure human-centric mHealth apps, helping you redefine healthcare experience and prepare for waves of disruption today and into tomorrow
+                            </div>
+                            <button class="landing-header__button button arrow-link arrow-link arrow-link_fixed-opacity"
+                                    id="cta-header" data-popup="#form" href="#form" animation="fade-up"
+                                    animation-delay=".35"><span class="arrow-link__text">Let’s <span
+                                    style="white-space: nowrap">talk<span class="arrow-link__arrow"><span
+                                    class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span
+                                    class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span>
+                            </button>
+                        </div>
+                        <div class="landing-header__picture landing-header__picture_mobile"><img
+                                src="{% static 'images/Ehealth-app/health-app-dev-1.jpg' %}"
+                                alt="Healthcare mobile app development"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="" cta-text="">
+            <div class="block__content block__content_half post-block__content post-block__content_medium">
+                <div class="landing-info" animation="fade-up" animation-delay=".15">
+                    <h2 class="landing-info__title title title_micro title_mb" animation="fade-up"
+                        animation-delay=".15">We make quality healthcare available on the go
+                    </h2>
+                    <div class="landing-info__text landing-info__text_mini">
+                        Relying on our expertise in <a class="link" href="{% url 'sAI_health' %}" target="_blank" rel="noopener noreferrer">healthcare software development,</a> we gear patients, physicians, and hospitals with mHealth applications that combine rich functionality, high performance, unrivaled security, and ease of use.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="" cta-text="Discuss your app idea">
+            <div class="block__content post-block__content_medium" style="padding-top: 0">
+                <div class="landing-info">
+                    <div class="landing-info__content landing-info__content_rows landing-info__content_columns_3">
+                        <div class="landing-info__row" animation="fade-up" animation-delay=".15">
+                            <span class="landing-info__name">For patients</span>
+                            <span class="landing-info__name">For physicians</span>
+                            <span class="landing-info__name">For hospitals</span>
+                            <span class="landing-info__value landing-info__value_no-border" style="color: #9A9A9A">We develop mHealth apps for patients to keep an eye on their health parameters, access personal health records, consult doctors, and schedule medical appointments</span>
+                            <span class="landing-info__value landing-info__value_no-border" style="color: #9A9A9A">We create mobile healthcare solutions that automate routine tasks, simplify healthcare records management, and assist in delivering personalized care, making practices run more efficiently</span>
+                            <span class="landing-info__value landing-info__value_no-border" style="color: #9A9A9A">We equip hospitals with robust mobile healthcare solutions that optimize hospital workflows and improve clinical communication, collaboration, and healthcare data management
+</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="block__button button arrow-link arrow-link arrow-link_fixed-opacity space space_hmt"
+                        id="cta-" data-popup="#form" href="#form" animation="fade-up" animation-delay=".15"><span
+                        class="arrow-link__text">Discuss your app <span style="white-space: nowrap">idea<span
+                        class="arrow-link__arrow"><span
+                        class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span
+                        class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span></button>
+            </div>
+        </div>
+        <div class="block" id="apps" cta-text="">
+            <div class="block__content block__content_half post-block__content post-block__content_medium"
+                 style="padding-top: 0">
+                <div class="landing-info" animation="fade-up" animation-delay=".15">
+                    <h2 class="landing-info__title title title_micro title_mb" animation="fade-up"
+                        animation-delay=".15">We bring the functionality of complex healthcare systems to mobile devices
+                    </h2>
+                    <div class="landing-info__text landing-info__text_mini">
+                        Whether you want to improve clinical workflows or make mobile healthcare more accessible in the wake of COVID-19, we are capable of developing an iOS, Android, or cross-platform mHealth apps to address your specific needs and help you tap into new, better healthcare.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="what-we-build" cta-text="Hire healthcare app developers">
+            <div class="block__content post-block__content post-block__content_medium" style="padding-top: 0">
+                <div class="post-block__title-medium" animation="fade-up" animation-delay=".15">What we build:</div>
+                <div class="vertical-accordion" animation="fade-up" animation-delay=".15">
+                    <div class="vertical-accordion__item vertical-accordion__item_active">
+                        <div class="vertical-accordion__background">
+                            <img class="vertical-accordion__background-item"
+                                 src="https://itrexgroup.com/wp-content/uploads/2021/01/telehealth.jpg"
+                                 alt="telehealth solutions"
+                                 srcset="https://itrexgroup.com/wp-content/uploads/2021/01/telehealth.jpg 1920w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/telehealth.jpg 1440w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/telehealth.jpg 1024w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/telehealth-720x720.jpg 720w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/telehealth-512x512.jpg 512w"
+                                 sizes="100vw">
+                        </div>
+                        <div class="vertical-accordion__header" style="opacity: 0">Telehealth</div>
+                        <div class="vertical-accordion__content">
+                            <div class="vertical-accordion__title" style="opacity: 1">Telehealth</div>
+                            <div class="vertical-accordion__text" style="opacity: 1">
+                                From simple telehealth apps to complex platforms featuring appointment booking, videoconferencing, e-prescriptions, symptom and activity trackers, health dashboards, custom notifications, and even real-time patient monitoring
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vertical-accordion__item">
+                        <div class="vertical-accordion__background">
+                            <img class="vertical-accordion__background-item"
+                                 src="https://itrexgroup.com/wp-content/uploads/2021/01/PHR.jpg"
+                                 alt="apps for healthcare"
+                                 srcset="https://itrexgroup.com/wp-content/uploads/2021/01/PHR.jpg 1920w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/PHR.jpg 1440w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/PHR.jpg 1024w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/PHR-720x720.jpg 720w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/PHR-512x512.jpg 512w"
+                                 sizes="100vw">
+                        </div>
+                        <div class="vertical-accordion__header">PHR, EMR and EHR</div>
+                        <div class="vertical-accordion__content">
+                            <div class="vertical-accordion__title">PHR, EMR and EHR</div>
+                            <div class="vertical-accordion__text">
+                                Mobile healthcare solutions that offer the most convenient and secure way of storing, accessing, and exchanging medical information
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vertical-accordion__item">
+                        <div class="vertical-accordion__background">
+                            <img class="vertical-accordion__background-item"
+                                 src="https://itrexgroup.com/wp-content/uploads/2021/01/diagnostic-assistance.jpg"
+                                 alt="Medical diagnosis software"
+                                 srcset="https://itrexgroup.com/wp-content/uploads/2021/01/diagnostic-assistance.jpg 1920w,
+                                  https://itrexgroup.com/wp-content/uploads/2021/01/diagnostic-assistance.jpg 1440w,
+                                  https://itrexgroup.com/wp-content/uploads/2021/01/diagnostic-assistance.jpg 1024w,
+                                  https://itrexgroup.com/wp-content/uploads/2021/01/diagnostic-assistance-720x720.jpg 720w,
+                                  https://itrexgroup.com/wp-content/uploads/2021/01/diagnostic-assistance-512x512.jpg 512w"
+                                 sizes="100vw">
+                        </div>
+                        <div class="vertical-accordion__header">Medical diagnosis software</div>
+                        <div class="vertical-accordion__content">
+                            <div class="vertical-accordion__title">Medical diagnosis software</div>
+                            <div class="vertical-accordion__text">
+                                <a class="link" href="{% url 'sAI_health' %}" target="_blank" rel="noopener noreferrer">AI-powered healthcare solutions</a> for enhanced diagnostics based on image recognition, symptom evaluation, and medical history analysis
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vertical-accordion__item">
+                        <div class="vertical-accordion__background">
+                            <img class="vertical-accordion__background-item"
+                                 src="https://itrexgroup.com/wp-content/uploads/2021/01/practice-management.jpg"
+                                 alt="healthcare app company"
+                                 srcset="https://itrexgroup.com/wp-content/uploads/2021/01/practice-management.jpg 1920w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/practice-management.jpg 1440w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/practice-management.jpg 1024w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/practice-management-720x720.jpg 720w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/practice-management-512x512.jpg 512w"
+                                 sizes="100vw">
+                        </div>
+                        <div class="vertical-accordion__header">Practice management software</div>
+                        <div class="vertical-accordion__content">
+                            <div class="vertical-accordion__title">Practice management software</div>
+                            <div class="vertical-accordion__text">
+                                Mobile-first solutions for fast and convenient task and revenue cycle management, enhanced workflows, optimized document exchange, and reporting
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vertical-accordion__item">
+                        <div class="vertical-accordion__background">
+                            <img class="vertical-accordion__background-item"
+                                 src="https://itrexgroup.com/wp-content/uploads/2021/01/patient-portals.jpg"
+                                 alt="healthcare mobile development"
+                                 srcset="https://itrexgroup.com/wp-content/uploads/2021/01/patient-portals.jpg 1920w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/patient-portals.jpg 1440w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/patient-portals.jpg 1024w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/patient-portals-720x720.jpg 720w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/patient-portals-512x512.jpg 512w"
+                                 sizes="100vw">
+                        </div>
+                        <div class="vertical-accordion__header">Patient portals</div>
+                        <div class="vertical-accordion__content">
+                            <div class="vertical-accordion__title">Patient portals</div>
+                            <div class="vertical-accordion__text">
+                                Patient-centric solutions that make it easy to view an individual's medical history, request appointments, renew prescriptions, access test results, and complete payments
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vertical-accordion__item">
+                        <div class="vertical-accordion__background">
+                            <img class="vertical-accordion__background-item"
+                                 src="https://itrexgroup.com/wp-content/uploads/2021/01/outpatient-care.jpg"
+                                 alt="app for doctors and patients"
+                                 srcset="https://itrexgroup.com/wp-content/uploads/2021/01/outpatient-care.jpg 1920w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/outpatient-care.jpg 1440w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/outpatient-care.jpg 1024w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/outpatient-care-720x720.jpg 720w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/outpatient-care-512x512.jpg 512w"
+                                 sizes="100vw">
+                        </div>
+                        <div class="vertical-accordion__header">Ambulatory software</div>
+                        <div class="vertical-accordion__content">
+                            <div class="vertical-accordion__title">Ambulatory software</div>
+                            <div class="vertical-accordion__text">
+                                mHealth applications that make it simpler to stay healthy with features such as medication tracking, activity logs, interactive guidance, mental health tips, real-time feedback, and chats for faster rehabilitation and effective chronic disease management
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vertical-accordion__item">
+                        <div class="vertical-accordion__background">
+                            <img class="vertical-accordion__background-item"
+                                 src="https://itrexgroup.com/wp-content/uploads/2021/01/medical-staff-training-.jpg"
+                                 alt="medical staff training"
+                                 srcset="https://itrexgroup.com/wp-content/uploads/2021/01/medical-staff-training-.jpg 1920w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/medical-staff-training-.jpg 1440w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/medical-staff-training-.jpg 1024w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/medical-staff-training--720x720.jpg 720w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/medical-staff-training--512x512.jpg 512w"
+                                 sizes="100vw">
+                        </div>
+                        <div class="vertical-accordion__header">Healthcare LMS</div>
+                        <div class="vertical-accordion__content">
+                            <div class="vertical-accordion__title">Healthcare LMS</div>
+                            <div class="vertical-accordion__text">
+                                Mobile apps that let healthcare students and professionals access knowledge on the go. And when enhanced with AR, mobile LMS apps simulate real-life scenarios, help prepare for surgeries and video-assisted procedures, and develop practical skills!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vertical-accordion__item">
+                        <div class="vertical-accordion__background">
+                            <img class="vertical-accordion__background-item"
+                                 src="https://itrexgroup.com/wp-content/uploads/2021/01/activity-app-solution-1.jpg"
+                                 alt="Activity tracking application"
+                                 srcset="https://itrexgroup.com/wp-content/uploads/2021/01/activity-app-solution-1.jpg 1920w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/activity-app-solution-1-1440x1440.jpg 1440w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/activity-app-solution-1-1024x1024.jpg 1024w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/activity-app-solution-1-720x720.jpg 720w,
+                                 https://itrexgroup.com/wp-content/uploads/2021/01/activity-app-solution-1-512x512.jpg 512w"
+                                 sizes="100vw">
+                        </div>
+                        <div class="vertical-accordion__header">Wellness apps</div>
+                        <div class="vertical-accordion__content">
+                            <div class="vertical-accordion__title">Wellness apps</div>
+                            <div class="vertical-accordion__text">
+                                Activity tracking, women’s health, sleep & meditation, and mental health mobile solutions that let users monitor their fitness progress, adopt healthy habits, alleviate anxiety, depression, and do much more
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="block__button button arrow-link arrow-link arrow-link_fixed-opacity space space_hmt"
+                        id="cta-what-we-build" data-popup="#form" href="#form" animation="fade-up"
+                        animation-delay=".15">
+                <span class="arrow-link__text">Hire healthcare app <span style="white-space: nowrap">developers<span
+                        class="arrow-link__arrow"><span
+                        class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span
+                        class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span></button>
+            </div>
+        </div>
+        <div class="block" id="compliance">
+            <div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
+                <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/compliance-bg.jpg" alt=""
+                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/compliance-bg-1920x667.jpg 1920w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/compliance-bg-1440x500.jpg 1440w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/compliance-bg-1024x356.jpg 1024w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/compliance-bg-720x250.jpg 720w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/compliance-bg-512x178.jpg 512w"
+                     sizes="100vw"
+                     alt="Healthcare app development">
+                <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up"
+                    animation-delay=".15">Healthcare mobile app development<br><span class="yellow">in line with the industry-specific regulations
+</span></h2>
+            </div>
+        </div>
+        <div class="block" id="compliance" cta-text="">
+            <div class="block__content block__content_half post-block__content post-block__content_medium">
+                <div class="landing-subheader" animation="fade-up" animation-delay=".15">
+                    <div class="landing-subheader__content">
+                        <p class="landing-subheader__text landing-subheader__text_small">
+                            Safe storage and transfer of patient health information is the backbone of medical apps. Our healthcare mobile app development company brings together a decade of experience creating mobile solutions and vast expertise in healthcare to craft mHealth solutions that never fail compliance reviews.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="compliance" cta-text="Schedule a free discussion">
+            <div class="block__content post-block__content post-block__content_medium" style="padding-top: 0">
+                <div class="landing-platforms">
+                    <div class="landing-platforms__item" animation="fade-up" animation-delay="0.15">
+                        <img class="landing-platforms__item-image"
+                             src="{% static 'images/Ehealth-app/HIPAA-sm-1.svg' %}" alt="HIPAA"
+                             role="presentation"/>
+                        <div class="landing-platforms__item-title"></div>
+                        <div class="landing-platforms__item-text">
+                            We put in place user authentication, login controls, data encryption, and other means of protecting information as early as at the design stage to guarantee that your medical app meets the technical safeguards of the HIPAA security rule
+                        </div>
+                    </div>
+                    <div class="landing-platforms__item" animation="fade-up" animation-delay="0.25">
+                        <img class="landing-platforms__item-image"
+                             src="{% static 'images/Ehealth-app/FDA-sm.svg' %}" alt="FDA"
+                             role="presentation"/>
+                        <div class="landing-platforms__item-title"></div>
+                        <div class="landing-platforms__item-text">
+                            For apps facilitating diagnosis, treatment, mitigation, or prevention of health problems that may fall under FDA regulation, we prepare detailed documentation for premarket approval submission and secure your healthcare app's compliance with all the relevant requirements
+                        </div>
+                    </div>
+                    <div class="landing-platforms__item" animation="fade-up" animation-delay="0.35">
+                        <img class="landing-platforms__item-image"
+                             src="{% static 'images/Ehealth-app/gdpr-sm.svg' %}" alt="gdpr"
+                             role="presentation"/>
+                        <div class="landing-platforms__item-title"></div>
+                        <div class="landing-platforms__item-text">
+                            We make GDPR-compliant mHealth apps, implementing the right to be forgotten, explicit consent, data encryption, two-factor authentication, and other legal requirements to help you avoid hefty fines
+                        </div>
+                    </div>
+                </div>
+                <button class="block__button button arrow-link arrow-link arrow-link_fixed-opacity space space_hmt"
+                        id="cta-compliance" data-popup="#form" href="#form" animation="fade-up"
+                        animation-delay=".15"><span
+                        class="arrow-link__text">Schedule a free <span style="white-space: nowrap">discussion<span
+                        class="arrow-link__arrow"><span
+                        class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span
+                        class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span></button>
+            </div>
+        </div>
+        <div class="block" id="integrations">
+            <div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
+                <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/vital-integrations-1.jpg" alt=""
+                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/vital-integrations-1-1920x667.jpg 1920w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/vital-integrations-1-1440x500.jpg 1440w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/vital-integrations-1-1024x356.jpg 1024w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/vital-integrations-1-720x250.jpg 720w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/vital-integrations-1-512x178.jpg 512w"
+                     sizes="100vw"
+                     alt="healthcare app development services">
+                <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up"
+                    animation-delay=".15">
+                    Improve healthcare data interoperability<br><span class="yellow">through unfailing integrations</span>
+                </h2>
+            </div>
+        </div>
+        <div class="block block_yellow" id="integrations" cta-text="">
+            <div class="block__content block__content_half post-block__content post-block__content_medium">
+                <div class="landing-subheader" animation="fade-up" animation-delay=".15">
+                    <div class="landing-subheader__content">
+                        <p class="landing-subheader__text landing-subheader__text_small">
+                            Flawless integration of your app with internal hospital systems and third-party solutions is what makes a phenomenal healthcare experience. Our healthcare mobile app development services have already helped many organizations to build seamlessly interoperating and secure eco-systems, and we can help you, too
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="" cta-text="Consult healthcare app developers">
+            <div class="block__content post-block__content_medium">
+                <div class="landing-info">
+                    <div class="landing-info__content landing-info__content_rows landing-info__content_columns_3">
+                        <div class="landing-info__row" animation="fade-up" animation-delay=".15">
+                            <span class="landing-info__name">Practice management systems</span>
+                            <span class="landing-info__name">LIS, RIS and PACS</span>
+                            <span class="landing-info__name">EHR</span>
+                            <span class="landing-info__value" style="color: #9A9A9A">Manage hospital operations on the go and enjoy synchronized practice workflows</span>
+                            <span class="landing-info__value" style="color: #9A9A9A">Let caregivers and patients access lab test results and radiology reports anywhere, anytime</span>
+                            <span class="landing-info__value" style="color: #9A9A9A">Guarantee true interoperability and make sure no vital data gets lost with a fast and secure healthcare information exchange</span>
+                        </div>
+                        <div class="landing-info__row" animation="fade-up" animation-delay=".15">
+                            <span class="landing-info__name">Insurance claim management</span>
+                            <span class="landing-info__name">Payment gateways</span>
+                            <span class="landing-info__name">Wearables</span>
+                            <span class="landing-info__value landing-info__value_no-border" style="color: #9A9A9A">Make it easier for the hospital workforce to manage patient flow and speed up claims processing and patient discharge</span>
+                            <span class="landing-info__value landing-info__value_no-border" style="color: #9A9A9A">Let your patients pay for doctor appointments and medical procedures with a couple of clicks via swift and secure payment processing</span>
+                            <span class="landing-info__value landing-info__value_no-border" style="color: #9A9A9A">Monitor your patients from remote and prevent accidents with fast and reliable transmission of physical health parameters</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="block__button button arrow-link arrow-link arrow-link_fixed-opacity space space_hmt"
+                        id="cta-" data-popup="#form" href="#form" animation="fade-up" animation-delay=".15"><span
+                        class="arrow-link__text">Consult healthcare app <span
+                        style="white-space: nowrap">developers<span
+                        class="arrow-link__arrow"><span
+                        class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span
+                        class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span></button>
+            </div>
+        </div>
+        <div class="block" id="emerging-tech">
+            <div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
+                <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/emerging-tech.jpg" alt=""
+                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/emerging-tech-1920x667.jpg 1920w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/emerging-tech-1440x500.jpg 1440w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/emerging-tech-1024x356.jpg 1024w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/emerging-tech-720x250.jpg 720w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/emerging-tech-512x178.jpg 512w"
+                     sizes="100vw"
+                     alt="Healthcare app solutions and services">
+                <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up"
+                    animation-delay=".15">
+                    Emerging tech for healthcare<br><span class="yellow">application development</span>
+                </h2>
+            </div>
+        </div>
+        <div class="block block_yellow" id="emerging-tech" cta-text="">
+            <div class="block__content block__content_half post-block__content post-block__content_medium">
+                <div class="landing-subheader" animation="fade-up" animation-delay=".15">
+                    <div class="landing-subheader__content">
+                        <p class="landing-subheader__text landing-subheader__text_small">
+                            By enriching your apps with modern technology, our healthcare app development company helps you ride the crest of transformation and tap into the healthcare of tomorrow now. Our innovations pave your way to new insights, richer patient experience, and far more effective medical training and practice while focusing on quality and compliance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="emerging-tech" cta-text="Develop your healthcare app">
+            <div class="block__content">
+                <div class="post-block__content post-block__content_text">
+                    <div class="landing-tabs" animation="fade-up" animation-delay=".15">
+                        <div class="landing-tabs__scroll">
+                            <div class="landing-tabs__header landing-tabs__header_opened">
+                                <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1" active-tab>
+                                    <svg class="landing-tabs__logo">
+                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#AI"></use>
+                                    </svg>
+                                    <div>AI/ML</div>
+                                </h3>
+                                <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1">
+                                    <svg class="landing-tabs__logo">
+                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#VR_2"></use>
+                                    </svg>
+                                    <div>AR/VR</div>
+                                </h3>
+                                <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1">
+                                    <svg class="landing-tabs__logo">
+                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#iot"></use>
+                                    </svg>
+                                    <div>IoT</div>
+                                </h3>
+                                <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1">
+                                    <svg class="landing-tabs__logo">
+                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#ML"></use>
+                                    </svg>
+                                    <div>Blockchain</div>
+                                </h3>
+                                <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1">
+                                    <svg class="landing-tabs__logo">
+                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#cloud"></use>
+                                    </svg>
+                                    <div>Cloud</div>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="landing-tabs__item" style="visibility: visible; position: relative" active-tab>
+                            <div class="landing-tabs__content">
+                                <div class="landing-tabs__text" style="text-align: center">
+                                    Insightful discoveries for intelligent workflow automation, support of clinical decision-making, personalized medical treatment, and more.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="landing-tabs__item" style="visibility: hidden; position: absolute">
+                            <div class="landing-tabs__content">
+                                <div class="landing-tabs__text" style="text-align: center">
+                                    Immersive experiences for better rehabilitation and treatment, enhanced medical staff training, physical therapy, and pain management.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="landing-tabs__item" style="visibility: hidden; position: absolute">
+                            <div class="landing-tabs__content">
+                                <div class="landing-tabs__text" style="text-align: center">
+                                    Intelligent, connected ecosystems for early symptom detection, medication tracking, or real-time monitoring of physical activity and health parameters, like glucose level or heart rate.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="landing-tabs__item" style="visibility: hidden; position: absolute">
+                            <div class="landing-tabs__content">
+                                <div class="landing-tabs__text" style="text-align: center">
+                                    Smart contracts for fast and secure patient data management, insurance claims processing, health records interoperability, and more.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="landing-tabs__item" style="visibility: hidden; position: absolute">
+                            <div class="landing-tabs__content">
+                                <div class="landing-tabs__text" style="text-align: center">
+                                    Cloud computing solutions for easy scaling, safer medical records sharing, more efficient and even automated backend operations, and facilitated telemedicine.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-block__content post-block__content_text">
+                    <button class="block__button button arrow-link arrow-link arrow-link_fixed-opacity space space_hmt"
+                            id="cta-emerging-tech" data-popup="#form" href="#form" animation="fade-up"
+                            animation-delay=".15"><span class="arrow-link__text">Develop your healthcare <span
+                            style="white-space: nowrap">app<span class="arrow-link__arrow"><span
+                            class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span
+                            class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="end-to-end-development">
+            <div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
+                <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/development-process.jpg" alt=""
+                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/development-process-1920x667.jpg 1920w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/development-process-1440x500.jpg 1440w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/development-process-1024x356.jpg 1024w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/development-process-720x250.jpg 720w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/development-process-512x178.jpg 512w"
+                     sizes="100vw"
+                     alt="technology solutions background">
+                <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up"
+                    animation-delay=".15">
+                    End-to-end healthcare app<br><span class="yellow">development process</span>
+                </h2>
+            </div>
+        </div>
+        <div class="block" id="end-to-end-development" cta-text="Develop your mHealth app">
+            <div class="block__content post-block__content post-block__content_medium">
+                <div class="landing-timeline" animation="fade-up" animation-delay=".15">
+                    <div class="landing-timeline__headers">
+                        <button class="landing-timeline__header-item landing-timeline__header-item_active">Discovery
+                        </button>
+                        <button class="landing-timeline__header-item">UX/UI design</button>
+                        <button class="landing-timeline__header-item">Development</button>
+                        <button class="landing-timeline__header-item">Testing</button>
+                        <button class="landing-timeline__header-item">Maintenance and support</button>
+                    </div>
+                    <div class="landing-timeline__content">
+                        <div class="landing-timeline__content-item" style="position: static; visibility: visible">
+                            We analyze your idea, define application features and compliance needs, and make up a healthcare app development plan to turn your vision into a quality product fast and at optimal costs
+                        </div>
+                        <div class="landing-timeline__content-item">
+                            We marry your product purpose with user needs and translate them into wireframes and graphical interfaces, which we then thoroughly test.
+                        </div>
+                        <div class="landing-timeline__content-item">
+                            When designing your app architecture, our healthcare app developers focus on built-in security and select a tech stack that suits your needs best to provide healthcare mobile app development services in line with best practices.
+                        </div>
+                        <div class="landing-timeline__content-item">
+                            By continuously testing your health app throughout development, we give you confidence in its compliance, security, and quality.
+                        </div>
+                        <div class="landing-timeline__content-item">
+                            With our continuous post-release support, you will be able to introduce rapid changes to meet the evolving needs of the industry and users.
+                        </div>
+                    </div>
+                </div>
+                <button class="block__button button arrow-link arrow-link arrow-link_fixed-opacity space space_hmt"
+                        id="cta-end-to-end-development" data-popup="#form" href="#form" animation="fade-up"
+                        animation-delay=".15"><span class="arrow-link__text">Develop your mHealth <span
+                        style="white-space: nowrap">app<span class="arrow-link__arrow"><span
+                        class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span
+                        class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span></button>
+            </div>
+        </div>
+        <div class="block" id="about-us" cta-text="">
+            <div class="block__content-x">
+                <div class="landing-rex post-block__content post-block__content post-block__content_text block landing-rex_black block_black">
+                    <div class="landing-rex__rex">
+                        <svg>
+                            <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#rex"></use>
+                        </svg>
+                    </div>
+                    <h2 class="landing-rex__title title title_small" animation="fade-up" animation-delay=".15">What makes {% if companyInfo %}{{ companyInfo.company_name }}{% else %}us{% endif %} stand out </h2>
+                    <div class="landing-rex__list">
+                        <div class="landing-rex__item" animation="fade-up" animation-delay=".15">
+                            <div class="landing-rex__item-title">{% if companyInfo %}{{ companyInfo.years_of_experiences }}{% else %}5{% endif %}+</div>
+                            <div class="landing-rex__item-value">years of hands-on experience</div>
+                        </div>
+                        <div class="landing-rex__item" animation="fade-up" animation-delay=".15">
+                            <div class="landing-rex__item-title">{% if companyInfo %}{{ companyInfo.experts_hired_total }}{% else %}35{% endif %}+</div>
+                            <div class="landing-rex__item-value">top-tier development experts</div>
+                        </div>
+                        <div class="landing-rex__item" animation="fade-up" animation-delay=".15">
+                            <div class="landing-rex__item-title">{% if companyInfo %}{{ companyInfo.product_delivers_total }}{% else %}200{% endif %}+</div>
+                            <div class="landing-rex__item-value">software products delivered</div>
+                        </div>
+                        <div class="landing-rex__item" animation="fade-up" animation-delay=".15">
+                            <div class="landing-rex__item-title">98%</div>
+                            <div class="landing-rex__item-value">app reliability rate</div>
+                        </div>
+                        <div class="landing-rex__item" animation="fade-up" animation-delay=".15">
+                            <div class="landing-rex__item-title">{% if companyInfo %}{{ companyInfo.clients_total_number }}{% else %}50{% endif %}+</div>
+                            <div class="landing-rex__item-value">clients around the globe</div>
+                        </div>
+                        <div class="landing-rex__item" animation="fade-up" animation-delay=".15">
+                            <div class="landing-rex__item-title">100+</div>
+                            <div class="landing-rex__item-value">thousands of user enjoy our apps</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% block precious_clients %}
+<div class="block" id="clients" cta-text="Get your optimum solution">
+            <div class="block__content">
+                <h2 class="block__title" animation="fade-up" animation-delay=".15">Hungry for every
+                    client’s success</h2>
+                <div class="clients" animation="fade-up" animation-delay=".15">
+                    <div class="clients__list">
+                        {% if clientDetails %}
+                            {% for x in clientDetails %}
+                                <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
+                                     style="width: 150px;height: 150px"/>
+                            {% endfor %}
+                        {% endif %}
+                        <div class="clients__append"></div>
+                    </div>
+                </div>
+            </div>
+            {% if clientDetails %}
+                <div class="block__content block__content_black block__content_auto block__content_scroll-tablet">
+                    <div class="reviews" animation="fade-up" animation-delay=".15">
+                        <div class="reviews__content">
+                            {% for client in clientDetails %}
+                                {% if client.client_quote %}
+                                    {% if forloop.counter == 1 %}
+                                        <div class="reviews__item" style="visibility: visible;">
+                                            <div class="reviews__title">
+                                                {{ client.client_quote }}
+                                            </div>
+                                            <div class="reviews__author">
+                                                <div class="reviews__author-image">
+                                                    <img src="{{ client.client_logo.url }}"
+                                                         alt="{{ client.client_name }}"></div>
+                                                <div class="reviews__author-info">
+                                                    <div class="reviews__author-name">{{ client.client_name }}</div>
+                                                    <div class="reviews__author-position">{{ client.client_mail }}</div>
+                                                    <div class="reviews__author-company">{{ client.client_address }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        <div class="reviews__item">
+                                            <div class="reviews__title">
+                                                {{ client.client_quote }}
+                                            </div>
+                                            <div class="reviews__author">
+                                                <div class="reviews__author-image">
+                                                    <img src="{{ client.client_logo.url }}"
+                                                         alt="{{ client.client_name }}"></div>
+                                                <div class="reviews__author-info">
+                                                    <div class="reviews__author-name">{{ client.client_name }}</div>
+                                                    <div class="reviews__author-position">{{ client.client_mail }}</div>
+                                                    <div class="reviews__author-company">{{ client.client_address }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+{% endblock precious_clients %}
+
+{% block project_content %}
+{% if projectDetails %}
+                <div class="block block_z-index-up block_relative" id="projects"
+                     cta-text="get your project's optimum solution">
+                    <div class="block__content">
+                        <div class="post-title">
+                            <h2 class="block__title post-title__title" animation="fade-up" animation-delay=".15">
+                                Our Latest projects
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="block__scroll block__scroll_tablet" scroll-destination="posts" animation="fade-up"
+                         animation-delay=".15">
+                        <div class="posts-list posts-list_slider">
+                            <svg style="position: absolute;pointer-events: none" width="0" height="0">
+                                <defs>
+                                    <clipPath id="thinking-mask" clipPathUnits="objectBoundingBox">
+                                        <rect x="0" y="0" width="1" height="1"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            {% for project in projectDetails %}
+                                {% if forloop.counter == 1 %}
+                                <div class="post post_slider" style="position: relative;visibility: visible">
+                                    <div class="post__info">
+                                        <div class="post__company">{{ project.project_client }}</div>
+                                        <a class="post__title arrow-link arrow-link_fixed-opacity"
+                                           href="{% url 'project-details' project.project_slug %}"><span
+                                                class="arrow-link__text">{{ project.project_title }}<span
+                                                class="arrow-link__arrow"><span
+                                                class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
+                                                class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
+                                    </div>
+                                    <a class="post__image" loading="lazy"
+                                       href="{% url 'project-details' project.project_slug %}">
+                                        <img loading="lazy" src="{{ project.project_preview.url }}"
+                                             alt="{{ project.project_title }}">
+                                    </a>
+                                </div>
+                                {% else %}
+                                    <div class="post post_slider">
+                                    <div class="post__info">
+                                        <div class="post__company">{{ project.project_client }}</div>
+                                        <a class="post__title arrow-link arrow-link_fixed-opacity"
+                                           href="{% url 'project-details' project.project_slug %}"><span
+                                                class="arrow-link__text">{{ project.project_title }}<span
+                                                class="arrow-link__arrow"><span
+                                                class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
+                                                class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
+                                    </div>
+                                    <a class="post__image" loading="lazy"
+                                       href="{% url 'project-details' project.project_slug %}">
+                                        <img loading="lazy" src="{{ project.project_preview.url }}"
+                                             alt="{{ project.project_title }}">
+                                    </a>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                            <div class="posts-list__controlls">
+                                <div class="posts-list__ui">
+                                    <div class="posts-list__button posts-list__button_left" id="post-prev-item">
+                                        <svg class="icon">
+                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="posts-list__button posts-list__button_right" id="post-next-item">
+                                        <svg class="icon">
+                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+{% endblock project_content %}
+    </div>
+{% endblock main_content %}
+

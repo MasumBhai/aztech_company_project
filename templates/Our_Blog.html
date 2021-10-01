@@ -1,0 +1,63 @@
+{% extends 'base_for_blog.html' %}
+{% load static %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+{% block post_content %}
+    {% for post in post_list %}
+        <div class="post-preview">
+            <a href="{% url 'blog-details' post.slug %}">
+                <h2 class="post-title">
+                    {{ post.title }}
+                </h2>
+                <h3 class="post-subtitle">
+                    {{ post.content|slice:":180" }}
+                </h3>
+            </a>
+            <p class="post-meta">Posted by: {{ post.author }} | at: {{ post.created_on }} </p>
+            <img class="img-fluid" src="{{ post.postImage.url }}" alt="{{ post.title }}"
+                 style="width: 640px;height: 320px"/>
+        </div>
+        <hr class="my-4"/>
+    {% endfor %}
+    <div class="clearfix">
+        {% if post_list.has_other_pages %}
+            <nav aria-label="Page navigation conatiner">
+                <ul class="pagination justify-content-center">
+                    {% if post_list.has_previous %}
+                        <li><a href="?page={{ post_list.previous_page_number }}" class="page-link">« PREV </a>
+                        </li>
+                    {% endif %}
+                    {% if post_list.has_next %}
+                        <li><a href="?page={{ post_list.next_page_number }}" class="page-link"> NEXT »</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        {% endif %}
+    </div>
+{% endblock post_content %}
+
+{% block postForm %}
+    <div class="card-body">
+        {% if post_Success %}
+            <div class="alert alert-success" role="alert">
+                Your Post is awaiting for moderation by site admin
+            </div>
+        {% elif recaptchaError %}
+            <div class="alert alert-danger" role="alert">
+                Maybe.. You skipped Recaptcha, that's why your post is not uploaded. Try again please.
+            </div>
+        {% else %}
+            <h3>Want to add your post?</h3>
+            <form method="post" style="margin-top: 1.3em;" class=" form form-control" enctype="multipart/form-data">
+                <div class="form-row">
+                    <div class="form-group green-border-focus">
+                        {{ post_form | crispy}}
+                        {% csrf_token %}
+                        <div class="g-recaptcha" data-sitekey="6LeI5pwbAAAAACjb1VO2NICpuBD89U9gcv9mvqnO"></div>
+                        <button type="submit" class="btn btn-outline-success" name="Post_Submitted">Submit</button>
+                    </div>
+                </div>
+            </form>
+        {% endif %}
+    </div>
+{% endblock postForm %}

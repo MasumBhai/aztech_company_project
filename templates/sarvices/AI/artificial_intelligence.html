@@ -1,0 +1,780 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_tag %}
+    <body class="page-template page-template-templates page-template-landing page-template-templateslanding-php page page-id-3944 page-child parent-pageid-1184">
+{% endblock body_tag %}
+
+{% block main_content %}
+    <div class="wrapper">
+        <div class="block block_slide-min block_nav block_yellow block_overflow" id="header"
+             cta-text="Talk to our AI developers" style="background-color: #040819">
+            <div class="block__content post-block__content post-block__content_medium flex">
+                <div class="landing-header landing-header_new">
+                    <div class="landing-header__background-picture landing-header__background-picture_desktop">
+                        <img class="landing-header__background-picture-desktop"
+                             src="{% static 'images/AI/AI-preview-1.jpg' %}"
+                             alt="Artificial intelligence services and solutions">
+                        <img class="landing-header__background-picture-mobile"
+                             src="{% static 'images/AI/AI-preview-1.jpg' %}"
+                             alt="Artificial intelligence services and solutions">
+                    </div>
+                    <div class="landing-header__content">
+                        <div class="landing-header__info">
+                            <h1 class="landing-header__title title title_small" style="color: #ffffff;"
+                                animation="fade-up"
+                                animation-delay=".15">Artificial Intelligence
+                                solutions and AI
+                                consulting services
+                            </h1>
+                            <div class="landing-header__text" animation="fade-up" animation-delay=".25"
+                                 style="color: #ffffff">From image analysis and human activity recognition to semantic
+                                search and manual task automation, we provide AI consulting services and develop custom
+                                artificial intelligence solutions that give you a competitive edge
+                            </div>
+                            <button class="landing-header__button button arrow-link arrow-link arrow-link_fixed-opacity"
+                                    id="cta-header" data-popup="#form" href="#form" animation="fade-up"
+                                    animation-delay=".35"><span class="arrow-link__text">Talk to our AI <span
+                                    style="white-space: nowrap">developers<span class="arrow-link__arrow"><span
+                                    class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span
+                                    class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span>
+                            </button>
+                        </div>
+                        <div class="landing-header__picture landing-header__picture_mobile"><img
+                                src="{% static 'images/AI/AI-preview-1.jpg' %}"
+                                alt="Artificial intelligence services and solutions"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="ai-know-how" cta-text="">
+            <div class="block__content block__content_half post-block__content post-block__content_medium">
+                <div class="landing-info" animation="fade-up" animation-delay=".15">
+                    <h2 class="landing-info__title title title_micro title_mb" animation="fade-up"
+                        animation-delay=".15">Our AI know-how </h2>
+                    <div class="landing-info__text landing-info__text_mini">
+                        <p class="landing-subheader__text landing-subheader__text_small">
+                            An AI company with {% if companyInfo %}{{ companyInfo.years_of_experiences }}{% else %}05{% endif %} years of experience, we will help you harness machine learning algorithms and the latest artificial intelligence tools and technologies for exponential growth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="ai-know-how" cta-text="Discuss your AI concept">
+            <div class="block__content post-block__content post-block__content_medium" style="padding-top: 0">
+                <div class="landing-platforms">
+                    <div class="landing-platforms__item" animation="fade-up" animation-delay="0.15">
+                        <img class="landing-platforms__item-image"
+                             src="https://itrexgroup.com/wp-content/uploads/2021/01/ML.svg" alt="machine learning"
+                             role="presentation"/>
+                        <div class="landing-platforms__item-title">Machine Learning</div>
+                        <div class="landing-platforms__item-text">Applying our expertise in supervised, unsupervised,
+                            and
+                            reinforcement machine learning, neural networks, and deep learning, we build smart systems
+                            that
+                            make best decisions with little to no human help.
+                        </div>
+                    </div>
+                    <div class="landing-platforms__item" animation="fade-up" animation-delay="0.25">
+                        <img class="landing-platforms__item-image"
+                             src="https://itrexgroup.com/wp-content/uploads/2021/01/NLP.svg"
+                             alt="Natural Language Processing" role="presentation"/>
+                        <div class="landing-platforms__item-title">Natural Language Processing</div>
+                        <div class="landing-platforms__item-text">We build real-time speech recognition and
+                            conversational
+                            AI software solutions that drive user experience way forward.
+                        </div>
+                    </div>
+                    <div class="landing-platforms__item" animation="fade-up" animation-delay="0.35">
+                        <img class="landing-platforms__item-image"
+                             src="https://itrexgroup.com/wp-content/uploads/2021/01/CV.svg" alt="Computer Vision"
+                             role="presentation"/>
+                        <div class="landing-platforms__item-title">Computer Vision</div>
+                        <div class="landing-platforms__item-text">From biometric authentication to CCTV monitoring and
+                            live
+                            video analysis, we develop sophisticated solutions that accurately recognize and interpret
+                            visual information.
+                        </div>
+                    </div>
+                </div>
+                <button class="block__button button arrow-link arrow-link arrow-link_fixed-opacity space space_hmt"
+                        id="cta-ai-know-how" data-popup="#form" href="#form" animation="fade-up"
+                        animation-delay=".15"><span
+                        class="arrow-link__text">Discuss your AI <span style="white-space: nowrap">concept<span
+                        class="arrow-link__arrow"><span
+                        class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span
+                        class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span></button>
+            </div>
+        </div>
+        <div class="block" id="ai-solutions">
+            <div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
+                <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/AI-solutions-1.jpg" alt=""
+                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/AI-solutions-1-1920x667.jpg 1920w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-solutions-1-1440x500.jpg 1440w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-solutions-1-1024x356.jpg 1024w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-solutions-1-720x250.jpg 720w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-solutions-1-512x178.jpg 512w"
+                     sizes="100vw"
+                     alt="ai development services">
+                <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up"
+                    animation-delay=".15">Artificial Intelligence
+                    <span class="yellow">solutions in focus</span></h2>
+            </div>
+        </div>
+        <div class="block block_yellow" id="ai-solutions" cta-text="">
+            <div class="block__content block__content_half post-block__content post-block__content_medium">
+                <div class="landing-subheader" animation="fade-up" animation-delay=".15">
+                    <div class="landing-subheader__content">
+                        <p class="landing-subheader__text landing-subheader__text_small">
+                            We know for sure that artificial intelligence has many possibilities to transform your business. The use cases below are just a few examples of how our AI consulting and development services forward business efficiency and improve the bottom line.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="" cta-text="">
+            <div class="block__content post-block__content_medium">
+                <div class="landing-info">
+                    <h3 class="landing-info__title title title_micro title_mb" animation="fade-up"
+                        animation-delay=".15">AI
+                        solutions to analyze and understand the physical world</h3>
+                    <div class="landing-info__content landing-info__content_rows landing-info__content_columns_4">
+                        <div class="landing-info__row" animation="fade-up" animation-delay=".15">
+                            <span class="landing-info__name">Manual task automation</span>
+                            <span class="landing-info__name">Facial recognition</span>
+                            <span class="landing-info__name">Image data labelling</span>
+                            <span class="landing-info__name">Human activity recognition</span>
+                            <span class="landing-info__value landing-info__value_no-border" style="color: #9A9A9A">Optical character recognition and data capturing solutions for extracting information from any documents to eliminate manual processes</span>
+                            <span class="landing-info__value landing-info__value_no-border" style="color: #9A9A9A">Person identification based on live captures and digital images for biometric authentication, access control, and other security purposes</span>
+                            <span class="landing-info__value landing-info__value_no-border" style="color: #9A9A9A">Deep learning models that automatically identify and tag people and objects in pictures and videos</span>
+                            <span class="landing-info__value landing-info__value_no-border" style="color: #9A9A9A">Intelligent models for human posture recognition used in sports training, surveillance, healthcare, and more</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="" cta-text="Let’s build your AI solution">
+            <div class="block__content post-block__content_medium" style="padding-top: 0">
+                <div class="landing-info">
+                    <h3 class="landing-info__title title title_micro title_mb" animation="fade-up"
+                        animation-delay=".15">AI
+                        solutions to grasp human language and emotions</h3>
+                    <div class="landing-info__content landing-info__content_rows landing-info__content_columns_4">
+                        <div class="landing-info__row" animation="fade-up" animation-delay=".15">
+                            <span class="landing-info__name">Speech recognition</span>
+                            <span class="landing-info__name">Semantic search</span>
+                            <span class="landing-info__name">Text classification</span>
+                            <span class="landing-info__name">Emotion recognition</span>
+                            <span class="landing-info__value landing-info__value_no-border" style="color: #9A9A9A">Real-time speech processing and voice interfaces to automate routine tasks and take user experience to the next level</span>
+                            <span class="landing-info__value landing-info__value_no-border" style="color: #9A9A9A">Advanced, NLP-powered algorithms to dig up search results that match a user’s intent best</span>
+                            <span class="landing-info__value landing-info__value_no-border" style="color: #9A9A9A">NLP-powered categorization of emails, posts, and other textual information for sentiment analysis, topic labeling, and spam detection</span>
+                            <span class="landing-info__value landing-info__value_no-border" style="color: #9A9A9A">Analyzing images and videos to detect and recognize emotions and better understand your customers’ response to your products and services</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="block__button button arrow-link arrow-link arrow-link_fixed-opacity space space_hmt"
+                        id="cta-" data-popup="#form" href="#form" animation="fade-up" animation-delay=".15"><span
+                        class="arrow-link__text">Let’s build your AI <span style="white-space: nowrap">solution<span
+                        class="arrow-link__arrow"><span
+                        class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span
+                        class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span></button>
+            </div>
+        </div>
+        <div class="block" id="ai-industries">
+            <div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
+                <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/AI-industry-3.jpg" alt=""
+                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/AI-industry-3-1920x667.jpg 1920w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-industry-3-1440x500.jpg 1440w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-industry-3-1024x356.jpg 1024w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-industry-3-720x250.jpg 720w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-industry-3-512x178.jpg 512w"
+                     sizes="100vw"
+                     alt="Artificial Intelligence Solutions & AI Consulting Services">
+                <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up"
+                    animation-delay=".15">Industry-specific AI consulting
+                    <span class="yellow">and development services </span></h2>
+            </div>
+        </div>
+        <div class="block block_yellow" id="ai-industries" cta-text="">
+            <div class="block__content block__content_half post-block__content post-block__content_medium">
+                <div class="landing-subheader" animation="fade-up" animation-delay=".15">
+                    <div class="landing-subheader__content">
+                        <p class="landing-subheader__text landing-subheader__text_small">
+                            Using our knowledge of industry-specific business processes and challenges, we tailor our artificial intelligence solutions to your particular needs. Whether you want to automate back-office operations, boost customer experience, improve security, or launch a truly innovative software product, our AI developers are up for the challenge.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="ai-industries" cta-text="Let’s solve your challenges with AI">
+            <div class="block__content post-block__content post-block__content_medium">
+                <div class="landing-accordion">
+                    <div class="landing-accordion__col">
+                        <div class="accordion accordion_small accordion_wide">
+                            <div class="accordion__item">
+                                <div class="accordion__header">
+                                    <svg class="accordion__icon">
+                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#heart"></use>
+                                    </svg>
+                                    <div class="accordion__title">Healthcare & Biotech</div>
+                                    <div class="accordion__indicator accordion__indicator_cross">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="accordion__content" style="height: 0">
+                                    <div class="accordion__content-inner">
+                                        <div class="accordion__list-line">Improve diagnostics and care delivery, enhance
+                                            patient-doctor communication, and optimize hospital operations and
+                                            population
+                                            health management with <a class="link" href="{% url 'sAI_health' %}"
+                                                                      target="_blank" rel="noopener noreferrer">AI-powered
+                                                healthcare solutions</a>.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion__item">
+                                <div class="accordion__header">
+                                    <svg class="accordion__icon">
+                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#finance"></use>
+                                    </svg>
+                                    <div class="accordion__title">Finance</div>
+                                    <div class="accordion__indicator accordion__indicator_cross">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="accordion__content" style="height: 0">
+                                    <div class="accordion__content-inner">
+                                        <div class="accordion__list-line">Automate banking and financial processes,
+                                            reduce
+                                            operational costs, enhance security, and enjoy other benefits of AI in
+                                            banking
+                                            and finance.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion__item">
+                                <div class="accordion__header">
+                                    <svg class="accordion__icon">
+                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#bag"></use>
+                                    </svg>
+                                    <div class="accordion__title">Retail & Ecommerce</div>
+                                    <div class="accordion__indicator accordion__indicator_cross">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="accordion__content" style="height: 0">
+                                    <div class="accordion__content-inner">
+                                        <div class="accordion__list-line">Make faster decisions, enjoy accurate demand
+                                            forecasting, streamline inventory management, optimize the flow of goods,
+                                            and
+                                            better understand your customers with <a class="link"
+                                                                                     href="{% url 'sAI_retail' %}"
+                                                                                     target="_blank"
+                                                                                     rel="noopener noreferrer">AI for
+                                                retail</a>.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="landing-accordion__col">
+                        <div class="accordion accordion_small accordion_wide">
+                            <div class="accordion__item">
+                                <div class="accordion__header">
+                                    <svg class="accordion__icon">
+                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#truk"></use>
+                                    </svg>
+                                    <div class="accordion__title">Supply Chain & Logistics</div>
+                                    <div class="accordion__indicator accordion__indicator_cross">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="accordion__content" style="height: 0">
+                                    <div class="accordion__content-inner">
+                                        <div class="accordion__list-line">Gain total control over shipments, reduce
+                                            paperwork, and simplify vendor communication, deliveries, and warehousing
+                                            operations with AI-enhanced software.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion__item">
+                                <div class="accordion__header">
+                                    <svg class="accordion__icon">
+                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#education"></use>
+                                    </svg>
+                                    <div class="accordion__title">Education</div>
+                                    <div class="accordion__indicator accordion__indicator_cross">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="accordion__content" style="height: 0">
+                                    <div class="accordion__content-inner">
+                                        <div class="accordion__list-line">Personalize learning programs, produce smart
+                                            content, automate administrative tasks, and provide access to education for
+                                            students with special needs with <a class="link"
+                                                                                href="{% url 'sAI_education' %}"
+                                                                                target="_blank"
+                                                                                rel="noopener noreferrer">AI in education</a>.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="block__button button arrow-link arrow-link arrow-link_fixed-opacity space space_hmt"
+                        id="cta-ai-industries" data-popup="#form" href="#form" animation="fade-up"
+                        animation-delay=".15">
+                <span class="arrow-link__text">Let’s solve your challenges with <span
+                        style="white-space: nowrap">AI<span class="arrow-link__arrow"><span
+                        class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span
+                        class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span></button>
+            </div>
+        </div>
+        <div class="block" id="ai-software-development" cta-text="Contact us">
+            <div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
+                <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/AI-development-1.jpg" alt=""
+                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/AI-development-1-1920x667.jpg 1920w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-development-1-1440x500.jpg 1440w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-development-1-1024x356.jpg 1024w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-development-1-720x250.jpg 720w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-development-1-512x178.jpg 512w"
+                     sizes="100vw"
+                     alt="AI consulting and development">
+                <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up"
+                    animation-delay=".15">Our approach to AI consulting
+                    <span class="yellow">and AI software development</span></h2>
+            </div>
+        </div>
+        <div class="block block_yellow" id="ai-software-development" cta-text="Contact us">
+            <div class="block__content block__content_half post-block__content post-block__content_medium">
+                <div class="landing-subheader" animation="fade-up" animation-delay=".15">
+                    <div class="landing-subheader__content">
+                        <p class="landing-subheader__text landing-subheader__text_small">
+                            We provide end-to-end AI consulting and development services, from preparing data for artificial intelligence algorithms to rolling out your system to thousands of users. We can also help you customize third-party AI as a Service solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="ai-software-development" cta-text="Contact us">
+            <div class="block__content">
+                <div class="post-block__content post-block__content_text">
+                    <div class="landing-tabs" animation="fade-up" animation-delay=".15">
+                        <div class="landing-tabs__scroll">
+                            <div class="landing-tabs__header landing-tabs__header_opened">
+                                <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1" active-tab>
+                                    <svg class="landing-tabs__logo">
+                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#AI"></use>
+                                    </svg>
+                                    <div>Discovery</div>
+                                </h3>
+                                <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1">
+                                    <svg class="landing-tabs__logo">
+                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#bigdata"></use>
+                                    </svg>
+                                    <div>Design</div>
+                                </h3>
+                                <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1">
+                                    <svg class="landing-tabs__logo">
+                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#ML"></use>
+                                    </svg>
+                                    <div>POC</div>
+                                </h3>
+                                <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1">
+                                    <svg class="landing-tabs__logo">
+                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#iot"></use>
+                                    </svg>
+                                    <div>Implementation</div>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="landing-tabs__item" style="visibility: visible; position: relative" active-tab>
+                            <div class="landing-tabs__content">
+                                <div class="landing-tabs__text" style="text-align: center">We take a deep dive into your
+                                    data, challenges, and IT capabilities to spot new business opportunities, nail down
+                                    use
+                                    cases, and map the AI software development journey
+                                </div>
+                            </div>
+                        </div>
+                        <div class="landing-tabs__item" style="visibility: hidden; position: absolute">
+                            <div class="landing-tabs__content">
+                                <div class="landing-tabs__text" style="text-align: center">Next, we clarify the AI
+                                    solution’s feature set, design the architecture, and choose the right tools and
+                                    technologies
+                                </div>
+                            </div>
+                        </div>
+                        <div class="landing-tabs__item" style="visibility: hidden; position: absolute">
+                            <div class="landing-tabs__content">
+                                <div class="landing-tabs__text" style="text-align: center">While developing a Proof of
+                                    Concept, we train and tune ML models and AI algorithms, continuously testing them
+                                    for
+                                    viability
+                                </div>
+                            </div>
+                        </div>
+                        <div class="landing-tabs__item" style="visibility: hidden; position: absolute">
+                            <div class="landing-tabs__content">
+                                <div class="landing-tabs__text" style="text-align: center">We engineer the application
+                                    relying on best artificial intelligence development practices, integrate the ML
+                                    models,
+                                    and launch your solution into a desired environment
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-block__content post-block__content_text">
+                    <button class="block__button button arrow-link arrow-link arrow-link_fixed-opacity space space_hmt"
+                            id="cta-ai-software-development" data-popup="#form" href="#form" animation="fade-up"
+                            animation-delay=".15"><span class="arrow-link__text">Contact <span
+                            style="white-space: nowrap">us<span
+                            class="arrow-link__arrow"><span
+                            class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span
+                            class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="why-itrex" cta-text="Talk to our AI experts">
+            <div class="block__content-x">
+                <div class="landing-list post-block__content post-block__content_text landing-list_whiteyellow">
+                    <div class="landing-list__title" animation="fade-up" animation-delay=".15">Why work with {% if companyInfo %}{{ companyInfo.company_name }}{% else %}us{% endif %}?
+                    </div>
+                    <div class="landing-list__list">
+                        <div class="landing-list__col">
+                            <div class="landing-list__item" animation="fade-up" animation-delay="0">
+                                <svg class="landing-list__item-icon">
+                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+                                </svg>
+                                <div class="landing-list__item-text"><b>Vendor-agnostic.</b>
+                                    We aren’t tied to any providers, so we only recommend AI services and technologies
+                                    that we believe are right for you.
+                                </div>
+                            </div>
+                            <div class="landing-list__item" animation="fade-up" animation-delay="0.2">
+                                <svg class="landing-list__item-icon">
+                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+                                </svg>
+                                <div class="landing-list__item-text"><b>Top AI developers with niche skills.</b>
+                                    With our {% if companyInfo %}{{ companyInfo.experts_hired_total }}{% else %}35{% endif %}-strong team, we can bring in senior analysts, elite developers, and our
+                                    R&D department when needed.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="landing-list__col">
+                            <div class="landing-list__item" animation="fade-up" animation-delay="0.1">
+                                <svg class="landing-list__item-icon">
+                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+                                </svg>
+                                <div class="landing-list__item-text"><b>Diverse expertise.</b>
+                                    An AI company with {% if companyInfo %}{{ companyInfo.years_of_experiences }}{% else %}05{% endif %} years of experience, we worked on hundreds of projects
+                                    across in idustries, from ecommerce and fintech to healthcare and real estate, and
+                                    beyond.
+                                </div>
+                            </div>
+                            <div class="landing-list__item" animation="fade-up" animation-delay="0.3">
+                                <svg class="landing-list__item-icon">
+                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+                                </svg>
+                                <div class="landing-list__item-text"><b>Proven track record.</b>
+                                    We’ve successfully completed {% if companyInfo %}{{ companyInfo.product_delivers_total }}{% else %}60{% endif %}+ projects and served {% if companyInfo %}{{ companyInfo.clients_total_number }}{% else %}80{% endif %}+ clients across the globe.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-block__content post-block__content_text">
+                    <button class="block__button button arrow-link arrow-link arrow-link_fixed-opacity landing-list__button"
+                            id="cta-why-itrex"
+                            data-popup="#form" href="#form" animation="fade-up" animation-delay=".15"><span
+                            class="arrow-link__text">Talk to our AI <span style="white-space: nowrap">experts<span
+                            class="arrow-link__arrow"><span
+                            class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span
+                            class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="ai-technologies">
+            <div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
+                <img data-src="https://itrexgroup.com/wp-content/uploads/2021/01/AI-tech-1.jpg" alt=""
+                     srcset="https://itrexgroup.com/wp-content/uploads/2021/01/AI-tech-1-1920x667.jpg 1920w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-tech-1-1440x500.jpg 1440w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-tech-1-1024x356.jpg 1024w,
+                     https://itrexgroup.com/wp-content/uploads/2021/01/AI-tech-1-720x250.jpg 720w,
+                     ttps://itrexgroup.com/wp-content/uploads/2021/01/AI-tech-1-512x178.jpg 512w"
+                     sizes="100vw"
+                     alt="ai software development">
+                <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up"
+                    animation-delay=".15">AI development
+                    <span class="yellow">tech stack</span></h2>
+            </div>
+        </div>
+        <div class="block" id="ai-technologies" cta-text="">
+            <div class="block__content">
+                <div class="post-block__content post-block__content_text">
+                    <div class="logo-grid">
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/Spark-wide.svg"
+     alt="apache spark logo">
+</span>
+                        </div>
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/tensorflow-bw.svg"
+     alt="tensor flow logo">
+</span>
+                        </div>
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/theano.svg" alt="theano logo">
+</span>
+                        </div>
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/caffe.svg" alt="caffe logo">
+</span>
+                        </div>
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/keras-bw.svg" alt="keras logo">
+</span>
+                        </div>
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/GENSIM.svg" alt="gensim logo">
+</span>
+                        </div>
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/Scikit-w.svg" alt="Scikit logo">
+</span>
+                        </div>
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/Spacy-w.svg" alt="Spacy logo">
+</span>
+                        </div>
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/Amazon-ML-2.svg"
+     alt="Amazon AWS machine learning logo">
+</span>
+                        </div>
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/Azure-ML-3.svg" alt="Azure ML logo">
+</span>
+                        </div>
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/python-w.svg" alt="python logo">
+</span>
+                        </div>
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/scala-wide.svg" alt="scala logo">
+</span>
+                        </div>
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/Cw.svg" alt="C++ logo">
+</span>
+                        </div>
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/Java-big-w.svg" alt="Java logo">
+</span>
+                        </div>
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/r-logo.svg" alt="r logo">
+</span>
+                        </div>
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/PyTorch.svg" alt="PyTorch logo">
+</span>
+                        </div>
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/OpenCV-bw-big.svg"
+     alt="OpenCV logo">
+</span>
+                        </div>
+                        <div class="logo-grid__item">
+<span class="logo-grid__item-inner">
+<img class="logo-grid__logo" src="https://itrexgroup.com/wp-content/uploads/2020/12/mxnet-bw-sm.svg" alt="mxnet logo">
+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% block precious_clients %}
+<div class="block" id="clients" cta-text="Get your optimum solution">
+            <div class="block__content">
+                <h2 class="block__title" animation="fade-up" animation-delay=".15">Hungry for every
+                    client’s success</h2>
+                <div class="clients" animation="fade-up" animation-delay=".15">
+                    <div class="clients__list">
+                        {% if clientDetails %}
+                            {% for x in clientDetails %}
+                                <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
+                                     style="width: 150px;height: 150px"/>
+                            {% endfor %}
+                        {% endif %}
+                        <div class="clients__append"></div>
+                    </div>
+                </div>
+            </div>
+            {% if clientDetails %}
+                <div class="block__content block__content_black block__content_auto block__content_scroll-tablet">
+                    <div class="reviews" animation="fade-up" animation-delay=".15">
+                        <div class="reviews__content">
+                            {% for client in clientDetails %}
+                                {% if client.client_quote %}
+                                    {% if forloop.counter == 1 %}
+                                        <div class="reviews__item" style="visibility: visible;">
+                                            <div class="reviews__title">
+                                                {{ client.client_quote }}
+                                            </div>
+                                            <div class="reviews__author">
+                                                <div class="reviews__author-image">
+                                                    <img src="{{ client.client_logo.url }}"
+                                                         alt="{{ client.client_name }}"></div>
+                                                <div class="reviews__author-info">
+                                                    <div class="reviews__author-name">{{ client.client_name }}</div>
+                                                    <div class="reviews__author-position">{{ client.client_mail }}</div>
+                                                    <div class="reviews__author-company">{{ client.client_address }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        <div class="reviews__item">
+                                            <div class="reviews__title">
+                                                {{ client.client_quote }}
+                                            </div>
+                                            <div class="reviews__author">
+                                                <div class="reviews__author-image">
+                                                    <img src="{{ client.client_logo.url }}"
+                                                         alt="{{ client.client_name }}"></div>
+                                                <div class="reviews__author-info">
+                                                    <div class="reviews__author-name">{{ client.client_name }}</div>
+                                                    <div class="reviews__author-position">{{ client.client_mail }}</div>
+                                                    <div class="reviews__author-company">{{ client.client_address }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+{% endblock precious_clients %}
+
+{% block project_content %}
+{% if projectDetails %}
+                <div class="block block_z-index-up block_relative" id="projects"
+                     cta-text="get your project's optimum solution">
+                    <div class="block__content">
+                        <div class="post-title">
+                            <h2 class="block__title post-title__title" animation="fade-up" animation-delay=".15">
+                                Our Latest projects
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="block__scroll block__scroll_tablet" scroll-destination="posts" animation="fade-up"
+                         animation-delay=".15">
+                        <div class="posts-list posts-list_slider">
+                            <svg style="position: absolute;pointer-events: none" width="0" height="0">
+                                <defs>
+                                    <clipPath id="thinking-mask" clipPathUnits="objectBoundingBox">
+                                        <rect x="0" y="0" width="1" height="1"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            {% for project in projectDetails %}
+                                {% if forloop.counter == 1 %}
+                                <div class="post post_slider" style="position: relative;visibility: visible">
+                                    <div class="post__info">
+                                        <div class="post__company">{{ project.project_client }}</div>
+                                        <a class="post__title arrow-link arrow-link_fixed-opacity"
+                                           href="{% url 'project-details' project.project_slug %}"><span
+                                                class="arrow-link__text">{{ project.project_title }}<span
+                                                class="arrow-link__arrow"><span
+                                                class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
+                                                class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
+                                    </div>
+                                    <a class="post__image" loading="lazy"
+                                       href="{% url 'project-details' project.project_slug %}">
+                                        <img loading="lazy" src="{{ project.project_preview.url }}"
+                                             alt="{{ project.project_title }}">
+                                    </a>
+                                </div>
+                                {% else %}
+                                    <div class="post post_slider">
+                                    <div class="post__info">
+                                        <div class="post__company">{{ project.project_client }}</div>
+                                        <a class="post__title arrow-link arrow-link_fixed-opacity"
+                                           href="{% url 'project-details' project.project_slug %}"><span
+                                                class="arrow-link__text">{{ project.project_title }}<span
+                                                class="arrow-link__arrow"><span
+                                                class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
+                                                class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
+                                    </div>
+                                    <a class="post__image" loading="lazy"
+                                       href="{% url 'project-details' project.project_slug %}">
+                                        <img loading="lazy" src="{{ project.project_preview.url }}"
+                                             alt="{{ project.project_title }}">
+                                    </a>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                            <div class="posts-list__controlls">
+                                <div class="posts-list__ui">
+                                    <div class="posts-list__button posts-list__button_left" id="post-prev-item">
+                                        <svg class="icon">
+                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="posts-list__button posts-list__button_right" id="post-next-item">
+                                        <svg class="icon">
+                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+{% endblock project_content %}
+    </div>
+{% endblock main_content %}
+
+{#{% block inner_body_content %}#}
+{#    <div class="cookie cookie_show" id="cookie">#}
+{#        <div class="cookie__message">#}
+{#            By using this website, you agree to our use of cookies. Read ITRex Group's#}
+{#            <a href="" target="_blank">Privacy Policy</a>#}
+{#        </div>#}
+{#        <div class="cookie__close" id="cookie-close"></div>#}
+{#    </div>#}
+{#{% endblock inner_body_content %}#}
+

@@ -1,0 +1,690 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_tag %}
+    <body class="page-template page-template-templates page-template-landing page-template-templateslanding-php page page-id-3394 page-child parent-pageid-1184"
+          xmlns="http://www.w3.org/1999/html">
+{% endblock body_tag %}
+
+{% block navbar_style %}
+    <style>
+.navigation > .navigation__logo,
+.navigation__item,
+.navigation__burger {
+color: #000000;
+}
+.navigation__item_active {
+color: #445aec;
+}
+@media only screen and (min-width: 961px) {
+.navigation__item:hover {
+color: #445aec;
+}
+}
+</style>
+{% endblock navbar_style %}
+
+{% block main_content %}
+    <div class="wrapper">
+<div class="block block_slide-min block_nav block_yellow block_overflow" id="header" cta-text="Hire app developers" style="background-color: #e0e0e0">
+<div class="block__content post-block__content post-block__content_medium flex">
+<div class="landing-header landing-header_new">
+<div class="landing-header__background-picture landing-header__background-picture_desktop">
+<img class="landing-header__background-picture-desktop" src="{% static 'images/app_development/mobileapp-header-1.jpg' %}" alt="">
+<img class="landing-header__background-picture-mobile" src="{% static 'images/app_development/mobile-app-header-mob2-1.jpg' %}" alt="">
+</div>
+<div class="landing-header__content">
+<div class="landing-header__info">
+<h1 class="landing-header__title title title_small" style="color: #0a0a0a;" animation="fade-up" animation-delay=".15">Mobile app
+development
+company </h1>
+<div class="landing-header__text" animation="fade-up" animation-delay=".25" style="color: #0a0a0a">We create custom mobile Apps that beat business challenges, generate revenue and hit millions of downloads
+</div>
+<button class="landing-header__button button arrow-link arrow-link arrow-link_fixed-opacity" id="cta-header" data-popup="#form" href="#form" animation="fade-up" animation-delay=".35"><span class="arrow-link__text">Hire app <span style="white-space: nowrap">developers<span class="arrow-link__arrow"><span class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span></button>
+</div>
+<div class="landing-header__picture landing-header__picture_mobile"><img src="{% static 'images/app_development/mobileapp-header-1.jpg' %}" alt=""></div>
+</div>
+</div>
+</div>
+</div>
+<div class="block" id="platforms" cta-text="">
+<div class="block__content block__content_half post-block__content post-block__content_medium">
+<div class="landing-info" animation="fade-up" animation-delay=".15">
+<h2 class="landing-info__title title title_micro title_mb" animation="fade-up" animation-delay=".15">Custom app solutions for any mobile platform</h2>
+<div class="landing-info__text landing-info__text_mini">We develop consumer and enterprise apps of any complexity that can handle a rapidly growing user base. Many of our clients’ products have expanded from an MVP to a full-featured app with millions of users.</div>
+</div>
+</div>
+</div>
+<div class="block" id="platforms" cta-text="Let’s build an app">
+<div class="block__content post-block__content post-block__content_medium" style="padding-top: 0">
+<div class="landing-platforms">
+<div class="landing-platforms__item" animation="fade-up" animation-delay="0.15">
+<img class="landing-platforms__item-image" src="{% static 'images/app_development/aindroid.svg' %}" alt="" role="presentation" />
+<div class="landing-platforms__item-title">Android</div>
+<div class="landing-platforms__item-text">Using innovative concepts and data-driven insights, we craft high-performance apps that rank high on Google Play and transform business.                               <div class="landing-platforms__item-tech">
+<div class="landing-platforms__item-tech-item">Java</div>
+<div class="landing-platforms__item-tech-item">Kotlin</div>
+</div>
+</div>
+</div>
+<div class="landing-platforms__item" animation="fade-up" animation-delay="0.25">
+<img class="landing-platforms__item-image" src="{% static 'images/app_development/ios-1.svg' %}" alt="" role="presentation" />
+<div class="landing-platforms__item-title">iOS</div>
+<div class="landing-platforms__item-text">We boast a legacy of great iOS apps for a range of business niches, which never leave the iPhones and iPads home screens of the delighted users.                              <div class="landing-platforms__item-tech">
+<div class="landing-platforms__item-tech-item">Swift</div>
+<div class="landing-platforms__item-tech-item">Objective-C</div>
+</div>
+</div>
+</div>
+<div class="landing-platforms__item" animation="fade-up" animation-delay="0.35">
+<img class="landing-platforms__item-image" src="{% static 'images/app_development/cross_platforms.svg' %}" alt="" role="presentation" />
+<div class="landing-platforms__item-title">Cross-platform</div>
+<div class="landing-platforms__item-text">Whatever the complexity, we bring the full benefit of cross-platform tech to the table, including lower costs, faster time to market and maximum reach.                              <div class="landing-platforms__item-tech">
+<div class="landing-platforms__item-tech-item">React Native</div>
+<div class="landing-platforms__item-tech-item">Flutter</div>
+<div class="landing-platforms__item-tech-item">Xamarin</div>
+</div>
+</div>
+</div>
+</div>
+<button class="block__button button arrow-link arrow-link arrow-link_fixed-opacity space space_hmt" id="cta-platforms" data-popup="#form" href="#form" animation="fade-up" animation-delay=".15"><span class="arrow-link__text">Let’s build an <span style="white-space: nowrap">app<span class="arrow-link__arrow"><span class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span></button>
+</div>
+</div>
+<div class="block block_whitesmoke block_overflow" id="cases" cta-text="Contact us">
+{% block project_content %}
+{% if projectDetails %}
+                <div class="block block_z-index-up block_relative" id="projects"
+                     cta-text="get your project's optimum solution">
+                    <div class="block__content">
+                        <div class="post-title">
+                            <h2 class="block__title post-title__title" animation="fade-up" animation-delay=".15">
+                                Our Latest projects
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="block__scroll block__scroll_tablet" scroll-destination="posts" animation="fade-up"
+                         animation-delay=".15">
+                        <div class="posts-list posts-list_slider">
+                            <svg style="position: absolute;pointer-events: none" width="0" height="0">
+                                <defs>
+                                    <clipPath id="thinking-mask" clipPathUnits="objectBoundingBox">
+                                        <rect x="0" y="0" width="1" height="1"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            {% for project in projectDetails %}
+                                {% if forloop.counter == 1 %}
+                                <div class="post post_slider" style="position: relative;visibility: visible">
+                                    <div class="post__info">
+                                        <div class="post__company">{{ project.project_client }}</div>
+                                        <a class="post__title arrow-link arrow-link_fixed-opacity"
+                                           href="{% url 'project-details' project.project_slug %}"><span
+                                                class="arrow-link__text">{{ project.project_title }}<span
+                                                class="arrow-link__arrow"><span
+                                                class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
+                                                class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
+                                    </div>
+                                    <a class="post__image" loading="lazy"
+                                       href="{% url 'project-details' project.project_slug %}">
+                                        <img loading="lazy" src="{{ project.project_preview.url }}"
+                                             alt="{{ project.project_title }}">
+                                    </a>
+                                </div>
+                                {% else %}
+                                    <div class="post post_slider">
+                                    <div class="post__info">
+                                        <div class="post__company">{{ project.project_client }}</div>
+                                        <a class="post__title arrow-link arrow-link_fixed-opacity"
+                                           href="{% url 'project-details' project.project_slug %}"><span
+                                                class="arrow-link__text">{{ project.project_title }}<span
+                                                class="arrow-link__arrow"><span
+                                                class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
+                                                class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
+                                    </div>
+                                    <a class="post__image" loading="lazy"
+                                       href="{% url 'project-details' project.project_slug %}">
+                                        <img loading="lazy" src="{{ project.project_preview.url }}"
+                                             alt="{{ project.project_title }}">
+                                    </a>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                            <div class="posts-list__controlls">
+                                <div class="posts-list__ui">
+                                    <div class="posts-list__button posts-list__button_left" id="post-prev-item">
+                                        <svg class="icon">
+                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="posts-list__button posts-list__button_right" id="post-next-item">
+                                        <svg class="icon">
+                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+{% endblock project_content %}
+<button class="block__button button arrow-link arrow-link arrow-link_fixed-opacity space space_hmt" id="cta-cases" data-popup="#form" href="#form" animation="fade-up" animation-delay=".15"><span class="arrow-link__text">Contact <span style="white-space: nowrap">us<span class="arrow-link__arrow"><span class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span></button>
+</div>
+<div class="block" id="end-to-end development">
+<div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
+<img data-src="https://itrexgroup.com/wp-content/uploads/2020/12/end-to-end-development.jpg" alt=""
+srcset="https://itrexgroup.com/wp-content/uploads/2020/12/end-to-end-development-1440x500.jpg 2880w,
+https://itrexgroup.com/wp-content/uploads/2020/12/end-to-end-development-1024x356.jpg 2048w,
+https://itrexgroup.com/wp-content/uploads/2020/12/end-to-end-development-720x250.jpg 720w,
+https://itrexgroup.com/wp-content/uploads/2020/12/end-to-end-development-512x178.jpg 512w"
+sizes="100vw"
+alt="">
+    <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up" animation-delay=".15">
+        End-to-end mobile<span class="yellow"></br>development services </span>
+    </h2>
+</div>
+</div>
+<div class="block" id="timeline" cta-text="Hire mobile app developers">
+<div class="block__content post-block__content post-block__content_medium">
+<div class="landing-timeline" animation="fade-up" animation-delay=".15">
+<div class="landing-timeline__headers">
+<button class="landing-timeline__header-item landing-timeline__header-item_active">Discovery & R&D</button>
+<button class="landing-timeline__header-item">UX/UI Design</button>
+<button class="landing-timeline__header-item">Development</button>
+<button class="landing-timeline__header-item">QA</button>
+<button class="landing-timeline__header-item">Launch</button>
+<button class="landing-timeline__header-item">Maintenance & Support</button>
+</div>
+<div class="landing-timeline__content">
+<div class="landing-timeline__content-item" style="position: static; visibility: visible">We translate your app idea into a feature setlist and draw up a detailed development roadmap that leads to the desired outcomes.
+</div>
+<div class="landing-timeline__content-item">To deliver an intuitive user experience and attractive look and feel for your app, we define personas, map user journeys and carefully test our assumptions.
+</div>
+<div class="landing-timeline__content-item">Our development strategies focus on creating a future-proof app architecture, selecting the right tech stack and using best development practices.
+</div>
+<div class="landing-timeline__content-item">Throughout development, we carry out comprehensive testing to make sure the app functions as intended across devices and screen resolutions.
+</div>
+<div class="landing-timeline__content-item">We release your app on the App Store or integrate it seamlessly into your enterprise tech infrastructure.
+</div>
+<div class="landing-timeline__content-item">Our apps come with continuous post-release support, which includes making improvements to meet the evolving needs of your business and users.</div>
+</div>
+</div>
+<button class="block__button button arrow-link arrow-link arrow-link_fixed-opacity space space_hmt" id="cta-timeline" data-popup="#form" href="#form" animation="fade-up" animation-delay=".15"><span class="arrow-link__text">Hire mobile app <span style="white-space: nowrap">developers<span class="arrow-link__arrow"><span class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span></button>
+</div>
+</div>
+<div class="block" id="industry-specific-solutions">
+<div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
+<img data-src="https://itrexgroup.com/wp-content/uploads/2020/12/industry.jpg" alt=""
+srcset="https://itrexgroup.com/wp-content/uploads/2020/12/industry-1440x500.jpg 2880w,
+https://itrexgroup.com/wp-content/uploads/2020/12/industry-1024x356.jpg 2048w,
+https://itrexgroup.com/wp-content/uploads/2020/12/industry-720x250.jpg 720w,
+https://itrexgroup.com/wp-content/uploads/2020/12/industry-512x178.jpg 512w"
+sizes="100vw"
+alt="mobile app solutions">
+    <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up" animation-delay=".15">
+        Delivering industry-specific<br><span class="yellow">mobile app solutions</span>
+    </h2>
+</div>
+</div>
+<div class="block block_yellow" id="" cta-text="">
+<div class="block__content block__content_half post-block__content post-block__content_medium">
+<div class="landing-subheader" animation="fade-up" animation-delay=".15">
+<div class="landing-subheader__content">
+<p class="landing-subheader__text landing-subheader__text_small">With a deep understanding of industry-specific challenges and requirements, the ITRex app development company delivers products tailored to your needs. Whether you are a startup aiming to disrupt the market or an enterprise looking to improve employee productivity, obtain valuable data insights or build a loyal customer base, <span class="mark mark_green">We are ready</span> to take on the challenge.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="block" id="industries" cta-text="Contact us">
+<div class="block__content post-block__content post-block__content_medium">
+<div class="landing-accordion">
+<div class="landing-accordion__col">
+<div class="accordion accordion_small accordion_wide">
+<div class="accordion__item">
+<div class="accordion__header">
+<svg class="accordion__icon">
+<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#bag"></use>
+</svg>
+<div class="accordion__title">Ecommerce</div>
+<div class="accordion__indicator accordion__indicator_cross">
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="accordion__content" style="height: 0">
+<div class="accordion__content-inner">
+<div class="accordion__list-line">Optimize operations and deliver personalized shopping experience with apps packed with next-generation tech and featuring geo-targeted push notifications, integrated payment solutions, and much more.</div>
+</div>
+</div>
+</div>
+<div class="accordion__item">
+<div class="accordion__header">
+<svg class="accordion__icon">
+<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#enterprise"></use>
+</svg>
+<div class="accordion__title">Enterprise</div>
+<div class="accordion__indicator accordion__indicator_cross">
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="accordion__content" style="height: 0">
+<div class="accordion__content-inner">
+<div class="accordion__list-line">Maximize employee productivity and performance, improve resource planning and overcome other business challenges with secure and scalable enterprise mobile apps that can be seamlessly integrated with corporate databases and workflows.
+</div>
+</div>
+</div>
+</div>
+<div class="accordion__item">
+<div class="accordion__header">
+<svg class="accordion__icon">
+<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#social"></use>
+</svg>
+<div class="accordion__title">Social Media</div>
+<div class="accordion__indicator accordion__indicator_cross">
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="accordion__content" style="height: 0">
+<div class="accordion__content-inner">
+<div class="accordion__list-line">We build any kind of social media apps - from corporate solutions to interest-based networks - that incorporate emerging tech such as AR/VR and AI, and feature content sharing, live chats, newsfeeds, push notifications, and more.</div>
+</div>
+</div>
+</div>
+<div class="accordion__item">
+<div class="accordion__header">
+<svg class="accordion__icon">
+<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#media"></use>
+</svg>
+<div class="accordion__title">Real-Time Communication</div>
+<div class="accordion__indicator accordion__indicator_cross">
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="accordion__content" style="height: 0">
+<div class="accordion__content-inner">
+<div class="accordion__list-line">Building apps for real-time video and voice communication, instant messaging, multi-party conferencing and file sharing that let consumers stay connected and give businesses access to remote live collaboration or data sharing.</div>
+</div>
+</div>
+</div>
+<div class="accordion__item">
+<div class="accordion__header">
+<svg class="accordion__icon">
+<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#finance"></use>
+</svg>
+<div class="accordion__title">Finance</div>
+<div class="accordion__indicator accordion__indicator_cross">
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="accordion__content" style="height: 0">
+<div class="accordion__content-inner">
+<div class="accordion__list-line">Creating fast and reliable mobile solutions for the entire financial industry that offer a user experience balancing security and simplicity and utilize new technology like blockchain and AI
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="landing-accordion__col">
+<div class="accordion accordion_small accordion_wide">
+<div class="accordion__item">
+<div class="accordion__header">
+<svg class="accordion__icon">
+<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#entertainmentsvg"></use>
+</svg>
+<div class="accordion__title">Entertainment</div>
+<div class="accordion__indicator accordion__indicator_cross">
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="accordion__content" style="height: 0">
+<div class="accordion__content-inner">
+<div class="accordion__list-line">Keep users engaged with feature-rich and customizable applications that let them enjoy sports, movies, music, games and all kinds of other entertainment content on the go</div>
+</div>
+</div>
+</div>
+<div class="accordion__item">
+<div class="accordion__header">
+<svg class="accordion__icon">
+<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#wellness"></use>
+</svg>
+<div class="accordion__title">Wellness</div>
+<div class="accordion__indicator accordion__indicator_cross">
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="accordion__content" style="height: 0">
+<div class="accordion__content-inner">
+<div class="accordion__list-line">Satisfy the health conscious with apps for workouts, activity tracking, nutrition and diet planning, and health monitoring that have perfect connectivity with wearables and great personalization, and leverage the benefits of AI and AR/VR.</div>
+</div>
+</div>
+</div>
+<div class="accordion__item">
+<div class="accordion__header">
+<svg class="accordion__icon">
+<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#heart"></use>
+</svg>
+<div class="accordion__title">Healthcare</div>
+<div class="accordion__indicator accordion__indicator_cross">
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="accordion__content" style="height: 0">
+<div class="accordion__content-inner">
+<div class="accordion__list-line">Redefine healthcare with AI-powered digital therapeutics, real-time telehealth, remote patient monitoring, AR/VR-enabled training simulators, and apps for booking doctor appointments and managing health records.</div>
+</div>
+</div>
+</div>
+<div class="accordion__item">
+<div class="accordion__header">
+<svg class="accordion__icon">
+<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#education"></use>
+</svg>
+<div class="accordion__title">Education</div>
+<div class="accordion__indicator accordion__indicator_cross">
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="accordion__content" style="height: 0">
+<div class="accordion__content-inner">
+<div class="accordion__list-line">We build the entire range of m-learning apps that boast AR-powered instructions, videoconferencing and gamification features, and are easily integrated with social media and payment gateways.</div>
+</div>
+</div>
+</div>
+<div class="accordion__item">
+<div class="accordion__header">
+<svg class="accordion__icon">
+<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#truk"></use>
+</svg>
+<div class="accordion__title">Logistics & Transportation</div>
+<div class="accordion__indicator accordion__indicator_cross">
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="accordion__content" style="height: 0">
+<div class="accordion__content-inner">
+<div class="accordion__list-line">Helping businesses reduce paperwork, minimize delivery time and costs, track shipments in real time, and optimize fleet and warehouse management with scalable custom mobile applications</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<button class="block__button button arrow-link arrow-link arrow-link_fixed-opacity space space_hmt" id="cta-industries" data-popup="#form" href="#form" animation="fade-up" animation-delay=".15"><span class="arrow-link__text">Contact <span style="white-space: nowrap">us<span class="arrow-link__arrow"><span class="arrow-link__arrow_back arrow-link__arrow_black">→</span><span class="arrow-link__arrow_front arrow-link__arrow_black">→</span></span></span></span></button>
+</div>
+</div>
+
+<div class="block" id="about-us" cta-text="get in touch">
+<div class="block__content-x">
+<div class="landing-rex post-block__content post-block__content post-block__content_text block landing-rex_black block_black">
+<div class="landing-rex__rex">
+<svg>
+<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#rex"></use>
+</svg>
+</div>
+<h2 class="landing-rex__title title title_small" animation="fade-up" animation-delay=".15">What makes {% if companyInfo %}{{ companyInfo.company_name }}{% else %}us{% endif %} different</h2>
+<div class="landing-rex__list">
+<div class="landing-rex__item" animation="fade-up" animation-delay=".15">
+<div class="landing-rex__item-title">{% if companyInfo %}{{ companyInfo.years_of_experiences }}{% else %}04{% endif %}+</div>
+<div class="landing-rex__item-value">years in mobile application development
+</div>
+</div>
+<div class="landing-rex__item" animation="fade-up" animation-delay=".15">
+<div class="landing-rex__item-title">{% if companyInfo %}{{ companyInfo.experts_hired_total }}{% else %}04{% endif %}+</div>
+<div class="landing-rex__item-value">top-tier software development experts</div>
+</div>
+<div class="landing-rex__item" animation="fade-up" animation-delay=".15">
+<div class="landing-rex__item-title">100+</div>
+<div class="landing-rex__item-value">thousands of users enjoy our apps</div>
+</div>
+<div class="landing-rex__item" animation="fade-up" animation-delay=".15">
+<div class="landing-rex__item-title">{% if companyInfo %}{{ companyInfo.clients_total_number }}{% else %}04{% endif %}+</div>
+<div class="landing-rex__item-value">clients around the globe</div>
+</div>
+<div class="landing-rex__item" animation="fade-up" animation-delay=".15">
+<div class="landing-rex__item-title">98%</div>
+<div class="landing-rex__item-value">app reliability rate</div>
+</div>
+<div class="landing-rex__item" animation="fade-up" animation-delay=".15">
+<div class="landing-rex__item-title">{% if companyInfo %}{{ companyInfo.product_delivers_total }}{% else %}04{% endif %}+</div>
+<div class="landing-rex__item-value">products delivered</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{% block precious_clients %}
+<div class="block" id="clients" cta-text="Get your optimum solution">
+            <div class="block__content">
+                <h2 class="block__title" animation="fade-up" animation-delay=".15">Hungry for every
+                    client’s success</h2>
+                <div class="clients" animation="fade-up" animation-delay=".15">
+                    <div class="clients__list">
+                        {% if clientDetails %}
+                            {% for x in clientDetails %}
+                                <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
+                                     style="width: 150px;height: 150px"/>
+                            {% endfor %}
+                        {% endif %}
+                        <div class="clients__append"></div>
+                    </div>
+                </div>
+            </div>
+            {% if clientDetails %}
+                <div class="block__content block__content_black block__content_auto block__content_scroll-tablet">
+                    <div class="reviews" animation="fade-up" animation-delay=".15">
+                        <div class="reviews__content">
+                            {% for client in clientDetails %}
+                                {% if client.client_quote %}
+                                    {% if forloop.counter == 1 %}
+                                        <div class="reviews__item" style="visibility: visible;">
+                                            <div class="reviews__title">
+                                                {{ client.client_quote }}
+                                            </div>
+                                            <div class="reviews__author">
+                                                <div class="reviews__author-image">
+                                                    <img src="{{ client.client_logo.url }}"
+                                                         alt="{{ client.client_name }}"></div>
+                                                <div class="reviews__author-info">
+                                                    <div class="reviews__author-name">{{ client.client_name }}</div>
+                                                    <div class="reviews__author-position">{{ client.client_mail }}</div>
+                                                    <div class="reviews__author-company">{{ client.client_address }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        <div class="reviews__item">
+                                            <div class="reviews__title">
+                                                {{ client.client_quote }}
+                                            </div>
+                                            <div class="reviews__author">
+                                                <div class="reviews__author-image">
+                                                    <img src="{{ client.client_logo.url }}"
+                                                         alt="{{ client.client_name }}"></div>
+                                                <div class="reviews__author-info">
+                                                    <div class="reviews__author-name">{{ client.client_name }}</div>
+                                                    <div class="reviews__author-position">{{ client.client_mail }}</div>
+                                                    <div class="reviews__author-company">{{ client.client_address }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+{% endblock precious_clients %}
+
+<div class="block" id="Next-Gen-Tech" data-popup="#form" cta-text="Contact us">
+<div class="landing-image landing-image_text-mode" animation="fade-up" animation-delay=".15">
+<img data-src="https://itrexgroup.com/wp-content/uploads/2020/12/vr.jpg" alt=""
+srcset="https://itrexgroup.com/wp-content/uploads/2020/12/vr-1440x500.jpg 2880w,
+https://itrexgroup.com/wp-content/uploads/2020/12/vr-1024x356.jpg 2048w,
+https://itrexgroup.com/wp-content/uploads/2020/12/vr-720x250.jpg 720w,
+https://itrexgroup.com/wp-content/uploads/2020/12/vr-512x178.jpg 512w"
+sizes="100vw"
+alt="">
+    <h2 class="landing-image__content post-block__content post-block__content_medium" animation="fade-up" animation-delay=".15">
+        Next-gen tech<br><span class="yellow">for mobile app development</span>
+    </h2>
+</div>
+</div>
+<div class="block block_yellow" id="" cta-text="">
+<div class="block__content block__content_half post-block__content post-block__content_medium">
+<div class="landing-subheader" animation="fade-up" animation-delay=".15">
+<div class="landing-subheader__content">
+<p class="landing-subheader__text landing-subheader__text_small">We bring innovation to the fore and <span class="mark mark_green">We use emerging technology</span> to power a new style of mobile apps.</p>
+</div>
+</div>
+</div>
+</div>
+
+{#<div class="block" id="clients" cta-text="Contact us">#}
+{#<div class="block__content">#}
+{#<h2 class="block__title" animation="fade-up" animation-delay=".15">Our clients</h2>#}
+{#<p class="block__subtitle" animation="fade-up" animation-delay=".15"></p>#}
+{#<div class="clients" animation="fade-up" animation-delay=".15">#}
+{#<div class="clients__list">#}
+{#<a class="clients__link" href="https://www.foxcorporation.com" target="_blank">#}
+{#<svg class="clients__logo" style="width: 123px;height: 44px">#}
+{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#21st-Century-Fox-logo"></use>#}
+{#</svg>#}
+{#</a>#}
+{#<a class="clients__link" href="https://www.dollarshaveclub.com" target="_blank">#}
+{#<svg class="clients__logo" style="width: 223px;height: 41px">#}
+{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#dollar-shave-club-logo"></use>#}
+{#</svg>#}
+{#</a>#}
+{#<a class="clients__link" href="https://www.dnb.com" target="_blank">#}
+{#<svg class="clients__logo" style="width: 200px;height: 31px">#}
+{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#dun-bradstreet-logo"></use>#}
+{#</svg>#}
+{#</a>#}
+{#<a class="clients__link" href="https://www.jibjab.com" target="_blank">#}
+{#<svg class="clients__logo" style="width: 63px;height: 54px">#}
+{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#JibJab-brand-logo"></use>#}
+{#</svg>#}
+{#</a>#}
+{#<a class="clients__link" href="https://www.potentiametrics.com" target="_blank">#}
+{#<svg class="clients__logo" style="width: 200px;height: 38px">#}
+{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#MyCancerJourny-logo"></use>#}
+{#</svg>#}
+{#</a>#}
+{#<a class="clients__link" href="https://www.potentiametrics.com" target="_blank">#}
+{#<svg class="clients__logo" style="width: 226px;height: 34px">#}
+{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#pm-logo"></use>#}
+{#</svg>#}
+{#</a>#}
+{#<a class="clients__link" href="https://us.pg.com" target="_blank">#}
+{#<svg class="clients__logo" style="width: 73px;height: 32px">#}
+{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#PG-logo"></use>#}
+{#</svg>#}
+{#</a>#}
+{#<a class="clients__link" href="https://www.poplidays.com/en/home" target="_blank">#}
+{#<svg class="clients__logo" style="width: 143px;height: 34px">#}
+{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#Poplidays-logo"></use>#}
+{#</svg>#}
+{#</a>#}
+{#<a class="clients__link" href="https://www.tasconline.com" target="_blank">#}
+{#<svg class="clients__logo" style="width: 121px;height: 47px">#}
+{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#tasc-logo"></use>#}
+{#</svg>#}
+{#</a>#}
+{#<a class="clients__link" href="https://www.telenav.com" target="_blank">#}
+{#<svg class="clients__logo" style="width: 166px;height: 27px">#}
+{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#telenav-logo"></use>#}
+{#</svg>#}
+{#</a>#}
+{#<a class="clients__link" href="https://www.honest.com" target="_blank">#}
+{#<svg class="clients__logo" style="width: 52px;height: 52px">#}
+{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#The-Honest-Co-logo"></use>#}
+{#</svg>#}
+{#</a>#}
+{#<a class="clients__link" href="https://turvo.com" target="_blank">#}
+{#<svg class="clients__logo" style="width: 129px;height: 34px">#}
+{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#Turvo-logo"></use>#}
+{#</svg>#}
+{#</a>#}
+{#<a class="clients__link" href="https://www.uei.com" target="_blank">#}
+{#<svg class="clients__logo" style="width: 148px;height: 54px">#}
+{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#UE-logo"></use>#}
+{#</svg>#}
+{#</a>#}
+{#<a class="clients__link" href="https://www.walmart.com" target="_blank">#}
+{#<svg class="clients__logo" style="width: 144px;height: 35px">#}
+{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#Walmart-logo"></use>#}
+{#</svg>#}
+{#</a>#}
+{#<a class="clients__link" href="https://www.warnerbros.com" target="_blank">#}
+{#<svg class="clients__logo" style="width: 52px;height: 54px">#}
+{#<use xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/clients.svg#Warner-Bros-logo"></use>#}
+{#</svg>#}
+{#</a>#}
+{#<div class="clients__append"></div>#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{#<div class="block__content block__content_black block__content_auto block__content_scroll-tablet" cta-text="Contact us">#}
+{#<div class="reviews" animation="fade-up" animation-delay=".15">#}
+{#<div class="reviews__content">#}
+{#<div class="reviews__item" style="visibility: visible">#}
+{#<div class="reviews__title">Itrex’s team are experts in their trade. The software development they provided was critical to advancing the project to the next level.</div>#}
+{#<div class="reviews__author">#}
+{#<div class="reviews__author-image"><img src="https://itrexgroup.com/wp-content/uploads/2020/06/Jeff-Block-150x150.jpg" alt="Jeff Block"></div>#}
+{#<div class="reviews__author-info">#}
+{#<div class="reviews__author-name">Jeff Block</div>#}
+{#<div class="reviews__author-position">VP of Process and Technology</div>#}
+{#<div class="reviews__author-company">PotentiaMetrics, Inc.</div>#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{#<div class="reviews__item">#}
+{#<div class="reviews__title">When you hire them, you're actually going to get something valuable.</div>#}
+{#<div class="reviews__author">#}
+{#<div class="reviews__author-image"><img src="https://itrexgroup.com/wp-content/uploads/2020/06/Daniel-Schuler-150x150.jpg" alt="Daniel Schuler"></div>#}
+{#<div class="reviews__author-info">#}
+{#<div class="reviews__author-name">Daniel Schuler</div>#}
+{#<div class="reviews__author-position">CTO</div>#}
+{#<div class="reviews__author-company">Hyginex</div>#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{#<div class="reviews__item">#}
+{#<div class="reviews__title">Itrex is an outstanding partner. They don't even feel like a contractor, but more like a fully integrated team.</div>#}
+{#<div class="reviews__author">#}
+{#<div class="reviews__author-image"><img src="https://itrexgroup.com/wp-content/uploads/2020/06/author-1.jpg" alt="Ashley Lewis"></div>#}
+{#<div class="reviews__author-info">#}
+{#<div class="reviews__author-name">Ashley Lewis</div>#}
+{#<div class="reviews__author-position">Director of Product Management</div>#}
+{#<div class="reviews__author-company">Dollar Shave Club</div>#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{#<div class="reviews__ui">#}
+{#<div class="reviews__button reviews__button_left" id="review-prev-item">#}
+{#<svg class="icon icon_white">#}
+{#<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>#}
+{#</svg>#}
+{#</div>#}
+{#<div class="reviews__button reviews__button_right" id="review-next-item">#}
+{#<svg class="icon icon_white">#}
+{#<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>#}
+{#</svg>#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{#</div>    </div>#}
+{#</div>#}
+</div>
+{% endblock main_content %}

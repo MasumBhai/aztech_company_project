@@ -1,0 +1,516 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load socialaccount %}
+{% block body_tag %}
+    <body class="home page-template-default page">
+{% endblock body_tag %}
+
+{% block header_nav_bar %}
+    <nav class="navigation" style="display: none;text-decoration-color: white;">
+        <a class="navigation__logo" href="{% url 'contact' %}">
+            {% if companyInfo %}
+                <img src="{{ companyInfo.company_logo.url }}" alt="{{ companyInfo.company_name }}"/>
+            {% else %}
+                Aztech
+            {% endif %}
+        </a>
+        <button class="navigation__burger"><span></span><span></span></button>
+        <div class="navigation__items">
+            <div class="navigation__header">
+                <a class="navigation__logo" href="{% url 'contact' %}">
+                    {% if companyInfo %}
+                        <img src="{{ companyInfo.company_logo.url }}" alt="{{ companyInfo.company_name }}"/>
+                    {% else %}
+                        Aztech
+                    {% endif %}
+                </a>
+                <button class="navigation__back" style="display: none">
+                    <a class="icon icon_white" href="{% url 'contact' %}">
+                        {% if companyInfo %}
+                            {{ companyInfo.company_name }}
+                        {% else %}
+                            Aztech
+                        {% endif %}
+                    </a>
+                </button>
+            </div>
+            <div class="navigation__breadcrumbs"></div>
+            <a class="navigation__item" href="{% url 'about' %}" target="">About</a>
+            <div class="navigation__item navigation__item_submenu">
+                <a href="" target="" disabled>Services</a>
+                <div class="navigation__open-submenu"></div>
+                <div class="navigation__submenu">
+                    <div class="navigation__list">
+                        <div class="navigation__link navigation__link_list">
+                            <a href="{% url 'sAI' %}" target="">Artificial Intelligence</a>
+                            <div class="navigation__open-sublist"></div>
+                            <div class="navigation__list">
+                                <a class="navigation__link" href="{% url 'sAI_retail' %}" target="">AI for Retail</a>
+                                <a class="navigation__link" href="{% url 'sAI_health' %}" target="">AI for
+                                    Healthcare</a>
+                                <a class="navigation__link" href="{% url 'sAI_education' %}" target="">AI for
+                                    Education</a>
+                                <a class="navigation__link" href="{% url 'sAI_automation' %}" target="">AI for
+                                    Automation</a>
+                            </div>
+                        </div>
+{#                        <a class="navigation__link" href="{% url 'sAugReality' %}" target="">Augmented Reality</a>#}
+{#                        <a class="navigation__link" href="{% url 'sCloud' %}" target="">Cloud</a>#}
+{#                        <a class="navigation__link" href="{% url 'sDataConsulting' %}" target="">Data Consultation</a>#}
+{#                        <a class="navigation__link" href="{% url 'sDevops' %}" target="">DevOps</a>#}
+                        <a class="navigation__link" href="{% url 'sTeam' %}" target="">Dedicated Team</a>
+                        <a class="navigation__link" href="{% url 'sAppDevelopment' %}" target="">Apps Development</a>
+                        <a class="navigation__link" href="{% url 'sDigiTransform' %}" target="">Digital Transformation</a>
+                        <a class="navigation__link" href="{% url 'sTechnologyConsulting' %}" target="">Technology Consulting</a>
+                        <a class="navigation__link" href="{% url 'sSoftwareTesting' %}" target="">Software Testing</a>
+                        <a class="navigation__link" href="{% url 'sTeamCto' %}" target="">CTO Service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation__item navigation__item_submenu">
+                <a href="" target="">Programme</a>
+                <div class="navigation__open-submenu"></div>
+                <div class="navigation__submenu">
+                    <div class="navigation__list">
+                        <a class="navigation__link" href="{% url 'eCommerce' %}" target="">e-Commerce</a>
+                        <a class="navigation__link" href="{% url 'eLearning' %}" target="">e-Learning</a>
+{#                            <a class="navigation__link" href="{% url 'eHealthSoft' %}" target="">Biotech Software</a>#}
+                        <a class="navigation__link" href="{% url 'eHealthApp' %}" target="">e-HealthCare</a>
+                        <a class="navigation__link" href="{% url 'eRetail' %}" target="">e-Retail</a>
+                        <a class="navigation__link" href="{% url 'eLogistics' %}" target="">Logistics & Transportation</a>
+                    </div>
+                </div>
+            </div>
+            <a class="navigation__item" href="{% url 'blog' %}" target="">Blog</a>
+            <div class="navigation__item navigation__item_submenu">
+                <a href="" target="" disabled>Account</a>
+                <div class="navigation__open-submenu"></div>
+                <div class="navigation__submenu">
+                    <div class="navigation__list">
+                        {% if user.is_authenticated %}
+                            <a class="navigation__link" disabled="" target="">I'm {{ user.username }}</a>
+                            <a class="navigation__link" href="{% url 'auth_logout' %}" target="">Log-Out</a>
+                        {% else %}
+                            <a class="navigation__link" href="{% provider_login_url 'google' %}" target="">I'm User</a>
+                            <a class="navigation__link" href="http://127.0.0.1:8000/admin/" target="">I'm Admin</a> {# ekhane change korte hobe #}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <a class="navigation__item" href="{% url 'job_portal' %}" target="">Careers</a>
+            <a class="navigation__item" href="{% url 'contact' %}" target="">Contact Us</a>
+            <div class="navigation__footer">
+                <div class="navigation__socials">
+                    <a class="social" href="{% if companyInfo %}{{ companyInfo.company_linkedin }}{% endif %}"
+                       target="_blank" id="menu-social-1">
+                        <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/linkedin.svg"/>
+                    </a>
+                    <a class="social" href="{% if companyInfo %}{{ companyInfo.company_facebook }}{% endif %}"
+                       target="_blank" id="menu-social-2">
+                        <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/facebook.svg"/>
+                    </a>
+                    <a class="social" href="{% if companyInfo %}{{ companyInfo.company_instagram }}{% endif %}"
+                       target="_blank" id="menu-social-3">
+                        <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/instagram.svg"/>
+                    </a>
+                    <a class="social" href="{% if companyInfo %}{{ companyInfo.company_youtube }}{% endif %}"
+                       target="_blank"
+                       id="menu-social-4">
+                        <img src="https://itrexgroup.com/wp-content/themes/itrex/assets/images/socials/youtube.svg"/>
+                    </a>
+                </div>
+                <div class="navigation__contacts">
+                    {% if companyInfo %}
+                    <a href="mailto:{{ companyInfo.company_mail }}" target="_blank" id="menu-contacts-1">{{ companyInfo.company_mail }}</a>
+                    <a href="tel:{{ companyInfo.company_phone }}" target="_blank" id="menu-contacts-2">{{ companyInfo.company_phone }}</a>
+                    {% endif %}
+                </div>
+                <div class="navigation__pages">
+                    <a class="arrow-link" href="{% url 'contact' %}" target="" id="menu-page-1">
+                        <span class="arrow-link__text">Contact us</span>
+                        <span class="arrow-link__arrow"><span
+                                class="arrow-link__arrow_static arrow-link__arrow_blue">→</span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+{% endblock header_nav_bar %}
+
+
+{% block navbar_style %}
+    <style>
+.navigation > .navigation__logo,
+.navigation__item,
+.navigation__burger {
+color: #000000;
+}
+.navigation__item_active {
+color: #445aec;
+}
+@media only screen and (min-width: 961px) {
+.navigation__item:hover {
+color: #445aec;
+}
+}
+</style>
+{% endblock navbar_style %}
+
+{% block sidebar_nav_bar %}
+    <div class="scroll-bar"></div>
+{% endblock sidebar_nav_bar %}
+{% block main_content %}
+    <div class="wrapper">
+        <div class="block block_slide-min block_yellow block_nav block_overflow" id="index"
+             cta-text="Let's discuss your challenge">
+            <div class="block__content">
+                <div class="slider">
+                    <div class="slider__content">
+                        <div class="slider__item" style="visibility: visible">
+                            <div class="slider__info" block-max-height="block-max-height">
+                                <h1 class="slider__title">Hungry
+                                    for challenges</h1>
+                                <p class="slider__text">
+                                    We are a software development and consulting company that creates and transforms products and enterprises  <span class="mark mark_green">to drive growth</span>.
+                                </p>
+                            </div>
+                            <div class="slider__picture">
+                                <picture>
+                                    <source srcset="{% static 'images/home/Landing1-720x720.jpg' %}"
+                                            type="image/jpeg" media="(max-width: 1440px)">
+                                    <source srcset="{% static 'images/home/Landing1-512x512.jpg' %}"
+                                            type="image/jpeg" media="(max-width: 512px)">
+                                    <source srcset="{% static 'images/home/Landing1-1024x1024.jpg' %}"
+                                            type="image/jpeg">
+                                    <img src="{% static 'images/home/Landing1-1024x1024.jpg' %}"
+                                         alt="">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <div class="slider__info" block-max-height="block-max-height">
+                                <h2 class="slider__title">Hungry
+                                    for impact</h2>
+                                <p class="slider__text">
+                                    We think in terms of value, not technology.  <span class="mark mark_green">We deep dive</span>  into your business to deliver innovations tailored to your business needs.</p>
+                            </div>
+                            <div class="slider__picture">
+                                <picture>
+                                    <source srcset="{% static 'images/home/Landing2-720x720.jpg' %}"
+                                            type="image/jpeg" media="(max-width: 1440px)">
+                                    <source srcset="{% static 'images/home/Landing2-512x512.jpg' %}"
+                                            type="image/jpeg" media="(max-width: 512px)">
+                                    <source srcset="{% static 'images/home/Landing2-1024x1024.jpg' %}"
+                                            type="image/jpeg">
+                                    <img src="{% static 'images/home/Landing2-1024x1024.jpg' %}"
+                                         alt="">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <div class="slider__info" block-max-height="block-max-height">
+                                <h2 class="slider__title">Hungry
+                                    for more</h2>
+                                <p class="slider__text">
+                                    Using a tech-agnostic approach,  <span class="mark mark_green">We provide</span> the right blend of software and hardware solutions that let you capture the full value of tech.</p>
+                            </div>
+                            <div class="slider__picture">
+                                <picture>
+                                    <source srcset="{% static 'images/home/Landing3-720x720.jpg' %}"
+                                            type="image/jpeg" media="(max-width: 1440px)">
+                                    <source srcset="{% static 'images/home/Landing3-512x512.jpg' %}"
+                                            type="image/jpeg" media="(max-width: 512px)">
+                                    <source srcset="{% static 'images/home/Landing3-1024x1024.jpg' %}"
+                                            type="image/jpeg">
+                                    <img src="{% static 'images/home/Landing3-1024x1024.jpg' %}"
+                                         alt="">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="slider__progress">
+                            <div class="slider__progress-value"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block" id="clients" cta-text="Get your optimum solution">
+            <div class="block__content">
+                <h2 class="block__title" animation="fade-up" animation-delay=".15">Hungry for every
+                    client’s success</h2>
+                <div class="clients" animation="fade-up" animation-delay=".15">
+                    <div class="clients__list">
+                        {% if clientDetails %}
+                            {% for x in clientDetails %}
+                                <img class="clients__link" src="{{ x.client_logo.url }}" alt="{{ x.client_name }}"
+                                     style="width: 150px;height: 150px"/>
+                            {% endfor %}
+                        {% endif %}
+                        <div class="clients__append"></div>
+                    </div>
+                </div>
+            </div>
+            {% if clientDetails %}
+                <div class="block__content block__content_black block__content_auto block__content_scroll-tablet">
+                    <div class="reviews" animation="fade-up" animation-delay=".15">
+                        <div class="reviews__content">
+                            {% for client in clientDetails %}
+                                {% if client.client_quote %}
+                                    {% if forloop.counter == 1 %}
+                                        <div class="reviews__item" style="visibility: visible;">
+                                            <div class="reviews__title">
+                                                {{ client.client_quote }}
+                                            </div>
+                                            <div class="reviews__author">
+                                                <div class="reviews__author-image">
+                                                    <img src="{{ client.client_logo.url }}"
+                                                         alt="{{ client.client_name }}"></div>
+                                                <div class="reviews__author-info">
+                                                    <div class="reviews__author-name">{{ client.client_name }}</div>
+                                                    <div class="reviews__author-position">{{ client.client_mail }}</div>
+                                                    <div class="reviews__author-company">{{ client.client_address }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        <div class="reviews__item">
+                                            <div class="reviews__title">
+                                                {{ client.client_quote }}
+                                            </div>
+                                            <div class="reviews__author">
+                                                <div class="reviews__author-image">
+                                                    <img src="{{ client.client_logo.url }}"
+                                                         alt="{{ client.client_name }}"></div>
+                                                <div class="reviews__author-info">
+                                                    <div class="reviews__author-name">{{ client.client_name }}</div>
+                                                    <div class="reviews__author-position">{{ client.client_mail }}</div>
+                                                    <div class="reviews__author-company">{{ client.client_address }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        <div class="block block_slide-min block_relative" id="we-do" cta-text="Get your optimum solution" tabs-block>
+            <div class="block__content" auto-size-padding="we-do">
+                <h2 class="block__title" animation="fade-up" animation-delay=".15" auto-size="we-do">Challenges we
+                    are hungry for</h2>
+            </div>
+            <div class="block__content block__content_mt_auto" auto-size-height="we-do">
+                <div class="tabs-wrapper"></div>
+                <div class="tabs" animation="fade-up" animation-delay=".15">
+                    <div class="tabs__header tabs__header_opened">
+                        <h3 class="tabs__tab" id="tab-1">Bring digital transformation down to earth
+                            <div class="tabs__indicator"><span style="transform: translateY(-0.75em)">↓</span></div>
+                        </h3>
+                        <div class="tabs__item" style="visibility: hidden; position: absolute">
+                            <div class="tabs__content">
+                                <div class="tabs__text">Digital transformation may feel like an incredible challenge
+                                    that
+                                    brings risks and uncertainties. And it actually is. We believe in starting smart and
+                                    simple to translate complexity into an easily digestible roadmap for change. We help
+                                    you
+                                    pivot to new technology step-by-step while getting most out of your legacy
+                                    systems</div>
+                                <div class="tabs__tags">
+                                    <div class="tabs__tag">Digital Transformation Strategy</div>
+                                    <div class="tabs__tag">Digital Transformation Implementation</div>
+                                    <div class="tabs__tag">Application Modernization</div>
+                                    <div class="tabs__tag">Software Modernization</div>
+                                    <div class="tabs__tag">Digital Product Deleopment</div>
+                                    <div class="tabs__tag">Cloud Migration</div>
+                                    <div class="tabs__tag">Big Data &amp; Analytics</div>
+                                    <div class="tabs__tag">Digital Workforce</div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="tabs__tab" id="tab-2" active-tab>Test, fail fast, build and scale for growth
+                            <div class="tabs__indicator"><span>↓</span></div>
+                        </h3>
+                        <div class="tabs__item" style="visibility: visible; position: relative" active-tab>
+                            <div class="tabs__content">
+                                <div class="tabs__text">Be it an innovative consumer app or a next-gen enterprise system
+                                    –
+                                    we do it all, from product ideation and concept development to system rollout and
+                                    scale-up. We envision, prototype, create and test products and solutions to find new
+                                    competitive advantage for your business</div>
+                                <div class="tabs__tags">
+                                    <div class="tabs__tag">Mobile Apps</div>
+                                    <div class="tabs__tag">Web Apps</div>
+                                    <div class="tabs__tag">Cloud Apps</div>
+                                    <div class="tabs__tag">Embedded Software</div>
+                                    <div class="tabs__tag">Data Platforms</div>
+                                    <div class="tabs__tag">Enterprise Software Development</div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="tabs__tab" id="tab-3">Turn emerging technologies into profit
+                            <div class="tabs__indicator"><span style="transform: translateY(-0.75em)">↓</span></div>
+                        </h3>
+                        <div class="tabs__item" style="visibility: hidden; position: absolute">
+                            <div class="tabs__content">
+                                <div class="tabs__text">
+                                    We make sure you are not adopting a technology just because it’s fancy. Our goal is
+                                    to turn innovations into a market-ready product to help you achieve operational
+                                    excellence, disrupt the competition and maximize profits
+                                </div>
+                                <div class="tabs__tags">
+                                    <div class="tabs__tag">Artificial Intelligence</div>
+                                    <div class="tabs__tag">Extended Reality: AR, VR</div>
+                                    <div class="tabs__tag">IoT</div>
+                                    <div class="tabs__tag">Automation</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs__item" style="visibility: hidden; position: absolute">
+                        <div class="tabs__content">
+                            <div class="tabs__text">
+                                Digital transformation may feel like an incredible challenge that brings risks and
+                                uncertainties. And it actually is. We believe in starting smart and simple to translate
+                                complexity into an easily digestible roadmap for change. We help you pivot to new
+                                technology step-by-step while getting most out of your legacy systems
+                            </div>
+                            <div class="tabs__tags">
+                                <div class="tabs__tag">Digital Transformation Strategy</div>
+                                {#                                <div class="tabs__tag">Digital Transformation Implementation</div>#}
+                                <div class="tabs__tag">Digital Workforce</div>
+                                <div class="tabs__tag">Application Modernization</div>
+                                <div class="tabs__tag">Software Modernization</div>
+                                <div class="tabs__tag">Big Data &amp; Analytics</div>
+                                <div class="tabs__tag">Digital Product Deleopment</div>
+                                {#                                <div class="tabs__tag">Cloud Migration</div>#}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs__item" style="visibility: visible; position: relative" active-tab>
+                        <div class="tabs__content">
+                            <div class="tabs__text">Be it an innovative consumer app or a next-gen enterprise system –
+                                we do
+                                it all, from product ideation and concept development to system rollout and scale-up. We
+                                envision, prototype, create and test products and solutions to find new competitive
+                                advantage for your business
+                            </div>
+                            <div class="tabs__tags">
+                                <div class="tabs__tag">Mobile Apps</div>
+                                <div class="tabs__tag">Web Apps</div>
+                                <div class="tabs__tag">Cloud Apps</div>
+                                <div class="tabs__tag">Embedded Software</div>
+                                <div class="tabs__tag">Data Platforms</div>
+                                <div class="tabs__tag">Enterprise Software Development</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs__item" style="visibility: hidden; position: absolute">
+                        <div class="tabs__content">
+                            <div class="tabs__text">
+                                We make sure you are not adopting a technology just because it’s fancy. Our goal is to
+                                turn innovations into a market-ready product to help you achieve operational excellence,
+                                disrupt the competition and maximize profits
+                            </div>
+                            <div class="tabs__tags">
+                                <div class="tabs__tag">Artificial Intelligence</div>
+                                <div class="tabs__tag">Extended Reality: AR, VR</div>
+                                <div class="tabs__tag">IoT</div>
+                                <div class="tabs__tag">Automation</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% block project_content %}
+            {% if projectDetails %}
+                <div class="block block_z-index-up block_relative" id="projects"
+                     cta-text="get your project's optimum solution">
+                    <div class="block__content">
+                        <div class="post-title">
+                            <h2 class="block__title post-title__title" animation="fade-up" animation-delay=".15">
+                                Our Latest projects
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="block__scroll block__scroll_tablet" scroll-destination="posts" animation="fade-up"
+                         animation-delay=".15">
+                        <div class="posts-list posts-list_slider">
+                            <svg style="position: absolute;pointer-events: none" width="0" height="0">
+                                <defs>
+                                    <clipPath id="thinking-mask" clipPathUnits="objectBoundingBox">
+                                        <rect x="0" y="0" width="1" height="1"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            {% for project in projectDetails %}
+                                {% if forloop.counter == 1 %}
+                                <div class="post post_slider" style="position: relative;visibility: visible">
+                                    <div class="post__info">
+                                        <div class="post__company">{{ project.project_client }}</div>
+                                        <a class="post__title arrow-link arrow-link_fixed-opacity"
+                                           href="{% url 'project-details' project.project_slug %}"><span
+                                                class="arrow-link__text">{{ project.project_title }}<span
+                                                class="arrow-link__arrow"><span
+                                                class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
+                                                class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
+                                    </div>
+                                    <a class="post__image" loading="lazy"
+                                       href="{% url 'project-details' project.project_slug %}">
+                                        <img loading="lazy" src="{{ project.project_preview.url }}"
+                                             alt="{{ project.project_title }}">
+                                    </a>
+                                </div>
+                                {% else %}
+                                    <div class="post post_slider">
+                                    <div class="post__info">
+                                        <div class="post__company">{{ project.project_client }}</div>
+                                        <a class="post__title arrow-link arrow-link_fixed-opacity"
+                                           href="{% url 'project-details' project.project_slug %}"><span
+                                                class="arrow-link__text">{{ project.project_title }}<span
+                                                class="arrow-link__arrow"><span
+                                                class="arrow-link__arrow_back arrow-link__arrow_blue">→</span><span
+                                                class="arrow-link__arrow_front arrow-link__arrow_blue">→</span></span></span></a>
+                                    </div>
+                                    <a class="post__image" loading="lazy"
+                                       href="{% url 'project-details' project.project_slug %}">
+                                        <img loading="lazy" src="{{ project.project_preview.url }}"
+                                             alt="{{ project.project_title }}">
+                                    </a>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                            <div class="posts-list__controlls">
+                                <div class="posts-list__ui">
+                                    <div class="posts-list__button posts-list__button_left" id="post-prev-item">
+                                        <svg class="icon">
+                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="posts-list__button posts-list__button_right" id="post-next-item">
+                                        <svg class="icon">
+                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endblock project_content %}
+        <div class="sticky-overflow">
+            <div class="footer" auto-size-height="we-do">
+                <div class="footer__content"><a class="footer__link" id="cta" href="#form"><span
+                        class="footer__link-background footer__link-background_back"></span><span
+                        class="footer__link-background footer__link-background_front"></span><span
+                        class="footer__link-text"><span
+                        class="footer__link-text-value">Let's discuss your challenge</span><span
+                        class="footer__link-icon"><span class="footer__link-icon-first">→</span><span
+                        class="footer__link-icon-second">→</span></span></span></a></div>
+            </div>
+        </div>
+    </div>
+{% endblock main_content %}
