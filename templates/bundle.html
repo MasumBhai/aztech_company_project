@@ -3268,8 +3268,26 @@
                             n && wordpress.hasOwnProperty(n) ? window.location.assign(wordpress[n]) : window.location.assign(wordpress.thankYouPageUrl)
                         }), !1)
                     }
-                })), o.on("change", (function () {
-                    i() ? a.removeAttr("disabled") : a.attr("disabled", "")
+                })),
+                    o.on("change", (function () {
+                    {#i() ? a.removeAttr("disabled") : a.attr("disabled", "")#}
+                        if (!i()) {
+                            a.removeAttr("disabled");
+                        }else {
+                            $(".form__submit").on("click", function () {
+                                if (!valid()) {
+                                    alert("You are missing required fields.")
+                                    return false;
+                                } else {
+                                    return confirm("This will submit the form. Are you sure?");
+                                }
+                            });
+
+                            function valid() {
+                                return false;
+                            }
+                        }
+                    {#i() ? a.removeAttr("disabled") : a.removeAttr("disabled")#}
                 }))
             }))
         })
@@ -6029,3 +6047,4 @@
         }]), e.a = L
     }]);
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

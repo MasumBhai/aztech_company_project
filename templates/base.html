@@ -461,8 +461,8 @@
                             <p role="status" aria-live="polite" aria-atomic="true"></p>
                             <ul></ul>
                         </div>
-                        <form action="" method="post" class="wpcf7-form init form form-control" novalidate="novalidate"
-                              data-status="init">
+                        <form name="contactsForm" action="" method="post" class="wpcf7-form init form form-control" novalidate="novalidate"
+                              data-status="init" onsubmit="return emptyFieldCheck()">
                             {% csrf_token %}
                             <div class="form__wrapper">
                                 <div class="form__col">
@@ -519,7 +519,7 @@
                             </div>
                             {% csrf_token %}
                             <input class="form__submit form__submit_full" id="form-submit" type="submit" name="send-message" value="Send message → ">
-                            <div class="wpcf7-response-output" aria-hidden="true"></div>
+{#                            <div class="wpcf7-response-output" aria-hidden="true"></div>#}
                         </form>
                     </div>
                 </div>
@@ -656,9 +656,9 @@
                     <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
                         <ul></ul>
                     </div>
-                    <form action="" method="post"
+                    <form name="floatingContactBox" action="" method="post"
                           class="wpcf7-form init wpcf7-acceptance-as-validation"
-                          novalidate="novalidate" data-status="init">
+                          novalidate="novalidate" data-status="init" onsubmit="return validationCheck()">
                         {% csrf_token %}
                         <div class="field" validation="required">
                             {% csrf_token %}
@@ -807,9 +807,77 @@
                 }
             }, false);
         </script>
+        <script>
+            function emptyFieldCheck() {
+                var x = document.forms["contactsForm"]["contact-name"].value;
+                var y = document.forms["contactsForm"]["contact-email"].value;
+                var z = document.forms["contactsForm"]["contact-phone"].value;
+                var w = document.forms["contactsForm"]["contact-message"].value;
+                var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                var phoneFormat = "^(?:\\+88|88)?(01[3-9]\\d{8})$";
+                if (x === "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+                if (y === "") {
+                    alert("Email must be filled out");
+                    return false;
+                }
+                if (z === "") {
+                    alert("Phone must be filled out");
+                    return false;
+                }
+                if (z === "") {
+                    alert("Message must be filled out");
+                    return false;
+                }
+                if (!y.match(mailFormat)) {
+                    alert("You have entered an invalid email address!");
+                    return false;
+                }
+                if (!z.match(phoneFormat)) {
+                    alert("You have entered an invalid phone Number!");
+                    return false;
+                }
+            }
+        </script>
+        <script>
+            function validationCheck() {
+                var x = document.forms["floatingContactBox"]["contact-name"].value;
+                var y = document.forms["floatingContactBox"]["contact-email"].value;
+                var z = document.forms["floatingContactBox"]["contact-phone"].value;
+                var w = document.forms["floatingContactBox"]["contact-message"].value;
+                var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                var phoneFormat = "^(?:\\+88|88)?(01[3-9]\\d{8})$";
+                if (x === "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+                if (y === "") {
+                    alert("Email must be filled out");
+                    return false;
+                }
+                if (z === "") {
+                    alert("Phone must be filled out");
+                    return false;
+                }
+                if (z === "") {
+                    alert("Message must be filled out");
+                    return false;
+                }
+                if (!y.match(mailFormat)) {
+                    alert("You have entered an invalid email address!");
+                    return false;
+                }
+                if (!z.match(phoneFormat)) {
+                    alert("You have entered an invalid phone Number!");
+                    return false;
+                }
+            }
+        </script>
         {% include 'scroll_lock.html' %}
-        {% include 'ajax_karbar.html' %}
-        {% include 'bundle.html' %}
+        {% include 'ajax_karbar.html' %} {# er vitore temon kaaj nai,Yoy can comment this line #}
+        {% include 'bundle.html' %} {# This is important for ajaxify #}
     {% endblock footer_javascript_section %}
     {% block footer_javascript_page %}
         <!--for Alertify js msg-->
