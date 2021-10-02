@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load svg %}
 {% block body_tag %}
     <body class="page-template page-template-templates page-template-jobs-landing page-template-templatesjobs-landing-php page">
 {% endblock body_tag %}
@@ -51,27 +52,27 @@
                     <div class="jobs-capabilities__list">
                         <div class="jobs-capabilities__item">
                             <svg class="jobs-capabilities__item-icon">
-                                <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#AI"></use>
+                                {% svg 'artificial_Intelligence' %}
                             </svg>
                             <div class="jobs-capabilities__item-text">Artificial intelligence, machine learning, big data
                             </div>
                         </div>
                         <div class="jobs-capabilities__item">
                             <svg class="jobs-capabilities__item-icon">
-                                <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#iot"></use>
+                                {% svg 'iot' %}
                             </svg>
                             <div class="jobs-capabilities__item-text">Embedded systems and the Internet of Things</div>
                         </div>
                         <div class="jobs-capabilities__item">
                             <svg class="jobs-capabilities__item-icon">
-                                <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#VR"></use>
+                                {% svg 'blockchain' %}
                             </svg>
                             <div class="jobs-capabilities__item-text">Virtual reality, augmented reality and mixed reality
                             </div>
                         </div>
                         <div class="jobs-capabilities__item">
                             <svg class="jobs-capabilities__item-icon">
-                                <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#iba"></use>
+                                {% svg 'tech' %}
                             </svg>
                             <div class="jobs-capabilities__item-text">Intelligent business automation</div>
                         </div>
@@ -345,7 +346,7 @@
                                    aria-invalid="false"/>
                             <label class="field__label" for="resume">
                                 <svg class="field__icon">
-                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.6#attach"></use>
+                                    {% svg 'attachment' %}
                                 </svg>
                                 <span data-file-label>Attach your CV / RESUME</span>
                             </label>
@@ -359,7 +360,7 @@
                                    aria-invalid="false"/>
                             <label class="field__label" for="coverLetter">
                                 <svg class="field__icon">
-                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.6#attach"></use>
+                                    {% svg 'attachment' %}
                                 </svg>
                                 <span data-file-label>Attach your Cover Letter</span>
                             </label>

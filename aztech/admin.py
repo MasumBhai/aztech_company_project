@@ -44,7 +44,7 @@ class UserContact(admin.ModelAdmin):
                                                     'companyMail': "abdullahmasum6035@gmail.com",
                                                     })
                 email_from = settings.EMAIL_HOST_USER
-                recipient_list = ['ultapaltapagla@gmail.com', ]
+                recipient_list = ['ultapaltapagla@gmail.com', ] # Change will be here Remember.
                 send_mail(subject, message, email_from, recipient_list, fail_silently=False)
                 self.message_user(request, "Promotional Mail Sent Successfully")
             except:

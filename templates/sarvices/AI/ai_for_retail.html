@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load svg %}
 {% block body_tag %}
     <body class="page-template page-template-templates page-template-landing page-template-templateslanding-php page page-id-6481 page-child parent-pageid-1184">
 {% endblock body_tag %}
@@ -92,7 +93,7 @@ ecommerce
 <div class="accordion__item">
 <div class="accordion__header">
 <svg class="accordion__icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#social"></use>
+{% svg 'video-conference' %}
 </svg>
 <div class="accordion__title">Customer segmentation </div>
 <div class="accordion__indicator accordion__indicator_cross">
@@ -109,7 +110,7 @@ ecommerce
 <div class="accordion__item">
 <div class="accordion__header">
 <svg class="accordion__icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#ML"></use>
+{% svg 'customer-service' %}
 </svg>
 <div class="accordion__title">Customer journey mapping </div>
 <div class="accordion__indicator accordion__indicator_cross">
@@ -127,7 +128,7 @@ ecommerce
 <div class="accordion__item">
 <div class="accordion__header">
 <svg class="accordion__icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#heart"></use>
+{% svg 'cool-emoji' %}
 </svg>
 <div class="accordion__title">Sentiment analysis</div>
 <div class="accordion__indicator accordion__indicator_cross">
@@ -145,7 +146,7 @@ ecommerce
 <div class="accordion__item">
 <div class="accordion__header">
 <svg class="accordion__icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#product_recomendations"></use>
+{% svg 'online-sales' %}
 </svg>
 <div class="accordion__title">Ecommerce product recommendations </div>
 <div class="accordion__indicator accordion__indicator_cross">
@@ -166,7 +167,7 @@ ecommerce
 <div class="accordion__item">
 <div class="accordion__header">
 <svg class="accordion__icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#smart_pricing"></use>
+{% svg 'market-research-analysis' %}
 </svg>
 <div class="accordion__title">Demand-supply alignment</div>
 <div class="accordion__indicator accordion__indicator_cross">
@@ -184,7 +185,7 @@ ecommerce
 <div class="accordion__item">
 <div class="accordion__header">
 <svg class="accordion__icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#bigdata"></use>
+{% svg 'competition' %}
 </svg>
 <div class="accordion__title">Competitive intelligence</div>
 <div class="accordion__indicator accordion__indicator_cross">
@@ -202,7 +203,7 @@ ecommerce
 <div class="accordion__item">
 <div class="accordion__header">
 <svg class="accordion__icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#finance"></use>
+{% svg 'server-lock' %}
 </svg>
 <div class="accordion__title">Fraud prevention</div>
 <div class="accordion__indicator accordion__indicator_cross">
@@ -219,7 +220,7 @@ ecommerce
 <div class="accordion__item">
 <div class="accordion__header">
 <svg class="accordion__icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#AI"></use>
+{% svg 'productivity' %}
 </svg>
 <div class="accordion__title">Intelligent automation </div>
 <div class="accordion__indicator accordion__indicator_cross">
@@ -376,7 +377,7 @@ alt="AI solutions for retail">          <h2 class="landing-image__content post-b
 <div class="landing-rex post-block__content post-block__content post-block__content_text block landing-rex_black block_black">
 <div class="landing-rex__rex">
 <svg>
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#rex"></use>
+{% svg 'rex' %}
 </svg>
 </div>
 <h2 class="landing-rex__title title title_small" animation="fade-up" animation-delay=".15">AI benefits for retail:</h2>
@@ -543,12 +544,12 @@ alt="AI solutions for retail">          <h2 class="landing-image__content post-b
                                 <div class="posts-list__ui">
                                     <div class="posts-list__button posts-list__button_left" id="post-prev-item">
                                         <svg class="icon">
-                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                            {% svg 'arrow-left' %}
                                         </svg>
                                     </div>
                                     <div class="posts-list__button posts-list__button_right" id="post-next-item">
                                         <svg class="icon">
-                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                            {% svg 'arrow-right' %}
                                         </svg>
                                     </div>
                                 </div>

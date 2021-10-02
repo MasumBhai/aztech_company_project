@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load svg %}
 {% block body_tag %}
     <body class="page-template page-template-templates page-template-about page-template-templatesabout-php page">
 {% endblock body_tag %}
@@ -205,30 +206,25 @@ color: #445aec;
             <div class="block__content">
                 <h2 class="block__title" animation="fade-up" animation-delay=".15">Our industry focus</h2>
                 <p class="block__subtitle" animation="fade-up" animation-delay=".15"><span
-                        style="display: inline-flex"><span>Retail & Ecommerce</span><svg class="icon icon_em"
+                        style="display: inline-flex"><span><a class="link" href="{% url 'eRetail' %}" target="_blank" rel="noopener noreferrer">Retail & Ecommerce</a></span><svg class="icon icon_em"
                                                                                          preserveAspectRatio="xMidYMax meet"
-                                                                                         style="width: 0.65em;"><use
-                        xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/icons.svg#bag"></use></svg></span><span
-                        style="display: inline-flex"><span>Healthcare & Biotech</span><svg class="icon icon_em"
+                                                                                         style="width: 0.65em;">
+                        {% svg 'bag' %}</svg></span><span
+                        style="display: inline-flex"><span><a class="link" href="{% url 'eHealthApp' %}" target="_blank" rel="noopener noreferrer">Healthcare & Biotech</a></span><svg class="icon icon_em"
                                                                                            preserveAspectRatio="xMidYMax meet"
-                                                                                           style="width: 0.95em;"><use
-                        xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/icons.svg#heart"></use></svg></span><br/><span
-                        style="display: inline-flex"><span>Entertainment & Media</span><svg class="icon icon_em"
+                                                                                           style="width: 0.95em;">{% svg 'heart' %}</svg></span><br/><span
+                        style="display: inline-flex"><span><a class="link" href="{% url 'sAppDevelopment' %}" target="_blank" rel="noopener noreferrer">Entertainment & Media</a></span><svg class="icon icon_em"
                                                                                             preserveAspectRatio="xMidYMax meet"
-                                                                                            style="width: 0.67em;"><use
-                        xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/icons.svg#media"></use></svg></span><span
-                        style="display: inline-flex"><span>Fintech</span><svg class="icon icon_em"
+                                                                                            style="width: 0.67em;">{% svg 'media' %}</svg></span><span
+                        style="display: inline-flex"><span><a class="link" href="{% url 'sDigiTransform' %}" target="_blank" rel="noopener noreferrer">Fintech</a></span><svg class="icon icon_em"
                                                                               preserveAspectRatio="xMidYMax meet"
-                                                                              style="width: 0.75em;"><use
-                        xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/icons.svg#finance"></use></svg></span><br/><span
-                        style="display: inline-flex"><span>Real Estate</span><svg class="icon icon_em"
+                                                                              style="width: 0.75em;">{% svg 'finance' %}</svg></span><br/><span
+                        style="display: inline-flex"><span><a class="link" href="{% url 'sTeamCto' %}" target="_blank" rel="noopener noreferrer">Real Estate</a></span><svg class="icon icon_em"
                                                                                   preserveAspectRatio="xMidYMax meet"
-                                                                                  style="width: 0.97em;"><use
-                        xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/icons.svg#home"></use></svg></span><span
-                        style="display: inline-flex"><span>Logistics & Transportation</span><svg class="icon icon_em"
+                                                                                  style="width: 0.97em;">{% svg 'home' %}</svg></span><span
+                        style="display: inline-flex"><span><a class="link" href="{% url 'eLogistics' %}" target="_blank" rel="noopener noreferrer">Logistics & Transportation</a></span><svg class="icon icon_em"
                                                                                                  preserveAspectRatio="xMidYMax meet"
-                                                                                                 style="width: 1.31em;"><use
-                        xlink:href="https://itrexgroup.com/wp-content/uploads/2020/06/icons.svg#truk"></use></svg></span>
+                                                                                                 style="width: 1.31em;">{% svg 'truk' %}</svg></span>
                 </p>
             </div>
         </div>
@@ -471,12 +467,12 @@ color: #445aec;
                                 <div class="posts-list__ui">
                                     <div class="posts-list__button posts-list__button_left" id="post-prev-item">
                                         <svg class="icon">
-                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                            {% svg 'arrow-left' %}
                                         </svg>
                                     </div>
                                     <div class="posts-list__button posts-list__button_right" id="post-next-item">
                                         <svg class="icon">
-                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                            {% svg 'arrow-right' %}
                                         </svg>
                                     </div>
                                 </div>

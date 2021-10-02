@@ -36,7 +36,6 @@ urlpatterns = [
     path('programme/e-health-app/', views.eHealthApp, name='eHealthApp'),  # svg is not working
     path('programme/logistics/', views.eLogistics, name='eLogistics'),
     path('programme/retail-software/', views.eRetail, name='eRetail'),  # our clients part
-    path('programme/retail-software/', views.eRetail, name='eRetail'),
 
     # path('sevices/cloud/', views.sCloud, name='sCloud'),
     # path('sevices/Augmented-Reality/', views.sAugmentedReality, name='sAugReality'),

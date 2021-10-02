@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'phone_field',
     'aztech.apps.AztechConfig',
 ]
-INSTALLED_APPS += ('crispy_forms',
+INSTALLED_APPS += ('svg',
+                   'crispy_forms',
                    'django_summernote',
                    'allauth',
                    'allauth.account',

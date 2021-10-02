@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load svg %}
 {% block body_tag %}
     <body class="page-template page-template-templates page-template-landing page-template-templateslanding-php page page-id-10809 page-child parent-pageid-1184">
 {% endblock body_tag %}
@@ -135,14 +136,12 @@ alt="cto for hire">
 <div class="landing-list__list">
 <div class="landing-list__col">
 <div class="landing-list__item" animation="fade-up" animation-delay="0">
-<svg class="landing-list__item-icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
-</svg>
+    <svg class="landing-list__item-icon">{% svg 'checked-data' %}</svg>
 <div class="landing-list__item-text"><b>We are experienced.</b> We’ve got {% if companyInfo %}{{ companyInfo.years_of_experiences }}{% else %}05{% endif %}+ years of experience delivering innovative software solutions and guiding complex development projects in healthcare, education, retail, and other industries</div>
 </div>
 <div class="landing-list__item" animation="fade-up" animation-delay="0.2">
 <svg class="landing-list__item-icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+<svg class="landing-list__item-icon">{% svg 'checked-data' %}</svg>
 </svg>
 <div class="landing-list__item-text"><b> We are innovative.</b> We know modern tech inside and out and continuously monitor the tech market trends to help our clients gain a competitive edge with disruptive technology</div>
 </div>
@@ -150,14 +149,14 @@ alt="cto for hire">
 <div class="landing-list__col">
 <div class="landing-list__item" animation="fade-up" animation-delay="0.1">
 <svg class="landing-list__item-icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+<svg class="landing-list__item-icon">{% svg 'checked-data' %}</svg>
 </svg>
 <div class="landing-list__item-text"><b>We are visionary.</b> We don’t only implement technology, although that’s what we competently do, but help you shape your company’s vision and translate it into an actionable technology strategy
 </div>
 </div>
 <div class="landing-list__item" animation="fade-up" animation-delay="0.3">
 <svg class="landing-list__item-icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+<svg class="landing-list__item-icon">{% svg 'checked-data' %}</svg>
 </svg>
 <div class="landing-list__item-text"><b> We care. </b>Partnering with our clients on a CTO as a service basis, we deep dive into every project to deliver excellence and take full responsibility for the success of technology in your project
 </div>
@@ -298,12 +297,12 @@ data-popup="#form" href="#form" animation="fade-up" animation-delay=".15"><span 
                                 <div class="posts-list__ui">
                                     <div class="posts-list__button posts-list__button_left" id="post-prev-item">
                                         <svg class="icon">
-                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                            {% svg 'arrow-left' %}
                                         </svg>
                                     </div>
                                     <div class="posts-list__button posts-list__button_right" id="post-next-item">
                                         <svg class="icon">
-                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                            {% svg 'arrow-right' %}
                                         </svg>
                                     </div>
                                 </div>

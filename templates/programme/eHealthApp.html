@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load svg %}
 {% block body_tag %}
     <body class="page-template page-template-templates page-template-landing page-template-templateslanding-php page page-id-4295 page-child parent-pageid-1184">
 {% endblock body_tag %}
@@ -444,31 +445,31 @@ color: #445aec;
                             <div class="landing-tabs__header landing-tabs__header_opened">
                                 <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1" active-tab>
                                     <svg class="landing-tabs__logo">
-                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#AI"></use>
+                                        {% svg 'artificial_Intelligence' %}
                                     </svg>
                                     <div>AI/ML</div>
                                 </h3>
                                 <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1">
                                     <svg class="landing-tabs__logo">
-                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#VR_2"></use>
+                                        {% svg 'ar-augmented-reality' %}
                                     </svg>
                                     <div>AR/VR</div>
                                 </h3>
                                 <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1">
                                     <svg class="landing-tabs__logo">
-                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#iot"></use>
+                                        {% svg 'iot' %}
                                     </svg>
                                     <div>IoT</div>
                                 </h3>
                                 <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1">
                                     <svg class="landing-tabs__logo">
-                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#ML"></use>
+                                        {% svg 'blockchain' %}
                                     </svg>
                                     <div>Blockchain</div>
                                 </h3>
                                 <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1">
                                     <svg class="landing-tabs__logo">
-                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#cloud"></use>
+                                        {% svg 'cloud-server' %}
                                     </svg>
                                     <div>Cloud</div>
                                 </h3>
@@ -580,7 +581,7 @@ color: #445aec;
                 <div class="landing-rex post-block__content post-block__content post-block__content_text block landing-rex_black block_black">
                     <div class="landing-rex__rex">
                         <svg>
-                            <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#rex"></use>
+                            {% svg 'rex' %}
                         </svg>
                     </div>
                     <h2 class="landing-rex__title title title_small" animation="fade-up" animation-delay=".15">What makes {% if companyInfo %}{{ companyInfo.company_name }}{% else %}us{% endif %} stand out </h2>
@@ -740,12 +741,12 @@ color: #445aec;
                                 <div class="posts-list__ui">
                                     <div class="posts-list__button posts-list__button_left" id="post-prev-item">
                                         <svg class="icon">
-                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                            {% svg 'arrow-left' %}
                                         </svg>
                                     </div>
                                     <div class="posts-list__button posts-list__button_right" id="post-next-item">
                                         <svg class="icon">
-                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                            {% svg 'arrow-right' %}
                                         </svg>
                                     </div>
                                 </div>

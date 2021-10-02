@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load svg %}
 {% block body_tag %}
     <body class="page-template page-template-templates page-template-landing page-template-templateslanding-php page page-id-9666 page-child parent-pageid-1184">
 {% endblock body_tag %}
@@ -303,7 +304,7 @@
                     <div class="landing-list__col">
                         <div class="landing-list__item" animation="fade-up" animation-delay="0">
                             <svg class="landing-list__item-icon">
-                                <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+                                {% svg 'checked-data' %}
                             </svg>
                             <div class="landing-list__item-text">
                                 We have hands-on experience creating cyber-physical systems and embedded software for smart retail equipment, including beacon-powered systems, surveillance cameras, digital signage, and checkout-free solutions.
@@ -311,7 +312,7 @@
                         </div>
                         <div class="landing-list__item" animation="fade-up" animation-delay="0.2">
                             <svg class="landing-list__item-icon">
-                                <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+                                {% svg 'checked-data' %}
                             </svg>
                             <div class="landing-list__item-text">
                                 We are well-versed in building complete data ecosystems — including AI-powered ones — that provide a 360-degree view into a company’s operations for global retail brands.
@@ -321,7 +322,7 @@
                     <div class="landing-list__col">
                         <div class="landing-list__item" animation="fade-up" animation-delay="0.1">
                             <svg class="landing-list__item-icon">
-                                <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+                                {% svg 'checked-data' %}
                             </svg>
                             <div class="landing-list__item-text">
                                 We have {% if companyInfo %}{{ companyInfo.years_of_experiences }} {% else %}05 {% endif %}years of experience delivering retail software development services and full-stack capabilities in place, including web, mobile, cloud, and embedded systems development, to back up digital transformation in retail.
@@ -329,7 +330,7 @@
                         </div>
                         <div class="landing-list__item" animation="fade-up" animation-delay="0.3">
                             <svg class="landing-list__item-icon">
-                                <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+                                {% svg 'checked-data' %}
                             </svg>
                             <div class="landing-list__item-text">
                                 We follow retail software development best practices and set up all the necessary data security practices to ensure that our retail solutions comply with PCI DSS, GDPR, and relevant local regulations.
@@ -476,12 +477,12 @@
                                 <div class="posts-list__ui">
                                     <div class="posts-list__button posts-list__button_left" id="post-prev-item">
                                         <svg class="icon">
-                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                            {% svg 'arrow-left' %}
                                         </svg>
                                     </div>
                                     <div class="posts-list__button posts-list__button_right" id="post-next-item">
                                         <svg class="icon">
-                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                            {% svg 'arrow-right' %}
                                         </svg>
                                     </div>
                                 </div>

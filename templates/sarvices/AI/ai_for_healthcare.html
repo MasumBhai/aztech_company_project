@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load svg %}
 {% block body_tag %}
     <body class="page-template page-template-templates page-template-landing page-template-templateslanding-php page page-id-6758 page-child parent-pageid-1184">
 {% endblock body_tag %}
@@ -44,7 +45,7 @@ for healthcare
 <div class="accordion__item">
 <div class="accordion__header">
 <svg class="accordion__icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#ML"></use>
+{% svg 'technology' %}
 </svg>
 <div class="accordion__title">Machine Learning </div>
 <div class="accordion__indicator accordion__indicator_cross">
@@ -61,7 +62,7 @@ for healthcare
 <div class="accordion__item">
 <div class="accordion__header">
 <svg class="accordion__icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#NLP"></use>
+{% svg 'mind-map' %}
 </svg>
 <div class="accordion__title">Deep Learning</div>
 <div class="accordion__indicator accordion__indicator_cross">
@@ -83,7 +84,7 @@ for healthcare
 <div class="accordion__item">
 <div class="accordion__header">
 <svg class="accordion__icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#AI"></use>
+{% svg 'robot' %}
 </svg>
 <div class="accordion__title">Intelligent Automation</div>
 <div class="accordion__indicator accordion__indicator_cross">
@@ -101,7 +102,7 @@ for healthcare
 <div class="accordion__item">
 <div class="accordion__header">
 <svg class="accordion__icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#Computer-Vision"></use>
+{% svg 'home-office' %}
 </svg>
 <div class="accordion__title">Computer Vision</div>
 <div class="accordion__indicator accordion__indicator_cross">
@@ -243,7 +244,7 @@ alt="medical AI solutions">
 <div class="accordion__item">
 <div class="accordion__header">
 <svg class="accordion__icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#catalog"></use>
+{% svg 'leaflet' %}
 </svg>
 <div class="accordion__title">Explainability</div>
 <div class="accordion__indicator accordion__indicator_cross">
@@ -261,7 +262,7 @@ alt="medical AI solutions">
 <div class="accordion__item">
 <div class="accordion__header">
 <svg class="accordion__icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#ML"></use>
+{% svg 'online-secure-payment' %}
 </svg>
 <div class="accordion__title">Safety</div>
 <div class="accordion__indicator accordion__indicator_cross">
@@ -283,7 +284,7 @@ alt="medical AI solutions">
 <div class="accordion__item">
 <div class="accordion__header">
 <svg class="accordion__icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#bigdata"></use>
+{% svg 'encrypted' %}
 </svg>
 <div class="accordion__title">Security </div>
 <div class="accordion__indicator accordion__indicator_cross">
@@ -301,7 +302,7 @@ alt="medical AI solutions">
 <div class="accordion__item">
 <div class="accordion__header">
 <svg class="accordion__icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#Computer-Vision"></use>
+{% svg 'supervision' %}
 </svg>
 <div class="accordion__title">Supervision</div>
 <div class="accordion__indicator accordion__indicator_cross">
@@ -329,13 +330,13 @@ alt="medical AI solutions">
 <div class="landing-list__col">
 <div class="landing-list__item" animation="fade-up" animation-delay="0">
 <svg class="landing-list__item-icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+{% svg 'checked-data' %}
 </svg>
 <div class="landing-list__item-text"><b>Vendor-agnostic.</b> We aren’t tied to any providers, so we only recommend AI services and technologies that are a right fit for you</div>
 </div>
 <div class="landing-list__item" animation="fade-up" animation-delay="0.2">
 <svg class="landing-list__item-icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+{% svg 'checked-data' %}
 </svg>
 <div class="landing-list__item-text"><b>Top AI developers with niche skills.</b> With {% if companyInfo %}{{ companyInfo.experts_hired_total }}{% else %}35{% endif %}+ skilled professionals on board, we bring in business analysts, data scientists, software architects, developers, and an R&D team with proven expertise building healthcare solutions
 </div>
@@ -344,13 +345,13 @@ alt="medical AI solutions">
 <div class="landing-list__col">
 <div class="landing-list__item" animation="fade-up" animation-delay="0.1">
 <svg class="landing-list__item-icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+{% svg 'checked-data' %}
 </svg>
 <div class="landing-list__item-text"><b>Focus on compliance. </b>We know healthcare compliance standards well and only build medical software that for sure passes compliance reviews</div>
 </div>
 <div class="landing-list__item" animation="fade-up" animation-delay="0.3">
 <svg class="landing-list__item-icon">
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+{% svg 'checked-data' %}
 </svg>
 <div class="landing-list__item-text"><b>Diverse expertise.</b> An <a class="link" href="{% url 'sAI' %}" target="_blank" rel="noopener noreferrer">AI development company</a> with {% if companyInfo %}{{ companyInfo.years_of_experiences }}{% else %}05{% endif %}+ years of experience, we have a track record of successfully completed healthcare projects utilizing varied AI subsets
 </div>
@@ -503,7 +504,7 @@ alt="AI development for healthcare industry">
 <div class="landing-rex post-block__content post-block__content post-block__content_text block landing-rex_black block_black">
 <div class="landing-rex__rex">
 <svg>
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#rex"></use>
+{% svg 'rex' %}
 </svg>
 </div>
 <h2 class="landing-rex__title title title_small" animation="fade-up" animation-delay=".15">How can AI help healthcare?</h2>
@@ -673,12 +674,12 @@ alt="AI development for healthcare industry">
                                 <div class="posts-list__ui">
                                     <div class="posts-list__button posts-list__button_left" id="post-prev-item">
                                         <svg class="icon">
-                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                            {% svg 'arrow-left' %}
                                         </svg>
                                     </div>
                                     <div class="posts-list__button posts-list__button_right" id="post-next-item">
                                         <svg class="icon">
-                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                            {% svg 'arrow-right' %}
                                         </svg>
                                     </div>
                                 </div>

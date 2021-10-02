@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load svg %}
 {% block body_tag %}
     <body class="page-template page-template-templates page-template-landing page-template-templateslanding-php page page-id-2724 page-child parent-pageid-1184">
 {% endblock body_tag %}
@@ -467,7 +468,7 @@ alt="auto qa services">
 <div class="landing-rex post-block__content post-block__content post-block__content_text block block_yellow">
 <div class="landing-rex__rex">
 <svg>
-<use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#rex"></use>
+{% svg 'rex' %}
 </svg>
 </div>
 <h2 class="landing-rex__title title title_small" animation="fade-up" animation-delay=".15">{% if companyInfo %}{{ companyInfo.company_name }}:{% else %}We are{% endif %} a software testing company you can trust </h2>
@@ -635,12 +636,12 @@ alt="auto qa services">
                                 <div class="posts-list__ui">
                                     <div class="posts-list__button posts-list__button_left" id="post-prev-item">
                                         <svg class="icon">
-                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                            {% svg 'arrow-left' %}
                                         </svg>
                                     </div>
                                     <div class="posts-list__button posts-list__button_right" id="post-next-item">
                                         <svg class="icon">
-                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                            {% svg 'arrow-right' %}
                                         </svg>
                                     </div>
                                 </div>

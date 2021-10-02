@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load svg %}
 {% block body_tag %}
     <body class="page-template page-template-templates page-template-landing page-template-templateslanding-php page page-id-3944 page-child parent-pageid-1184">
 {% endblock body_tag %}
@@ -213,7 +214,7 @@
                             <div class="accordion__item">
                                 <div class="accordion__header">
                                     <svg class="accordion__icon">
-                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#heart"></use>
+                                        {% svg 'medicine-sign' %}
                                     </svg>
                                     <div class="accordion__title">Healthcare & Biotech</div>
                                     <div class="accordion__indicator accordion__indicator_cross">
@@ -236,7 +237,7 @@
                             <div class="accordion__item">
                                 <div class="accordion__header">
                                     <svg class="accordion__icon">
-                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#finance"></use>
+                                        {% svg 'money-bag' %}
                                     </svg>
                                     <div class="accordion__title">Finance</div>
                                     <div class="accordion__indicator accordion__indicator_cross">
@@ -258,7 +259,7 @@
                             <div class="accordion__item">
                                 <div class="accordion__header">
                                     <svg class="accordion__icon">
-                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#bag"></use>
+                                        {% svg 'online-sales' %}
                                     </svg>
                                     <div class="accordion__title">Retail & Ecommerce</div>
                                     <div class="accordion__indicator accordion__indicator_cross">
@@ -287,7 +288,7 @@
                             <div class="accordion__item">
                                 <div class="accordion__header">
                                     <svg class="accordion__icon">
-                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#truk"></use>
+                                        {% svg 'on-time-delivery' %}
                                     </svg>
                                     <div class="accordion__title">Supply Chain & Logistics</div>
                                     <div class="accordion__indicator accordion__indicator_cross">
@@ -307,7 +308,7 @@
                             <div class="accordion__item">
                                 <div class="accordion__header">
                                     <svg class="accordion__icon">
-                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#education"></use>
+                                        {% svg 'creative-thinking' %}
                                     </svg>
                                     <div class="accordion__title">Education</div>
                                     <div class="accordion__indicator accordion__indicator_cross">
@@ -373,25 +374,25 @@
                             <div class="landing-tabs__header landing-tabs__header_opened">
                                 <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1" active-tab>
                                     <svg class="landing-tabs__logo">
-                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#AI"></use>
+                                        {% svg 'artificial_Intelligence' %}
                                     </svg>
                                     <div>Discovery</div>
                                 </h3>
                                 <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1">
                                     <svg class="landing-tabs__logo">
-                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#bigdata"></use>
+                                        {% svg 'website-ui-ux' %}
                                     </svg>
                                     <div>Design</div>
                                 </h3>
                                 <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1">
                                     <svg class="landing-tabs__logo">
-                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#ML"></use>
+                                        {% svg 'testing' %}
                                     </svg>
                                     <div>POC</div>
                                 </h3>
                                 <h3 class="landing-tabs__tab landing-tabs__tab_icon" id="tab-1">
                                     <svg class="landing-tabs__logo">
-                                        <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#iot"></use>
+                                        {% svg 'improvement-performance' %}
                                     </svg>
                                     <div>Implementation</div>
                                 </h3>
@@ -455,7 +456,7 @@
                         <div class="landing-list__col">
                             <div class="landing-list__item" animation="fade-up" animation-delay="0">
                                 <svg class="landing-list__item-icon">
-                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+                                    {% svg 'checked-data' %}
                                 </svg>
                                 <div class="landing-list__item-text"><b>Vendor-agnostic.</b>
                                     We aren’t tied to any providers, so we only recommend AI services and technologies
@@ -464,7 +465,7 @@
                             </div>
                             <div class="landing-list__item" animation="fade-up" animation-delay="0.2">
                                 <svg class="landing-list__item-icon">
-                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+                                    {% svg 'checked-data' %}
                                 </svg>
                                 <div class="landing-list__item-text"><b>Top AI developers with niche skills.</b>
                                     With our {% if companyInfo %}{{ companyInfo.experts_hired_total }}{% else %}35{% endif %}-strong team, we can bring in senior analysts, elite developers, and our
@@ -475,7 +476,7 @@
                         <div class="landing-list__col">
                             <div class="landing-list__item" animation="fade-up" animation-delay="0.1">
                                 <svg class="landing-list__item-icon">
-                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+                                    {% svg 'checked-data' %}
                                 </svg>
                                 <div class="landing-list__item-text"><b>Diverse expertise.</b>
                                     An AI company with {% if companyInfo %}{{ companyInfo.years_of_experiences }}{% else %}05{% endif %} years of experience, we worked on hundreds of projects
@@ -485,7 +486,7 @@
                             </div>
                             <div class="landing-list__item" animation="fade-up" animation-delay="0.3">
                                 <svg class="landing-list__item-icon">
-                                    <use xlink:href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#check"></use>
+                                    {% svg 'checked-data' %}
                                 </svg>
                                 <div class="landing-list__item-text"><b>Proven track record.</b>
                                     We’ve successfully completed {% if companyInfo %}{{ companyInfo.product_delivers_total }}{% else %}60{% endif %}+ projects and served {% if companyInfo %}{{ companyInfo.clients_total_number }}{% else %}80{% endif %}+ clients across the globe.
@@ -750,12 +751,12 @@
                                 <div class="posts-list__ui">
                                     <div class="posts-list__button posts-list__button_left" id="post-prev-item">
                                         <svg class="icon">
-                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-left"></use>
+                                            {% svg 'arrow-left' %}
                                         </svg>
                                     </div>
                                     <div class="posts-list__button posts-list__button_right" id="post-next-item">
                                         <svg class="icon">
-                                            <use href="https://itrexgroup.com/wp-content/themes/itrex/assets/images/icons.svg?ver=1.5#arrow-right"></use>
+                                            {% svg 'arrow-right' %}
                                         </svg>
                                     </div>
                                 </div>
